@@ -9,6 +9,11 @@ app_system/tests/
 PaperReviewer/
 referee_classifier/
 
+# Local exp-12 tests and planning documents
+/mad_experiments/exp-12/tests/
+/mad_experiments/exp-12/exp_12_instructions.md
+/mad_experiments/exp-12/exp_12_proposal.md
+
 # ============================================
 # Python
 # ============================================
