@@ -1,16 +1,4 @@
-"""Offline evaluation of frozen exp-12 features and separately specified scores.
-
-No review outputs or external outcomes are synthesized by this module. Tests use
-synthetic fixtures; real benchmark evaluation requires an exported feature JSON
-from feature_selection.py plus a paper-linked outcome CSV such as rankings.csv.
-Verdict disagreement is categorical and belongs here. Source feature formulas,
-raw review records and ratings are never changed. Individual feature associations
-are descriptive; trained score comparisons require explicit paper-level splits.
-
-CLI:
-    python analysis/evaluation_analysis.py --features features.json \
-        --outcomes rankings.csv --spec evaluation_spec.json --output-dir evaluation
-
+"""Evaluation of frozen exp-12 features and separately specified scores.
 The JSON spec selects features, targets, metrics, and optional aggregation,
 ablation, bootstrap, or score-audit settings. There is no default final score or
 model search. Use --synthetic for fixture outputs. All operations are offline.
