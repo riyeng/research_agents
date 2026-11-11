@@ -1,0 +1,72 @@
+{
+  "features": [
+    "concern_post_severity_max",
+    "insight_post_mean",
+    "repair_scope_post_mean",
+    "novelty_empirical_post_mean",
+    "novelty_methodological_post_mean",
+    "novelty_theoretical_post_mean",
+    "novelty_policy_post_mean",
+    "concern_pre_severity_max",
+    "insight_pre_mean",
+    "repair_scope_pre_mean",
+    "concern_survival_rate",
+    "insight_pre_sd",
+    "repair_scope_pre_sd",
+    "debate_concession_count",
+    "debate_final_retract_count"
+  ],
+  "primary": {
+    "features": ["concern_post_severity_max", "insight_post_mean", "repair_scope_post_mean"],
+    "targets": ["sjr_score"],
+    "metric": "spearman"
+  },
+  "targets": [
+    "sjr_score", "cites", "wp_cites", "gsm_h5_index",
+    "sjr_economics_finance_rank", "tier_used_in_experiments"
+  ],
+  "metrics": ["spearman", "kendall_tau_b", "concordance"],
+  "derived_features": true,
+  "holdout": {"fraction": 0.3, "seed": 12, "stage": "development",
+              "stratify_column": "tier_used_in_experiments"},
+  "feature_directions": {
+    "concern_post_severity_max": "lower",
+    "concern_pre_severity_max": "lower",
+    "repair_scope_post_mean": "lower",
+    "repair_scope_pre_mean": "lower",
+    "concern_survival_rate": "lower"
+  },
+  "aggregation": {
+    "metric": "spearman",
+    "validation_folds": 2,
+    "min_validation_papers": 5,
+    "min_train_papers": 5,
+    "seed": 12,
+    "candidates": [
+      {
+        "name": "fixed_primary_equal_weights",
+        "kind": "fixed",
+        "weights": {"insight_post_mean": 1, "repair_scope_post_mean": -1, "concern_post_severity_max": -1},
+        "standardize": true,
+        "bins": {"quantiles": [0.3333333333333333, 0.6666666666666666]}
+      },
+      {
+        "name": "ridge_post_levels",
+        "kind": "ridge",
+        "features": ["concern_post_severity_max", "insight_post_mean", "repair_scope_post_mean",
+                     "novelty_empirical_post_mean", "novelty_methodological_post_mean"],
+        "alpha": 10,
+        "bins": {"quantiles": [0.3333333333333333, 0.6666666666666666]}
+      },
+      {
+        "name": "ridge_pre_levels",
+        "kind": "ridge",
+        "features": ["concern_pre_severity_max", "insight_pre_mean", "repair_scope_pre_mean"],
+        "alpha": 10,
+        "bins": {"quantiles": [0.3333333333333333, 0.6666666666666666]}
+      }
+    ]
+  },
+  "persona_analysis": true,
+  "synthetic": false
+}

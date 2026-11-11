@@ -10,12 +10,20 @@ PaperReviewer/
 referee_classifier/
 
 # Exp-11 benchmark results from running on gpt sol
-/Users/rithikaiyengar/Downloads/co_econ/research_agents/mad_experiments/exp-11/exp11_8_gpt56_sol_final
+/mad_experiments/exp-11/exp11_8_gpt56_sol_final
 
 # Local exp-12 tests and planning documents
 /mad_experiments/exp-12/tests/
 /mad_experiments/exp-12/exp_12_instructions.md
 /mad_experiments/exp-12/exp_12_proposal.md
+/mad_experiments/exp-12.1/exp_12_proposal.md
+/mad_experiments/exp-12.1/make_manifest.py
+/mad_experiments/exp-12.1/tests/
+/mad_experiments/exp-12.1/BENCHMARK_CHANGES.md
+/mad_experiments/exp-12.1/run_benchmark.py
+
+
+
 
 # ============================================
 # Python
