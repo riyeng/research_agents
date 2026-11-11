@@ -1,0 +1,101 @@
+{
+  "duration_seconds": 306.415946,
+  "total_calls": 11,
+  "total_tokens": {
+    "input": 347773,
+    "output": 23118,
+    "thinking": 5906,
+    "total": 370891,
+    "cache_read": 0,
+    "cache_creation": 347740
+  },
+  "by_role": {
+    "Editor-Selection": {
+      "input": 8797,
+      "output": 146,
+      "thinking": 0,
+      "total": 8943,
+      "cache_read": 0,
+      "cache_creation": 8794,
+      "calls": 1
+    },
+    "CS_Expert": {
+      "input": 62736,
+      "output": 2066,
+      "thinking": 432,
+      "total": 64802,
+      "cache_read": 0,
+      "cache_creation": 62733,
+      "calls": 1
+    },
+    "Theorist": {
+      "input": 62737,
+      "output": 3503,
+      "thinking": 1662,
+      "total": 66240,
+      "cache_read": 0,
+      "cache_creation": 62734,
+      "calls": 1
+    },
+    "Data_Scientist": {
+      "input": 62761,
+      "output": 2699,
+      "thinking": 814,
+      "total": 65460,
+      "cache_read": 0,
+      "cache_creation": 62758,
+      "calls": 1
+    },
+    "Debater-CS_Expert": {
+      "input": 37432,
+      "output": 3942,
+      "thinking": 642,
+      "total": 41374,
+      "cache_read": 0,
+      "cache_creation": 37426,
+      "calls": 2
+    },
+    "Debater-Theorist": {
+      "input": 37432,
+      "output": 4446,
+      "thinking": 1546,
+      "total": 41878,
+      "cache_read": 0,
+      "cache_creation": 37426,
+      "calls": 2
+    },
+    "Debater-Data_Scientist": {
+      "input": 37434,
+      "output": 4001,
+      "thinking": 810,
+      "total": 41435,
+      "cache_read": 0,
+      "cache_creation": 37428,
+      "calls": 2
+    },
+    "Editor-In-Chief": {
+      "input": 38444,
+      "output": 2315,
+      "thinking": 0,
+      "total": 40759,
+      "cache_read": 0,
+      "cache_creation": 38441,
+      "calls": 1
+    }
+  },
+  "by_model": {
+    "gpt-5.6-sol": {
+      "input": 347773,
+      "output": 23118,
+      "thinking": 5906,
+      "total": 370891,
+      "cache_read": 0,
+      "cache_creation": 347740,
+      "calls": 11
+    }
+  },
+  "cost_by_model": {
+    "gpt-5.6-sol": 2.8670799999999996
+  },
+  "total_cost": 2.8670799999999996
+}

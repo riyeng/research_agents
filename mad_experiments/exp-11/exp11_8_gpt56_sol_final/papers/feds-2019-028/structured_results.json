@@ -1,0 +1,879 @@
+{
+  "metadata": {
+    "doc_id": "feds-2019-028",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2019-028.pdf",
+    "ground_truth_tier": "Tier2",
+    "year": "2019",
+    "series": "feds",
+    "final_score": 0.7702984008745832,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 395.69948387145996,
+    "char_count": 74969,
+    "word_count": 11817,
+    "token_usage": {
+      "duration_seconds": 395.553824,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 202854,
+        "output": 20885,
+        "thinking": 7346,
+        "total": 223739,
+        "cache_read": 0,
+        "cache_creation": 202821
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 7730,
+          "output": 145,
+          "thinking": 0,
+          "total": 7875,
+          "cache_read": 0,
+          "cache_creation": 7727,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 25276,
+          "output": 2029,
+          "thinking": 512,
+          "total": 27305,
+          "cache_read": 0,
+          "cache_creation": 25273,
+          "calls": 1
+        },
+        "CS_Expert": {
+          "input": 25249,
+          "output": 3144,
+          "thinking": 1740,
+          "total": 28393,
+          "cache_read": 0,
+          "cache_creation": 25246,
+          "calls": 1
+        },
+        "Theorist": {
+          "input": 25250,
+          "output": 1976,
+          "thinking": 429,
+          "total": 27226,
+          "cache_read": 0,
+          "cache_creation": 25247,
+          "calls": 1
+        },
+        "Debater-Econometrician": {
+          "input": 30782,
+          "output": 3952,
+          "thinking": 1719,
+          "total": 34734,
+          "cache_read": 0,
+          "cache_creation": 30776,
+          "calls": 2
+        },
+        "Debater-CS_Expert": {
+          "input": 30782,
+          "output": 4210,
+          "thinking": 1287,
+          "total": 34992,
+          "cache_read": 0,
+          "cache_creation": 30776,
+          "calls": 2
+        },
+        "Debater-Theorist": {
+          "input": 30782,
+          "output": 3559,
+          "thinking": 1659,
+          "total": 34341,
+          "cache_read": 0,
+          "cache_creation": 30776,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 27003,
+          "output": 1870,
+          "thinking": 0,
+          "total": 28873,
+          "cache_read": 0,
+          "cache_creation": 27000,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 202854,
+          "output": 20885,
+          "thinking": 7346,
+          "total": 223739,
+          "cache_read": 0,
+          "cache_creation": 202821,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 1.8943462500000001
+      },
+      "total_cost": 1.8943462500000001
+    },
+    "timestamp": "2026-07-29T19:13:43.117473",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Econometrician": {
+      "structural_strength": "The Monte Carlo design cleanly separates solution approximation error from likelihood misspecification. The data-generating process uses the most accurate value-function-iteration solution without measurement error; the inversion filter provides the benchmark likelihood; and alternative rows and columns in Figure 3 vary one source of error at a time before combining them. This factorial structure is well matched to the paper's descriptive methodological claim.",
+      "domain_audit": "The paper makes no reduced-form causal claim requiring exogenous identifying variation. Its estimand is the finite-sample likelihood-based inference for the risk-aversion parameter gamma under specified combinations of solution and filtering methods. Within the deliberately narrow experiment, the design supports the stated existential claim that solution error and a misspecified observation equation can interact and compound: Figure 3 compares each error separately and jointly, while Table 1 repeats the exercise over 100 samples and reports bias, credible-set coverage, and the percentile of the true parameter. Identification is transparent because consumption is observed, the model is exactly determined for the inversion filter, nuisance parameters are fixed at their true values in the main experiment, and the DGP is explicitly known. The conclusions should remain understood as a cautionary example rather than a general quantitative theorem: the model is scalar and stylized, initial states and nuisance parameters are unusually favorable, and the particle-filter misspecification is deliberately induced by fixing positive measurement error when the DGP contains none. The manuscript already acknowledges most of these scope limits, so they do not undermine the central claim.",
+      "best_case_contribution": "The paper provides a controlled computational demonstration that, in a nonlinear model where an occasionally binding constraint creates a kinked decision rule, seemingly modest misspecification of measurement error can distort regime inference and parameter estimates, and can interact non-additively with solution approximation error. It also offers a useful comparison among value-function iteration, OccBin, and linearization, paired with inversion, particle, and Kalman filtering.",
+      "minimum_viable_revision": "Clarify in the Monte Carlo section exactly how the fixed measurement-error variance is calibrated and whether it is held numerically constant as gamma varies; label the resulting targets explicitly as finite-sample estimates or pseudo-true parameters under a misspecified likelihood; and keep the practical conclusions framed as implications of this calibrated cautionary example rather than universal rankings of filters or solution methods. Reporting a brief numerical-error diagnostic for the particle likelihood would further reassure readers but is not necessary to sustain the main result.",
+      "primary_issue_class": "no_issue",
+      "severity_score": 2.0,
+      "barrier_category": "NONE",
+      "severity_rationale": "The core exercise is internally identified and directly answers the paper's stated descriptive question. The main limitations concern external scope and implementation transparency rather than a defect in the estimand, likelihood comparison, or Monte Carlo logic. Because the authors repeatedly characterize the analysis as a cautionary example conditional on a particular model, these limitations cause little damage to the stated argument and do not create a publication barrier.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A controlled analysis of how numerical solution error and likelihood misspecification from imposed measurement error interact in likelihood-based inference for a model with an occasionally binding constraint.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "The introduction distinguishes the contribution from prior work that considered approximation error or measurement-error misspecification separately: Fernandez-Villaverde, Rubio-Ramirez, and Santos (2006) study approximated likelihoods while abstracting from measurement-error misspecification, and Canova, Ferroni, and Matthes (2014) study measurement error in linearized DSGE models. The manuscript's new ingredient is the joint, factorial comparison in an endogenous-regime model, not a new general-purpose estimator."
+        },
+        {
+          "claim_type": "theoretical",
+          "description": "An economic explanation for why measurement error can bias risk-aversion inference in an occasionally constrained consumption model by obscuring the location and shape of the kink that identifies the active regime.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Section 4.3 links the bias to the kinked consumption policy shown in Figure 4: gamma changes where the borrowing constraint becomes slack, while additive normal measurement error changes observed volatility and skewness. This provides a genuine mechanism-based interpretation, although it is demonstrated in a specific model rather than established as a general theorem."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript has a clear argument architecture: it first separates the model solution from likelihood construction, then uses a simple borrowing-constrained consumption model to explain the relevant nonlinearity, and finally varies the two errors separately and jointly. The discussion of the kinked consumption rule gives useful economic intuition for the otherwise computational findings. The paper is informative rather than exceptionally synthetic, and some implementation details are relegated to the appendix.",
+        "supporting_evidence": "Sections 2.1 and 2.2 organize the comparison around three solution methods and three likelihood approaches. Figure 3's row-column structure isolates solution and measurement-error misspecification, while Figures 4 and 5 explain the direction of the gamma bias through changes in the consumption-function kink. Section 5 translates the findings into four practical options and explicitly notes their trade-offs.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper creates artificial consumption data from a carefully solved model and then asks what happens when researchers analyze those data with less accurate model solutions or incorrectly assume that the observations contain noise. In this example, either mistake can bias the estimated willingness of households to avoid risk, and making both mistakes can be worse than simply adding their separate effects. Because the exercise is a simulation from one simple model, it establishes that this problem can occur, not that it must be quantitatively important in every macroeconomic model.",
+      "confidence_score": 8.4,
+      "source_evidence": "The abstract states the appropriately existential claim that the authors 'document how solution approximation errors and likelihood misspecification, related to the treatment of measurement errors, can interact and compound each other.' The introduction explicitly limits scope: 'Our results are certainly conditional on this particular example.' Equations (1)-(4) define the state-space model and distinguish structural innovations from observation error. Section 4 states that the DGP is the value-function-iteration solution, gamma equals 1, all other parameters are fixed at their true values, and the DGP has no measurement error. Figure 3 isolates the two error sources, and the text reports that with 5 percent measurement error the modal estimate is 1.34, with solution error alone it is 1.21, and with both it is 1.61. Table 1 extends the comparison to 100 Monte Carlo samples at T=100 and T=500 and shows deteriorating bias and credible-set coverage as misspecification and solution error are introduced. Appendix A.2 describes the inversion and particle filters, including use of 2,000,000 particles.",
+      "verdict": "ACCEPT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "CS_Expert": {
+      "structural_strength": "The computational design is conceptually well organized: it holds the data-generating process fixed, crosses three solution approximations with several likelihood constructions, reports Euler-equation errors in consumption units, and uses Monte Carlo coverage rather than relying only on one illustrative likelihood contour.",
+      "domain_audit": "The central simulation is not computationally reproducible from the manuscript and appears infeasible under the literal algorithm described. Appendix A.2.2 sets N = 2,000,000 particles; one T = 500 likelihood evaluation therefore propagates roughly one billion particle-periods. The paper then reports 20,000 random-walk Metropolis draws for credible sets and averages those sets across 100 Monte Carlo samples. A direct implementation would require roughly 2e13 particle-periods per sample and about 2e15 across 100 samples, before resampling, policy interpolation, density evaluation, and repeated model solution. No caching, likelihood-grid interpolation, parallelization, hardware, runtime, or other acceleration is disclosed. Moreover, the actual resampling rule is left optional, random-number handling is unspecified, and it is unclear whether the noisy particle likelihood is used through a valid particle marginal Metropolis-Hastings implementation or treated as an ordinary deterministic likelihood. The value-function implementation also omits interpolation and boundary-hit details needed to reconcile a 15-node Tauchen approximation with the Gaussian income innovations used in the likelihood. These omissions matter because particle noise, initialization, interpolation, and boundary truncation can alter the likelihood shape, posterior credible sets, and reported coverage rates that constitute the paper's principal evidence.",
+      "best_case_contribution": "The paper provides a useful controlled computational demonstration that, in an occasionally constrained consumption model, approximation error and an incorrectly imposed measurement-error specification can interact non-additively, bias structural-parameter estimates, weaken identification, and severely degrade credible-set coverage. Its strongest contribution is diagnostic rather than a new estimator: it makes researchers consider solution accuracy and likelihood specification jointly.",
+      "minimum_viable_revision": "Release the exact executable code and configuration files; state hardware, parallelization strategy, wall-clock times, seeds or common-random-number policy, and whether likelihood values were cached or interpolated; specify the implemented resampling trigger and algorithm; document whether posterior sampling is genuine particle marginal Metropolis-Hastings or uses a fixed simulated likelihood; report particle-number convergence and Monte Carlo standard errors for the likelihood modes and coverage statistics; and provide VFI interpolation, grid-boundary-hit, and initialization diagnostics. If the stated computation was not executed literally, correct the particle count or describe the actual accelerated procedure.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.4,
+      "barrier_category": "REVISION",
+      "severity_rationale": "This is not merely a request for faster code. Figures 3 through 6 and Table 1 are the evidence for the headline interaction between solution and likelihood errors, but the supplied algorithm does not presently establish how those results can be executed or independently regenerated. Unspecified treatment of a stochastic particle likelihood can also change the posterior target, while unreported numerical approximations can affect the benchmark labeled the true likelihood. The underlying experimental framework remains plausible and the problem is repairable by disclosing and validating the actual implementation, so REVISION rather than BLOCKER is appropriate.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A controlled comparison showing that numerical solution error and likelihood misspecification from imposed measurement error can compound each other in likelihood-based inference for models with occasionally binding constraints.",
+          "significance": "MEDIUM",
+          "confidence": 8.2,
+          "supporting_evidence": "The abstract says the paper documents how solution approximation errors and likelihood misspecification can interact and compound. The introduction distinguishes this joint analysis from earlier work studying approximation error or measurement-error misspecification separately. The paper does not introduce a new solution or filtering algorithm: VFI, OccBin, first-order perturbation, inversion filtering, particle filtering, and Kalman filtering are all adopted from cited work. The novel ingredient is their systematic joint comparison and the documented non-additive bias."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument has a clear architecture and provides useful intuition linking measurement error to uncertainty about the binding regime and hence to biased risk-aversion estimates. The exposition is stronger conceptually than computationally: readers can understand why the mechanism may operate, but cannot reconstruct the numerical pipeline with confidence.",
+        "supporting_evidence": "Sections 4.2 through 4.4 use the kink in the consumption policy function to explain why measurement error shifts the inferred coefficient of relative risk aversion and why OccBin approximation error can amplify that shift. Table 1 then connects the mechanism to bias and coverage. By contrast, Appendix A.2.2 labels resampling optional and omits the exact posterior-computation and acceleration details.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper's economic message is plausible: when a model switches between constrained and unconstrained behavior, both an approximate model solution and falsely assumed data noise can make the researcher infer the wrong preferences. The concern is that the reported experiment would require an enormous amount of computation if run exactly as described, while several choices that materially affect the answer are not stated. Code, runtimes, random-number handling, and numerical convergence evidence are needed before the headline results can be verified.",
+      "confidence_score": 8.4,
+      "source_evidence": "Appendix A.2.2 states, \"To obtain an accurate approximation of the likelihood, we set the number of particles in our simulation to N = 2,000,000,\" and describes propagating those particles through every period. Table 1 covers T = 500, 100 Monte Carlo samples, and credible sets based on \"20,000 draws from the posterior distribution using a random walk Metropolis algorithm.\" The same appendix calls resampling an \"(Optional)\" step and says it is \"usually\" performed at unspecified thresholds rather than documenting the implemented rule. Appendix A.1 bounds debt between 25 percent below and 8 percent above steady state, uses only 15 Tauchen nodes for income, and does not report interpolation or boundary-hit frequencies. Appendix A.2.1 says the inversion filter initializes states at their true values, whereas Appendix A.2.2 initializes particle states using only a 50-period simulation, so the filters also do not obviously evaluate identically initialized likelihoods.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Theorist": {
+      "structural_strength": "The paper cleanly separates three objects that are often conflated: the economic model, the numerical approximation to its decision rule, and the statistical observation equation. The consumption-saving example is particularly effective because the borrowing constraint produces an economically interpretable kink, allowing the direction of the estimated-risk-aversion bias to be connected to regime classification rather than reported as a purely numerical artifact.",
+      "domain_audit": "The central mechanism is internally coherent within the stated Monte Carlo design. With positive debt interpreted as borrowing, the budget constraint, borrowing limit, and restriction beta times R less than one consistently imply an impatient household whose constraint binds in the deterministic steady state. When the constraint is slack, risk aversion affects intertemporal smoothing; when it binds, borrowing is pinned down by current income, explaining why the always-binding linearization loses identification of gamma. The upward bias from falsely imposed Gaussian measurement error is also economically plausible in this kinked model: the filter must rationalize regime-dependent skewness after allocating some observed variation to symmetric noise, and it can do so by changing gamma and hence the location and shape of the policy-function kink. The main qualification concerns the paper's broader interpretation of observation error. The conclusion says that separating the econometrician's information from agents' information presents an interpretational problem and suggests that agents should account for possible revisions. That does not follow for all legitimate observation errors: statistical-agency noise, sampling error, aggregation error, or discrepancies between model concepts and published series can affect the econometrician's data without affecting agents' observation of their own economic states. Thus, the numerical result establishes the cost of falsely imposing an external error absent from this particular DGP, not a general incoherence of measurement-error observation equations.",
+      "best_case_contribution": "The paper provides a controlled demonstration that, in an occasionally constrained nonlinear model, modest decision-rule approximation error and misspecification of the observation equation can interact non-additively. It further explains the mechanism through the constraint-induced kink: noisy observations impair inference about the active regime, which in turn distorts inference about structural parameters governing policy-function shape. This is a useful methodological warning because improving the model solution alone need not protect likelihood-based inference from observation-equation misspecification.",
+      "minimum_viable_revision": "Retain the analysis but narrow the concluding information-set claim. Distinguish measurement error representing econometrician-only recording or aggregation noise from noisy economic signals observed by agents. State explicitly that the demonstrated bias applies when the estimator imposes measurement error that is absent from, or incorrectly calibrated relative to, the DGP, especially when that error obscures endogenous regime classification. No redesign of the model or Monte Carlo experiment is needed.",
+      "primary_issue_class": "rephrasal",
+      "severity_score": 3.0,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The qualification affects a secondary interpretation of measurement error, not the validity of the reported Monte Carlo exercise. The manuscript repeatedly discloses that its DGP contains no measurement error and conditions its conclusions on the example, so the defensible narrower claim is already visible to attentive readers. The numerical interaction between approximation error, false measurement error, regime inference, and parameter bias remains intact. A local conceptual clarification is therefore sufficient and does not warrant a verdict below acceptance.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A controlled comparison of value-function iteration, OccBin, and an always-binding first-order approximation combined with inversion, particle, and Kalman filtering to isolate the separate and joint effects of solution error and observation-equation misspecification in an occasionally constrained model.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "The introduction states that the paper considers three solution methods and three paths to specifying the likelihood, while holding the accurate global solution as the DGP. The individual solution and filtering methods are established by citation, but their factorial comparison and the emphasis on interacting errors provide a genuine, bounded methodological contribution rather than a new estimator."
+        },
+        {
+          "claim_type": "theoretical",
+          "description": "An economic mechanism linking falsely imposed measurement error to biased structural inference through uncertainty about which endogenous constraint regime generated an observation.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Sections 4.3 and 4.4 connect the position of the kink in the consumption function to gamma and explain why symmetric additive error changes the inferred volatility and skewness of consumption. Figure 3 and Table 1 show that the bias grows with assumed measurement error and compounds the OccBin approximation bias."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument is clearly organized and supplies useful economic intuition for why an apparently technical filtering choice affects structural inference in a regime-switching model. The policy-function kink, asymmetric impulse responses, and likelihood contours form a coherent explanatory sequence. The paper is illuminating but not exceptional in architecture because its conclusions remain deliberately tied to one small calibrated model and several arguments are graphical or numerical rather than formal.",
+        "supporting_evidence": "Figure 1 compares policy rules, Figure 2 illustrates asymmetric responses, Figure 4 relates gamma to the kink, and Sections 4.2 through 4.4 separately discuss solution error, likelihood misspecification, and their interaction. Table 1 then verifies that the representative-sample patterns recur across Monte Carlo repetitions.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper studies a household model in which borrowing sometimes hits a limit. That limit creates two different behavioral regimes and a kink in consumption choices. If an economist solves the model only approximately, or incorrectly assumes that observed consumption contains recording noise, the estimated degree of household risk aversion can be biased. Using both shortcuts together can produce more bias than either shortcut alone because noise makes it harder to tell whether the borrowing limit was active. The caveat is that data can legitimately be noisy only from the economist's perspective, so such noise need not always be incorporated into households' own decisions.",
+      "confidence_score": 8.3,
+      "source_evidence": "The abstract identifies the interaction of solution approximation errors and likelihood misspecification as the main claim. Section 2 defines the nonlinear state equation and the observation equation with measurement error. Equations (6) through (10) consistently characterize consumption, positive borrowing, the borrowing limit, the Euler equation, and complementary slackness. Section 3.2 states that the constraint binds about 60 percent of the time. Section 4.3 explicitly explains the relationship between gamma and the kinked consumption rule; Section 4.4 reports that with 5 percent measurement error alone the modal estimate is 1.34, with solution error alone it is 1.21, and with both it is 1.61. Table 1 shows increasing bias and deteriorating credible-set coverage as measurement error and solution error are combined. The interpretive qualification is prompted by the conclusion's claim that econometrician-only measurement error 'divorces' information sets and that agents should consider possible revisions, which is not necessary when the observation error represents recording, sampling, aggregation, or model-data mapping noise unavailable and irrelevant to agents.",
+      "verdict": "ACCEPT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph correctly identifies the paper's strongest feature: a controlled Monte Carlo design that isolates solution error, likelihood misspecification, and their interaction. The Theorist also identifies a valid qualification concerning the interpretation of econometrician-only measurement error. The CS_Expert raises useful reproducibility questions, but the available evidence does not establish an argument-damaging computational error.",
+        "attacks": [
+          {
+            "target_persona": "CS_Expert",
+            "critique": "The classification of incomplete computational disclosure as a serious substantive flaw is too strong. The particle-count arithmetic shows that a literal unaccelerated implementation would be expensive, but it does not establish that the reported computation was infeasible, that the particle likelihood was evaluated afresh for every posterior draw, or that an invalid posterior algorithm was actually used. Missing information about caching, interpolation, parallelization, resampling, and random-number handling warrants documentation and numerical diagnostics; absent evidence of an erroneous implementation, it does not place the paper's central Monte Carlo result in serious doubt.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 4.0,
+            "barrier_category": "MINOR",
+            "confidence": 7.5,
+            "evidence": "The manuscript describes the central estimand and factorial experiment clearly: the DGP is the value-function-iteration solution without measurement error, nuisance parameters are fixed at their true values, and likelihood contours vary the solution and observation equation separately and jointly. The CS_Expert infers repeated full particle-filter evaluations from the particle count and posterior-draw count, but cites no statement establishing that no likelihood caching, grid evaluation, interpolation, fixed-random-number method, or parallel implementation was used. Computational cost alone does not demonstrate incorrect likelihood evaluation."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "CS_Expert",
+            "argument": "The paper should report the implemented resampling rule, particle-likelihood variability, random-number policy, hardware, runtime, and any caching or interpolation. It should also state whether posterior simulation uses a valid pseudo-marginal construction or a fixed numerical approximation to the likelihood. These are important reproducibility clarifications, but the central descriptive result is not supported solely by posterior MCMC: the likelihood comparisons directly isolate each error source, and the mechanism is corroborated by the kinked policy function. Without affirmative evidence of an invalid algorithm, the concern supports minor revision rather than RESUBMIT.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "The conclusion should not imply that an observation equation containing econometrician-only error is generally incoherent. Recording, sampling, aggregation, revision, and model-concept discrepancies can affect published data without entering agents' information sets. The demonstrated result concerns falsely imposed or incorrectly calibrated measurement error that obscures endogenous regime classification, not every legitimate use of measurement error.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "CS_Expert",
+            "question": "What manuscript evidence establishes that every one of the 20,000 posterior draws recomputed a fresh two-million-particle likelihood, rather than using a cached likelihood grid, interpolation, common random numbers, or another disclosed or undisclosed acceleration?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is favorable. Within its deliberately stylized design, the paper identifies finite-sample likelihood distortions by fixing a known DGP and varying solution approximation and measurement-error misspecification separately and jointly. Its conclusions remain an existential cautionary example rather than a general ranking of filters. Novelty is MEDIUM because the contribution is the joint comparison and interaction mechanism, not a new estimator. Insight is MEDIUM because the constraint-induced kink provides a clear economic explanation for the numerical findings. The manuscript should clarify measurement-error calibration, particle-filter numerical error, posterior implementation, and computational reproducibility. It should also narrow the information-set discussion to distinguish econometrician-only recording or aggregation noise from noisy signals observed by agents. These revisions do not overturn the headline evidence or require a new research design.",
+        "verdict": "ACCEPT"
+      },
+      "CS_Expert": {
+        "referee_acknowledgment": "The reviewers agree that the paper has a coherent factorial design, a useful kink-based economic mechanism, and a bounded methodological contribution. The principal disagreement is whether the computational evidence is documented sufficiently to support acceptance.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The no-issue assessment understates the importance of numerical-likelihood diagnostics. The paper's central evidence consists of particle-filter likelihood shapes, posterior credible sets, and Monte Carlo coverage. Without an implemented resampling rule, particle-number convergence, likelihood Monte Carlo standard errors, random-number policy, and a clear account of how the simulated likelihood enters Metropolis-Hastings, one cannot determine whether the reported distortions arise from the intended measurement-error misspecification or from particle noise and posterior-computation error. These checks are necessary for the central result, not merely reassuring additions.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 8.3,
+            "evidence": "Section 4 bases its conclusions on 100 Monte Carlo samples and likelihood contours from the particle filter, while the posterior credible sets use 20,000 random-walk Metropolis draws. The implementation details are deferred to an online appendix. As summarized in the review graph, Appendix A.2.2 uses 2,000,000 particles but leaves resampling optional and does not report the actual trigger, algorithm, seeds, likelihood-noise diagnostics, acceleration strategy, hardware, or runtime. The manuscript also does not explain whether the random-walk Metropolis procedure is valid particle marginal Metropolis-Hastings or instead treats a noisy likelihood estimate as deterministic."
+          },
+          {
+            "target_persona": "Theorist",
+            "critique": "The information-set wording is indeed only a local overclaim, but correcting it does not exhaust the required revision. The theoretical coherence of the mechanism cannot substitute for validation of the numerical pipeline that generates the likelihood modes and coverage rates. The ACCEPT verdict therefore overlooks a repairable but decision-relevant computational flaw.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.1,
+            "evidence": "The manuscript's headline empirical support is entirely computational: Figure 3 is said to establish non-additive bias, and Table 1 is said to establish persistence over 100 samples and deterioration in credible-set coverage. Yet the supplied manuscript does not provide particle-number sensitivity, repeated-likelihood variability, Monte Carlo uncertainty for coverage, or enough implementation information to reproduce those quantities."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The conclusion overgeneralizes the interpretation of observation error by suggesting that econometrician-only measurement error inherently creates an objectionable separation from agents' information and should therefore enter agents' decision problems. Recording noise, sampling error, aggregation error, and discrepancies between model concepts and published series can legitimately affect the econometrician's observation equation without being signals observed or acted upon by model agents.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.4,
+            "evidence": "Section 5 argues that measurement error in the observation equations 'divorces' the econometrician's information set from agents' information sets and suggests that agents should consider possible revisions. The experiment establishes bias when positive measurement error is falsely imposed on a DGP without such error; it does not establish that all econometrician-only observation errors are economically incoherent."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The claim that particle-likelihood diagnostics are unnecessary is not persuasive because the reported coverage and posterior summaries repeatedly evaluate a simulation-based likelihood. Particle noise, resampling choices, and random-number treatment can directly alter likelihood curvature and Metropolis-Hastings behavior, precisely the objects used to distinguish approximation error from likelihood misspecification.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Theorist",
+            "argument": "I agree with the model-theoretic assessment and the narrow information-set correction, but those points do not answer the separate computational-validity concern. The paper can be repaired within its existing model and Monte Carlo framework by documenting and validating the actual numerical procedure.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "The distinction between econometrician-only recording or aggregation noise and noisy economic signals observed by agents is correct. The conclusion should be narrowed accordingly, but this wording issue alone would not change the verdict.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The factorial Monte Carlo design does conceptually isolate solution approximation and imposed measurement-error misspecification, and the paper appropriately presents its result as a cautionary example rather than a universal theorem.",
+            "concession_type": "extension"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "Why are particle-number convergence and likelihood-noise diagnostics considered unnecessary when posterior credible sets are obtained through 20,000 Metropolis draws and the manuscript does not establish whether the simulated likelihood is fixed, refreshed, or used through a valid particle marginal Metropolis-Hastings construction?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What exact resampling algorithm and trigger were implemented, how were random numbers handled across parameter values and Metropolis iterations, and what are the particle-number sensitivity and Monte Carlo standard errors for the reported likelihood modes and coverage rates?"
+          }
+        ],
+        "final_argument_state": "The paper retains MEDIUM novelty and MEDIUM insight: its main contribution is a clear diagnostic demonstration, supported by useful intuition about a constraint-induced policy-function kink, rather than a new estimator or general theorem. The conceptual design is sound, and the information-set discussion requires only local rephrasing. However, execution of the central particle-filter and posterior computations is not documented or numerically validated sufficiently to separate the intended misspecification effects from simulation noise and implementation choices. This is a repairable substantive flaw within the current framework: exact code and configuration, resampling and random-number rules, posterior-sampling construction, hardware and runtime information, particle convergence, repeated-likelihood variability, VFI interpolation and boundary diagnostics, and Monte Carlo uncertainty should be supplied. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Theorist": {
+        "referee_acknowledgment": "The reviews agree that the manuscript's bounded contribution is a controlled demonstration of interacting solution and likelihood-specification errors, with useful intuition supplied by the constraint-induced kink. The main disagreement concerns whether incomplete computational documentation places the reported particle-filter and posterior calculations in substantive doubt.",
+        "attacks": [
+          {
+            "target_persona": "CS_Expert",
+            "critique": "The claim that the computation is literally infeasible and therefore constitutes a serious substantive flaw is stronger than the cited evidence supports. The operation count assumes that every Metropolis draw independently reruns the full particle filter for every sample, but the review itself notes that caching, likelihood-grid interpolation, parallelization, or other acceleration is undisclosed rather than affirmatively absent. This establishes a reproducibility and reporting deficiency, not by itself that the numerical results are invalid.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.0,
+            "evidence": "The manuscript studies a scalar parameter gamma with all nuisance parameters fixed, making precomputation or interpolation particularly plausible. No manuscript evidence cited by the review states that all 20,000 posterior draws used fresh, independent evaluations with two million particles. Moreover, the qualitative solution-error result and benchmark likelihood are obtained through value-function iteration and the inversion filter rather than particle MCMC."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "CS_Expert",
+            "argument": "The omitted resampling, random-number, interpolation, runtime, and particle-convergence details should be supplied, especially because credible-set coverage depends on stable likelihood evaluation. Nevertheless, omission of those implementation details does not establish that particle noise materially altered the modes or coverage, and it does not undermine the analytic mechanism or the inversion-filter benchmark. The appropriate response is a focused reproducibility revision and numerical-error diagnostic, not treating the paper's central economic argument as presently refuted.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "CS_Expert",
+            "reason": "The manuscript should document the actual acceleration strategy, resampling rule, random-number treatment, VFI interpolation, boundary behavior, and whether posterior simulation used a valid particle-marginal method or a fixed/interpolated likelihood. Particle-number convergence and Monte Carlo uncertainty for coverage would materially improve auditability.",
+            "concession_type": "extension"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "CS_Expert",
+            "question": "Is there affirmative manuscript evidence that every posterior proposal reruns a fresh noisy particle filter, rather than using cached or interpolated likelihood evaluations, and that the implemented sampler is ordinary noisy Metropolis rather than particle marginal Metropolis-Hastings?"
+          }
+        ],
+        "final_argument_state": "The core execution remains conceptually sound: the known DGP, inversion-filter benchmark, and factorial variation of solution and observation-equation errors support the paper's existential claim within the calibrated model. The computational implementation is insufficiently documented and deserves explicit convergence and reproducibility evidence, but the current record does not show that numerical noise invalidates the reported patterns. Novelty and insight are both MEDIUM: the individual algorithms are established, while the joint comparison and regime-classification mechanism provide a bounded but worthwhile contribution. The conclusion should also narrow its information-set criticism by distinguishing falsely imposed measurement error from legitimate econometrician-only recording, sampling, aggregation, or model-data mapping error. These are limited reporting and claim-calibration revisions rather than a demonstrated failure of the work.",
+        "verdict": "ACCEPT"
+      }
+    },
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The CS_Expert correctly identifies missing numerical-likelihood and posterior-implementation diagnostics that materially affect reproducibility. The Theorist correctly distinguishes this reporting deficiency from affirmative evidence that the computations are invalid and also correctly supports narrowing the information-set claim.",
+        "attacks": [
+          {
+            "target_persona": "CS_Expert",
+            "critique": "The review overclassifies incomplete computational disclosure as a serious substantive flaw in the work. The manuscript does not reveal whether posterior calculations used fresh stochastic likelihood estimates, fixed random numbers, cached likelihoods, interpolation over the scalar gamma grid, or another deterministic approximation. Consequently, an invalid Metropolis-Hastings implementation is possible but not established. Missing diagnostics justify a focused reporting and robustness requirement, not the conclusion that the central numerical result is presently in serious doubt.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 4.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.0,
+            "evidence": "The manuscript states that only gamma varies while all nuisance parameters remain fixed, displays direct likelihood contours, and separately reports 20,000 random-walk Metropolis draws for credible sets. This one-dimensional design permits grid evaluation, caching, interpolation, or fixed-random-number likelihood evaluation. No cited manuscript statement establishes that a noisy particle likelihood was independently recomputed and naively inserted into every Metropolis-Hastings acceptance ratio."
+          },
+          {
+            "target_persona": "CS_Expert",
+            "critique": "The claim that the paper's central evidence is entirely dependent on posterior computation is too broad. Posterior credible-set coverage does require clarification of the likelihood treatment, but the headline interaction is also presented through direct likelihood comparisons under a factorial design and an economic mechanism tied to the constraint-induced kink. Potential posterior-simulation error would weaken the coverage exercise without automatically eliminating the likelihood-shape evidence.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 7.5,
+            "evidence": "Section 4 first compares likelihood contours while varying solution error and assumed measurement error separately and jointly. It then uses Figure 4 to explain how measurement error changes inference about the location and shape of the kinked consumption rule. Table 1 and its Metropolis-based credible sets are additional evidence rather than the sole basis for the interaction claim."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "CS_Expert",
+            "argument": "Particle-number sensitivity, repeated likelihood evaluations at selected gamma values, the implemented resampling and random-number rules, and an explicit statement of whether posterior sampling is pseudo-marginal or based on a fixed numerical likelihood should be reported. These checks are especially important for the credible-set coverage results. However, absent affirmative evidence of appreciable likelihood noise or an invalid acceptance ratio, the omission is a reproducibility and auditability deficiency rather than a demonstrated argument-damaging defect.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "CS_Expert",
+            "argument": "Monte Carlo uncertainty for coverage rates should be supplied, but with 100 repetitions its binomial standard error is at most approximately five percentage points and approximately three percentage points near 90 percent coverage. This uncertainty may qualify close comparisons but is unlikely to explain the manuscript's described dramatic coverage deterioration.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "CS_Expert",
+            "reason": "The manuscript should disclose the actual particle-filter resampling rule, particle count and convergence checks, likelihood variability, random-number policy, posterior-sampling construction, and any caching or interpolation. Without these details, the credible-set calculations are not fully reproducible and their numerical accuracy cannot be independently verified.",
+            "concession_type": "extension"
+          },
+          {
+            "attacker_persona": "Theorist",
+            "reason": "The conclusion should distinguish falsely imposed measurement error from legitimate econometrician-only recording, sampling, aggregation, revision, and model-data mapping errors. The experiment does not establish that every observation equation separating econometrician and agent information sets is incoherent.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "CS_Expert",
+            "question": "What affirmative evidence in the supplied manuscript, rather than an absence of disclosure, establishes that fresh noisy particle-likelihood estimates were inserted into an ordinary Metropolis-Hastings acceptance ratio?"
+          },
+          {
+            "target_persona": "CS_Expert",
+            "question": "Would documented fixed-random-number or grid-based likelihood evaluation, together with particle-convergence and repeated-likelihood diagnostics, resolve the objection without changing the model, estimand, or Monte Carlo design?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is favorable but conditional on focused numerical documentation. The known VFI DGP, absence of measurement error in that DGP, fixed nuisance parameters, and separate and joint variation of solution and observation-equation errors form a coherent factorial Monte Carlo design. The constraint-induced kink supplies a credible mechanism for the direction and interaction of the distortions. Numerical-likelihood and posterior details are insufficiently reported, especially for credible-set coverage, but the record does not affirmatively establish particle noise or invalid posterior computation. Novelty is MEDIUM because the contribution combines established solution and filtering methods to study their interacting errors rather than proposing a new estimator. Insight is MEDIUM because the regime-classification mechanism is economically clear but demonstrated only in a stylized calibration. The information-set discussion needs local narrowing, and computational diagnostics should be added. These are minor revisions rather than a demonstrated substantive failure, so the verdict remains ACCEPT.",
+        "verdict": "ACCEPT"
+      },
+      "CS_Expert": {
+        "referee_acknowledgment": "The peer responses correctly distinguish an undocumented implementation from a demonstrated computational failure. I therefore withdraw any implication that operation counts alone establish infeasibility or invalidity. The remaining concern is narrower: the supplied manuscript does not provide enough numerical validation to audit the particle-filter likelihoods and posterior coverage results on which the joint-error finding substantially relies.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The ACCEPT assessment places too much burden on the referee to prove that an undisclosed numerical implementation failed. Because measurement-error misspecification is studied through particle-filter likelihoods, the authors must demonstrate that particle noise and random-number handling are negligible relative to the reported changes in likelihood location and curvature. This does not establish that the results are wrong, but it leaves a central component of the evidence insufficiently validated.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.0,
+            "evidence": "Section 4 draws conclusions about likelihood modes, non-additive bias, and credible-set coverage from particle-filter evaluations over 100 simulated samples. Footnote 21 reports 20,000 random-walk Metropolis draws with 10,000 discarded, but the supplied manuscript reports no particle-number sensitivity, repeated likelihood evaluations, likelihood Monte Carlo standard errors, resampling implementation, random-number policy, or explanation of how a simulation-based likelihood is handled inside Metropolis-Hastings."
+          },
+          {
+            "target_persona": "Theorist",
+            "critique": "The analytical intuition and inversion-filter benchmark do not fully validate the particle-filter evidence. The inversion filter establishes a benchmark without imposed measurement error, whereas the estimated effects of positive measurement error and its interaction with the OccBin approximation are represented by particle-filter contours and posterior coverage calculations. Numerical validation is therefore needed for the specific comparisons supporting the joint-error claim.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.3,
+            "barrier_category": "REVISION",
+            "confidence": 7.8,
+            "evidence": "Figure 3 is described as comparing inversion-filter benchmarks against particle-filter likelihoods with 5%, 10%, and 20% measurement error, while Table 1 summarizes resulting posterior percentiles and coverage. The policy-function kink explains the direction of the proposed mechanism, but it cannot establish that the reported numerical magnitudes and coverage deterioration are insensitive to particle-filter approximation."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "Caching, interpolation, parallelization, or fixed random numbers could indeed make the calculations feasible, so computational expense is not evidence of invalidity. The concern instead concerns evidentiary sufficiency: whichever strategy was actually used must be disclosed and checked because interpolation error, particle noise, and pseudo-marginal versus fixed-approximation treatment can affect the likelihood curvature and posterior coverage being reported.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The requested checks remain entirely within the existing model and Monte Carlo design. Reporting repeated-likelihood variability, particle-count convergence, the actual posterior construction, and Monte Carlo uncertainty would either validate the present findings or reveal the need to recompute them; no broader economic model or new identification design is required.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I concede that the supplied evidence does not justify claiming that the computation was infeasible, that every posterior draw necessarily reran a full particle filter, or that an invalid Metropolis-Hastings algorithm was actually used. Those possibilities are undisclosed rather than affirmatively ruled out.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I concede that the factorial Monte Carlo design, accurate-solution benchmark, and policy-function kink provide a coherent mechanism and meaningful evidence independent of posterior MCMC. The computational concern places the reported particle-based magnitudes and coverage in doubt, not the logical possibility of the mechanism.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The conclusion should distinguish falsely imposed measurement error from legitimate econometrician-only recording, sampling, aggregation, revision, or model-to-data mapping error. The experiment does not establish that every observation equation separating agents' and econometricians' information sets is incoherent.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "What evidence in the supplied manuscript establishes that particle-filter approximation error is small relative to the shifts in likelihood modes and curvature used to support the interaction result?"
+          },
+          {
+            "target_persona": "Theorist",
+            "question": "Given that the inversion filter does not generate the positive-measurement-error posterior coverage results, what feature of the analytical mechanism independently validates the reported numerical coverage rates?"
+          }
+        ],
+        "final_argument_state": "The paper has MEDIUM novelty and MEDIUM insight. Its contribution is not a new solution or filtering algorithm, but a useful factorial demonstration that solution approximation and falsely imposed measurement error can interact in a model with an occasionally binding constraint. The constraint-induced kink supplies clear economic intuition, and the known-DGP design is conceptually sound. I withdraw the stronger allegation that the computation was shown to be infeasible or invalid. Nevertheless, the supplied manuscript does not document or validate the particle-filter and posterior calculations sufficiently to audit the likelihood curvature, interaction magnitude, and credible-set coverage central to its evidence. The authors should report the actual resampling and random-number rules, likelihood treatment inside Metropolis-Hastings, any caching or interpolation, particle-count convergence, repeated-likelihood variability, VFI interpolation and boundary diagnostics, runtime configuration, and Monte Carlo uncertainty for coverage. The information-set discussion also needs a local rephrasing to distinguish falsely imposed measurement error from legitimate econometrician-only observation noise. Because the numerical validation is a repairable within-framework requirement rather than an optional extension, the verdict remains RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Theorist": {
+        "referee_acknowledgment": "The review graph correctly identifies the main dispute: whether incomplete particle-filter documentation is evidence of a substantive computational defect or a reporting and reproducibility deficiency. It also converges on the need to narrow the manuscript's information-set argument.",
+        "attacks": [
+          {
+            "target_persona": "CS_Expert",
+            "critique": "The computational omissions do not, on the current evidence, justify classifying the work itself as seriously flawed. The manuscript's benchmark likelihood uses value-function iteration with the inversion filter, and the solution-error comparison can be formed without particle MCMC. Particle-filter implementation choices are central to auditing the measurement-error and coverage results, but no affirmative evidence shows that particle noise, resampling, or an invalid Metropolis construction generated the reported qualitative patterns. The appropriate classification is a limited reproducibility and numerical-validation deficiency unless diagnostics reveal material instability.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 4.0,
+            "barrier_category": "MINOR",
+            "confidence": 8.0,
+            "evidence": "Section 4 defines a known DGP, fixes nuisance parameters at their true values, and uses the VFI/inversion-filter likelihood as the benchmark. Figure 3 separately varies solution approximation and imposed measurement error, while the kinked policy function supplies a mechanism for the direction of bias. The manuscript omits enough computational detail to prevent full replication, but it contains no reported convergence failure or evidence that simulation noise is comparable to the likelihood differences under discussion."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The conclusion should not characterize econometrician-only observation error as generally conceptually objectionable or imply that such error must enter agents' decision problems. Recording, sampling, aggregation, revision, and model-to-data discrepancies can legitimately affect observed series without being signals available to model agents. The demonstrated warning applies to falsely imposed or incorrectly calibrated measurement error that obscures endogenous regime classification.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.8,
+            "evidence": "Section 5 says that observation-equation measurement error 'divorces' the econometrician's information set from agents' information sets and suggests agents should account for revisions. The Monte Carlo DGP instead assumes no measurement error and demonstrates distortion when positive error is imposed; it does not analyze all economically legitimate sources of observation error."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "CS_Expert",
+            "argument": "The requested resampling rule, random-number policy, likelihood-variance estimates, particle-count sensitivity, posterior construction, interpolation or caching details, and runtime information are valuable and should be reported. However, their omission does not itself demonstrate that the likelihood modes or coverage calculations are contaminated. The benchmark likelihood and economic mechanism are independent of particle MCMC, and the factorial design gives a coherent interpretation to the reported comparisons. A substantive-flaw classification requires evidence of material numerical instability or an invalid implemented algorithm, not merely uncertainty about undisclosed implementation details.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "CS_Expert",
+            "reason": "Because the measurement-error and credible-set results depend on simulation-based likelihood evaluation, the manuscript should provide particle-number convergence, repeated likelihood evaluations, Monte Carlo uncertainty for coverage, the implemented resampling and random-number rules, and a precise explanation of how the likelihood was used in posterior simulation.",
+            "concession_type": "extension"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The information-set discussion should explicitly distinguish falsely imposed measurement error from legitimate recording, sampling, aggregation, revision, and model-data mapping errors that need not enter agents' information sets.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "The surviving execution assessment is favorable but conditional on improved computational disclosure. The known-DGP design, inversion-filter benchmark, and separate and joint variation of solution and observation-equation errors coherently support an existential cautionary example within the calibrated consumption model. The record does not affirmatively establish that particle noise or posterior-computation error invalidates the results, although convergence diagnostics and implementation details are needed for auditability. Novelty is MEDIUM because the contribution lies in comparing established solution and likelihood methods and exposing their interaction rather than proposing a new estimator. Insight is MEDIUM because the constraint-induced kink and resulting regime-classification problem provide a clear economic mechanism for the numerical bias. The conclusion must narrow its information-set criticism, but this is a local rephrasing rather than a failure of the headline analysis. With these limited revisions, the work is sound enough for ACCEPT.",
+        "verdict": "ACCEPT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper is a controlled cautionary exercise showing that solution approximation and a misspecified observation equation can interact non-additively in likelihood-based inference for a model with an occasionally binding borrowing constraint. The known DGP, fixed nuisance parameters, inversion-filter benchmark, and factorial comparison of errors provide a coherent design. The constraint-induced kink supplies an economically intelligible mechanism linking measurement error, regime classification, and inference about risk aversion. Novelty is MEDIUM: the individual solution and filtering methods are established, while the contribution lies in their joint comparison and the documented interaction. Insight is also MEDIUM: the mechanism is clear and useful, but it is demonstrated in one stylized calibration rather than established as a general theorem.\n\nThe substantive flaw is not a demonstrated computational failure; the record does not establish that the calculations were infeasible, that every posterior proposal reran a fresh two-million-particle filter, or that an invalid Metropolis algorithm was used. Those stronger critiques were successfully defended. The unresolved and conceded problem is instead evidentiary sufficiency. The manuscript does not disclose or validate enough of the numerical pipeline to determine whether particle-filter approximation, initialization, interpolation, boundary truncation, resampling, or random-number treatment materially affects the likelihood curvature, posterior summaries, and coverage rates that support the quantitative findings. In particular, the actual resampling rule is unspecified; the treatment of the simulation-based likelihood inside random-walk Metropolis is unclear; particle-number sensitivity and repeated-likelihood variability are absent; the VFI implementation does not report interpolation or boundary-hit diagnostics; and the inversion and particle filters do not obviously use comparable initialization. Given the stated two-million-particle calculation, 20,000 posterior draws, and 100 Monte Carlo samples, the actual acceleration and computational strategy must also be documented. These omissions are repairable within the existing design, but they concern central evidence rather than an optional extension and therefore warrant major revision.\n\nThere is no unresolved blocker and no need for a new economic model or identification strategy. Nor is there a substantial-rephrasal issue affecting the central claim. The principal wording issue is minor but important: the conclusion overgeneralizes when it suggests that econometrician-only measurement error inherently creates an objectionable separation from agents' information sets. The experiment shows distortion when measurement error is absent from the DGP but imposed in estimation, or more generally when it is misspecified or miscalibrated. It does not show that recording, sampling, aggregation, revision, or model-to-data mapping errors must enter agents' decision problems. The paper should preserve its appropriately bounded, existential interpretation and avoid universal rankings of filters or solution methods. No additional extensions are required beyond validation and disclosure of the computations already central to the paper.",
+    "official_letter_to_the_author": "Dear Authors,\n\nThe manuscript offers a coherent and potentially useful methodological warning. Its strongest contribution is the controlled demonstration that solution approximation error and misspecification of measurement error can interact in a nonlinear model with an occasionally binding constraint. The design is well organized: the data-generating process uses the value-function-iteration solution without measurement error; nuisance parameters are fixed at their true values; the inversion filter supplies a benchmark; and the experiment varies solution and observation-equation errors separately and jointly. The kinked consumption rule also gives the numerical findings an economic mechanism rather than leaving them as an unexplained computational pattern.\n\nOur decision is MAJOR REVISION REQUIRED. The central issue is the validation and documentation of the numerical evidence. This decision should not be read as a finding that your implementation is invalid. The record does not establish that the computation was infeasible or that the particle likelihood was necessarily mishandled. However, the manuscript presently does not provide enough information to audit the particle-filter likelihoods, posterior credible sets, and Monte Carlo coverage results. Because these quantities materially support the paper's conclusions, the missing information is substantive rather than merely cosmetic.\n\nA revision should state exactly what was implemented. Please specify the particle-filter resampling algorithm and trigger; initialization; random-number or common-random-number policy; and whether likelihood evaluations were recomputed, fixed, cached, interpolated, or otherwise accelerated. Explain precisely how the simulation-based likelihood enters the random-walk Metropolis procedure, including whether the sampler is pseudo-marginal or instead targets a fixed numerical approximation. Report the hardware, parallelization, runtime, and configuration needed to reconcile the stated particle count with the Monte Carlo and posterior exercises. Exact executable code and configuration files would be the clearest way to make the analysis reproducible.\n\nThe revision should also provide numerical validation. At selected parameter values, report repeated-likelihood variability and particle-number sensitivity sufficient to show that simulation error is small relative to the shifts in likelihood location and curvature under discussion. Report Monte Carlo uncertainty for the coverage statistics. For the value-function solution, document interpolation, grid-boundary behavior or boundary-hit frequencies, and sensitivity to the 15-node income discretization where relevant. Clarify and, if necessary, harmonize the initialization used by the inversion and particle filters. If the computation was not performed literally as the current appendix suggests, correct the description and report the actual procedure.\n\nPlease also narrow the conclusion's information-set argument. Your experiment establishes the consequences of imposing measurement error that is absent from, or incorrectly calibrated relative to, the DGP, especially when it obscures endogenous regime classification. It does not establish that all econometrician-only observation errors are economically incoherent. Recording, sampling, aggregation, revision, and model-to-data mapping noise may legitimately affect observed series without entering agents' information sets. This is a local conceptual correction and does not require redesigning the experiment.\n\nFinally, keep the contribution calibrated to what the design establishes: a cautionary example showing that the interaction can occur in this model, not a universal quantitative theorem or general ranking of solution and filtering methods. Please clarify how the fixed measurement-error variance is calibrated and whether it remains numerically constant as gamma varies, and describe estimates under misspecification as finite-sample estimates or pseudo-true targets as appropriate.\n\nThe revision path is focused. The economic model, factorial design, and central mechanism need not be replaced. What is required is a transparent and validated account of the computations supporting the quantitative claims, together with a narrower interpretation of observation error.",
+    "minimum_viable_revision_path": "1. Fully document the implemented particle filter: particle count, initialization, resampling algorithm and trigger, random-number policy, and all caching, interpolation, fixed-random-number, or other acceleration procedures.\n2. Explain the posterior target and algorithm exactly: state whether the random-walk Metropolis exercise is particle marginal Metropolis-Hastings or uses a fixed numerical likelihood, and show that the acceptance calculation is valid for the stated target.\n3. Supply reproducibility materials or equivalent detail, including executable code and configurations, hardware, parallelization, seeds where appropriate, and runtimes. Correct any discrepancy between the literal appendix description and the procedure actually used.\n4. Validate the particle likelihood with particle-count sensitivity and repeated evaluations at representative gamma values. Report likelihood variability or Monte Carlo standard errors relative to the mode and curvature differences used in the argument.\n5. Report uncertainty for the Monte Carlo coverage estimates and verify that the qualitative coverage deterioration is not driven by simulation error.\n6. Document VFI interpolation, sensitivity to the income discretization, debt-grid boundary behavior or boundary-hit frequencies, and any relevant grid checks.\n7. Clarify and make comparable the initialization of the inversion and particle filters, or demonstrate that initialization differences do not drive the comparisons.\n8. Clarify calibration of the imposed measurement-error variance, including whether it is held numerically fixed as gamma varies, and label inferential targets under misspecification appropriately.\n9. Rephrase the information-set discussion to distinguish falsely imposed or miscalibrated measurement error from legitimate econometrician-only recording, sampling, aggregation, revision, or model-data mapping noise.\n10. Retain the bounded claim that the interaction can occur in this calibrated example; avoid universal rankings or implications not established by the experiment. No new model, estimator, or broad extension is required.",
+    "constructive_summary": "The paper has a sound conceptual core and a promising, bounded contribution. Its factorial Monte Carlo design and kink-based mechanism make a persuasive case for studying solution accuracy and likelihood specification jointly. The principal weakness is that the particle-filter and posterior computations underlying the quantitative magnitudes and coverage results are not sufficiently documented or validated. This is a repairable substantive flaw, not an unresolved blocker or proof that the results are wrong. A successful revision can preserve the existing model and research design while making the numerical pipeline reproducible, demonstrating that simulation and discretization errors are small relative to the reported effects, and narrowing the conclusion's claim about econometrician-only measurement error. Novelty and insight are both moderate: the paper does not introduce a new estimator or general theorem, but it offers a useful diagnostic comparison and an economically clear explanation of how regime uncertainty can distort structural inference."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Econometrician': 0.5, 'CS_Expert': 0.3, 'Theorist': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Econometrician→CS_Expert: severity 4.0/10; category MINOR; type substantive_flaw; issue substantive_flaw; confidence 7.5/10 → DEFENDED. A matching defense was recorded.\n  • CS_Expert→Econometrician: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.3/10 → DEFENDED. A matching defense was recorded.\n  • CS_Expert→Theorist: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.1/10 → DEFENDED. A matching defense was recorded.\n  • CS_Expert→paper: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.4/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→CS_Expert: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.0/10 → CONCEDED. Explicit concession recorded.\n### Debate Round 2\n  • Econometrician→CS_Expert: severity 4.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.0/10 → CONCEDED. Explicit concession recorded.\n  • Econometrician→CS_Expert: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 7.5/10 → CONCEDED. Explicit concession recorded.\n  • CS_Expert→Econometrician: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → DEFENDED. A matching defense was recorded.\n  • CS_Expert→Theorist: severity 6.3/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.8/10 → DEFENDED. A matching defense was recorded.\n  • Theorist→CS_Expert: severity 4.0/10; category MINOR; type rephrasal; issue rephrasal; confidence 8.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Theorist→paper: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Econometrician→CS_Expert (DEFENDED): +0.002 to CS_Expert, -0.002 to Econometrician\n  Econometrician→CS_Expert (CONCEDED): +0.002 to Econometrician, -0.002 to CS_Expert\n  Econometrician→CS_Expert (CONCEDED): +0.001 to Econometrician, -0.001 to CS_Expert\n  CS_Expert→Econometrician (DEFENDED): +0.019 to Econometrician, -0.014 to CS_Expert\n  CS_Expert→Theorist (DEFENDED): +0.011 to Theorist, -0.008 to CS_Expert\n  CS_Expert→Econometrician (DEFENDED): +0.004 to Econometrician, -0.003 to CS_Expert\n  CS_Expert→Theorist (DEFENDED): +0.002 to Theorist, -0.002 to CS_Expert\n  CS_Expert→paper (UNANSWERED): +0.000 to CS_Expert (paper critique, discounted)\n  Theorist→CS_Expert (UNANSWERED): +0.001 to Theorist, -0.000 to CS_Expert (unanswered, discounted)\n  Theorist→paper (UNANSWERED): +0.000 to Theorist (paper critique, discounted)\n  Theorist→CS_Expert (CONCEDED): +0.001 to Theorist, -0.001 to CS_Expert\n\n## FINAL REVIEWER WEIGHTS\n  Econometrician: 0.500 +0.023 → 0.523\n  CS_Expert: 0.300 -0.028 → 0.272\n  Theorist: 0.200 +0.016 → 0.216\nNormalized final weights: {'Econometrician': 0.5178139291192474, 'CS_Expert': 0.26867732750277884, 'Theorist': 0.21350874337797388}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Econometrician: verdict=ACCEPT, novelty=MEDIUM, insight=MEDIUM, issue=no_issue, severity=2.0/10, barrier=NONE\n  CS_Expert: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.4/10, barrier=REVISION\n  Theorist: verdict=ACCEPT, novelty=MEDIUM, insight=MEDIUM, issue=rephrasal, severity=3.0/10, barrier=REPHRASAL\nRaw execution score: 0.933\nExecution penalty from surviving substantive flaws: 0.000\nExecution score: 0.933\nNovelty consensus: MEDIUM (0.450 before debate penalty; 0.450 after)\nNovelty claim counts (all personas): HIGH=0, MEDIUM=5, LOW=0\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=2, RESUBMIT=1, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 1\nSubstantial-rephrasal (central overclaim) revisions: 0\nRephrasal-only revisions: 7\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.560 + 0.099 + 0.112 = 0.770\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nRephrasal issues are reported categorically and do not reduce insight or execution scores by themselves.",
+  "score_components": {
+    "final_score": 0.7702984008745832,
+    "execution_score": 0.9328306681243054,
+    "novelty_score": 0.44999999999999996,
+    "insight_score": 0.6200000000000001,
+    "raw_execution_score": 0.9328306681243054,
+    "novelty_consensus": "MEDIUM",
+    "novelty_counts": {
+      "HIGH": 0,
+      "MEDIUM": 5,
+      "LOW": 0
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Econometrician": "ACCEPT",
+      "CS_Expert": "RESUBMIT",
+      "Theorist": "ACCEPT"
+    },
+    "adjusted_weights": {
+      "Econometrician": 0.5178139291192474,
+      "CS_Expert": 0.26867732750277884,
+      "Theorist": 0.21350874337797388
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "attack_id": "Initial audit by CS_Expert",
+        "attacker": "CS_Expert",
+        "target": "paper",
+        "severity_score": 7.4,
+        "barrier_category": "REVISION",
+        "confidence": 8.4,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Appendix A.2.2 states, \"To obtain an accurate approximation of the likelihood, we set the number of particles in our simulation to N = 2,000,000,\" and describes propagating those particles through every period. Table 1 covers T = 500, 100 Monte Carlo samples, and credible sets based on \"20,000 draws from the posterior distribution using a random walk Metropolis algorithm.\" The same appendix calls resampling an \"(Optional)\" step and says it is \"usually\" performed at unspecified thresholds rather than documenting the implemented rule. Appendix A.1 bounds debt between 25 percent below and 8 percent above steady state, uses only 15 Tauchen nodes for income, and does not report interpolation or boundary-hit frequencies. Appendix A.2.1 says the inversion filter initializes states at their true values, whereas Appendix A.2.2 initializes particle states using only a 50-period simulation, so the filters also do not obviously evaluate identically initialized likelihoods."
+      }
+    ],
+    "substantial_rephrasal_revisions": [],
+    "rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "CS_Expert",
+        "attack_id": "Econometrician→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "The manuscript states that only gamma varies while all nuisance parameters remain fixed, displays direct likelihood contours, and separately reports 20,000 random-walk Metropolis draws for credible sets. This one-dimensional design permits grid evaluation, caching, interpolation, or fixed-random-number likelihood evaluation. No cited manuscript statement establishes that a noisy particle likelihood was independently recomputed and naively inserted into every Metropolis-Hastings acceptance ratio.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "CS_Expert",
+        "attack_id": "Econometrician→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "Section 4 first compares likelihood contours while varying solution error and assumed measurement error separately and jointly. It then uses Figure 4 to explain how measurement error changes inference about the location and shape of the kinked consumption rule. Table 1 and its Metropolis-based credible sets are additional evidence rather than the sole basis for the interaction claim.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "CS_Expert",
+        "target": "paper",
+        "attack_id": "CS_Expert→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.4,
+        "evidence": "Section 5 argues that measurement error in the observation equations 'divorces' the econometrician's information set from agents' information sets and suggests that agents should consider possible revisions. The experiment establishes bias when positive measurement error is falsely imposed on a DGP without such error; it does not establish that all econometrician-only observation errors are economically incoherent.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "CS_Expert",
+        "attack_id": "Theorist→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.0,
+        "evidence": "Section 4 defines a known DGP, fixes nuisance parameters at their true values, and uses the VFI/inversion-filter likelihood as the benchmark. Figure 3 separately varies solution approximation and imposed measurement error, while the kinked policy function supplies a mechanism for the direction of bias. The manuscript omits enough computational detail to prevent full replication, but it contains no reported convergence failure or evidence that simulation noise is comparable to the likelihood differences under discussion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.8,
+        "evidence": "Section 5 says that observation-equation measurement error 'divorces' the econometrician's information set from agents' information sets and suggests agents should account for revisions. The Monte Carlo DGP instead assumes no measurement error and demonstrates distortion when positive error is imposed; it does not analyze all economically legitimate sources of observation error.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "CS_Expert",
+        "attack_id": "Theorist→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "The manuscript studies a scalar parameter gamma with all nuisance parameters fixed, making precomputation or interpolation particularly plausible. No manuscript evidence cited by the review states that all 20,000 posterior draws used fresh, independent evaluations with two million particles. Moreover, the qualitative solution-error result and benchmark likelihood are obtained through value-function iteration and the inversion filter rather than particle MCMC.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "attack_id": "Initial audit by Theorist",
+        "attacker": "Theorist",
+        "target": "paper",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.3,
+        "outcome": "CONCEDED",
+        "issue_class": "rephrasal",
+        "attack_type": "rephrasal",
+        "evidence": "The abstract identifies the interaction of solution approximation errors and likelihood misspecification as the main claim. Section 2 defines the nonlinear state equation and the observation equation with measurement error. Equations (6) through (10) consistently characterize consumption, positive borrowing, the borrowing limit, the Euler equation, and complementary slackness. Section 3.2 states that the constraint binds about 60 percent of the time. Section 4.3 explicitly explains the relationship between gamma and the kinked consumption rule; Section 4.4 reports that with 5 percent measurement error alone the modal estimate is 1.34, with solution error alone it is 1.21, and with both it is 1.61. Table 1 shows increasing bias and deteriorating credible-set coverage as measurement error and solution error are combined. The interpretive qualification is prompted by the conclusion's claim that econometrician-only measurement error 'divorces' information sets and that agents should consider possible revisions, which is not necessary when the observation error represents recording, sampling, aggregation, or model-data mapping noise unavailable and irrelevant to agents."
+      }
+    ],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "attack_id": "Initial audit by CS_Expert",
+        "attacker": "CS_Expert",
+        "target": "paper",
+        "severity_score": 7.4,
+        "barrier_category": "REVISION",
+        "confidence": 8.4,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Appendix A.2.2 states, \"To obtain an accurate approximation of the likelihood, we set the number of particles in our simulation to N = 2,000,000,\" and describes propagating those particles through every period. Table 1 covers T = 500, 100 Monte Carlo samples, and credible sets based on \"20,000 draws from the posterior distribution using a random walk Metropolis algorithm.\" The same appendix calls resampling an \"(Optional)\" step and says it is \"usually\" performed at unspecified thresholds rather than documenting the implemented rule. Appendix A.1 bounds debt between 25 percent below and 8 percent above steady state, uses only 15 Tauchen nodes for income, and does not report interpolation or boundary-hit frequencies. Appendix A.2.1 says the inversion filter initializes states at their true values, whereas Appendix A.2.2 initializes particle states using only a 50-period simulation, so the filters also do not obviously evaluate identically initialized likelihoods."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "CS_Expert",
+        "attack_id": "Econometrician→CS_Expert",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 4.0,
+        "barrier_category": "MINOR",
+        "confidence": 7.5,
+        "evidence": "The manuscript describes the central estimand and factorial experiment clearly: the DGP is the value-function-iteration solution without measurement error, nuisance parameters are fixed at their true values, and likelihood contours vary the solution and observation equation separately and jointly. The CS_Expert infers repeated full particle-filter evaluations from the particle count and posterior-draw count, but cites no statement establishing that no likelihood caching, grid evaluation, interpolation, fixed-random-number method, or parallel implementation was used. Computational cost alone does not demonstrate incorrect likelihood evaluation.",
+        "outcome": "DEFENDED",
+        "outcome_reason": "A matching defense was recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "CS_Expert",
+        "target": "Econometrician",
+        "attack_id": "CS_Expert→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "Section 4 bases its conclusions on 100 Monte Carlo samples and likelihood contours from the particle filter, while the posterior credible sets use 20,000 random-walk Metropolis draws. The implementation details are deferred to an online appendix. As summarized in the review graph, Appendix A.2.2 uses 2,000,000 particles but leaves resampling optional and does not report the actual trigger, algorithm, seeds, likelihood-noise diagnostics, acceleration strategy, hardware, or runtime. The manuscript also does not explain whether the random-walk Metropolis procedure is valid particle marginal Metropolis-Hastings or instead treats a noisy likelihood estimate as deterministic.",
+        "outcome": "DEFENDED",
+        "outcome_reason": "A matching defense was recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "CS_Expert",
+        "target": "Theorist",
+        "attack_id": "CS_Expert→Theorist",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.1,
+        "evidence": "The manuscript's headline empirical support is entirely computational: Figure 3 is said to establish non-additive bias, and Table 1 is said to establish persistence over 100 samples and deterioration in credible-set coverage. Yet the supplied manuscript does not provide particle-number sensitivity, repeated-likelihood variability, Monte Carlo uncertainty for coverage, or enough implementation information to reproduce those quantities.",
+        "outcome": "DEFENDED",
+        "outcome_reason": "A matching defense was recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "CS_Expert",
+        "target": "paper",
+        "attack_id": "CS_Expert→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.4,
+        "evidence": "Section 5 argues that measurement error in the observation equations 'divorces' the econometrician's information set from agents' information sets and suggests that agents should consider possible revisions. The experiment establishes bias when positive measurement error is falsely imposed on a DGP without such error; it does not establish that all econometrician-only observation errors are economically incoherent.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "CS_Expert",
+        "attack_id": "Theorist→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "The manuscript studies a scalar parameter gamma with all nuisance parameters fixed, making precomputation or interpolation particularly plausible. No manuscript evidence cited by the review states that all 20,000 posterior draws used fresh, independent evaluations with two million particles. Moreover, the qualitative solution-error result and benchmark likelihood are obtained through value-function iteration and the inversion filter rather than particle MCMC.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "CS_Expert",
+        "attack_id": "Econometrician→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "The manuscript states that only gamma varies while all nuisance parameters remain fixed, displays direct likelihood contours, and separately reports 20,000 random-walk Metropolis draws for credible sets. This one-dimensional design permits grid evaluation, caching, interpolation, or fixed-random-number likelihood evaluation. No cited manuscript statement establishes that a noisy particle likelihood was independently recomputed and naively inserted into every Metropolis-Hastings acceptance ratio.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "CS_Expert",
+        "attack_id": "Econometrician→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "Section 4 first compares likelihood contours while varying solution error and assumed measurement error separately and jointly. It then uses Figure 4 to explain how measurement error changes inference about the location and shape of the kinked consumption rule. Table 1 and its Metropolis-based credible sets are additional evidence rather than the sole basis for the interaction claim.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "CS_Expert",
+        "target": "Econometrician",
+        "attack_id": "CS_Expert→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 4 draws conclusions about likelihood modes, non-additive bias, and credible-set coverage from particle-filter evaluations over 100 simulated samples. Footnote 21 reports 20,000 random-walk Metropolis draws with 10,000 discarded, but the supplied manuscript reports no particle-number sensitivity, repeated likelihood evaluations, likelihood Monte Carlo standard errors, resampling implementation, random-number policy, or explanation of how a simulation-based likelihood is handled inside Metropolis-Hastings.",
+        "outcome": "DEFENDED",
+        "outcome_reason": "A matching defense was recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "CS_Expert",
+        "target": "Theorist",
+        "attack_id": "CS_Expert→Theorist",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.3,
+        "barrier_category": "REVISION",
+        "confidence": 7.8,
+        "evidence": "Figure 3 is described as comparing inversion-filter benchmarks against particle-filter likelihoods with 5%, 10%, and 20% measurement error, while Table 1 summarizes resulting posterior percentiles and coverage. The policy-function kink explains the direction of the proposed mechanism, but it cannot establish that the reported numerical magnitudes and coverage deterioration are insensitive to particle-filter approximation.",
+        "outcome": "DEFENDED",
+        "outcome_reason": "A matching defense was recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "CS_Expert",
+        "attack_id": "Theorist→CS_Expert",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.0,
+        "evidence": "Section 4 defines a known DGP, fixes nuisance parameters at their true values, and uses the VFI/inversion-filter likelihood as the benchmark. Figure 3 separately varies solution approximation and imposed measurement error, while the kinked policy function supplies a mechanism for the direction of bias. The manuscript omits enough computational detail to prevent full replication, but it contains no reported convergence failure or evidence that simulation noise is comparable to the likelihood differences under discussion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.8,
+        "evidence": "Section 5 says that observation-equation measurement error 'divorces' the econometrician's information set from agents' information sets and suggests agents should account for revisions. The Monte Carlo DGP instead assumes no measurement error and demonstrates distortion when positive error is imposed; it does not analyze all economically legitimate sources of observation error.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 2,
+    "revise_count": 1,
+    "fail_count": 0
+  }
+}

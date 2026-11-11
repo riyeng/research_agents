@@ -1,0 +1,101 @@
+{
+  "duration_seconds": 411.726342,
+  "total_calls": 11,
+  "total_tokens": {
+    "input": 244384,
+    "output": 21839,
+    "thinking": 5140,
+    "total": 266223,
+    "cache_read": 0,
+    "cache_creation": 244351
+  },
+  "by_role": {
+    "Editor-Selection": {
+      "input": 7594,
+      "output": 175,
+      "thinking": 0,
+      "total": 7769,
+      "cache_read": 0,
+      "cache_creation": 7591,
+      "calls": 1
+    },
+    "Data_Scientist": {
+      "input": 33682,
+      "output": 3104,
+      "thinking": 1351,
+      "total": 36786,
+      "cache_read": 0,
+      "cache_creation": 33679,
+      "calls": 1
+    },
+    "Historian": {
+      "input": 33664,
+      "output": 2387,
+      "thinking": 443,
+      "total": 36051,
+      "cache_read": 0,
+      "cache_creation": 33661,
+      "calls": 1
+    },
+    "Policymaker": {
+      "input": 33663,
+      "output": 2326,
+      "thinking": 439,
+      "total": 35989,
+      "cache_read": 0,
+      "cache_creation": 33660,
+      "calls": 1
+    },
+    "Debater-Data_Scientist": {
+      "input": 33640,
+      "output": 3867,
+      "thinking": 865,
+      "total": 37507,
+      "cache_read": 0,
+      "cache_creation": 33634,
+      "calls": 2
+    },
+    "Debater-Historian": {
+      "input": 33636,
+      "output": 4055,
+      "thinking": 903,
+      "total": 37691,
+      "cache_read": 0,
+      "cache_creation": 33630,
+      "calls": 2
+    },
+    "Debater-Policymaker": {
+      "input": 33638,
+      "output": 4020,
+      "thinking": 1139,
+      "total": 37658,
+      "cache_read": 0,
+      "cache_creation": 33632,
+      "calls": 2
+    },
+    "Editor-In-Chief": {
+      "input": 34867,
+      "output": 1905,
+      "thinking": 0,
+      "total": 36772,
+      "cache_read": 0,
+      "cache_creation": 34864,
+      "calls": 1
+    }
+  },
+  "by_model": {
+    "gpt-5.6-sol": {
+      "input": 244384,
+      "output": 21839,
+      "thinking": 5140,
+      "total": 266223,
+      "cache_read": 0,
+      "cache_creation": 244351,
+      "calls": 11
+    }
+  },
+  "cost_by_model": {
+    "gpt-5.6-sol": 2.18252875
+  },
+  "total_cost": 2.18252875
+}

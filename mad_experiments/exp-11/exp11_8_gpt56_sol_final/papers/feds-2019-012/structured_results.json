@@ -1,0 +1,1176 @@
+{
+  "metadata": {
+    "doc_id": "feds-2019-012",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2019-012.pdf",
+    "ground_truth_tier": "Tier3",
+    "year": "2019",
+    "series": "feds",
+    "final_score": 0.622937025,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 277.20395708084106,
+    "char_count": 83188,
+    "word_count": 12391,
+    "token_usage": {
+      "duration_seconds": 277.058076,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 216577,
+        "output": 20797,
+        "thinking": 5707,
+        "total": 237374,
+        "cache_read": 0,
+        "cache_creation": 216544
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 7642,
+          "output": 183,
+          "thinking": 0,
+          "total": 7825,
+          "cache_read": 0,
+          "cache_creation": 7639,
+          "calls": 1
+        },
+        "Data_Scientist": {
+          "input": 27586,
+          "output": 2096,
+          "thinking": 420,
+          "total": 29682,
+          "cache_read": 0,
+          "cache_creation": 27583,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 27588,
+          "output": 2323,
+          "thinking": 649,
+          "total": 29911,
+          "cache_read": 0,
+          "cache_creation": 27585,
+          "calls": 1
+        },
+        "Policymaker": {
+          "input": 27567,
+          "output": 1904,
+          "thinking": 312,
+          "total": 29471,
+          "cache_read": 0,
+          "cache_creation": 27564,
+          "calls": 1
+        },
+        "Debater-Data_Scientist": {
+          "input": 31395,
+          "output": 4080,
+          "thinking": 1486,
+          "total": 35475,
+          "cache_read": 0,
+          "cache_creation": 31389,
+          "calls": 2
+        },
+        "Debater-Econometrician": {
+          "input": 31393,
+          "output": 4557,
+          "thinking": 1586,
+          "total": 35950,
+          "cache_read": 0,
+          "cache_creation": 31387,
+          "calls": 2
+        },
+        "Debater-Policymaker": {
+          "input": 31393,
+          "output": 3625,
+          "thinking": 1254,
+          "total": 35018,
+          "cache_read": 0,
+          "cache_creation": 31387,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 32013,
+          "output": 2029,
+          "thinking": 0,
+          "total": 34042,
+          "cache_read": 0,
+          "cache_creation": 32010,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 216577,
+          "output": 20797,
+          "thinking": 5707,
+          "total": 237374,
+          "cache_read": 0,
+          "cache_creation": 216544,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 1.977475
+      },
+      "total_cost": 1.977475
+    },
+    "timestamp": "2026-07-29T20:25:13.090481",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Data_Scientist": {
+      "structural_strength": "The manuscript provides an unusually transparent conceptual lineage from handset transactions to national-accounts categories. Table 4 explicitly maps four purchase arrangements into company reports, the Service Annual Survey, the Economic Census/PCE, and the proposed allocation, while Sections 2–4 separately document the IDC model definition, revenue weighting, price transformations, and hedonic specifications.",
+      "domain_audit": "The smartphone price-index evidence is reasonably well constructed, but the second headline result—the estimated reallocation of spending and resulting four-percentage-point increase in real PCE growth—depends on an insufficiently validated join across datasets with different populations, products, price concepts, and collection methods. The paper multiplies the SAS equipment-revenue share by the ratio of the IDC and J.D. Power average smartphone prices and interprets the resulting adjusted share as the full equipment share. Yet IDC includes consumer and commercial sales, J.D. Power is a consumer survey of recalled out-of-pocket prices, the SAS ratio covers all subscribers and telecommunications equipment rather than smartphones alone, and the two price averages are not shown to use common models, carriers, transaction dates, or purchaser weights. Consequently, model-mix, channel, commercial-customer, recall, and zero-price differences can enter the IDC/J.D. Power ratio alongside subsidies. The manuscript acknowledges portions of this mismatch but nevertheless treats the entire ratio as an adjustment factor. Because this factor raises the estimated equipment share from an unadjusted average near 13 percent to 28 percent and directly drives the adjusted PCE deflator, the central 4-percentage-point result is not identified by the presented data construction. This is repairable within the framework through harmonization, validation, and informative bounds rather than requiring a different research design.",
+      "best_case_contribution": "The paper combines proprietary handset data with national-accounts source data to produce a quarterly quality-adjusted mobile-phone price index for 2010–2018 and a practical framework for recognizing that bundled wireless bills can contain implicit handset payments. Its preferred overall mobile-phone index declines about 17 percent annually, and the accounting exercise plausibly shows that applying only a wireless-service deflator to the bundled category understates real consumption growth.",
+      "minimum_viable_revision": "Provide an auditable, apples-to-apples construction of the subsidy factor: harmonize IDC and J.D. Power by handset model or tightly defined device class, quarter, carrier/channel, and consumer status; document weights, unmatched observations, zero-price treatment, and missingness; and demonstrate that the resulting gap tracks contract subsidies rather than compositional differences. Replace the all-customer SAS allocation with consumer-specific information if available, or report defensible bounds and sensitivity analyses for differences between consumer and commercial equipment shares and for non-phone equipment. Propagate those alternatives through Tables 5 and 7. If harmonization is impossible, present the PCE estimate as a scenario or bounded calculation rather than a point correction, while retaining the independently supported price-index contribution.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 8.0,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The concern targets one of the paper's two headline contributions and the abstract's quantitative claim that real PCE in Cellular Telephone Services grew four percentage points faster than published. The adjustment is mechanically driven by a cross-dataset ratio whose comparability has not been established, so the magnitude—and potentially much of the correction—is in real doubt. The separate hedonic price-index result remains informative, and the allocation framework can be repaired using the existing data sources through matched comparisons, validation, or bounds. Therefore this is a serious but nonfatal within-framework revision rather than a blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "The paper uses IDC's proprietary Worldwide Quarterly Mobile Phone Tracker, reportedly not previously used for this purpose, to estimate quarterly U.S. quality-adjusted smartphone prices and combine them with feature-phone prices for 2010–2018.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "Section 1 states that the IDC data track model-level average selling prices and units and 'have not previously been used to develop hedonic price indexes.' The resulting index is quarterly, directly measures new-phone prices, uses revenue weights, and is compared with Byrne and Corrado's index based partly on used-phone prices. This is a genuine but bounded measurement contribution using established hedonic methods."
+        },
+        {
+          "claim_type": "methodological",
+          "description": "The paper proposes a framework for separating handset and wireless-service expenditures in bundled contracts by combining SAS equipment revenue with a subsidy adjustment inferred from IDC and J.D. Power price concepts.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Section 1 says the authors know of no previous effort to separate the phone and service components of wireless-service-plan spending. Tables 4–7 translate the proposed allocation into separate deflators and real PCE estimates. The accounting framework is novel and useful, although its empirical calibration needs stronger data harmonization."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument is clearly divided into the quality-adjustment problem and the bundled-spending problem, and the transaction examples make the national-accounting implications intuitive. The exposition does not fully illuminate the statistical consequences of joining datasets with different populations and price concepts, however, and it moves too quickly from a plausible price-gap interpretation to a point estimate of subsidies.",
+        "supporting_evidence": "Sections 3 and 4 connect matched-model attrition, hedonic controls, revenue weighting, and model entry to the resulting indexes, while Table 4 gives a concrete $199-versus-$499 example. By contrast, Section 5 acknowledges that SAS coverage includes all subscribers and all equipment and that some IDC/J.D. Power differences may reflect coverage, but it does not decompose or bound these effects before using the full ratio in line 6 of Table 5.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper's phone-price index is fairly convincing: smartphones stayed near the same sticker price while becoming much more capable, so their quality-adjusted price fell rapidly. The shakier part is the estimate of how much of a wireless bill was really payment for the phone. The authors compare average prices from two sources, but those sources do not necessarily contain the same phones, customers, or sales channels. They treat essentially all of the difference as a carrier subsidy. Since that assumption is what produces the reported four-percentage-point increase in real spending growth, the estimate needs a matched comparison or credible upper and lower bounds.",
+      "confidence_score": 8.5,
+      "source_evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services 'increased 4 percentage points faster than is reflected in published data.' Section 2 states that IDC contains both consumer and commercial sales and that roughly 90 percent of units are consumer sales. Section 5 states that J.D. Power records consumers' reported upfront price, whereas IDC records a no-contract price, but also concedes that 'a portion of the difference in average prices between the datasets could reflect differences in coverage.' The SAS discussion explicitly says its equipment line includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' Despite these mismatches, Table 5 line 6 is constructed simply as the IDC/J.D. Power average-price ratio in line 5 multiplied by the SAS equipment share in line 4. This increases the average inferred equipment share from 13.2 percent to 28.0 percent. Table 7 then uses that share to produce a deflator declining 7.7 percent annually instead of 3.5 percent and the headline 4.2-percentage-point difference in real PCE growth.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Econometrician": {
+      "structural_strength": "The price-index analysis is unusually transparent about the consequences of alternative index formulas and specifications. Table 2 compares unadjusted average prices, unweighted and revenue-weighted matched-model indexes, time-invariant and adjacent-quarter hedonic indexes, and manufacturer-specific estimates. This makes clear that weighting and coefficient stability are economically important rather than hiding specification sensitivity.",
+      "domain_audit": "The paper is descriptive rather than causal, and its hedonic analysis supports a credible descriptive conclusion that quality-adjusted mobile-phone prices fell rapidly. The principal econometric problem concerns the second headline estimate: the claimed four-percentage-point correction to real PCE growth is not identified by the comparison of aggregate IDC and J.D. Power prices. IDC covers both consumer and commercial transactions, while J.D. Power is a consumer survey; the datasets need not contain the same model, carrier, contract-status, or purchaser composition. Consequently, the ratio of their aggregate average prices combines subsidies with cross-dataset composition differences. The paper nevertheless treats this ratio as an adjustment factor, multiplying it by the SAS equipment-revenue share in Table 5. SAS has still broader coverage, including all subscribers and telecommunications equipment rather than consumer smartphones alone. This mapping also relies on the unverified assumption that carriers recover the entire difference between the no-contract and upfront phone prices through service charges. The manuscript acknowledges both ingredients but does not quantify their implications. Thus, the resulting 7.7 percent deflator decline and four-percentage-point real-PCE correction should presently be interpreted as an assumption-dependent calibration, not an empirically isolated reallocation. This is material because the abstract and conclusion present that correction as a principal result. The framework can be repaired by harmonizing transaction populations or by reporting bounds and sensitivity analyses for composition and subsidy-recovery assumptions. Separately, the preferred hedonic index is reasonable but should disclose uncertainty around the 2.6-percentage-point effect of the introduction-quarter dummy, since that dummy may remove either temporary novelty pricing or genuine quality-adjusted gains from model entry.",
+      "best_case_contribution": "The paper provides a useful new quarterly, revenue-weighted quality-adjusted mobile-phone price index based directly on new-phone transactions and proposes the first systematic national-accounts framework in the manuscript's cited literature for separating device payments from wireless-service payments. Its strongest defensible finding is that quality-adjusted smartphone and mobile-phone prices declined at double-digit annual rates during 2010-2018, while the proposed PCE reallocation illustrates that bundled contracts could materially affect measured real consumption.",
+      "minimum_viable_revision": "Retain the hedonic price-index contribution, but revise the PCE exercise so the IDC/J.D. Power ratio is not treated as a directly identified subsidy. At minimum, state the exact assumptions required for multiplying that ratio by the SAS share, reconcile or adjust the populations by consumer status, phone type, model mix, carrier, and contract status where the existing data permit, and report sensitivity ranges for incomplete subsidy recovery and residual composition differences. Recast the four-percentage-point result as a calibrated estimate unless those comparisons validate the identifying assumptions. Also report uncertainty or specification ranges for the final deflator and real-PCE calculations, including the introduction-quarter treatment.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.5,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The issue affects one of the paper's two headline contributions and can materially change the estimated PCE correction: an unmatched ratio of aggregate prices does not isolate a subsidy without comparable transaction populations and a recovery assumption. The mobile-phone price-index result likely survives, and the spending-allocation analysis can be repaired within the current framework using harmonization, validation, bounds, or explicit calibration language. It is therefore a serious but repairable substantive flaw rather than a blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "Develops new quarterly quality-adjusted U.S. smartphone and mobile-phone price indexes using model-level IDC prices, units, revenue weights, and characteristics for new phones.",
+          "significance": "MEDIUM",
+          "confidence": 8.5,
+          "supporting_evidence": "The manuscript states that the IDC data had not previously been used to develop hedonic price indexes and contrasts the resulting index with Byrne and Corrado (2015), whose index used a mixture of sources including used-phone prices. The contribution is bounded because hedonic and matched-model methods are established, but direct new-phone data, quarterly frequency, broad model coverage, and revenue weights provide a genuine measurement advance."
+        },
+        {
+          "claim_type": "methodological",
+          "description": "Proposes a national-accounts method for separating device spending from wireless-service spending when phones are bundled with service contracts.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "The paper states that it knows of no prior effort to separate phone and service components of wireless-plan spending. It combines SAS revenue detail with IDC and J.D. Power price concepts to construct an adjusted allocation. This is a genuine new accounting application, although its quantitative implementation requires stronger validation because the three data sources cover different populations."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper offers a clear economic explanation of why bundled device and service payments matter for deflation and why nearly flat observed prices can coexist with rapid quality improvement. The argument is well organized and connects micro price measurement to PCE and productivity. It does not reach HIGH because the key assumptions translating cross-dataset price differences into subsidies are explained intuitively but not formalized enough to reveal the exact identifying restrictions and sources of uncertainty.",
+        "supporting_evidence": "Sections 2-4 move coherently from rapid changes in phone characteristics to matched-model and hedonic methods, while Section 5 uses four hypothetical transactions in Table 4 to explain the accounting problem. Tables 5-7 then trace the proposed adjustment into the PCE deflator. However, the narrative moves from the statement that coverage differences may explain a portion of the IDC-J.D. Power gap to treating the full ratio as the adjustment factor without a formal decomposition.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper convincingly shows that phones became much better even though their sticker prices changed little, so their price after adjusting for quality fell rapidly. Its estimate of how much official consumption growth is understated is less secure. It compares average prices from different datasets and assumes the whole gap represents phone discounts later repaid through service bills, but the datasets contain different buyers and potentially different phones. The authors should align those samples or show a range of results under alternative assumptions before treating the four-percentage-point correction as a measured fact.",
+      "confidence_score": 8.7,
+      "source_evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services increased four percentage points faster than published data. Section 5 states that IDC includes consumer and commercial sales, with roughly 90 percent consumer sales, whereas J.D. Power is based on consumer surveys. Footnote 31 states that SAS reselling revenue includes sales to all subscribers and all types of equipment, not just consumer mobile phones. Footnote 30 explicitly assumes that providers recoup the unpaid portion of the phone's no-contract price over the service contract and notes that they may recover less or more. Section 5 also concedes that part of the IDC-J.D. Power price difference could reflect coverage differences but then uses the full ratio in Table 5, line 5, to multiply the SAS equipment share. Table 7 reports the resulting 7.7 percent annual deflator decline and four-percentage-point real-PCE difference. For the hedonic result, Section 4 reports that excluding the model-introduction dummy slows the estimated aggregate price decline by 2.6 percentage points annually.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Policymaker": {
+      "structural_strength": "The paper traces the full measurement chain from transaction structure to nominal expenditure classification, deflator choice, and real PCE growth. In particular, Tables 4, 5, and 7 make transparent why assigning device payments to wireless services matters when device and service prices follow very different trends.",
+      "domain_audit": "The paper makes no direct regulatory or fiscal-policy recommendation; its relevant institutional implication is that BEA could revise the allocation and deflation of cellular expenditures. The smartphone price-index contribution is reasonably supported, but the proposed reallocation is presented as a correction more definitive than the evidence permits. The central adjustment multiplies the SAS equipment-revenue share by the ratio of IDC to J.D. Power average smartphone prices and interprets the entire ratio as the subsidy embedded in service payments. Yet the manuscript states that SAS equipment revenue covers all subscribers and all equipment, while the adjustment factor covers smartphones and combines datasets with different populations and price concepts. It also concedes that part of the IDC-J.D. Power price gap may reflect differences in coverage and assumes carriers recover the unpaid device price over the contract, although recovery may be higher or lower. These are not merely implementation details: they determine the estimated device share, the 7.7 percent adjusted deflator decline, and the reported four-percentage-point increase in real category growth. For official-statistics adoption, the use of licensed proprietary data also raises reproducibility, continuity, procurement, and disclosure constraints that should be explicitly addressed. The evidence supports an experimental estimate or bounded range, not yet a uniquely correct official allocation.",
+      "best_case_contribution": "The paper provides a useful experimental measurement framework showing that bundled handset subsidies can cause national accounts to misclassify device expenditure as wireless-service expenditure, and that correcting this classification could materially reduce the category's deflator and increase measured real PCE growth. It also constructs a quarterly, revenue-weighted hedonic smartphone index from previously unused IDC model data and combines it with a feature-phone index.",
+      "minimum_viable_revision": "Recast the four-percentage-point real-PCE result as an experimental estimate conditional on explicit assumptions, and provide a compact sensitivity or bounds analysis for the central allocation. At minimum, vary the fraction of the IDC-J.D. Power price gap attributed to subsidies, address the mismatch between SAS coverage and smartphone price coverage, and show how alternative assumptions about subsidy recovery and timing affect Tables 5 and 7. The paper should also state what data access, licensing, continuity, and disclosure arrangements would be required for a statistical agency to reproduce and maintain the indexes.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.5,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The concern affects one of the paper's two headline results rather than a peripheral claim. The estimated reallocation and resulting four-percentage-point growth correction rely on an unvalidated equality between an aggregate cross-dataset price ratio and the subsidy recovered through service charges. If that equality is materially wrong, the adjusted expenditure shares and deflator in Tables 5 and 7 change directly. The smartphone price index can survive, and the allocation framework can be repaired within the existing data through transparent assumptions, reconciliation, and sensitivity ranges, so this is a serious revision rather than a blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "Constructs quarterly quality-adjusted U.S. smartphone price indexes from IDC model-level prices, characteristics, units, and revenues not previously used for this purpose, finding an approximately 16 percent annual decline for smartphones over 2010Q1-2018Q1.",
+          "significance": "MEDIUM",
+          "confidence": 8.5,
+          "supporting_evidence": "The manuscript states that the IDC data had not previously been used to develop hedonic indexes and reports a preferred adjacent-quarter, revenue-weighted hedonic index in Table 2. The contribution is bounded because hedonic and matched-model methods are established and Byrne and Corrado (2015) had already produced a rapidly declining U.S. mobile-phone index, but the new data, quarterly frequency, direct new-phone prices, and revenue weights are meaningful measurement advances."
+        },
+        {
+          "claim_type": "methodological",
+          "description": "Proposes a method for separating handset expenditure from wireless-service expenditure by combining SAS revenue detail with the ratio of IDC unsubsidized prices to J.D. Power consumer-reported upfront prices.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "Sections 5 and Tables 4-7 develop a transaction-accounting framework and use it to estimate that device expenditure averaged 28 percent of the published Cellular Telephone Services category. The manuscript says it knows of no prior effort to separate these components. The approach is a genuine new combination of existing data concepts, although its identifying assumptions require revision."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript offers a clear and useful economic explanation of how handset subsidies, service contracts, accounting conventions, and divergent deflators interact. Its argument is strongest when it follows hypothetical transactions through company accounts, Census sources, and PCE. It is less illuminating about the institutional standards needed to turn an experimental estimate based on licensed data and cross-source assumptions into a sustainable official statistic.",
+        "supporting_evidence": "Table 4's four transaction scenarios clearly expose the classification problem, while Table 7 connects the reallocation to price and real-output measurement. Sections 2-4 also explain the distinction between average, matched-model, and hedonic prices. However, the implementation discussion does not systematically treat reproducibility, source continuity, revisions, procurement, or uncertainty around the allocation assumptions.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper persuasively shows that phone companies historically collected some of the price of a handset through monthly service bills, so official statistics may have treated purchases of phones as purchases of service. It also finds that phone quality improved rapidly. But its estimate of how much spending was misclassified assumes that nearly the entire price difference between two different datasets represents a handset subsidy. Because those datasets cover somewhat different transactions and populations, the exact claim that real cellular spending grew four percentage points faster is not yet firm enough for direct use in official accounts. The authors can preserve the main contribution by presenting a range of estimates and documenting what an agency would need to reproduce the measure.",
+      "confidence_score": 8.5,
+      "source_evidence": "The abstract and conclusion state that adjusted real PCE in Cellular Telephone Services increased about four percentage points faster than published data. Table 5 obtains the adjusted device share by multiplying the SAS equipment share by the IDC/J.D. Power average-price ratio, and Table 7 uses that share to construct the 7.7 percent annual deflator decline. Section 5 acknowledges that SAS reselling revenue is broader than desired because it includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' It further states that 'a portion of the difference in average prices between the datasets could reflect differences in coverage' and only then says the differences are believed to 'largely reflect discounts or cross subsidies.' Footnote 30 assumes that the provider recoups the unpaid portion over the contract while acknowledging that it may recover less or more. The paper also reports that IDC and J.D. Power data are proprietary or licensed, and its agreement prevents disclosure of one prominent manufacturer's identity.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Data_Scientist": {
+        "referee_acknowledgment": "The reviews converge on the correct decision-relevant issue: the hedonic price-index contribution is reasonably supported, whereas the headline PCE reallocation treats a cross-dataset average-price gap as a subsidy measure despite nonaligned populations and price concepts. That concern is substantive because the inferred equipment share directly determines the adjusted deflator and real-PCE result.",
+        "attacks": [
+          {
+            "target_persona": "Policymaker",
+            "critique": "The request to establish procurement, licensing, continuity, and disclosure arrangements for official-statistics production is useful implementation guidance but is outside the paper's stated empirical measurement exercise. Proprietary data can limit reproducibility without invalidating the estimates themselves, so this should not be treated as part of the publication barrier.",
+            "attack_type": "extension",
+            "issue_class": "extension",
+            "severity_score": 2.0,
+            "barrier_category": "EXTENSION",
+            "confidence": 8.0,
+            "evidence": "The manuscript identifies IDC and J.D. Power as licensed proprietary sources and describes their relevant data concepts. It does not claim to provide a procurement or operational-maintenance plan for an official statistical agency."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "The review slightly understates the manuscript's existing disclosure of sensitivity to the model-introduction treatment. The paper already reports that excluding the introduction-quarter dummy slows the annual price decline by 2.6 percentage points and explains several competing interpretations of that dummy. Further propagation would improve presentation, but the basic specification sensitivity is not hidden.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 2.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "Section 4 explicitly states that excluding the introduction-quarter dummy makes the aggregate price index fall 2.6 percentage points more slowly per year. Section 4 also discusses novelty premia, disequilibrium, early-buyer discounts, and partial-quarter observation as possible rationales."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "Operational data-access and procurement requirements concern adoption by an official agency rather than the internal validity of the research contribution. They should be labeled as an extension or implementation consideration, not a substantive defect.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the aggregate IDC/J.D. Power price ratio does not isolate contract subsidies without stronger alignment or assumptions. Differences in customer population, model and carrier mix, channel, timing, and price reporting can contaminate the ratio, while the SAS equipment category is broader still. The resulting PCE correction is therefore an assumption-dependent calibration rather than an identified point estimate.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the four-percentage-point real-PCE result should not be presented as an implementation-ready official correction unless the cross-source coverage mismatches and subsidy-recovery assumptions are validated or bounded.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "If model-level harmonization is infeasible, what minimum decomposition or bounding assumptions would you require before regarding the PCE exercise as quantitatively informative rather than purely illustrative?"
+          },
+          {
+            "target_persona": "Policymaker",
+            "question": "Would you regard a transparent experimental series with sensitivity bounds as sufficient for publication, while reserving continuity and procurement requirements for any later official adoption?"
+          }
+        ],
+        "final_argument_state": "The surviving assessment is that the quarterly smartphone and overall mobile-phone price-index work is a credible, moderately novel measurement contribution. The use of model-level IDC data, revenue weighting, adjacent-quarter hedonic regressions, explicit matched-model comparisons, and disclosed introduction-quarter sensitivity supports the conclusion that quality-adjusted handset prices declined at double-digit annual rates. Insight is MEDIUM: the paper clearly connects transaction structures, expenditure classification, and divergent deflators, but does not adequately formalize the assumptions behind the subsidy calibration. The central PCE estimate remains impaired because aggregate IDC, J.D. Power, and SAS measures do not share a demonstrated common population or product definition, so the price ratio can capture composition and reporting differences in addition to subsidies. Revision should harmonize the sources where possible, document matching and weighting, and propagate bounds for residual composition and subsidy recovery; otherwise, the four-percentage-point result must be recast as a scenario. Proprietary-data operational planning is an extension, not a publication barrier. Because the main quantitative PCE result is in serious but repairable doubt, the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph correctly identifies the central distinction between a reasonably supported hedonic price-index contribution and a substantially less identified PCE reallocation. The supplied manuscript supports the concern that aggregate IDC and J.D. Power price differences may combine subsidies with differences in customer and product composition, although some precise claims in the graph rely on tables and footnotes not included in the provided excerpt.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The proposed PCE correction does not isolate handset subsidies from cross-dataset composition effects. IDC includes consumer and commercial transactions, whereas J.D. Power is described as a consumer survey, and no model-, carrier-, channel-, or transaction-period harmonization is demonstrated before the difference in average prices is interpreted as a subsidy. Consequently, the headline four-percentage-point real-PCE adjustment is an assumption-dependent calibration rather than an identified measurement correction.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 2 states that IDC includes both consumer and commercial sales, with roughly 90 percent of units sold to consumers. Section 1 states that J.D. Power is based on consumer surveys and that the difference between IDC and J.D. Power prices provides the subsidy estimate. The supplied text does not establish common model, carrier, purchaser, or transaction weights across the two sources, yet the abstract reports a four-percentage-point correction as a principal result."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The preferred smartphone index is materially sensitive to an introduction-quarter dummy whose economic interpretation is unresolved. The manuscript offers several mutually different mechanisms—novelty premiums, disequilibrium discounts, consumer testing compensation, and partial-quarter measurement—but does not empirically distinguish them. Because excluding the dummy changes the annual decline by 2.6 percentage points, the preferred point estimate should be accompanied by a specification range and a clearer account of which entry-related price movements constitute quality-adjusted inflation.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 5.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.0,
+            "evidence": "Section 4 reports that excluding the model-introduction dummy slows the aggregate price decline by 2.6 percentage points annually. Section 4 and footnotes 23–25 supply several competing explanations for entry-quarter pricing but no test selecting among them. The double-digit decline remains robust, but the preferred 15.5 percent estimate is not sufficiently distinguished from the alternative."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "The request for procurement, licensing, source-continuity, and disclosure arrangements for official-statistics implementation is useful but lies beyond the manuscript's stated empirical measurement exercise. Proprietary-data reproducibility should be disclosed, but a full operational-adoption plan is an extension rather than a publication barrier.",
+            "attack_type": "extension",
+            "issue_class": "extension",
+            "severity_score": 2.5,
+            "barrier_category": "EXTENSION",
+            "confidence": 8.0,
+            "evidence": "The manuscript constructs experimental price indexes and a proposed allocation methodology; it does not claim to provide an operational implementation plan for a statistical agency. The IDC licensing restrictions are relevant limitations, but they do not by themselves invalidate the reported econometric exercise."
+          },
+          {
+            "target_persona": "Data_Scientist",
+            "critique": "The review's exact assertions about Table 5 line 6, Table 7, and an unadjusted 13.2 percent equipment share cannot be independently verified from the manuscript content supplied here, which ends near the beginning of Section 5. The underlying cross-source mismatch is visible and substantive, but the review should distinguish evidence present in the supplied text from details apparently taken from unavailable portions.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "The provided manuscript ends during the discussion of the first two hypothetical iPhone transactions and does not include Tables 4–7 or the cited later footnotes. The introduction does report the 28 percent average adjusted share, the 7.7 percent deflator decline, and the four-percentage-point result, but it does not display all of the exact table calculations cited in the review graph."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "Operational requirements for maintaining an official index based on licensed proprietary data are legitimate institutional considerations, but demanding a complete procurement and continuity framework extends beyond evaluating whether the manuscript's experimental measurement method is scholarly sound.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree with the central data-construction criticism: aggregate IDC and J.D. Power prices do not visibly share a common transaction population, so their difference cannot be assigned entirely to contract subsidies without harmonization, validation, or bounds.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the four-percentage-point result should be presented as an experimental, assumption-dependent estimate unless the authors validate the cross-source subsidy measure and propagate uncertainty through the PCE calculation.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Data_Scientist",
+            "question": "Which of the exact Table 5 and Table 7 calculations cited in the review can be established from the supplied manuscript excerpt, as opposed to unavailable portions of the paper?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How much of the IDC–J.D. Power average-price gap remains after matching observations by quarter, handset model or device class, carrier, consumer status, and transaction channel?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is mixed. The quarterly hedonic price-index exercise is transparent, uses economically relevant revenue weights, and robustly supports a double-digit decline in quality-adjusted mobile-phone prices, although the exact preferred rate is materially sensitive to the insufficiently validated introduction-quarter treatment. The PCE framework is conceptually useful, but its headline numerical correction is not identified by the aggregate cross-source comparison shown in the supplied text because subsidies are confounded with purchaser, model, carrier, and channel composition. Novelty is MEDIUM: the IDC-based quarterly new-phone index and bundled-spending framework are genuine but bounded applications of established methods. Insight is MEDIUM: the paper clearly links handset quality, bundling, deflators, and real PCE, but does not formalize the identifying restrictions behind the subsidy calibration. The four-percentage-point result requires substantial qualification and sensitivity analysis, while the proprietary-data implementation issue is an extension rather than a core defect. The substantive problems are serious but repairable within the existing framework through harmonization or defensible bounds, so RESUBMIT is warranted.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The Data Scientist and Econometrician correctly identify the principal weakness: the handset price-index contribution is substantially better supported than the point estimate of the PCE reallocation. The cross-source price ratio does not, as presented, isolate contract subsidies from differences in transaction populations and product composition.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The four-percentage-point real-PCE correction is not sufficiently identified to be presented as a uniquely correct allocation. The method interprets the difference between IDC no-contract average prices and J.D. Power consumer-reported upfront prices as a handset subsidy, although these sources are not demonstrated to cover matched models, purchasers, carriers, channels, or transaction periods. The resulting ratio can therefore reflect composition and measurement differences as well as subsidies.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 1 says IDC measures prices without service commitments while J.D. Power captures consumer-reported upfront prices, and it uses their difference to estimate subsidies. Section 2 states that IDC includes both consumer and commercial sales, whereas J.D. Power is described as a consumer survey. The manuscript does not demonstrate a common-model or common-population comparison before translating the aggregate price gap into the device share that drives the headline PCE correction."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript does not sufficiently distinguish an experimental research index from a sustainable official statistic. Reliance on licensed proprietary data, restrictions on disclosure, and analyst-mediated price construction create unresolved requirements concerning reproducibility, source continuity, revisions, procurement, and independent validation.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 5.5,
+            "barrier_category": "REVISION",
+            "confidence": 7.5,
+            "evidence": "The IDC data are proprietary, J.D. Power data are used under license, and the authors report disclosure restrictions concerning manufacturer-specific results. IDC prices also rely on public and proprietary information assembled by its analysts. The manuscript does not specify how a statistical agency could reproduce, audit, and maintain the series if access, methodology, or coverage changed."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The sensitivity to the model-introduction dummy warrants clearer uncertainty reporting, but it does not place the broad price-index conclusion in serious doubt. The manuscript discloses that excluding the dummy slows the annual decline by 2.6 percentage points, while both variants still imply rapid double-digit quality-adjusted price declines. This is a specification-range issue rather than a separate failure of the hedonic design.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that the aggregate IDC/J.D. Power ratio is not an auditable apples-to-apples subsidy measure and that this matters directly because the ratio drives the increase from the observed equipment share to the adjusted share. Harmonization or defensible bounds are necessary before treating the four-percentage-point estimate as an official correction.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the PCE result is an assumption-dependent calibration unless the authors validate population comparability and formalize assumptions about how much of the handset discount is recovered through service charges. The abstract and conclusions should present it as experimental or bounded unless that validation is supplied.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Data_Scientist",
+            "question": "If model-level harmonization between IDC and J.D. Power is infeasible, what empirically defensible bounds on composition differences could be constructed from the available model, carrier, consumer-status, and device-class information?"
+          },
+          {
+            "target_persona": "Econometrician",
+            "question": "Would sensitivity over the fraction of the cross-source price gap attributed to subsidies, combined with alternative subsidy-recovery rates and timing conventions, be sufficient to recast the PCE exercise as a credible calibrated range?"
+          }
+        ],
+        "final_argument_state": "The quarterly hedonic smartphone index is a credible and moderately novel measurement contribution: it uses direct new-phone prices, revenue weights, rich characteristics, and adjacent-quarter specifications, and its central conclusion of rapid double-digit quality-adjusted price decline survives the reported specification variation. The bundled-spending framework is also conceptually useful and offers medium insight by tracing transaction arrangements into nominal classification, deflator choice, and real PCE. However, its quantitative implementation does not isolate subsidies from cross-dataset differences in populations, products, channels, and price concepts, while assumptions about subsidy recovery are not sufficiently tested. The four-percentage-point real-PCE result must therefore be validated, bounded, or recast as an experimental scenario. Official-statistics feasibility also requires a discussion of proprietary-data access, auditability, continuity, and disclosure. Novelty is MEDIUM, insight is MEDIUM, and substantial revision is required rather than rejection because the price-index contribution survives and the PCE framework can be repaired within the existing design.",
+        "verdict": "RESUBMIT"
+      }
+    },
+    {
+      "Data_Scientist": {
+        "referee_acknowledgment": "The peer reviews converge on the key distinction: the handset price-index contribution is broadly credible, while the headline PCE correction depends on a cross-source subsidy calibration that is not shown to be compositionally comparable. I also acknowledge the useful concern about entry-quarter treatment, but distinguish uncertainty about the preferred point estimate from failure of the broad double-digit price-decline result.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The IDC–J.D. Power price difference is not demonstrated to identify handset subsidies. IDC includes consumer and commercial transactions and reports no-contract prices assembled from manufacturers, suppliers, and distribution channels, whereas J.D. Power is described as a consumer survey of upfront payments. Without common-support matching or reweighting by model, carrier, channel, purchaser type, and transaction period, the aggregate price gap can reflect composition and reporting differences. Because this calibration drives the device-services reallocation, the four-percentage-point real-PCE result is not established as a point estimate.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 1 identifies the IDC/J.D. Power price difference as the subsidy estimate. Section 2 states that IDC includes both consumer and commercial sales, with approximately 90 percent of units going to consumers, while Section 1 describes J.D. Power as consumer-survey data. The supplied manuscript does not document model-, carrier-, channel-, or period-level harmonization before reporting the four-percentage-point PCE correction."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "Classifying the introduction-quarter treatment as a material substantive flaw overstates its damage to the paper. The manuscript explicitly reports the 2.6-percentage-point sensitivity and explains why entry-quarter prices may not be comparable with full-quarter incumbent prices. The unresolved mechanism weakens the case for privileging 15.5 percent as the exact estimate, but both specifications retain the central conclusion of rapid double-digit quality-adjusted price decline. This is principally a claim-calibration and uncertainty-presentation issue.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "Section 4 states that excluding the introduction-quarter dummy makes the annual decline 2.6 percentage points slower. It also discloses novelty premiums, disequilibrium, early-adopter testing compensation, and Apple's partial-quarter introduction timing as possible explanations. Thus, the relevant sensitivity is visible and does not overturn the qualitative price-index conclusion."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "A complete procurement, continuity, and operational-maintenance framework for licensed data is beyond the paper's empirical scope. Proprietary inputs limit reproducibility and should be disclosed and independently validated, but the absence of an official-agency implementation plan does not itself undermine the internal validity of the experimental index.",
+            "attack_type": "extension",
+            "issue_class": "extension",
+            "severity_score": 2.0,
+            "barrier_category": "EXTENSION",
+            "confidence": 8.0,
+            "evidence": "The manuscript presents experimental price indexes and a proposed PCE allocation method, identifies IDC and J.D. Power as licensed sources, and notes disclosure restrictions. It does not claim to deliver an operational production system for an official statistical agency."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The manuscript already quantifies the introduction-dummy sensitivity, and the alternative still implies a double-digit annual decline. A specification range and less emphasis on the exact preferred rate are warranted, but this issue does not invalidate the hedonic design or its main qualitative result.",
+            "defense_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "Data licensing, source continuity, and procurement are important for eventual official adoption, but they are implementation extensions rather than necessary elements of the stated research exercise. The scholarly validity question is whether the data concepts and calculations are adequately documented and validated.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that aggregate IDC and J.D. Power prices do not visibly represent a common transaction population. Their difference therefore cannot be attributed entirely to subsidies without matching, reweighting, validation against another source, or defensible uncertainty bounds.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the four-percentage-point real-PCE result is not implementation-ready. Unless cross-source composition and subsidy-recovery assumptions are validated or bounded, it should be presented as an experimental scenario rather than a uniquely correct official correction.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Can the IDC and J.D. Power samples be restricted or reweighted to common model, carrier, purchaser, channel, and quarter cells, and how much of the estimated subsidy remains after that harmonization?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How does the final PCE growth correction vary when the introduction-quarter price-index specification and plausible bounds on cross-source subsidy measurement are propagated jointly?"
+          }
+        ],
+        "final_argument_state": "Execution is mixed but repairable. The quarterly handset price-index analysis is a credible measurement contribution: it uses direct new-phone prices, revenue weighting, rich characteristics, adjacent-quarter hedonic regressions, matched-model comparisons, and a disclosed entry-quarter sensitivity. The exact preferred decline should be reported with a specification range, but the conclusion that quality-adjusted handset prices fell at double-digit annual rates is robust. The PCE framework is conceptually insightful, yet its headline numerical correction remains in serious doubt because the aggregate IDC/J.D. Power comparison does not isolate subsidies from differences in product and purchaser composition, channels, timing, and price concepts. The authors should harmonize the sources, validate the subsidy measure, and propagate defensible bounds; otherwise, the four-percentage-point result must be recast as a scenario. Novelty is MEDIUM and insight is MEDIUM. Proprietary-data operational planning is an extension rather than a publication barrier. The unresolved PCE measurement flaw requires substantial within-framework revision, so the verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph converges on the key distinction: the handset price-index exercise supports a robust qualitative conclusion of rapid quality-adjusted price decline, whereas the headline PCE correction remains an assumption-dependent calibration because the cross-source price comparison does not demonstrably identify subsidies.",
+        "attacks": [
+          {
+            "target_persona": "Data_Scientist",
+            "critique": "Disclosure of the 2.6-percentage-point sensitivity does not by itself resolve the econometric concern about the introduction-quarter dummy. The alternative explanations offered imply different estimands: a partial-quarter recording artifact should be corrected, while an entrant's lower quality-adjusted price may represent genuine innovation that should enter the index. Because the manuscript neither separates partial-quarter observations from full-quarter introductions nor validates the preferred treatment using model launch timing, presenting this primarily as a presentation issue understates the required within-framework analysis.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 5.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.0,
+            "evidence": "Section 4 reports that excluding the introduction-quarter dummy slows the annual decline by 2.6 percentage points. It attributes entry-quarter behavior variously to novelty premia, disequilibrium, compensation for product testing, and Apple's September launch timing. These mechanisms do not have the same implications for measured quality-adjusted inflation."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "Classifying the absence of a complete procurement, licensing, continuity, and maintenance plan as a substantive flaw in the paper overstates its scholarly relevance. Proprietary inputs limit reproducibility and should be disclosed and independently validated, but the manuscript presents an experimental measurement exercise rather than claiming to supply an implementation-ready official statistic. A full institutional adoption plan is therefore an extension.",
+            "attack_type": "extension",
+            "issue_class": "extension",
+            "severity_score": 2.5,
+            "barrier_category": "EXTENSION",
+            "confidence": 8.5,
+            "evidence": "The manuscript describes experimental IDC-based price indexes and a proposed PCE allocation methodology. It acknowledges licensed data and disclosure restrictions but does not claim to establish a production system for an official statistical agency."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The original concern was not that the introduction-quarter sensitivity was hidden. It was that the preferred specification is not adequately distinguished from a materially different alternative. Reporting the 2.6-percentage-point difference is useful, but the competing economic and recording explanations require either empirical discrimination or presentation of both estimates as a specification range.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "Auditability and source continuity are relevant limitations, but a complete operational plan is outside the stated research contribution. The publication barrier should be the validity of the empirical construction, especially the cross-source subsidy calibration, rather than unresolved procurement arrangements.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that the central PCE criticism survives: aggregate IDC and J.D. Power prices are not shown to represent a common set of models, consumers, carriers, channels, or transaction periods, so their difference cannot be interpreted entirely as a contract subsidy without harmonization, validation, or bounds.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the four-percentage-point real-PCE result should be characterized as experimental and assumption-dependent unless the authors validate the subsidy measure and propagate uncertainty through the expenditure allocation and deflation calculations.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Can the IDC and J.D. Power observations be harmonized by model, carrier, consumer segment, channel, and transaction quarter, or can reweighting and decomposition show how much of their average-price difference is attributable to composition rather than subsidies?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Can the introduction-quarter treatment be tested using exact launch months, separately comparing models observed for one, two, and three months in their initial quarter and models introduced near quarter boundaries?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How sensitive are the adjusted equipment share, cellular-services deflator, and four-percentage-point real-PCE result to plausible bounds on both the subsidy estimate and the fraction of the handset discount recovered through subsequent service charges?"
+          }
+        ],
+        "final_argument_state": "The handset price-index component is a credible and moderately novel application of established hedonic methods. Model-level new-phone prices, revenue weighting, rich characteristics, adjacent-quarter regressions, and matched-model comparisons support the robust qualitative finding that quality-adjusted mobile-phone prices declined at double-digit annual rates. The exact preferred decline remains materially sensitive to an introduction-quarter treatment that mixes several economically distinct mechanisms; disclosure of the sensitivity is valuable but should be supplemented by launch-timing tests or a specification range. The PCE allocation framework provides MEDIUM insight by linking bundled contracts to nominal classification, deflator choice, and real expenditure. Its headline numerical correction, however, is not identified by the aggregate IDC/J.D. Power comparison because subsidies are confounded with purchaser, model, carrier, channel, and timing composition. The authors should harmonize the sources or provide defensible bounds and propagate them through the PCE estimates; otherwise, the four-percentage-point result must be recast as a scenario. Novelty is MEDIUM and insight is MEDIUM. Proprietary-data operational planning is an extension rather than a core publication barrier. Because the PCE result is in serious but repairable doubt and the preferred price-index estimate needs material sensitivity treatment, the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer reviews correctly converge on the central distinction: the handset price-index exercise is broadly credible, whereas the headline PCE correction depends on a cross-source subsidy calibration that is not shown to compare equivalent transaction populations. They also persuasively clarify that a complete proprietary-data procurement and continuity plan is an implementation extension rather than a publication requirement.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The four-percentage-point real-PCE correction is not identified as a uniquely correct reallocation because the difference between IDC no-contract prices and J.D. Power consumer-reported upfront prices may reflect composition and measurement differences in addition to handset subsidies. Without common-model, carrier, channel, purchaser, and period weighting—or defensible bounds—the result should be treated as an assumption-dependent scenario.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 1 interprets the difference between IDC and J.D. Power prices as the subsidy. Section 2 states that IDC includes consumer and commercial sales, while J.D. Power is described as a consumer survey. The supplied manuscript does not demonstrate matched products or populations before using the price difference to derive the device share underlying the reported four-percentage-point PCE adjustment."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "Classifying the introduction-quarter treatment as a material substantive flaw overstates its damage to the price-index contribution. The manuscript discloses the 2.6-percentage-point sensitivity, and both specifications continue to imply rapid double-digit price declines. The unresolved interpretation affects selection of the preferred point estimate and uncertainty presentation, but it does not place the principal qualitative price-index finding in serious doubt.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "Section 4 reports that excluding the introduction-quarter dummy makes the index decline 2.6 percentage points more slowly. Relative to the preferred 15.5 percent annual decline, the alternative still indicates a decline of roughly 12.9 percent, preserving the paper's broad conclusion of rapid quality-adjusted price reduction."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The economic interpretation of the introduction-quarter dummy is unresolved, so the preferred estimate should be reported alongside the alternative. Nevertheless, the paper already quantifies the sensitivity, and removing the dummy does not overturn the double-digit-decline conclusion. This is primarily a claim-calibration and uncertainty-presentation issue rather than a failure of the hedonic design.",
+            "defense_type": "rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that procurement, licensing continuity, and operational maintenance arrangements for an official statistical program extend beyond the manuscript's experimental measurement exercise. Proprietary access and reproducibility should be disclosed as limitations, but a complete agency implementation plan should not be a publication barrier.",
+            "concession_type": "extension"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the aggregate IDC/J.D. Power price comparison does not isolate subsidies without stronger harmonization or explicit identifying assumptions. The headline PCE estimate must therefore be validated, bounded, or reframed as an experimental calibration.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Can the IDC and J.D. Power observations be reweighted to a common set of models, carriers, channels, consumer purchasers, and transaction periods, or can the resulting composition bias be bounded and propagated through the device share, deflator, and real-PCE calculations?"
+          }
+        ],
+        "final_argument_state": "The smartphone and overall mobile-phone price-index work remains a credible execution of established hedonic methods using valuable quarterly new-phone data, revenue weights, rich characteristics, and adjacent-quarter regressions. Its conclusion that quality-adjusted handset prices declined at double-digit annual rates survives the disclosed introduction-quarter sensitivity, although the preferred point estimate should be accompanied by a specification range. Novelty is MEDIUM because the quarterly IDC application and combination with a feature-phone index add useful measurement evidence without introducing a fundamentally new econometric method. Insight is MEDIUM because the manuscript clearly links bundling, expenditure classification, divergent deflators, and measured real PCE. The quantitative PCE correction, however, remains in serious doubt: unmatched IDC and J.D. Power averages can differ because of product and population composition rather than subsidies alone. The four-percentage-point result requires harmonization, validation, or propagated bounds and otherwise must be presented as a scenario. A full proprietary-data procurement and continuity plan is an extension, not a publication barrier. Because the principal PCE estimate has a serious but repairable measurement flaw while the price-index contribution survives, the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper contains two related contributions. First, it constructs quarterly, revenue-weighted quality-adjusted indexes for smartphones and mobile phones using model-level IDC data, adjacent-quarter hedonic regressions, and a matched-model feature-phone index. Second, it develops an accounting framework for separating handset expenditure from wireless-service expenditure when devices are bundled with service contracts. The first contribution is substantially more secure than the second. The evidence supports the broad conclusion that quality-adjusted handset prices declined at double-digit annual rates during 2010–2018. The paper is transparent about weighting, alternative index formulas, coefficient flexibility, and the sensitivity to treatment of a model's introduction quarter. The second contribution is conceptually promising because it traces bundling through nominal classification, deflator choice, and real PCE, but its headline quantitative implementation has a substantive measurement flaw.\n\nThe decisive issue is the interpretation of the aggregate IDC–J.D. Power price difference as a handset subsidy. IDC includes consumer and commercial sales and records no-contract prices, whereas J.D. Power is described as a consumer survey of upfront payments. The manuscript does not establish common support or harmonization by model or device class, carrier, channel, purchaser type, transaction period, or weights. The price gap can therefore contain differences in product mix, customer composition, channel, timing, recall, and price concepts in addition to subsidies. The SAS equipment measure is broader still, covering all subscribers and types of telecommunications equipment rather than consumer smartphones alone. The calculation also assumes that carriers recover the unpaid handset amount through service charges, while acknowledging that recovery may be lower or higher. These assumptions directly determine the inferred equipment share and hence the reported 7.7 percent deflator decline and approximately four-percentage-point increase in real PCE growth. As presented, that result is an assumption-dependent calibration rather than an identified point correction.\n\nThis is a genuine substantive flaw, not merely a wording problem, because it affects one of the paper's two headline findings. It is nevertheless repairable within the existing framework. There are no unresolved hard blockers, and the handset price-index contribution remains informative. The preferred hedonic estimate also requires better calibration: excluding the introduction-quarter dummy slows the annual decline by 2.6 percentage points. The manuscript already discloses this sensitivity, and both specifications preserve the broad double-digit-decline conclusion. Accordingly, this is principally a need to report a specification range and avoid privileging an exact rate without stronger evidence; launch-timing tests would strengthen the analysis but are not necessary to preserve the qualitative result.\n\nNovelty is MEDIUM. The use of quarterly model-level IDC data, direct new-phone prices, revenue weights, and the combination with a feature-phone index constitute a meaningful empirical measurement advance, although the econometric methods are established and related mobile-phone indexes already exist. The bundled-expenditure framework is also a useful new accounting application, but its calibration is not yet validated. Insight is MEDIUM. The paper clearly explains why flat average prices can coexist with rapid quality improvement and why bundling matters for PCE deflation. Its insight is limited by the absence of a formal decomposition of the cross-source price gap and the identifying assumptions needed to interpret that gap as a subsidy.\n\nMinor rephrasal issues concern the exact hedonic decline and the status of the PCE estimate. The introduction-quarter alternatives should be displayed together, but this sensitivity does not overturn the broad price-index conclusion. The PCE result, however, cannot be repaired by wording alone unless the authors explicitly demote it from a measured correction to a scenario or bounded calibration. Requests for a complete procurement, licensing, continuity, and maintenance plan for official statistical production are extensions rather than publication requirements. The paper should disclose proprietary-data and auditability limitations and distinguish an experimental research series from an implementation-ready official statistic, but it need not supply a full agency operational plan.",
+    "official_letter_to_the_author": "Dear Authors,\n\nThe paper addresses an important measurement problem and has a credible core contribution. Its strongest result is the construction of quarterly quality-adjusted smartphone and mobile-phone price indexes using model-level IDC data, revenue weights, matched-model comparisons, and adjacent-quarter hedonic regressions. The analysis supports the conclusion that quality-adjusted handset prices fell rapidly at double-digit annual rates even though average prices were comparatively flat. The paper also offers a useful conceptual framework for understanding how bundled handset and service payments can affect expenditure classification, deflator choice, and measured real PCE.\n\nOur decision is MAJOR REVISION REQUIRED because the quantitative implementation of the PCE reallocation does not yet support the headline claim that real PCE in Cellular Telephone Services grew approximately four percentage points faster than published. The manuscript interprets the difference between aggregate IDC no-contract prices and J.D. Power consumer-reported upfront prices as a handset subsidy. Yet IDC includes consumer and commercial sales, while J.D. Power is a consumer survey, and the manuscript does not demonstrate that the sources have been aligned by handset model or device class, carrier, channel, purchaser population, transaction period, or weights. Their average-price difference may therefore reflect composition and measurement differences as well as subsidies. In addition, the SAS equipment category covers all subscribers and types of equipment, not only consumer smartphones. The calculation further assumes that carriers recover the unpaid handset amount through service charges, although the manuscript acknowledges that recovery may differ from that amount.\n\nThese issues are central because the cross-source ratio drives the adjusted equipment share, which in turn drives the reported deflator and real-PCE correction. The current evidence supports an experimental calibration, not a uniquely identified point correction. A revision should either establish a substantially more comparable construction or replace the point estimate with defensible bounds or scenarios. Where the data permit, align or reweight IDC and J.D. Power observations by quarter, model or tightly defined device class, carrier or channel, and consumer status. Document the weights, unmatched observations, missingness, and treatment of zero or subsidized prices. Address the broader coverage of SAS using consumer- and phone-specific information if available. If exact harmonization is infeasible, vary the fraction of the IDC–J.D. Power gap attributed to subsidies, the fraction recovered through service charges, and the treatment of nonconsumer and nonphone equipment. Propagate these alternatives through the equipment share, deflator, and real-PCE calculations.\n\nThe handset price-index analysis requires a more limited revision. The manuscript reports that excluding the model-introduction dummy slows the estimated annual decline by 2.6 percentage points. Because the proposed explanations for entry-quarter behavior have different implications for quality-adjusted inflation, present the preferred and alternative estimates as a specification range and moderate claims about the exact rate. If feasible, use launch-month information to distinguish partial-quarter observations from other entry effects. The broad conclusion of rapid double-digit decline appears to survive, so this issue does not undermine the price-index contribution.\n\nPlease also distinguish clearly between an experimental research series and an implementation-ready official statistic. Licensed proprietary data and disclosure restrictions should be discussed as limitations affecting reproducibility and auditability. A complete procurement or operational-maintenance plan for a statistical agency is not required, but readers should understand the access and continuity constraints.\n\nA successful revision can retain the paper's central architecture. The essential task is to separate the well-supported handset price-index result from the more assumption-dependent PCE exercise, and then either validate the latter's cross-source mapping or report its implications transparently as a range of calibrated outcomes.",
+    "minimum_viable_revision_path": "1. Preserve the quarterly handset price-index contribution, but report the preferred and no-introduction-dummy estimates together as a specification range. Moderate claims about the exact annual decline while retaining the supported conclusion of rapid double-digit quality-adjusted price reduction.\n\n2. State formally the assumptions required to interpret the IDC–J.D. Power average-price gap as a subsidy and to multiply that adjustment by the SAS equipment share. Identify explicitly the roles of common product mix, purchaser population, carrier or channel, timing, weights, and subsidy recovery.\n\n3. Construct the closest feasible apples-to-apples comparison between IDC and J.D. Power by matching or reweighting on quarter, handset model or tightly defined device class, carrier or channel, and consumer status. Document weights, unmatched observations, missingness, and zero-price treatment.\n\n4. Reconcile the SAS measure with the target population. Use consumer- and phone-specific information if available; otherwise, provide defensible sensitivity ranges for commercial customers and nonphone equipment.\n\n5. Vary the share of the cross-source price gap attributable to subsidies and the fraction and timing of subsidy recovery through service charges. Propagate all alternatives through the adjusted equipment share, cellular-services deflator, and real-PCE growth calculation.\n\n6. If adequate harmonization cannot be achieved, recast the approximately four-percentage-point result throughout the abstract, introduction, tables, and conclusion as an experimental scenario or bounded calibration rather than a measured correction. This is the minimum acceptable fallback.\n\n7. Add a concise limitations discussion covering proprietary access, disclosure restrictions, auditability, and source continuity, while making clear that the paper proposes an experimental measurement exercise rather than a complete official-statistics production system.",
+    "constructive_summary": "The paper's most defensible contribution is a moderately novel and informative quarterly handset price-index exercise showing rapid quality-adjusted price declines. Its accounting framework for bundled devices and services is promising and economically useful, but the headline PCE correction currently rests on unmatched data sources and unvalidated subsidy-recovery assumptions. The revision should validate that mapping or replace the point correction with transparent bounds or scenarios. With that substantive repair, clearer specification ranges for the hedonic estimate, and appropriate disclosure of data limitations, the paper could make a useful contribution to price and national-accounts measurement."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Data_Scientist': 0.5, 'Econometrician': 0.3, 'Policymaker': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Data_Scientist→Policymaker: severity 2.0/10; category EXTENSION; type extension; issue extension; confidence 8.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Data_Scientist→Econometrician: severity 2.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 5.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Policymaker: severity 2.5/10; category EXTENSION; type extension; issue extension; confidence 8.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Econometrician→Data_Scientist: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 9.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Policymaker→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 5.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n### Debate Round 2\n  • Data_Scientist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→Econometrician: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Data_Scientist→Policymaker: severity 2.0/10; category EXTENSION; type extension; issue extension; confidence 8.0/10 → CONCEDED. Explicit concession recorded.\n  • Econometrician→Data_Scientist: severity 5.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → CONCEDED. Explicit concession recorded.\n  • Econometrician→Policymaker: severity 2.5/10; category EXTENSION; type extension; issue extension; confidence 8.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Policymaker→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→Econometrician: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Data_Scientist→paper (UNANSWERED): +0.010 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→Econometrician (UNANSWERED): +0.000 to Data_Scientist, -0.000 to Econometrician (unanswered, discounted)\n  Data_Scientist→Econometrician (UNANSWERED): +0.000 to Data_Scientist, -0.000 to Econometrician (unanswered, discounted)\n  Data_Scientist→Policymaker (UNANSWERED): +0.000 to Data_Scientist, -0.000 to Policymaker (unanswered, discounted)\n  Data_Scientist→Policymaker (CONCEDED): +0.000 to Data_Scientist, -0.000 to Policymaker\n  Econometrician→paper (UNANSWERED): +0.010 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.003 to Econometrician (paper critique, discounted)\n  Econometrician→Data_Scientist (CONCEDED): +0.008 to Econometrician, -0.008 to Data_Scientist\n  Econometrician→Data_Scientist (UNANSWERED): +0.000 to Econometrician, -0.000 to Data_Scientist (unanswered, discounted)\n  Econometrician→Policymaker (UNANSWERED): +0.000 to Econometrician, -0.000 to Policymaker (unanswered, discounted)\n  Econometrician→Policymaker (UNANSWERED): +0.000 to Econometrician, -0.000 to Policymaker (unanswered, discounted)\n  Policymaker→paper (UNANSWERED): +0.010 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.002 to Policymaker (paper critique, discounted)\n  Policymaker→Econometrician (UNANSWERED): +0.000 to Policymaker, -0.000 to Econometrician (unanswered, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Data_Scientist: 0.500 +0.003 → 0.503\n  Econometrician: 0.300 +0.020 → 0.320\n  Policymaker: 0.200 +0.017 → 0.217\nNormalized final weights: {'Data_Scientist': 0.4832335280047489, 'Econometrician': 0.3080343614987678, 'Policymaker': 0.2087321104964833}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Data_Scientist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION\n  Econometrician: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.5/10, barrier=REVISION\n  Policymaker: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.5/10, barrier=REVISION\nRaw execution score: 0.750\nExecution penalty from surviving substantive flaws: 0.063\nExecution score: 0.687\nNovelty consensus: MEDIUM (0.450 before debate penalty; 0.450 after)\nNovelty claim counts (all personas): HIGH=0, MEDIUM=6, LOW=0\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 7\nSubstantial-rephrasal (central overclaim) revisions: 0\nRephrasal-only revisions: 4\nExtension/future-work requests: 4\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.412 + 0.099 + 0.112 = 0.623\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nRephrasal issues are reported categorically and do not reduce insight or execution scores by themselves.",
+  "score_components": {
+    "final_score": 0.622937025,
+    "execution_score": 0.687228375,
+    "novelty_score": 0.44999999999999996,
+    "insight_score": 0.62,
+    "raw_execution_score": 0.75,
+    "novelty_consensus": "MEDIUM",
+    "novelty_counts": {
+      "HIGH": 0,
+      "MEDIUM": 6,
+      "LOW": 0
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Data_Scientist": "RESUBMIT",
+      "Econometrician": "RESUBMIT",
+      "Policymaker": "RESUBMIT"
+    },
+    "adjusted_weights": {
+      "Data_Scientist": 0.4832335280047489,
+      "Econometrician": 0.3080343614987678,
+      "Policymaker": 0.2087321104964833
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 identifies the IDC/J.D. Power price difference as the subsidy estimate. Section 2 states that IDC includes both consumer and commercial sales, with approximately 90 percent of units going to consumers, while Section 1 describes J.D. Power as consumer-survey data. The supplied manuscript does not document model-, carrier-, channel-, or period-level harmonization before reporting the four-percentage-point PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 2 states that IDC includes both consumer and commercial sales, with roughly 90 percent of units sold to consumers. Section 1 states that J.D. Power is based on consumer surveys and that the difference between IDC and J.D. Power prices provides the subsidy estimate. The supplied text does not establish common model, carrier, purchaser, or transaction weights across the two sources, yet the abstract reports a four-percentage-point correction as a principal result.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 says IDC measures prices without service commitments while J.D. Power captures consumer-reported upfront prices, and it uses their difference to estimate subsidies. Section 2 states that IDC includes both consumer and commercial sales, whereas J.D. Power is described as a consumer survey. The manuscript does not demonstrate a common-model or common-population comparison before translating the aggregate price gap into the device share that drives the headline PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 interprets the difference between IDC and J.D. Power prices as the subsidy. Section 2 states that IDC includes consumer and commercial sales, while J.D. Power is described as a consumer survey. The supplied manuscript does not demonstrate matched products or populations before using the price difference to derive the device share underlying the reported four-percentage-point PCE adjustment.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services 'increased 4 percentage points faster than is reflected in published data.' Section 2 states that IDC contains both consumer and commercial sales and that roughly 90 percent of units are consumer sales. Section 5 states that J.D. Power records consumers' reported upfront price, whereas IDC records a no-contract price, but also concedes that 'a portion of the difference in average prices between the datasets could reflect differences in coverage.' The SAS discussion explicitly says its equipment line includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' Despite these mismatches, Table 5 line 6 is constructed simply as the IDC/J.D. Power average-price ratio in line 5 multiplied by the SAS equipment share in line 4. This increases the average inferred equipment share from 13.2 percent to 28.0 percent. Table 7 then uses that share to produce a deflator declining 7.7 percent annually instead of 3.5 percent and the headline 4.2-percentage-point difference in real PCE growth."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services increased four percentage points faster than published data. Section 5 states that IDC includes consumer and commercial sales, with roughly 90 percent consumer sales, whereas J.D. Power is based on consumer surveys. Footnote 31 states that SAS reselling revenue includes sales to all subscribers and all types of equipment, not just consumer mobile phones. Footnote 30 explicitly assumes that providers recoup the unpaid portion of the phone's no-contract price over the service contract and notes that they may recover less or more. Section 5 also concedes that part of the IDC-J.D. Power price difference could reflect coverage differences but then uses the full ratio in Table 5, line 5, to multiply the SAS equipment share. Table 7 reports the resulting 7.7 percent annual deflator decline and four-percentage-point real-PCE difference. For the hedonic result, Section 4 reports that excluding the model-introduction dummy slows the estimated aggregate price decline by 2.6 percentage points annually."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract and conclusion state that adjusted real PCE in Cellular Telephone Services increased about four percentage points faster than published data. Table 5 obtains the adjusted device share by multiplying the SAS equipment share by the IDC/J.D. Power average-price ratio, and Table 7 uses that share to construct the 7.7 percent annual deflator decline. Section 5 acknowledges that SAS reselling revenue is broader than desired because it includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' It further states that 'a portion of the difference in average prices between the datasets could reflect differences in coverage' and only then says the differences are believed to 'largely reflect discounts or cross subsidies.' Footnote 30 assumes that the provider recoups the unpaid portion over the contract while acknowledging that it may recover less or more. The paper also reports that IDC and J.D. Power data are proprietary or licensed, and its agreement prevents disclosure of one prominent manufacturer's identity."
+      }
+    ],
+    "substantial_rephrasal_revisions": [],
+    "rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 states that excluding the introduction-quarter dummy makes the annual decline 2.6 percentage points slower. It also discloses novelty premiums, disequilibrium, early-adopter testing compensation, and Apple's partial-quarter introduction timing as possible explanations. Thus, the relevant sensitivity is visible and does not overturn the qualitative price-index conclusion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 2.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 explicitly states that excluding the introduction-quarter dummy makes the aggregate price index fall 2.6 percentage points more slowly per year. Section 4 also discusses novelty premia, disequilibrium, early-buyer discounts, and partial-quarter observation as possible rationales.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Data_Scientist",
+        "attack_id": "Econometrician→Data_Scientist",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "The provided manuscript ends during the discussion of the first two hypothetical iPhone transactions and does not include Tables 4–7 or the cited later footnotes. The introduction does report the 28 percent average adjusted share, the 7.7 percent deflator decline, and the four-percentage-point result, but it does not display all of the exact table calculations cited in the review graph.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 reports that excluding the introduction-quarter dummy makes the index decline 2.6 percentage points more slowly. Relative to the preferred 15.5 percent annual decline, the alternative still indicates a decline of roughly 12.9 percent, preserving the paper's broad conclusion of rapid quality-adjusted price reduction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      }
+    ],
+    "extension_requests": [
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.0,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript identifies IDC and J.D. Power as licensed proprietary sources and describes their relevant data concepts. It does not claim to provide a procurement or operational-maintenance plan for an official statistical agency.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.0,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript presents experimental price indexes and a proposed PCE allocation method, identifies IDC and J.D. Power as licensed sources, and notes disclosure restrictions. It does not claim to deliver an operational production system for an official statistical agency.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.5,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.5,
+        "evidence": "The manuscript describes experimental IDC-based price indexes and a proposed PCE allocation methodology. It acknowledges licensed data and disclosure restrictions but does not claim to establish a production system for an official statistical agency.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.5,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript constructs experimental price indexes and a proposed allocation methodology; it does not claim to provide an operational implementation plan for a statistical agency. The IDC licensing restrictions are relevant limitations, but they do not by themselves invalidate the reported econometric exercise.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      }
+    ],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 identifies the IDC/J.D. Power price difference as the subsidy estimate. Section 2 states that IDC includes both consumer and commercial sales, with approximately 90 percent of units going to consumers, while Section 1 describes J.D. Power as consumer-survey data. The supplied manuscript does not document model-, carrier-, channel-, or period-level harmonization before reporting the four-percentage-point PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 2 states that IDC includes both consumer and commercial sales, with roughly 90 percent of units sold to consumers. Section 1 states that J.D. Power is based on consumer surveys and that the difference between IDC and J.D. Power prices provides the subsidy estimate. The supplied text does not establish common model, carrier, purchaser, or transaction weights across the two sources, yet the abstract reports a four-percentage-point correction as a principal result.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 says IDC measures prices without service commitments while J.D. Power captures consumer-reported upfront prices, and it uses their difference to estimate subsidies. Section 2 states that IDC includes both consumer and commercial sales, whereas J.D. Power is described as a consumer survey. The manuscript does not demonstrate a common-model or common-population comparison before translating the aggregate price gap into the device share that drives the headline PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 interprets the difference between IDC and J.D. Power prices as the subsidy. Section 2 states that IDC includes consumer and commercial sales, while J.D. Power is described as a consumer survey. The supplied manuscript does not demonstrate matched products or populations before using the price difference to derive the device share underlying the reported four-percentage-point PCE adjustment.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services 'increased 4 percentage points faster than is reflected in published data.' Section 2 states that IDC contains both consumer and commercial sales and that roughly 90 percent of units are consumer sales. Section 5 states that J.D. Power records consumers' reported upfront price, whereas IDC records a no-contract price, but also concedes that 'a portion of the difference in average prices between the datasets could reflect differences in coverage.' The SAS discussion explicitly says its equipment line includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' Despite these mismatches, Table 5 line 6 is constructed simply as the IDC/J.D. Power average-price ratio in line 5 multiplied by the SAS equipment share in line 4. This increases the average inferred equipment share from 13.2 percent to 28.0 percent. Table 7 then uses that share to produce a deflator declining 7.7 percent annually instead of 3.5 percent and the headline 4.2-percentage-point difference in real PCE growth."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract claims that adjusted real PCE in Cellular Phone Services increased four percentage points faster than published data. Section 5 states that IDC includes consumer and commercial sales, with roughly 90 percent consumer sales, whereas J.D. Power is based on consumer surveys. Footnote 31 states that SAS reselling revenue includes sales to all subscribers and all types of equipment, not just consumer mobile phones. Footnote 30 explicitly assumes that providers recoup the unpaid portion of the phone's no-contract price over the service contract and notes that they may recover less or more. Section 5 also concedes that part of the IDC-J.D. Power price difference could reflect coverage differences but then uses the full ratio in Table 5, line 5, to multiply the SAS equipment share. Table 7 reports the resulting 7.7 percent annual deflator decline and four-percentage-point real-PCE difference. For the hedonic result, Section 4 reports that excluding the model-introduction dummy slows the estimated aggregate price decline by 2.6 percentage points annually."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract and conclusion state that adjusted real PCE in Cellular Telephone Services increased about four percentage points faster than published data. Table 5 obtains the adjusted device share by multiplying the SAS equipment share by the IDC/J.D. Power average-price ratio, and Table 7 uses that share to construct the 7.7 percent annual deflator decline. Section 5 acknowledges that SAS reselling revenue is broader than desired because it includes 'sales to all subscribers—not just consumers—and for all types of equipment—not just phones.' It further states that 'a portion of the difference in average prices between the datasets could reflect differences in coverage' and only then says the differences are believed to 'largely reflect discounts or cross subsidies.' Footnote 30 assumes that the provider recoups the unpaid portion over the contract while acknowledging that it may recover less or more. The paper also reports that IDC and J.D. Power data are proprietary or licensed, and its agreement prevents disclosure of one prominent manufacturer's identity."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.0,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript identifies IDC and J.D. Power as licensed proprietary sources and describes their relevant data concepts. It does not claim to provide a procurement or operational-maintenance plan for an official statistical agency.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 2.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 explicitly states that excluding the introduction-quarter dummy makes the aggregate price index fall 2.6 percentage points more slowly per year. Section 4 also discusses novelty premia, disequilibrium, early-buyer discounts, and partial-quarter observation as possible rationales.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 2 states that IDC includes both consumer and commercial sales, with roughly 90 percent of units sold to consumers. Section 1 states that J.D. Power is based on consumer surveys and that the difference between IDC and J.D. Power prices provides the subsidy estimate. The supplied text does not establish common model, carrier, purchaser, or transaction weights across the two sources, yet the abstract reports a four-percentage-point correction as a principal result.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 5.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 4 reports that excluding the model-introduction dummy slows the aggregate price decline by 2.6 percentage points annually. Section 4 and footnotes 23–25 supply several competing explanations for entry-quarter pricing but no test selecting among them. The double-digit decline remains robust, but the preferred 15.5 percent estimate is not sufficiently distinguished from the alternative.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.5,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript constructs experimental price indexes and a proposed allocation methodology; it does not claim to provide an operational implementation plan for a statistical agency. The IDC licensing restrictions are relevant limitations, but they do not by themselves invalidate the reported econometric exercise.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Data_Scientist",
+        "attack_id": "Econometrician→Data_Scientist",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "The provided manuscript ends during the discussion of the first two hypothetical iPhone transactions and does not include Tables 4–7 or the cited later footnotes. The introduction does report the 28 percent average adjusted share, the 7.7 percent deflator decline, and the four-percentage-point result, but it does not display all of the exact table calculations cited in the review graph.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 says IDC measures prices without service commitments while J.D. Power captures consumer-reported upfront prices, and it uses their difference to estimate subsidies. Section 2 states that IDC includes both consumer and commercial sales, whereas J.D. Power is described as a consumer survey. The manuscript does not demonstrate a common-model or common-population comparison before translating the aggregate price gap into the device share that drives the headline PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 5.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "The IDC data are proprietary, J.D. Power data are used under license, and the authors report disclosure restrictions concerning manufacturer-specific results. IDC prices also rely on public and proprietary information assembled by its analysts. The manuscript does not specify how a statistical agency could reproduce, audit, and maintain the series if access, methodology, or coverage changed.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 identifies the IDC/J.D. Power price difference as the subsidy estimate. Section 2 states that IDC includes both consumer and commercial sales, with approximately 90 percent of units going to consumers, while Section 1 describes J.D. Power as consumer-survey data. The supplied manuscript does not document model-, carrier-, channel-, or period-level harmonization before reporting the four-percentage-point PCE correction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 states that excluding the introduction-quarter dummy makes the annual decline 2.6 percentage points slower. It also discloses novelty premiums, disequilibrium, early-adopter testing compensation, and Apple's partial-quarter introduction timing as possible explanations. Thus, the relevant sensitivity is visible and does not overturn the qualitative price-index conclusion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.0,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.0,
+        "evidence": "The manuscript presents experimental price indexes and a proposed PCE allocation method, identifies IDC and J.D. Power as licensed sources, and notes disclosure restrictions. It does not claim to deliver an operational production system for an official statistical agency.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Data_Scientist",
+        "attack_id": "Econometrician→Data_Scientist",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 5.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 4 reports that excluding the introduction-quarter dummy slows the annual decline by 2.6 percentage points. It attributes entry-quarter behavior variously to novelty premia, disequilibrium, compensation for product testing, and Apple's September launch timing. These mechanisms do not have the same implications for measured quality-adjusted inflation.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "extension",
+        "issue_class": "extension",
+        "severity_score": 2.5,
+        "barrier_category": "EXTENSION",
+        "confidence": 8.5,
+        "evidence": "The manuscript describes experimental IDC-based price indexes and a proposed PCE allocation methodology. It acknowledges licensed data and disclosure restrictions but does not claim to establish a production system for an official statistical agency.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 1 interprets the difference between IDC and J.D. Power prices as the subsidy. Section 2 states that IDC includes consumer and commercial sales, while J.D. Power is described as a consumer survey. The supplied manuscript does not demonstrate matched products or populations before using the price difference to derive the device share underlying the reported four-percentage-point PCE adjustment.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section 4 reports that excluding the introduction-quarter dummy makes the index decline 2.6 percentage points more slowly. Relative to the preferred 15.5 percent annual decline, the alternative still indicates a decline of roughly 12.9 percent, preserving the paper's broad conclusion of rapid quality-adjusted price reduction.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 3,
+    "fail_count": 0
+  }
+}

@@ -1,0 +1,1138 @@
+{
+  "metadata": {
+    "doc_id": "feds-2020-004",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2020-004.txt",
+    "ground_truth_tier": "Tier3",
+    "year": "2020",
+    "series": "feds",
+    "final_score": 0.1680201,
+    "decision": "REJECT / INSUFFICIENT STRUCTURAL STABILITY",
+    "duration_seconds": 312.8502779006958,
+    "char_count": 89847,
+    "word_count": 13168,
+    "token_usage": {
+      "duration_seconds": 312.843344,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 240257,
+        "output": 24928,
+        "thinking": 9707,
+        "total": 265185,
+        "cache_read": 0,
+        "cache_creation": 240224
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 7804,
+          "output": 163,
+          "thinking": 0,
+          "total": 7967,
+          "cache_read": 0,
+          "cache_creation": 7801,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 35341,
+          "output": 3213,
+          "thinking": 1696,
+          "total": 38554,
+          "cache_read": 0,
+          "cache_creation": 35338,
+          "calls": 1
+        },
+        "Data_Scientist": {
+          "input": 35339,
+          "output": 2776,
+          "thinking": 941,
+          "total": 38115,
+          "cache_read": 0,
+          "cache_creation": 35336,
+          "calls": 1
+        },
+        "Perspective": {
+          "input": 35311,
+          "output": 2549,
+          "thinking": 921,
+          "total": 37860,
+          "cache_read": 0,
+          "cache_creation": 35308,
+          "calls": 1
+        },
+        "Debater-Econometrician": {
+          "input": 31826,
+          "output": 5469,
+          "thinking": 2915,
+          "total": 37295,
+          "cache_read": 0,
+          "cache_creation": 31820,
+          "calls": 2
+        },
+        "Debater-Data_Scientist": {
+          "input": 31828,
+          "output": 3516,
+          "thinking": 1407,
+          "total": 35344,
+          "cache_read": 0,
+          "cache_creation": 31822,
+          "calls": 2
+        },
+        "Debater-Perspective": {
+          "input": 31822,
+          "output": 4974,
+          "thinking": 1827,
+          "total": 36796,
+          "cache_read": 0,
+          "cache_creation": 31816,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 30986,
+          "output": 2268,
+          "thinking": 0,
+          "total": 33254,
+          "cache_read": 0,
+          "cache_creation": 30983,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 240257,
+          "output": 24928,
+          "thinking": 9707,
+          "total": 265185,
+          "cache_read": 0,
+          "cache_creation": 240224,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 2.249405
+      },
+      "total_cost": 2.249405
+    },
+    "timestamp": "2026-07-29T20:51:12.879278",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Econometrician": {
+      "structural_strength": "The empirical architecture appropriately separates portfolio participation from allocation conditional on participation, uses the SCF's survey weights and multiple imputations, reports replicate-weight standard errors, and supplements conditional-mean regressions with unconditional quantile regressions. This provides a careful descriptive account of heterogeneity in portfolio associations.",
+      "domain_audit": "The defensible estimands are weighted cross-sectional conditional associations in the 2016 SCF: associations of respondent financial literacy and confidence with household asset ownership, plus associations with portfolio shares among observed asset holders. The manuscript acknowledges in Section 5.4 that endogeneity prevents causal interpretation, but its headline language and several substantive conclusions exceed those estimands. The abstract says confidence in financial skills increases the probability of holding both risky assets and bonds, although Table 2b estimates essentially zero coefficients for confidence in own knowledge. The conclusion says conditional equity shares still rise with financial literacy, while Table 3a is statistically insignificant and Table 4a is heterogeneous, becoming significantly negative at the 90th percentile. Moreover, conditioning allocation regressions on asset ownership creates an endogenously selected population, so contrasts among holders cannot establish that literacy changes allocation or 'dampens risk appetite.' Terms such as 'impacts,' 'effects,' 'determinants,' and 'policy tool' should therefore be replaced by association or prediction language. The underlying regressions remain informative as descriptive evidence, so this is primarily a central claim-calibration problem rather than an invalid estimation design.",
+      "best_case_contribution": "The paper provides a useful US-specific descriptive study linking newly available 2016 SCF measures of objective financial literacy, self-assessed knowledge, and macroeconomic expectations to unusually detailed household portfolio data. Its strongest result is that objective literacy and self-confidence independently predict equity-market participation after conditioning on many observed household characteristics, whereas conditional portfolio-share relationships are weaker and heterogeneous.",
+      "minimum_viable_revision": "Rewrite the abstract, introduction, results, and conclusion consistently around weighted conditional associations rather than impacts or determinants; remove the claim that own-knowledge confidence predicts bond ownership; state explicitly that intensive-margin estimates describe the selected population of current holders and do not identify allocation effects; replace the claim that literacy generally raises conditional equity shares with the actual mixed UQR pattern; correct the conclusion's reference to a negative effect at the 75th percentile, since Table 4a shows the significant negative estimate at the 90th percentile; and remove or sharply qualify policy claims that financial-knowledge initiatives would foster participation.",
+      "primary_issue_class": "substantial_rephrasal",
+      "severity_score": 6.5,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The regression analysis can support a coherent descriptive paper, but the abstract and conclusion materially overstate both causality and the consistency of the bond and intensive-margin findings. A reader relying on the headline presentation could infer identified behavioral effects and policy relevance that the cross-sectional design cannot establish. Because the estimates themselves remain useful after narrowing the claims, this is substantial rephrasing rather than a substantive econometric flaw. Separately, the empirical novelty is low under the stated publication standard because the paper uses public cross-sectional data, standard estimators, and no identifying variation to revisit relationships already documented in related settings.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "The paper claims to be the first to use the SCF to jointly study objective financial literacy, confidence in one's financial knowledge, confidence in the economy, and detailed household equity and bond portfolios, including distributional heterogeneity in conditional portfolio shares.",
+          "significance": "LOW",
+          "confidence": 8.5,
+          "supporting_evidence": "The manuscript states that it is the first to use the SCF for this question and that prior confidence evidence comes from China, Germany, the Netherlands, and a US web survey. The contribution is nevertheless an incremental application of LPM, OLS, and cited RIF-UQR methods to publicly available 2016 SCF data without causal identification. Closely related associations between financial literacy, confidence, and participation were already documented by Van Rooij et al. (2011), Xia et al. (2014), Allgood and Walstad (2016), Chu et al. (2017), and Bannier and Schwarz (2018), all cited in the manuscript."
+        },
+        {
+          "claim_type": "policy",
+          "description": "The manuscript suggests that its findings can inform initiatives to increase financial knowledge as a tool for fostering US stock-market participation.",
+          "significance": "LOW",
+          "confidence": 9.0,
+          "supporting_evidence": "The conclusion says the results could inform 'potential policy tools, perhaps through initiatives to increase financial knowledge, to foster stock-market participation.' No intervention, policy variation, or exogenous change in literacy is analyzed, and Section 5.4 expressly states that the estimated relationships should be interpreted as conditional correlations or predictive effects."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript has a clear extensive-margin versus intensive-margin structure and usefully distinguishes objective knowledge, subjective confidence, and macroeconomic confidence. Its interpretation becomes less disciplined when mixed or null estimates are summarized as general behavioral effects, but the overall narrative and economic motivation are understandable.",
+        "supporting_evidence": "Sections 2 through 4 develop hypotheses and map them to participation, conditional-mean allocation, and distributional regressions. Section 5.4 candidly identifies endogeneity. However, the conclusion's statements that literacy 'dampens risk appetite' and that the measures are 'powerful determinants' go beyond the descriptive design, and its percentile summary does not match Table 4a.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The data show that households whose respondents know more about finance, or feel more financially knowledgeable, are more likely to own stocks. They do not show that improving knowledge or confidence would cause a household to buy stocks. The claimed confidence result for bond ownership is not present in the reported regression, and portfolio-share results among existing investors are mixed.",
+      "confidence_score": 9.0,
+      "source_evidence": "The abstract initially describes 'impacts' and states that confidence in financial skills increases the probability of holding risky assets and bonds. Table 2a supports a positive equity-participation association for literacy and self-confidence, but Table 2b reports self-confidence coefficients of approximately zero and statistically insignificant across specifications. Table 3a reports an insignificant literacy coefficient of about 0.007 for the conditional equity share. Table 4a reports positive literacy associations at p25 and p50, no significant association at p75, and a negative association of -0.027 at p90. Nevertheless, the conclusion refers to a negative effect at the 75th percentile and says conditional risky-asset shares still rise with literacy. Section 5.4 explicitly concedes that endogeneity is unresolved and that estimates 'should be interpreted as conditional correlations or predictive effects rather than causal effects.'",
+      "verdict": "REJECT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Data_Scientist": {
+      "structural_strength": "The paper uses a nationally representative wealth survey with unusually detailed household balance sheets and explicitly accounts for survey weights, five multiple imputations, and 999 replicate weights. Appendix D documents the pooling of estimates and within- and between-imputation variance, which is a strong and auditable treatment of SCF sampling and item nonresponse.",
+      "domain_audit": "The equity and bond outcomes are constructed asymmetrically, making the broad bond findings difficult to interpret. Appendix A defines equity ownership to include direct stocks, stock mutual funds, combination funds, equity held through IRAs/Keoghs, managed accounts, retirement accounts, and 529 plans. By contrast, the bond indicator lists principally direct debt securities and does not list bond mutual funds, bond exposure in IRAs/Keoghs or thrift retirement accounts, combination funds, or managed accounts. Nevertheless, the manuscript labels the variable as household ownership of bonds and other debt securities and uses total financial assets including pensions as its denominator. Consequently, a household with substantial indirect bond exposure may be coded as a nonholder, while analogous indirect equity exposure is counted. This likely understates bond participation and may alter its association with literacy and confidence because the route through which households acquire bond exposure is plausibly correlated with those variables. The reported 10 percent bond participation rate and all bond regressions therefore support, at most, conclusions about the specific direct securities included in Appendix A unless the omitted indirect holdings are incorporated. There are also headline reporting inconsistencies: the abstract says confidence in one's own skills increases the probability of holding bonds, whereas Table 2b reports coefficients of approximately zero and statistically insignificant; Table 2b also shows confidence in the economy is significantly negative for bond ownership, not positive. These inconsistencies should be corrected alongside reconstruction or relabeling of the bond outcome.",
+      "best_case_contribution": "The strongest credible contribution is a carefully executed cross-sectional description, using the 2016 SCF, showing that objective financial literacy and self-assessed financial knowledge independently predict whether US households hold broadly measured equity exposure, while these variables have much weaker conditional associations with portfolio shares among holders. The distributional regressions add evidence that the literacy-equity relationship differs across the unconditional distribution of equity shares.",
+      "minimum_viable_revision": "Reconstruct bond ownership and bond portfolio shares to include indirect bond exposure through mutual funds, retirement accounts, managed accounts, and combination funds on a basis comparable to the equity measure, then rerun Tables 1 through 4 and the bond appendices. If the SCF variables do not permit that reconstruction, rename the outcomes throughout as ownership and share of the specifically enumerated direct debt securities, remove comparisons that imply symmetric coverage of equity and bond exposure, and explain the numerator-denominator mismatch. Independently, revise the abstract, introduction, and conclusion to match Table 2b: self-confidence does not predict bond participation, and economic confidence is negatively associated with that participation measure. Retain explicitly associational language rather than terms such as 'impacts,' 'affect,' or 'policy tool.'",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.3,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The asymmetric asset construction affects a central supporting branch of the paper: its claimed evidence about bond participation and bond allocation. It is not merely a label preference because households can be systematically assigned to bond nonownership despite economically similar indirect exposure being counted for equity, and that measurement error may correlate with literacy and confidence. The equity results remain potentially valid, so this is not a blocker. The problem is repairable within the SCF framework by reconstructing the bond measure or narrowing the bond estimand and claims, making REVISION appropriate.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "The paper claims to be the first to use the SCF to jointly relate objective financial literacy, confidence in one's own financial knowledge, and confidence in the economy to household equity and bond participation and allocation.",
+          "significance": "LOW",
+          "confidence": 8.2,
+          "supporting_evidence": "The introduction states, 'To the best of our knowledge, our study is the first to utilize the SCF to analyze the role of financial literacy and confidence as determinants of household investment behavior.' This is an incremental application of standard linear probability, OLS, and RIF-regression methods to publicly described cross-sectional survey data. The manuscript itself identifies closely related prior evidence from Xia et al. (2014), Allgood and Walstad (2016), Kramer (2016), and Bannier and Schwarz (2018), including US evidence from Allgood and Walstad. There is no causal identification, scarce proprietary data, or new estimator."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "The unconditional quantile analysis documents heterogeneity in the associations of literacy and confidence with equity and bond portfolio shares.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "Tables 4a and 4b apply the established Firpo, Fortin, and Lemieux RIF framework. Table 4a reports positive literacy coefficients at the 25th and 50th percentiles and a negative coefficient at the 90th percentile. This is a useful additional empirical pattern, but it is based on an off-the-shelf method in the same cross-sectional sample and is not a methodological or identified causal contribution."
+        },
+        {
+          "claim_type": "policy",
+          "description": "The paper suggests that financial-knowledge initiatives could be used to foster US stock-market participation.",
+          "significance": "LOW",
+          "confidence": 9.0,
+          "supporting_evidence": "The conclusion states that the results could inform policy initiatives to increase financial knowledge and foster participation. Section 5.4 concedes that literacy and confidence may be endogenous and that the estimates 'should be interpreted as conditional correlations or predictive effects rather than causal effects.' The evidence therefore does not establish that changing literacy or confidence through policy would change participation."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript has a clear two-margin organization and usefully distinguishes objective knowledge, self-assessed knowledge, and macroeconomic confidence. Its economic interpretation is generally accessible, although some explanations overreach the estimates and the bond category is not conceptually reconciled with the much broader equity category.",
+        "supporting_evidence": "Section 4 organizes portfolio choice into participation and conditional allocation decisions, and Sections 5.1 through 5.3 proceed from descriptive patterns to regressions, distributional heterogeneity, and extensions. Section 5.4 clearly acknowledges endogeneity. However, the discussion calls heterogeneous RIF coefficients 'mean-reverting allocation behavior' without establishing that mechanism, and the conclusion moves from conditional correlations to policy initiatives.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The stock results are based on a broad definition that counts stocks held directly and through funds and retirement accounts. The bond definition appears much narrower and mainly counts direct bond securities. A household holding bonds only through a retirement account may therefore be treated as owning no bonds, even though an analogous stock holding is counted. That makes the stock-versus-bond comparison uneven and could change the reported relationships with financial knowledge. The paper also says in its abstract that self-confidence predicts bond ownership, but its own bond table shows essentially no such relationship.",
+      "confidence_score": 8.7,
+      "source_evidence": "Appendix A defines D_equity to include 'stock mutual funds, combination funds, IRAs/Keoghs invested in stocks, other managed assets w/equity interest' and 'thrift-type retirement accounts invested in stocks.' Its D_bonds list instead covers government saving bonds, corporate bonds, commercial paper, municipal and foreign bonds, debentures, mortgage-backed securities, negotiable CDs, and Treasury instruments, without listing indirect retirement-account or mutual-fund bond exposure. W_bonds is divided by 'total financial assets (including pensions).' Table 1 reports only 10 percent bond ownership. Table 2b reports confidence in own financial knowledge coefficients of -0.000 to -0.001 with no significance, contradicting the abstract's statement that confidence 'additionally increases the probability of holding risky assets and bonds.' Table 2b also reports confidence in the economy of -0.008 with p below 0.05, while Table 3b reports a positive association with conditional bond shares. Section 5.4 explicitly states that the estimates should be interpreted as conditional correlations or predictive effects.",
+      "verdict": "REJECT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Perspective": {
+      "structural_strength": "The paper uses the nationally representative 2016 SCF with survey weights, multiple-imputation procedures, and replicate-weight bootstrap inference, and it distinguishes participation from conditional portfolio allocation. This is a strong foundation for describing how literacy and confidence correlate with household portfolios across the population.",
+      "domain_audit": "The nationally aggregated participation results are reasonably supported, but the manuscript overstates its distributional evidence. The abstract says that the relevance of literacy and confidence varies with wealth and across age, education, and race. Yet the reported models enter these characteristics primarily as additive controls; they do not estimate literacy-by-race, literacy-by-education, literacy-by-age, or corresponding confidence interactions. The UQR estimates concern quantiles of conditional asset shares, not quantiles of household wealth, and the only explicit subgroup interaction analysis reported is by respondent gender. Consequently, the manuscript documents racial, educational, and age differences in portfolio outcomes, but not that the associations of literacy or confidence themselves vary across those groups. Moreover, race and gender are characteristics of the selected household respondent, who is generally the most financially knowledgeable household member, so family-level subgroup language should be used cautiously. These limitations are especially important for the proposed policy interpretation: the regressions neither show that financial education causally increases participation nor establish that increasing risky-asset participation improves welfare for low-wealth or historically marginalized households facing different constraints and background risks.",
+      "best_case_contribution": "The strongest defensible contribution is a careful, nationally representative descriptive analysis showing that objective financial literacy and self-assessed financial knowledge independently predict participation in equity markets in the 2016 SCF, while their associations with conditional portfolio shares are weak on average and heterogeneous across the distribution of asset shares. The paper also documents large conditional portfolio-participation gaps by respondent race and education, without identifying their causes.",
+      "minimum_viable_revision": "Remove or substantiate the abstract and conclusion claims that literacy and confidence effects vary by wealth, age, education, and race. If retaining them, report appropriately weighted interaction or stratified estimates with uncertainty and adequate-cell diagnostics, and distinguish wealth quantiles from quantiles of asset shares. Recast race and gender findings as respondent-characteristic associations rather than household-group mechanisms. Finally, replace claims that literacy initiatives could foster desirable stock-market participation with a narrower statement that the correlations motivate future causal and welfare analysis, particularly for resource-constrained and marginalized households.",
+      "primary_issue_class": "rephrasal",
+      "severity_score": 4.0,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The core weighted SCF regressions can still support a narrower descriptive contribution, so the concern does not invalidate the underlying estimates. However, the manuscript's stated subgroup heterogeneity and policy implications go beyond the analyses reported. The damage is moderate because readers could mistake outcome-level racial and educational gaps, or asset-share quantile heterogeneity, for evidence that literacy and confidence operate differently across wealth and demographic groups. The issue can be repaired through narrower wording or within-framework interaction analysis, so it is a rephrasal rather than a substantive flaw.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "The paper claims to be the first to use the 2016 SCF's newly added financial-literacy and confidence measures jointly with detailed household balance sheets to study equity and bond participation and allocation.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "The manuscript states that it is the first to use the SCF for this question, but the SCF is an available survey, the analysis is associational, and the methods are standard linear probability, OLS, and cited RIF-UQR estimators. Closely related relationships had already been studied using other surveys and countries, including Van Rooij et al. (2011), Xia et al. (2014), Kramer (2016), Allgood and Walstad (2016), and Bannier and Schwarz (2018). The new contribution is therefore a useful US-SCF application rather than scarce-data access, new identification, or a first-order new measurement result."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "The paper adds distributional evidence by applying unconditional quantile regressions to conditional equity and bond shares.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "Tables 4a and 4b report RIF-UQR estimates at five quantiles, revealing sign changes for financial literacy across the equity-share distribution. The estimator is taken directly from Firpo et al. (2009), and the analysis does not establish subgroup-specific effects or causal mechanisms. This is an informative but incremental application."
+        },
+        {
+          "claim_type": "policy",
+          "description": "The manuscript suggests that initiatives increasing financial knowledge could foster stock-market participation in the United States.",
+          "significance": "LOW",
+          "confidence": 8.5,
+          "supporting_evidence": "Section 6 says the findings could inform initiatives to increase financial knowledge and foster participation, while Section 5.4 explicitly states that endogeneity is unresolved and that estimates should be interpreted as conditional correlations or predictive effects. No welfare analysis establishes that greater risky-asset participation is uniformly beneficial across wealth or demographic groups."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper has a clear two-margin portfolio framework and usefully separates objective literacy, confidence in one's knowledge, and macroeconomic confidence. Its interpretation becomes less illuminating when distributional UQR patterns are described as subgroup or wealth heterogeneity without directly connecting those concepts, and when racial gaps are reported without discussing structural constraints or respondent-based measurement.",
+        "supporting_evidence": "Section 4 clearly distinguishes participation and allocation decisions, and Tables 2 through 4 follow that structure. However, the abstract asserts variation by wealth, age, education, and race, while the reported heterogeneity analysis is primarily across outcome quantiles and gender interactions. The policy discussion does not explain why increasing risky-asset participation would have similar welfare consequences for groups with substantially different wealth and participation rates.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper credibly shows that financially knowledgeable and self-confident respondents are more likely to report household stock ownership. It does not show that teaching financial literacy causes people to buy stocks, that doing so makes them better off, or that literacy and confidence work differently for Black, Hispanic, low-wealth, older, or less-educated households. Those broader distributional and policy claims should be removed or directly tested.",
+      "confidence_score": 8.5,
+      "source_evidence": "The abstract states that the relevance of literacy and confidence varies with the distribution of wealth and across age, education, and race. Table 2a instead reports additive race, education, age, literacy, and confidence coefficients; Table 2b does the same for bonds. Tables 4a and 4b estimate quantiles of conditional asset shares rather than wealth quantiles. Tables E.2a and E.2b provide gender interactions, but no analogous race, age, education, or wealth interactions are reported. Appendix A defines race and gender using the respondent, and Section 3 notes that the respondent is generally the most financially knowledgeable person in the household. Section 5.4 explicitly cautions that literacy and confidence may be endogenous and that estimates should be treated as conditional correlations or predictive effects. Nevertheless, the introduction uses language such as positively affect participation, and the conclusion proposes initiatives to increase financial knowledge to foster stock-market participation.",
+      "verdict": "REJECT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The peer reviews correctly converge on the paper's strongest defensible contribution: a weighted cross-sectional description of equity participation and conditional portfolio shares in the 2016 SCF. They also identify material inconsistencies between the reported estimates and the abstract or conclusion.",
+        "attacks": [
+          {
+            "target_persona": "Perspective",
+            "critique": "The unsupported claim that literacy and confidence vary across wealth, age, education, and race is more than a minor rephrasal because it appears in the abstract as a principal distributional finding. The reported UQRs concern quantiles of asset shares, not wealth, and additive demographic controls do not establish heterogeneous literacy or confidence associations. Correcting this requires removing a headline result or adding within-framework interaction or stratified analyses, so substantial rephrasal is the better classification.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.2,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "The abstract asserts variation with wealth and across age, education, and race. The described Tables 2a and 2b use these characteristics as additive controls, Tables 4a and 4b analyze quantiles of conditional asset shares, and only the appendix gender exercise reports interactions."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The asymmetric bond construction is a substantive measurement problem for the bond results, but it does not invalidate the separately constructed equity results. Because the problem can potentially be repaired by reconstructing indirect bond exposure or, less satisfactorily, by relabeling and sharply narrowing the bond estimand, it is a REVISION-level flaw rather than a blocker.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "argument": "The absence of subgroup interactions does not require the authors to add an extensive new heterogeneity analysis if that lies outside their intended scope. They can instead remove the unsupported subgroup-effect claim and accurately describe age, race, and education as additive respondent-characteristic associations.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I concede that counting broad indirect equity exposure while apparently omitting analogous indirect bond exposure creates an asymmetric and potentially misclassified bond outcome. This places the interpretation of the reported bond participation rate and bond regressions in genuine doubt.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I concede that the manuscript does not establish heterogeneity in literacy or confidence associations by wealth, race, age, or education, and that respondent-level race and gender should not be presented uncritically as household-level mechanisms.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I concede that the abstract's statement that confidence in one's own financial knowledge predicts bond ownership conflicts with the described Table 2b estimates and must be removed.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I concede that the policy discussion is unsupported: cross-sectional conditional associations do not show that financial-education initiatives would increase participation or improve welfare, particularly across households with different resources and background risks.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "Execution is partly sound and informative: the extensive-margin versus conditional-allocation structure, SCF weighting and imputation procedures, and RIF-UQR supplement support a useful descriptive analysis. However, the bond outcome has a repairable but substantive measurement-comparability problem, and the manuscript requires substantial claim calibration. It must consistently present conditional associations rather than causal impacts, acknowledge selection among current asset holders, remove the unsupported self-confidence result for bonds, report the mixed equity-share UQR pattern accurately, correct the 75th-versus-90th-percentile inconsistency, and remove unsupported demographic and wealth heterogeneity claims. Novelty remains LOW because the paper applies established estimators to a new SCF wave after closely related literacy-confidence-participation relationships had already been studied by Van Rooij et al. (2011), Xia et al. (2014), Allgood and Walstad (2016), and Bannier and Schwarz (2018). Insight is MEDIUM due to the useful two-margin organization but limited mechanism or identification. Although the empirical defects are repairable within the framework, the incremental novelty is insufficient for publication under the stated verdict rules.",
+        "verdict": "REJECT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The reviews converge that the equity analysis is a useful weighted cross-sectional description, but causal language, policy implications, and several headline summaries exceed the evidence. I additionally retain the concern that the broad equity and bond outcomes are not measured comparably.",
+        "attacks": [
+          {
+            "target_persona": "Perspective",
+            "critique": "The statement that nationally aggregated participation results are reasonably supported is too broad for the bond results. The bond measure appears to omit major forms of indirect bond exposure that are included analogously in the equity measure, so the reported bond participation rate and regressions cannot be interpreted as covering household bond ownership generally.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Appendix A, as summarized in the review graph, includes stock mutual funds, combination funds, managed accounts, IRAs/Keoghs, retirement accounts, and 529 plans in equity exposure. The bond construction instead enumerates principally direct debt securities and does not list comparable indirect exposure, while the bond share uses total financial assets including pensions as its denominator. The manuscript nevertheless reports this as general household bond ownership."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Perspective",
+            "argument": "Estimating new interactions by wealth, race, age, and education is not necessary if the unsupported heterogeneity claim is removed. Such subgroup analysis would be an extension beyond the core extensive-margin and conditional-allocation analysis rather than a prerequisite for reporting the supported aggregate equity associations.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the defensible estimands are conditional cross-sectional associations, not causal impacts or behavioral determinants. The abstract and conclusion also misstate the bond-confidence result and the conditional equity-share evidence, including the location of the negative UQR estimate.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that the reported models do not substantiate the claim that literacy or confidence associations vary by wealth, race, age, and education. Quantiles of asset shares are not wealth quantiles, and additive demographic controls do not establish heterogeneous literacy or confidence relationships.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that respondent race and gender should not be presented uncritically as household-level mechanisms and that the observational regressions do not establish either the effectiveness or welfare desirability of policies intended to increase risky-asset participation.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that allocation regressions among current holders describe a selected subpopulation. They do not identify an effect of literacy on allocation or establish the proposed mechanism that literacy dampens risk appetite.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "The surviving execution assessment is mixed. The survey-weighted, multiply imputed cross-sectional equity analysis is competently organized and supports a descriptive association between objective literacy, self-assessed knowledge, and equity participation. However, the bond outcome has a serious repairable measurement and labeling problem because it is not constructed comparably to the broad equity measure. The manuscript also requires substantial claim calibration: causal terminology, policy implications, the claimed confidence-bond relationship, the summary of conditional equity shares, and unsupported demographic and wealth heterogeneity claims must be corrected. Novelty remains LOW because the paper applies established estimators to a new SCF wave after closely related literacy-confidence associations were already documented in the cited literature. Insight is MEDIUM: the two-margin organization and distinction among confidence concepts are useful, but the behavioral interpretations exceed what the design establishes. Although the measurement defect could be repaired within the current framework, the incremental novelty is insufficient for publication at the implied threshold.",
+        "verdict": "REJECT"
+      },
+      "Perspective": {
+        "referee_acknowledgment": "The peer reviews correctly distinguish the paper's useful descriptive architecture from its unsupported causal, distributional, and policy interpretations. The econometric critique identifies central claim-calibration errors, while the data-science critique raises a genuine measurement-comparability problem for the bond outcomes.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript centrally presents cross-sectional conditional associations as impacts, effects, and determinants, despite expressly acknowledging that financial literacy and confidence may be endogenous. This affects the abstract, introduction, interpretation of intensive-margin results, and policy conclusion rather than merely isolated wording.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.3,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.2,
+            "evidence": "The abstract describes the 'impacts' of literacy and confidence; Sections 1 and 5 use language such as 'positively affect' and 'determinants'; and Section 6 calls the variables 'powerful determinants' and proposes financial-knowledge initiatives. Section 5.4 instead states that endogeneity is unresolved and that estimates should be interpreted as conditional correlations or predictive effects."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The headline summaries do not accurately represent the reported bond and conditional-equity results. Confidence in one's financial knowledge does not predict bond ownership in Table 2b, and conditional equity shares do not generally rise with literacy: the mean estimate is insignificant and the quantile estimates change sign.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.8,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "The abstract says confidence in financial skills increases the probability of holding risky assets and bonds, but Table 2b reportedly gives near-zero, insignificant self-confidence coefficients. Table 3a gives an insignificant conditional-mean literacy coefficient, while Table 4a reports positive associations at lower quantiles and a significant negative association at the 90th percentile. Section 6 incorrectly refers to the negative result as occurring at the 75th percentile."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The equity and bond outcomes appear to measure materially different forms of exposure. Broad indirect equity holdings are counted, whereas the bond measure principally captures enumerated direct debt securities. This undermines comparisons between equity and bond participation and may distort the bond regressions if indirect bond ownership is correlated with literacy or confidence.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.3,
+            "evidence": "The outcome definitions described in the review record include stock mutual funds, combination funds, equity in retirement accounts, and managed-account equity in the equity measure, but do not list analogous bond mutual funds, retirement-account bond exposure, or managed-account bond exposure in the bond measure. The bond share nevertheless uses total financial assets including pensions as its denominator. Reconstruction or explicit relabeling is required."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript claims heterogeneity in the relevance of literacy and confidence across wealth, age, education, and race without reporting analyses that identify such heterogeneous associations. Additive controls establish outcome differences, while quantiles of asset shares are not wealth quantiles.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 4.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.7,
+            "evidence": "The abstract asserts variation across wealth and socioeconomic dimensions. The reported baseline models include age, education, and race additively; Tables 4a and 4b examine quantiles of conditional asset shares; and the only described subgroup interaction exercise is by respondent gender. No corresponding literacy-by-race, literacy-by-age, literacy-by-education, or wealth-stratified estimates are reported."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The contribution is empirically useful but insufficiently novel for a strong standalone publication claim. It transfers already established literacy-confidence-participation questions to one wave of the SCF using standard cross-sectional methods, without new identification, measurement validation, or methodology.",
+            "attack_type": "novelty",
+            "issue_class": "literature_dispute",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.6,
+            "evidence": "The manuscript itself cites Van Rooij et al. (2011) on literacy and stockholding, Xia et al. (2014) and Chu et al. (2017) on confidence and participation, Allgood and Walstad (2016) on actual and perceived literacy in the United States, and Bannier and Schwarz (2018) on confidence and financial wealth. The incremental elements are the 2016 SCF application, macroeconomic-confidence control, and an off-the-shelf Firpo et al. (2009) RIF-UQR analysis."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The bond-measurement asymmetry is a serious but branch-specific substantive flaw. It places the broad bond conclusions in doubt, but it does not invalidate the more credible equity-participation analysis. The problem remains repairable within the current framework through reconstruction or narrow relabeling and re-estimation, so it is a REVISION issue rather than a fatal blocker.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "Conditioning allocation regressions on ownership limits the estimand to current holders and precludes causal claims about allocation, but it does not make the descriptive regressions intrinsically invalid. The appropriate remedy is explicit selected-population and associational language rather than treating the entire intensive-margin exercise as unidentified or unusable.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I concede that the manuscript's central causal and behavioral language materially exceeds the estimands, that the bond-confidence headline contradicts Table 2b, and that the conclusion misstates the conditional-equity and quantile findings. These require substantial rephrasing across the manuscript.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I concede that asymmetric coverage of indirect equity and bond exposure is an argument-damaging measurement problem for the bond branch. The authors must either construct comparable exposure measures or restrict every bond claim to the enumerated direct debt securities.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "The surviving execution assessment is that the paper offers a competent weighted, multiply imputed, cross-sectional description of participation and conditional portfolio shares in the 2016 SCF. Its most credible result is the independent association of objective literacy and self-assessed knowledge with equity participation. The bond analysis has a repairable but serious measurement-comparability problem, and the intensive-margin estimates concern the selected population of current holders. Central claims require substantial rephrasing to remove causal language, correct contradictions with the tables, and distinguish outcome-share quantiles from wealth or demographic heterogeneity. Novelty remains LOW because closely related literacy-confidence-participation relationships were already established and the SCF application uses standard methods; insight is MEDIUM because the two-margin framework is clear but the proposed mechanisms and policy implications are not identified. Even after feasible repairs, the contribution appears too incremental to overcome insufficient novelty, so the verdict remains REJECT.",
+        "verdict": "REJECT"
+      }
+    },
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph correctly identifies pervasive claim-calibration problems and the selected-population nature of the allocation regressions. I add that the manuscript does not document its treatment of the SCF sampling design and misinterprets unconditional quantile coefficients as relationships within households located at particular quantiles.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The interpretation of the RIF unconditional quantile regressions as describing behavior among households located near a given asset-share quantile is econometrically incorrect. An unconditional quantile partial effect describes how a marginal change in a covariate distribution shifts an unconditional quantile under the maintained projection; it is not a coefficient for the subgroup of households observed at that quantile. Consequently, the estimates do not establish that literacy dampens risk appetite among households with comparably risky portfolios.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "Section 5.2 interprets the negative upper-quantile coefficient as showing that 'for households generally holding riskier assets—given their set of covariates—those with higher literacy and higher confidence actually hold a little less' and calls this 'mean-reverting allocation behavior.' RIF-UQR estimates effects on unconditional distributional statistics, not associations within the observations occupying an unconditional quantile."
+          },
+          {
+            "target_persona": "Perspective",
+            "critique": "The characterization of the analysis as survey-weighted is not supported by the supplied manuscript. The SCF sampling design intentionally yields unequal selection probabilities, so nationally representative rates and population regressions require sampling weights, while valid design-based uncertainty also requires an explicit variance procedure. Until these choices are documented, the population interpretation of even the equity results cannot be treated as established.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.2,
+            "evidence": "Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin's rules for the five implicates, but it never states that SCF sampling weights are used or explains how sampling-design uncertainty is combined with imputation uncertainty. Nevertheless, the paper reports nationally representative household participation rates, and the review graph describes the estimates as weighted."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The claimed asymmetry between indirect equity and bond exposure cannot be verified from the supplied manuscript because Appendix A is not included in the provided content, while Section 3.1 describes categories covering instruments directly or indirectly linked to stocks or bonds. The construction plainly requires clarification, but the specific omission of indirect bond exposure should not be treated as established solely from unavailable appendix material.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "argument": "Conditioning allocation regressions on ownership does not make them intrinsically invalid. They remain descriptive regressions for the selected population of current holders, provided the manuscript explicitly states that estimand and abandons causal or mechanism claims.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that the manuscript's repeated language of impacts, effects, and determinants is incompatible with its cross-sectional design and acknowledged endogeneity. The abstract, results, conclusion, and policy discussion require systematic conversion to conditional-association language.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that the abstract's self-confidence result for bond ownership, the conclusion's summary of conditional equity shares, and the inconsistent placement of the negative upper-quantile estimate do not match the reported results.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that, if the detailed construction indeed includes broad indirect equity exposure but excludes analogous indirect bond exposure, broad bond-ownership claims would be materially misleading and the bond outcomes would need reconstruction or narrow relabeling.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that additive demographic controls and quantiles of asset shares do not demonstrate heterogeneity in literacy or confidence associations across wealth, race, age, or education. Because this appears as a headline abstract claim, its removal is material rather than merely cosmetic.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Perspective",
+            "question": "What passage in the supplied manuscript establishes that sampling weights and an appropriate SCF design-based variance procedure were used in the LPM, OLS, and RIF-UQR estimates?"
+          },
+          {
+            "target_persona": "Data_Scientist",
+            "question": "Can the asserted exclusion of indirect bond exposure be demonstrated from the supplied manuscript text rather than from an appendix that is not present in the provided content?"
+          }
+        ],
+        "final_argument_state": "The surviving equity result is a potentially useful cross-sectional association between objective literacy, self-assessed financial knowledge, and participation, but execution cannot yet be described as demonstrably survey-weighted because the manuscript does not document sampling weights or design-based variance estimation. The allocation regressions apply only to current holders, and their RIF-UQR coefficients are incorrectly interpreted as subgroup relationships at particular quantiles. Central claims must be rewritten as associations, the bond-confidence and conditional-share summaries must be corrected, unsupported demographic and wealth heterogeneity claims must be removed, and the bond construction must be made transparent. Novelty is LOW because Van Rooij et al. (2011), Xia et al. (2014), Allgood and Walstad (2016), and Bannier and Schwarz (2018) already study closely related literacy-confidence-participation relationships; the main increment is application to the 2016 SCF with an additional macroeconomic-confidence measure. Insight is MEDIUM: separating participation from conditional allocation is useful, but neither mechanisms nor policy effects are identified. Although the econometric and measurement issues appear repairable within the existing framework, the contribution remains too incremental to overcome insufficient novelty.",
+        "verdict": "REJECT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The review graph correctly converges on a serious but repairable bond-measurement problem, substantial claim-calibration failures, low novelty, and medium insight. One additional execution concern remains: the supplied empirical-strategy discussion does not document use of SCF sampling weights, despite peer summaries describing the analysis as weighted.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The characterization of the analysis as survey-weighted is not supported by the supplied manuscript text. The SCF uses a complex sampling design with disproportionate representation of wealthy households, so failure to use the final sampling weights would materially affect nationally representative participation rates, distributional estimates, and regression targets. The paper must explicitly document weighting in every estimator or re-estimate the results with appropriate weights.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 7.6,
+            "evidence": "Section 3 calls the SCF nationally representative, and Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin-style multiple-imputation inference. It does not state that SCF sampling weights enter these estimators or explain how weighting is combined with multiple imputation. The provided text says Appendix D describes multiple imputation, not survey weighting."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Perspective",
+            "argument": "The asymmetric bond construction is serious but does not invalidate the separately defined equity-participation analysis. Reconstruction of indirect bond exposure and re-estimation, or a much narrower label restricted to enumerated debt securities, is feasible within the existing SCF framework; therefore REVISION rather than BLOCKER remains appropriate.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The absence of literacy or confidence interactions by wealth, age, education, and race does not compel a new subgroup analysis. Removing the unsupported headline heterogeneity claim would preserve the supported aggregate equity-participation analysis, making this principally a claim-calibration problem rather than a required extension.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that unresolved endogeneity limits the estimates to conditional cross-sectional associations. The repeated language of impacts, effects, determinants, mechanisms, and policy effectiveness materially overstates the design and requires substantial revision throughout the abstract, results, and conclusion.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that the headline summaries conflict with the reported estimates: self-assessed financial knowledge does not significantly predict bond ownership, the conditional-mean equity-share association with literacy is insignificant, and the reported quantile pattern changes sign. The conclusion also inconsistently places the negative estimate at the 75th rather than the 90th percentile.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that allocation regressions conditional on ownership concern a selected population of current holders. They can provide descriptive evidence for that subpopulation but cannot establish that literacy changes allocation or dampens risk appetite.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Perspective",
+            "reason": "I agree that additive demographic controls and quantiles of conditional asset shares do not establish heterogeneity in literacy or confidence associations by wealth, race, age, or education. Those claims should be removed unless appropriate interactions or stratified analyses are supplied.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "What passage in the supplied manuscript establishes that SCF sampling weights were used in the LPM, OLS, and RIF-UQR estimates and combined correctly with the five implicates?"
+          }
+        ],
+        "final_argument_state": "The most credible surviving result is a descriptive association of objective financial literacy and self-assessed financial knowledge with equity participation in the 2016 SCF. Execution is otherwise mixed: the bond branch has a serious but repairable exposure-measurement asymmetry, conditional-allocation regressions apply only to selected current holders, and use of SCF sampling weights is not documented in the supplied methods. Substantial rephrasing is required to eliminate causal and mechanistic language, correct the bond-confidence and conditional-equity summaries, remove unsupported demographic and wealth heterogeneity claims, and withdraw policy-effectiveness implications. Novelty is LOW because the cited studies by Van Rooij et al. (2011), Xia et al. (2014), Allgood and Walstad (2016), and Bannier and Schwarz (2018) already establish closely related literacy-confidence-participation relationships using similar observational approaches. Insight is MEDIUM because distinguishing extensive and intensive margins and separating two forms of confidence is useful, but no new mechanism is identified. Although the execution defects are repairable within the framework, the contribution remains too incremental; the verdict is REJECT.",
+        "verdict": "REJECT"
+      },
+      "Perspective": {
+        "referee_acknowledgment": "The peer critiques materially sharpen the audit. I accept that the unsupported wealth and demographic heterogeneity claim is a central abstract-level overstatement requiring substantial rephrasing, and that the asymmetric construction of equity and bond exposure creates a serious but repairable measurement problem for the bond branch.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The supplied methodology does not establish that the SCF sampling weights are used, even though the paper reports nationally representative household percentages and population-level regressions. Because the SCF sampling design is not self-weighting, failure to use the survey weights could materially affect participation estimates and estimated associations.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 7.2,
+            "evidence": "Section 3 calls the SCF nationally representative, and Sections 4.1–4.2 describe linear probability, OLS, and RIF-UQR models. Section 4 discusses combining five implicates under Rubin's rules, but the supplied text does not state that sampling weights are applied to descriptive statistics or regressions. Consequently, the review graph's characterization of the analysis as survey-weighted is not supported by the manuscript content provided."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "The surviving assessment affirmatively describes the empirical analysis as using SCF weighting procedures, but the supplied manuscript text documents multiple-imputation handling rather than sampling-weight use. The review should not credit survey-weighted population inference without manuscript evidence.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.0,
+            "barrier_category": "REVISION",
+            "confidence": 7.3,
+            "evidence": "Section 4 explicitly explains Rubin-style combination of the five implicates, while equations (1)–(3) and the surrounding discussion do not mention SCF sampling weights. This matters because nationally representative SCF estimates require attention to its sampling design."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The asymmetric bond construction is serious but does not invalidate the separately constructed equity-participation results. It can be repaired within the existing SCF framework by reconstructing indirect bond exposure and re-estimating, or by consistently relabeling the outcome as ownership of the enumerated debt securities and abandoning broad equity-versus-bond comparisons.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "Selection into current ownership limits the intensive-margin estimand, but descriptive regressions among holders remain usable if explicitly labeled as conditional associations for that selected population. A causal allocation mechanism or claim that literacy dampens risk appetite is not supported.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the abstract's claim of heterogeneity by wealth, age, education, and race is not a minor wording defect. It is presented as a principal finding, while asset-share quantiles and additive demographic controls do not identify heterogeneous literacy or confidence associations. Removing this headline result requires substantial rephrasing unless corresponding interaction or stratified analyses are added.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that broad indirect equity exposure is not comparable to an apparently direct-security-oriented bond measure. The resulting bond participation rate and regressions cannot be interpreted as general household bond exposure without reconstruction or substantially narrower labeling.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that causal terms such as impacts, effects, and determinants exceed the cross-sectional design; that self-assessed financial knowledge does not support the stated bond-ownership headline; and that the conclusion misreports the mixed conditional equity-share evidence and the location of the negative quantile estimate.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that respondent race and gender should not automatically be interpreted as household-level mechanisms and that the observational estimates do not establish that financial-education initiatives would increase participation or welfare.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "What passage in the supplied manuscript establishes use of SCF sampling weights, as distinct from Rubin-rule handling of the five multiple-imputation implicates?"
+          }
+        ],
+        "final_argument_state": "The most defensible contribution is a cross-sectional descriptive association of objective financial literacy and self-assessed financial knowledge with equity participation in the 2016 SCF. Execution is otherwise mixed: the bond branch has a serious but repairable exposure-measurement problem; conditional allocation regressions concern the selected population of current holders; and the supplied methods do not establish use of SCF sampling weights despite population-level interpretation. Substantial rephrasing is required throughout to replace causal language with conditional-association language, correct the unsupported confidence-bond headline, accurately report the mixed equity-share quantile pattern, remove unsupported wealth and demographic heterogeneity claims, and withdraw policy-effectiveness implications. Novelty is LOW because Van Rooij et al. (2011), Xia et al. (2014), Allgood and Walstad (2016), and Bannier and Schwarz (2018) already examine closely related literacy, confidence, and participation relationships using comparable empirical approaches. Insight is MEDIUM: separating participation from conditional portfolio shares and distinguishing two forms of confidence is useful, but the design does not identify the proposed behavioral mechanisms. Although the execution defects are repairable within the framework, the contribution remains too incremental; insufficient novelty therefore supports REJECT.",
+        "verdict": "REJECT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: REJECT / INSUFFICIENT STRUCTURAL STABILITY. The strongest credible version of the paper is a descriptive study of how objective financial literacy, self-assessed financial knowledge, and macroeconomic confidence are associated with household portfolio participation and, among current holders, portfolio shares in the 2016 SCF. The extensive-margin/intensive-margin organization is useful, the distinction among the three focal measures is conceptually clear, and the distributional analysis potentially adds nuance. The most credible empirical finding is that objective literacy and self-assessed knowledge are independently associated with equity participation after conditioning on observed household characteristics. Insight is therefore MEDIUM, but novelty is LOW: the manuscript applies standard cross-sectional methods to a new SCF wave in a literature that it acknowledges already contains closely related evidence on literacy, confidence, and participation.\n\nThe rejection rests primarily on execution and structural stability, not on novelty alone. First, the manuscript does not state that SCF sampling weights enter the descriptive statistics, LPM, OLS, or RIF-UQR estimators, nor does it explain how sampling-design uncertainty is combined with uncertainty from the five implicates. Because the SCF is not self-weighting, the manuscript has not established the nationally representative interpretation it repeatedly invokes. This is a substantive flaw, although it appears repairable through documentation and, if necessary, re-estimation.\n\nSecond, the bond outcome is not comparable to the equity outcome as described. Equity exposure includes indirect holdings through funds, retirement accounts, and managed accounts, whereas the bond definition principally enumerates direct debt securities and does not list analogous indirect bond exposure. Yet the bond share uses total financial assets including pensions as its denominator, and the manuscript presents the outcome as general household bond ownership. This can understate bond participation and may distort its associations with literacy and confidence. The bond branch therefore requires reconstruction on a basis comparable to equity or consistent relabeling and narrowing of its estimand, with corresponding re-estimation or withdrawal of broad comparisons.\n\nThird, several central interpretations materially exceed the design or conflict with the reported estimates. The cross-sectional regressions identify conditional associations, not impacts, determinants, mechanisms, or policy effects. Allocation regressions describe the selected population of current holders and cannot establish that literacy changes allocation. The RIF-UQR coefficients concern unconditional distributional statistics; they do not describe relationships within households observed at a particular quantile and do not establish mean-reverting behavior or dampened risk appetite. The abstract's claim that self-confidence predicts bond ownership conflicts with the near-zero, insignificant estimates in Table 2b. The conditional-mean equity-share association with literacy is insignificant, while the quantile pattern is mixed and becomes negative at the 90th percentile; the conclusion incorrectly locates that negative result at the 75th percentile. These are substantial-rephrasal issues because they affect the paper's headline account.\n\nThe claim that the relevance of literacy and confidence varies by wealth, age, education, and race is also unsupported by the reported analysis. Additive demographic controls do not estimate heterogeneous literacy or confidence associations, and quantiles of asset shares are not wealth quantiles. Only gender interactions are reported. This claim should be removed unless directly supported by appropriately weighted interaction or stratified estimates. Respondent race and gender should also be described as respondent characteristics rather than unqualified household-level mechanisms.\n\nDefended critiques and scope: the intensive-margin regressions are not intrinsically unusable; they can remain as descriptive estimates for current holders if their selected-population estimand is explicit. Likewise, the bond problem does not automatically invalidate the separately constructed equity analysis. New demographic interaction analyses are not mandatory if the unsupported heterogeneity claims are removed. No additional extension is required merely for breadth. Nonetheless, the combination of undocumented survey-design treatment, unstable bond measurement, and central misinterpretation means the manuscript is not presently sound enough for publication.",
+    "official_letter_to_the_author": "Dear Authors,\n\nYour manuscript addresses an economically relevant question using the 2016 Survey of Consumer Finances and a clear two-margin framework. Its strongest contribution is a descriptive analysis distinguishing portfolio participation from allocation among current holders and separating objective financial literacy, self-assessed financial knowledge, and confidence in the economy. In its most defensible form, the paper shows that objective literacy and self-assessed knowledge are independently associated with equity participation, while conditional portfolio-share relationships are weaker and heterogeneous.\n\nAfter integrating the reviews, I must decline the manuscript in its current form. The decision is REJECT / INSUFFICIENT STRUCTURAL STABILITY. The principal concerns are substantive execution problems and central overstatements.\n\nFirst, the methods section does not document whether SCF sampling weights are used in the descriptive statistics or the LPM, OLS, and RIF-UQR estimates. It explains the treatment of five implicates under Rubin's rules but not how the sampling design and its uncertainty enter estimation. Because the SCF is not self-weighting, nationally representative rates and population-level regression interpretations require explicit treatment of the survey design. Please document the weighting and variance procedures estimator by estimator and explain how they are combined with multiple imputation. If the reported estimates were not appropriately weighted, they must be re-estimated and all tables and conclusions reassessed.\n\nSecond, the equity and bond measures appear asymmetric. The equity measure includes indirect exposure through mutual funds, retirement accounts, and managed accounts, whereas the bond measure principally lists direct debt securities and does not list analogous indirect bond exposure. At the same time, the bond share is divided by total financial assets including pensions. The resulting outcome cannot be presented without qualification as general household bond ownership. The preferred remedy is to construct comparable broad equity and bond exposure measures and rerun the relevant analyses. If the data do not permit this, relabel the bond outcome throughout as ownership or share of the specifically enumerated debt securities, explain the numerator-denominator mismatch, and remove broad equity-versus-bond comparisons.\n\nThird, the manuscript must be rewritten consistently around conditional associations. The observational design and acknowledged endogeneity do not support language such as impacts, effects, determinants, or claims that financial-knowledge initiatives would foster participation. The allocation regressions apply only to current holders and should be described as associations within that selected population. They do not identify an allocation effect or show that literacy dampens risk appetite.\n\nFourth, revise the interpretation of the RIF-UQR estimates. These coefficients describe changes in unconditional distributional statistics under the maintained projection; they are not coefficients for households observed at a particular quantile. The current interpretation as behavior among households with comparably risky portfolios, and the label of mean-reverting allocation behavior, should be removed unless supported by a different analysis.\n\nFifth, reconcile every headline statement with the tables. In particular, self-assessed financial knowledge does not significantly predict bond participation in Table 2b. The conditional-mean literacy coefficient for the equity share is insignificant, and the quantile results are mixed rather than uniformly positive. The significant negative equity-share estimate occurs at the 90th percentile, not the 75th. Confidence in the economy is negatively associated with the reported bond-participation measure in Table 2b but positively associated with conditional bond shares in Table 3b; these distinct findings should not be collapsed into a general positive effect.\n\nFinally, remove the claim that literacy and confidence relationships vary by wealth, age, education, and race unless you directly estimate those forms of heterogeneity. Additive controls do not establish heterogeneous associations, and asset-share quantiles are not wealth quantiles. New subgroup analyses are optional; narrowing the claim is sufficient. Race and gender should be identified as characteristics of the selected respondent, who is generally the household's most financially knowledgeable member.\n\nThe paper's novelty is incremental rather than first-order: closely related literacy-confidence-participation relationships are already represented in the literature cited by the manuscript, while the principal additions are the 2016 SCF application, macroeconomic-confidence measure, and standard RIF-UQR analysis. A revised project would therefore need to present itself as a careful US-specific descriptive contribution rather than as identifying new behavioral determinants or policy effects.\n\nSincerely,\nSenior Coordinating Editor",
+    "minimum_viable_revision_path": "1. Establish the survey estimand. State explicitly whether final SCF sampling weights are used in every descriptive statistic and estimator. Explain the design-based variance procedure and how sampling uncertainty is combined with the five implicates. Re-estimate all results if the existing implementation is inadequate.\n\n2. Repair the bond branch. Preferably reconstruct bond ownership and shares to include indirect exposure on a basis comparable to equity, then rerun all affected descriptive statistics, regressions, and appendices. If reconstruction is infeasible, narrowly relabel the outcomes as the enumerated debt securities, explain omitted indirect exposure and the denominator choice, and remove claims about general bond ownership or symmetric equity-bond comparisons.\n\n3. Recast the paper as observational. Replace causal and mechanistic terms throughout with conditional-association or predictive language. Remove policy-effectiveness claims and state that causal and welfare implications require future research.\n\n4. Define the intensive-margin estimand as associations among current holders. Remove claims that these regressions identify changes in allocation, risk appetite, or behavior for the broader population.\n\n5. Correct the RIF-UQR interpretation. Describe coefficients as associations with unconditional quantiles under the RIF projection, not as relationships within households occupying particular quantiles. Remove the mean-reversion mechanism unless separately demonstrated.\n\n6. Audit all summaries against the tables. Remove the claim that self-confidence predicts bond ownership; report the insignificant conditional-mean equity-share result and mixed quantile pattern; correct the 75th/90th-percentile error; and distinguish the negative bond-participation association of economic confidence from its positive conditional-share association.\n\n7. Remove unsupported heterogeneity claims by wealth, age, education, and race, or add appropriately weighted interaction or stratified analyses with uncertainty and adequate-cell diagnostics. Clearly distinguish wealth quantiles from asset-share quantiles and respondent characteristics from household mechanisms.\n\n8. Reframe novelty modestly as a US-SCF descriptive application that jointly considers objective literacy and two confidence measures, rather than as a new identification or policy contribution.",
+    "constructive_summary": "The paper has a coherent descriptive core and a useful distinction between participation and allocation. Its strongest result concerns equity participation, not broad bond ownership, causal effects, or policy efficacy. The present version is structurally unstable because nationally representative inference is not documented, the bond measure is not demonstrably comparable to the equity measure, and several headline interpretations conflict with either the design or the reported tables. These problems are potentially repairable within the existing framework, but they require re-estimation or explicit survey-design documentation, reconstruction or narrowing of the bond outcome, and substantial rewriting of the paper's central claims. Novelty is LOW and insight is MEDIUM; a viable revised project would be a disciplined, transparent, US-specific descriptive study."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Econometrician': 0.5, 'Data_Scientist': 0.3, 'Perspective': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Econometrician→Perspective: severity 5.2/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → CONCEDED. Explicit concession recorded.\n  • Data_Scientist→Perspective: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.\n  • Perspective→paper: severity 6.3/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Perspective→paper: severity 5.8/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Perspective→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.3/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Perspective→paper: severity 4.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Perspective→paper: severity 7.0/10; category REVISION; type novelty; issue literature_dispute; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n### Debate Round 2\n  • Econometrician→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Perspective: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.2/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Data_Scientist→Econometrician: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.6/10 → CONCEDED. Explicit concession recorded.\n  • Perspective→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Perspective→Econometrician: severity 6.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.3/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Econometrician→Perspective (UNANSWERED): +0.009 to Econometrician, -0.002 to Perspective (unanswered, discounted)\n  Econometrician→paper (UNANSWERED): +0.001 to Econometrician (paper critique, discounted)\n  Econometrician→Perspective (CONCEDED): +0.002 to Econometrician, -0.002 to Perspective\n  Data_Scientist→Perspective (CONCEDED): +0.038 to Data_Scientist, -0.038 to Perspective\n  Data_Scientist→Econometrician (CONCEDED): +0.021 to Data_Scientist, -0.021 to Econometrician\n  Perspective→paper (UNANSWERED): +0.010 to Perspective (paper critique, discounted)\n  Perspective→paper (UNANSWERED): +0.006 to Perspective (paper critique, discounted)\n  Perspective→Econometrician (UNANSWERED): +0.002 to Perspective, -0.000 to Econometrician (unanswered, discounted)\n  Perspective→paper (UNANSWERED): +0.001 to Perspective (paper critique, discounted)\n  Perspective→paper (UNANSWERED): +0.000 to Perspective (paper critique, discounted)\n  Perspective→paper (UNANSWERED): +0.000 to Perspective (paper critique, discounted)\n  Perspective→paper (UNANSWERED): +0.000 to Perspective (paper critique, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Econometrician: 0.500 -0.009 → 0.491\n  Data_Scientist: 0.300 +0.059 → 0.359\n  Perspective: 0.200 -0.024 → 0.176\nNormalized final weights: {'Econometrician': 0.47882093979667384, 'Data_Scientist': 0.349594705599293, 'Perspective': 0.1715843546040332}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Econometrician: verdict=REJECT, novelty=LOW, insight=MEDIUM, issue=substantial_rephrasal, severity=6.5/10, barrier=REPHRASAL\n  Data_Scientist: verdict=REJECT, novelty=LOW, insight=MEDIUM, issue=substantive_flaw, severity=7.3/10, barrier=REVISION\n  Perspective: verdict=REJECT, novelty=LOW, insight=MEDIUM, issue=rephrasal, severity=4.0/10, barrier=REPHRASAL\nRaw execution score: 0.000\nExecution penalty from surviving substantive flaws: 0.083\nExecution score: 0.000\nNovelty consensus: LOW (0.270 before debate penalty; 0.256 after)\nNovelty claim counts (all personas): HIGH=0, MEDIUM=0, LOW=8\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=0, RESUBMIT=0, REJECT=3\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 7\nSubstantial-rephrasal (central overclaim) revisions: 5\nRephrasal-only revisions: 2\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.000 + 0.056 + 0.112 = 0.168\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nRephrasal issues are reported categorically and do not reduce insight or execution scores by themselves.\nSubstantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.",
+  "score_components": {
+    "final_score": 0.1680201,
+    "execution_score": 0.0,
+    "novelty_score": 0.25645500000000004,
+    "insight_score": 0.62,
+    "raw_execution_score": 0.0,
+    "novelty_consensus": "LOW",
+    "novelty_counts": {
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 8
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Econometrician": "REJECT",
+      "Data_Scientist": "REJECT",
+      "Perspective": "REJECT"
+    },
+    "adjusted_weights": {
+      "Econometrician": 0.47882093979667384,
+      "Data_Scientist": 0.349594705599293,
+      "Perspective": 0.1715843546040332
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Perspective",
+        "attack_id": "Econometrician→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "evidence": "Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin's rules for the five implicates, but it never states that SCF sampling weights are used or explains how sampling-design uncertainty is combined with imputation uncertainty. Nevertheless, the paper reports nationally representative household participation rates, and the review graph describes the estimates as weighted.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Perspective",
+        "attack_id": "Data_Scientist→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix A, as summarized in the review graph, includes stock mutual funds, combination funds, managed accounts, IRAs/Keoghs, retirement accounts, and 529 plans in equity exposure. The bond construction instead enumerates principally direct debt securities and does not list comparable indirect exposure, while the bond share uses total financial assets including pensions as its denominator. The manuscript nevertheless reports this as general household bond ownership.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.6,
+        "evidence": "Section 3 calls the SCF nationally representative, and Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin-style multiple-imputation inference. It does not state that SCF sampling weights enter these estimators or explain how weighting is combined with multiple imputation. The provided text says Appendix D describes multiple imputation, not survey weighting.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "The outcome definitions described in the review record include stock mutual funds, combination funds, equity in retirement accounts, and managed-account equity in the equity measure, but do not list analogous bond mutual funds, retirement-account bond exposure, or managed-account bond exposure in the bond measure. The bond share nevertheless uses total financial assets including pensions as its denominator. Reconstruction or explicit relabeling is required.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "Econometrician",
+        "attack_id": "Perspective→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.3,
+        "evidence": "Section 4 explicitly explains Rubin-style combination of the five implicates, while equations (1)–(3) and the surrounding discussion do not mention SCF sampling weights. This matters because nationally representative SCF estimates require attention to its sampling design.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.2,
+        "evidence": "Section 3 calls the SCF nationally representative, and Sections 4.1–4.2 describe linear probability, OLS, and RIF-UQR models. Section 4 discusses combining five implicates under Rubin's rules, but the supplied text does not state that sampling weights are applied to descriptive statistics or regressions. Consequently, the review graph's characterization of the analysis as survey-weighted is not supported by the manuscript content provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 7.3,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Appendix A defines D_equity to include 'stock mutual funds, combination funds, IRAs/Keoghs invested in stocks, other managed assets w/equity interest' and 'thrift-type retirement accounts invested in stocks.' Its D_bonds list instead covers government saving bonds, corporate bonds, commercial paper, municipal and foreign bonds, debentures, mortgage-backed securities, negotiable CDs, and Treasury instruments, without listing indirect retirement-account or mutual-fund bond exposure. W_bonds is divided by 'total financial assets (including pensions).' Table 1 reports only 10 percent bond ownership. Table 2b reports confidence in own financial knowledge coefficients of -0.000 to -0.001 with no significance, contradicting the abstract's statement that confidence 'additionally increases the probability of holding risky assets and bonds.' Table 2b also reports confidence in the economy of -0.008 with p below 0.05, while Table 3b reports a positive association with conditional bond shares. Section 5.4 explicitly states that the estimates should be interpreted as conditional correlations or predictive effects."
+      }
+    ],
+    "substantial_rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Section 5.2 interprets the negative upper-quantile coefficient as showing that 'for households generally holding riskier assets—given their set of covariates—those with higher literacy and higher confidence actually hold a little less' and calls this 'mean-reverting allocation behavior.' RIF-UQR estimates effects on unconditional distributional statistics, not associations within the observations occupying an unconditional quantile.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Perspective",
+        "attack_id": "Econometrician→Perspective",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.2,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "The abstract asserts variation with wealth and across age, education, and race. The described Tables 2a and 2b use these characteristics as additive controls, Tables 4a and 4b analyze quantiles of conditional asset shares, and only the appendix gender exercise reports interactions.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.3,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.2,
+        "evidence": "The abstract describes the 'impacts' of literacy and confidence; Sections 1 and 5 use language such as 'positively affect' and 'determinants'; and Section 6 calls the variables 'powerful determinants' and proposes financial-knowledge initiatives. Section 5.4 instead states that endogeneity is unresolved and that estimates should be interpreted as conditional correlations or predictive effects.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.8,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "The abstract says confidence in financial skills increases the probability of holding risky assets and bonds, but Table 2b reportedly gives near-zero, insignificant self-confidence coefficients. Table 3a gives an insignificant conditional-mean literacy coefficient, while Table 4a reports positive associations at lower quantiles and a significant negative association at the 90th percentile. Section 6 incorrectly refers to the negative result as occurring at the 75th percentile.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 6.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "outcome": "CONCEDED",
+        "issue_class": "substantial_rephrasal",
+        "attack_type": "substantial_rephrasal",
+        "evidence": "The abstract initially describes 'impacts' and states that confidence in financial skills increases the probability of holding risky assets and bonds. Table 2a supports a positive equity-participation association for literacy and self-confidence, but Table 2b reports self-confidence coefficients of approximately zero and statistically insignificant across specifications. Table 3a reports an insignificant literacy coefficient of about 0.007 for the conditional equity share. Table 4a reports positive literacy associations at p25 and p50, no significant association at p75, and a negative association of -0.027 at p90. Nevertheless, the conclusion refers to a negative effect at the 75th percentile and says conditional risky-asset shares still rise with literacy. Section 5.4 explicitly concedes that endogeneity is unresolved and that estimates 'should be interpreted as conditional correlations or predictive effects rather than causal effects.'"
+      }
+    ],
+    "rephrasal_revisions": [
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract asserts variation across wealth and socioeconomic dimensions. The reported baseline models include age, education, and race additively; Tables 4a and 4b examine quantiles of conditional asset shares; and the only described subgroup interaction exercise is by respondent gender. No corresponding literacy-by-race, literacy-by-age, literacy-by-education, or wealth-stratified estimates are reported.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Perspective",
+        "attacker": "Perspective",
+        "target": "paper",
+        "severity_score": 4.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "rephrasal",
+        "attack_type": "rephrasal",
+        "evidence": "The abstract states that the relevance of literacy and confidence varies with the distribution of wealth and across age, education, and race. Table 2a instead reports additive race, education, age, literacy, and confidence coefficients; Table 2b does the same for bonds. Tables 4a and 4b estimate quantiles of conditional asset shares rather than wealth quantiles. Tables E.2a and E.2b provide gender interactions, but no analogous race, age, education, or wealth interactions are reported. Appendix A defines race and gender using the respondent, and Section 3 notes that the respondent is generally the most financially knowledgeable person in the household. Section 5.4 explicitly cautions that literacy and confidence may be endogenous and that estimates should be treated as conditional correlations or predictive effects. Nevertheless, the introduction uses language such as positively affect participation, and the conclusion proposes initiatives to increase financial knowledge to foster stock-market participation."
+      }
+    ],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Perspective",
+        "attack_id": "Econometrician→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "evidence": "Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin's rules for the five implicates, but it never states that SCF sampling weights are used or explains how sampling-design uncertainty is combined with imputation uncertainty. Nevertheless, the paper reports nationally representative household participation rates, and the review graph describes the estimates as weighted.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Perspective",
+        "attack_id": "Data_Scientist→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix A, as summarized in the review graph, includes stock mutual funds, combination funds, managed accounts, IRAs/Keoghs, retirement accounts, and 529 plans in equity exposure. The bond construction instead enumerates principally direct debt securities and does not list comparable indirect exposure, while the bond share uses total financial assets including pensions as its denominator. The manuscript nevertheless reports this as general household bond ownership.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.6,
+        "evidence": "Section 3 calls the SCF nationally representative, and Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin-style multiple-imputation inference. It does not state that SCF sampling weights enter these estimators or explain how weighting is combined with multiple imputation. The provided text says Appendix D describes multiple imputation, not survey weighting.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "The outcome definitions described in the review record include stock mutual funds, combination funds, equity in retirement accounts, and managed-account equity in the equity measure, but do not list analogous bond mutual funds, retirement-account bond exposure, or managed-account bond exposure in the bond measure. The bond share nevertheless uses total financial assets including pensions as its denominator. Reconstruction or explicit relabeling is required.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "Econometrician",
+        "attack_id": "Perspective→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.3,
+        "evidence": "Section 4 explicitly explains Rubin-style combination of the five implicates, while equations (1)–(3) and the surrounding discussion do not mention SCF sampling weights. This matters because nationally representative SCF estimates require attention to its sampling design.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.2,
+        "evidence": "Section 3 calls the SCF nationally representative, and Sections 4.1–4.2 describe linear probability, OLS, and RIF-UQR models. Section 4 discusses combining five implicates under Rubin's rules, but the supplied text does not state that sampling weights are applied to descriptive statistics or regressions. Consequently, the review graph's characterization of the analysis as survey-weighted is not supported by the manuscript content provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 7.3,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Appendix A defines D_equity to include 'stock mutual funds, combination funds, IRAs/Keoghs invested in stocks, other managed assets w/equity interest' and 'thrift-type retirement accounts invested in stocks.' Its D_bonds list instead covers government saving bonds, corporate bonds, commercial paper, municipal and foreign bonds, debentures, mortgage-backed securities, negotiable CDs, and Treasury instruments, without listing indirect retirement-account or mutual-fund bond exposure. W_bonds is divided by 'total financial assets (including pensions).' Table 1 reports only 10 percent bond ownership. Table 2b reports confidence in own financial knowledge coefficients of -0.000 to -0.001 with no significance, contradicting the abstract's statement that confidence 'additionally increases the probability of holding risky assets and bonds.' Table 2b also reports confidence in the economy of -0.008 with p below 0.05, while Table 3b reports a positive association with conditional bond shares. Section 5.4 explicitly states that the estimates should be interpreted as conditional correlations or predictive effects."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Perspective",
+        "attack_id": "Econometrician→Perspective",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.2,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "The abstract asserts variation with wealth and across age, education, and race. The described Tables 2a and 2b use these characteristics as additive controls, Tables 4a and 4b analyze quantiles of conditional asset shares, and only the appendix gender exercise reports interactions.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Perspective",
+        "attack_id": "Data_Scientist→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix A, as summarized in the review graph, includes stock mutual funds, combination funds, managed accounts, IRAs/Keoghs, retirement accounts, and 529 plans in equity exposure. The bond construction instead enumerates principally direct debt securities and does not list comparable indirect exposure, while the bond share uses total financial assets including pensions as its denominator. The manuscript nevertheless reports this as general household bond ownership.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.3,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.2,
+        "evidence": "The abstract describes the 'impacts' of literacy and confidence; Sections 1 and 5 use language such as 'positively affect' and 'determinants'; and Section 6 calls the variables 'powerful determinants' and proposes financial-knowledge initiatives. Section 5.4 instead states that endogeneity is unresolved and that estimates should be interpreted as conditional correlations or predictive effects.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.8,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "The abstract says confidence in financial skills increases the probability of holding risky assets and bonds, but Table 2b reportedly gives near-zero, insignificant self-confidence coefficients. Table 3a gives an insignificant conditional-mean literacy coefficient, while Table 4a reports positive associations at lower quantiles and a significant negative association at the 90th percentile. Section 6 incorrectly refers to the negative result as occurring at the 75th percentile.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "The outcome definitions described in the review record include stock mutual funds, combination funds, equity in retirement accounts, and managed-account equity in the equity measure, but do not list analogous bond mutual funds, retirement-account bond exposure, or managed-account bond exposure in the bond measure. The bond share nevertheless uses total financial assets including pensions as its denominator. Reconstruction or explicit relabeling is required.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 4.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract asserts variation across wealth and socioeconomic dimensions. The reported baseline models include age, education, and race additively; Tables 4a and 4b examine quantiles of conditional asset shares; and the only described subgroup interaction exercise is by respondent gender. No corresponding literacy-by-race, literacy-by-age, literacy-by-education, or wealth-stratified estimates are reported.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "novelty",
+        "issue_class": "literature_dispute",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "The manuscript itself cites Van Rooij et al. (2011) on literacy and stockholding, Xia et al. (2014) and Chu et al. (2017) on confidence and participation, Allgood and Walstad (2016) on actual and perceived literacy in the United States, and Bannier and Schwarz (2018) on confidence and financial wealth. The incremental elements are the 2016 SCF application, macroeconomic-confidence control, and an off-the-shelf Firpo et al. (2009) RIF-UQR analysis.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Section 5.2 interprets the negative upper-quantile coefficient as showing that 'for households generally holding riskier assets—given their set of covariates—those with higher literacy and higher confidence actually hold a little less' and calls this 'mean-reverting allocation behavior.' RIF-UQR estimates effects on unconditional distributional statistics, not associations within the observations occupying an unconditional quantile.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Perspective",
+        "attack_id": "Econometrician→Perspective",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "evidence": "Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin's rules for the five implicates, but it never states that SCF sampling weights are used or explains how sampling-design uncertainty is combined with imputation uncertainty. Nevertheless, the paper reports nationally representative household participation rates, and the review graph describes the estimates as weighted.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.6,
+        "evidence": "Section 3 calls the SCF nationally representative, and Section 4 discusses linear probability models, OLS, RIF-UQR, and Rubin-style multiple-imputation inference. It does not state that SCF sampling weights enter these estimators or explain how weighting is combined with multiple imputation. The provided text says Appendix D describes multiple imputation, not survey weighting.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "paper",
+        "attack_id": "Perspective→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.2,
+        "evidence": "Section 3 calls the SCF nationally representative, and Sections 4.1–4.2 describe linear probability, OLS, and RIF-UQR models. Section 4 discusses combining five implicates under Rubin's rules, but the supplied text does not state that sampling weights are applied to descriptive statistics or regressions. Consequently, the review graph's characterization of the analysis as survey-weighted is not supported by the manuscript content provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Perspective",
+        "target": "Econometrician",
+        "attack_id": "Perspective→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.3,
+        "evidence": "Section 4 explicitly explains Rubin-style combination of the five implicates, while equations (1)–(3) and the surrounding discussion do not mention SCF sampling weights. This matters because nationally representative SCF estimates require attention to its sampling design.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 0,
+    "fail_count": 3
+  }
+}

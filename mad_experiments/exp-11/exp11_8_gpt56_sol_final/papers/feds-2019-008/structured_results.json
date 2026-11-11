@@ -1,0 +1,1087 @@
+{
+  "metadata": {
+    "doc_id": "feds-2019-008",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2019-008.pdf",
+    "ground_truth_tier": "Tier3",
+    "year": "2019",
+    "series": "feds",
+    "final_score": 0.6028868249999999,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 443.13163709640503,
+    "char_count": 74087,
+    "word_count": 11784,
+    "token_usage": {
+      "duration_seconds": 442.886834,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 206132,
+        "output": 20465,
+        "thinking": 6342,
+        "total": 226597,
+        "cache_read": 0,
+        "cache_creation": 206099
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 7714,
+          "output": 171,
+          "thinking": 0,
+          "total": 7885,
+          "cache_read": 0,
+          "cache_creation": 7711,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 24585,
+          "output": 2393,
+          "thinking": 523,
+          "total": 26978,
+          "cache_read": 0,
+          "cache_creation": 24582,
+          "calls": 1
+        },
+        "Data_Scientist": {
+          "input": 24583,
+          "output": 2628,
+          "thinking": 1024,
+          "total": 27211,
+          "cache_read": 0,
+          "cache_creation": 24580,
+          "calls": 1
+        },
+        "Policymaker": {
+          "input": 24564,
+          "output": 2060,
+          "thinking": 488,
+          "total": 26624,
+          "cache_read": 0,
+          "cache_creation": 24561,
+          "calls": 1
+        },
+        "Debater-Econometrician": {
+          "input": 31449,
+          "output": 4361,
+          "thinking": 1862,
+          "total": 35810,
+          "cache_read": 0,
+          "cache_creation": 31443,
+          "calls": 2
+        },
+        "Debater-Data_Scientist": {
+          "input": 31451,
+          "output": 4462,
+          "thinking": 1686,
+          "total": 35913,
+          "cache_read": 0,
+          "cache_creation": 31445,
+          "calls": 2
+        },
+        "Debater-Policymaker": {
+          "input": 31449,
+          "output": 2494,
+          "thinking": 759,
+          "total": 33943,
+          "cache_read": 0,
+          "cache_creation": 31443,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 30337,
+          "output": 1896,
+          "thinking": 0,
+          "total": 32233,
+          "cache_read": 0,
+          "cache_creation": 30334,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 206132,
+          "output": 20465,
+          "thinking": 6342,
+          "total": 226597,
+          "cache_read": 0,
+          "cache_creation": 206099,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 1.90223375
+      },
+      "total_cost": 1.90223375
+    },
+    "timestamp": "2026-07-29T15:06:45.225718",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Econometrician": {
+      "structural_strength": "The empirical design is tightly aligned with the stress-testing objective: the authors construct a large county-quarter panel, model eight-quarter-ahead serious delinquency using contemporaneous delinquency, credit-score-specific leverage, house-price changes, unemployment changes, and their interactions, and then apply several transparent macroeconomic scenarios. Separating prime, near-prime, and subprime DTI ratios is particularly useful because it lets the exercise distinguish the amount of debt from its borrower-risk composition.",
+      "domain_audit": "The paper's actual claim is predictive and descriptive rather than credibly causal: conditional on specified unemployment and house-price paths and a stable estimated delinquency relationship, the 2017 stock of household debt generates lower projected delinquency than pre-crisis stocks. The principal econometric weakness is that the manuscript treats in-sample fit as validation of this forecasting relationship. Figure 1 uses fitted values from equation (1), while the historical exercises in Figure 4 are also based on coefficients estimated over the entire sample, including the crisis outcomes being reproduced. Thus the statement that the model has been established to predict delinquency is not supported by genuine pseudo-out-of-sample evidence. This matters because the headline comparison relies on coefficient stability across unusually different underwriting regimes, debt compositions, and macroeconomic states, and because some differences are moderate: the severe-scenario projection is about 7.6 percent for 2017 versus 8.3 percent for 2002. The manuscript supplies neither forecast uncertainty nor a test showing that such differences survive estimation and scenario-assignment uncertainty. Overlapping eight-quarter outcomes also create strong serial dependence, yet Table 2 reports standard errors without stating any county clustering, time clustering, spatial correction, or block bootstrap. The analysis remains a valuable conditional scenario exercise, but its headline ranking of vintages is not yet adequately validated as a forecasting result.",
+      "best_case_contribution": "The strongest credible contribution is a practical household-debt stress-testing framework that combines nationwide consumer-credit records with county labor-market and housing data to produce conditional delinquency projections for all major household debt, not only mortgages. Within the maintained model and imposed scenarios, the exercise indicates that lower leverage, a shift of debt toward higher-score borrowers, and less extreme housing valuation make the 2017 debt stock appear more resilient than pre-crisis debt, while still implying materially elevated delinquency under a severe recession.",
+      "minimum_viable_revision": "Conduct a genuine time-based validation exercise using only the existing data: estimate the model on an early training period and forecast the crisis, then use rolling or expanding-window forecasts for later periods and compare performance with simple benchmarks. Report forecast errors and block-bootstrap or appropriately clustered confidence intervals for the cross-vintage stress-test differences, accounting for overlapping eight-quarter outcomes and re-estimation of the county shock mappings. If the 2017-versus-pre-crisis ranking remains robust, present it as a conditional projection under a stable historical relationship; otherwise narrow the conclusion to the scenarios and specifications for which the ranking is supported.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.5,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The missing out-of-sample validation and forecast uncertainty are defects in the empirical support for the paper's central predictive conclusion, not merely requests for optional robustness. In-sample fitted values cannot establish forecasting ability, and full-sample estimation makes the successful reconstruction of the crisis partly mechanical. Because the central conclusion compares fairly close projected delinquency rates across vintages under an assumed stable model, validation and uncertainty could change the ranking or substantially weaken the claim that current debt is safer. The problem is nevertheless repairable within the current data and framework through temporal cross-validation, dependence-robust inference, and calibrated interpretation, so it warrants REVISION rather than a BLOCKER.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "Develops a county-level household stress-testing framework that jointly interacts unemployment and house-price shocks with credit-score-specific debt-to-income measures and applies CCAR-style scenarios to household debt.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "The manuscript explicitly positions the exercise as analogous to bank stress testing and distinguishes it from Fuster et al. (2018) by incorporating both unemployment and house-price shocks and by considering all major household debt rather than mortgage debt alone. The estimator itself is standard, but the combination is a genuine applied framework extension."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Provides a conditional comparison of the stress sensitivity of recent and pre-crisis household debt stocks using the FRBNY Consumer Credit Panel merged with county wage, unemployment, and house-price data.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "The paper constructs a county-quarter panel covering more than 1,500 counties and roughly 90 percent of the population, disaggregates debt by current credit-score group, and reports that the severe CCAR scenario projects delinquency of about 7.6 percent from 2017 versus approximately 8.3 to 9.2 percent from selected pre-crisis years. This is a bounded empirical measurement contribution rather than causal identification."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Offers a monitoring tool for assessing whether household borrowing poses changing risks to financial stability under common supervisory macroeconomic scenarios.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "The introduction motivates the exercise as a household analogue to bank balance-sheet stress testing, and the conclusion uses the results to assess financial-stability risk. The manuscript appropriately notes that realized financial-system effects additionally depend on who bears the credit risk."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument is clear and economically coherent: liquidity shocks, declining collateral values, leverage, and borrower credit quality are connected through a double-trigger interpretation, and the progression from CCAR scenarios to valuation corrections and adverse geographic assignments is easy to follow. The exposition does not, however, sharply separate fitted association, forecast validation, and causal mechanism, and it understates the maintained stability assumptions behind the cross-vintage comparison.",
+        "supporting_evidence": "Sections 2 through 4 motivate the interaction structure using liquidity shocks, negative equity, and the double-trigger theory; Tables 3 and 4 translate the interaction-heavy regression into interpretable scenarios; and Section 6 progressively considers CCAR, valuation-correction, price-reversion, and worst-case geographic scenarios. By contrast, Section 6 begins, 'Having established that our model is able to predict,' although Figure 1 provides only full-sample fitted values.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper builds a sensible calculator for asking how household loans might perform if unemployment rises and home prices fall. Its results suggest that 2017 household debt was safer than debt before the financial crisis, mainly because more debt was held by borrowers with stronger credit and leverage was lower. The problem is that the authors test the calculator largely on the same historical data used to build it. Reproducing the crisis in that setting does not show that the model could have forecast the crisis or that it will remain reliable in a new downturn. The paper needs a true historical forecasting test and uncertainty ranges before its conclusion that recent debt is safer can be treated as well established.",
+      "confidence_score": 8.7,
+      "source_evidence": "The abstract states that forecasted delinquency rates for recent debt are 'moderately lower' than for pre-crisis debt under the same shocks and attributes this to improved DTI ratios and a larger high-score debt share. Equation (1) predicts eight-quarter-ahead delinquency from current delinquency, future unemployment and house-price changes, credit-score-group DTI quartiles, and their interactions. Figure 1 is described as comparing observed delinquency with the 'model-predicted' series based on estimating equation (1), with no held-out sample. Section 6 then says, 'Having established that our model is able to predict the levels and trends in observed household delinquency rates during our sample period,' before making out-of-sample projections. Figure 4 states that historical estimates are 'based on estimating equation 1 for the entire sample period,' so the apparent 2006-to-crisis predictive success uses crisis observations in estimation. Table 2 reports conventional-looking standard errors but does not identify clustering or another correction despite overlapping eight-quarter outcomes in a county panel. The manuscript also acknowledges omitted LTV, changing mortgage underwriting, student-loan measurement limitations, and changing allocation of mortgage credit risk, all of which reinforce the need to phrase results as conditional model projections.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Data_Scientist": {
+      "structural_strength": "The manuscript provides a comparatively transparent high-level data lineage: CCP/Equifax supplies debt, credit scores, location, and delinquency; QCEW supplies county wages; BLS LAU supplies unemployment; and Zillow supplies house prices. It defines the 60-plus-day delinquency label, credit-score bins, debt coverage, county weighting, forecast horizon, and the increasing county coverage reported in Table 1. The separation of mortgage and non-mortgage outcomes in Table 4 is also a useful measurement check.",
+      "domain_audit": "The central data-label problem is that the paper describes the exercise as stress testing the debt stock outstanding at time t, but the estimated outcome is the aggregate delinquency share at t+8, apparently calculated over balances outstanding at t+8. Section 3.1 says the authors construct county delinquency as the share of dollar balances in a county that are at least 60 days past due, and Section 4 defines the dependent variable as D[c,t+8], while the regressors characterize debt at t. Nothing indicates that the t+8 numerator and denominator are restricted to loans or balances already outstanding at t. Consequently, the label can include loans originated after t, exclude debt repaid or refinanced between t and t+8, change with migration and county composition, and mechanically reflect balance attrition among delinquent loans. The model therefore forecasts a future aggregate delinquency rate conditional on current county summaries; it does not directly estimate the stressed performance of the current debt stock. This matters for the headline comparison that the 2017 stock is safer than the pre-crisis stock, because historical differences in origination, refinancing, repayment, foreclosure resolution, and balance growth during the eight-quarter window can generate differences in D[c,t+8] even when the performance of debt outstanding at t is unchanged. A secondary provenance concern is that Zillow coverage rises from 1,421 counties in 2000 to 1,649 in 2014, so cross-year comparisons also mix changes in debt risk with changes in the county sample unless a balanced-sample result is shown.",
+      "best_case_contribution": "The strongest credible contribution is a county-level conditional forecasting framework that combines CCP debt and current credit quality with local unemployment and house-price paths to project the future aggregate serious-delinquency share. It extends household stress testing beyond mortgage-only house-price exercises by incorporating unemployment, interactions associated with the double-trigger mechanism, and non-mortgage debt, and it applies several economically interpretable stress scenarios.",
+      "minimum_viable_revision": "Reconstruct the outcome as a fixed-pool performance measure for debt or tradelines outstanding at t, assigning geography and borrower characteristics at t and measuring entry into or cumulative incidence of 60-plus-day delinquency over the following eight quarters. Re-estimate the model and repeat the main 2002, 2004, 2006, and 2017 comparisons. At minimum, reconcile balance amortization, refinancing, charge-off, and disappearance from the credit file. Also report the main comparison on a balanced county panel and provide a time-based held-out validation rather than relying only on fitted values from the full estimation sample. If a fixed-pool outcome cannot be constructed, the paper must instead consistently describe the exercise as forecasting future aggregate delinquency and withdraw claims that it directly compares the intrinsic riskiness of debt stocks outstanding at different dates.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 8.0,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The mismatch concerns the outcome being stress tested and therefore directly affects the paper's headline interpretation that the recent outstanding debt stock is less vulnerable than pre-crisis stocks. It does not necessarily invalidate the model as a forecast of future aggregate county delinquency, but it prevents that forecast from isolating the performance of debt outstanding at the scenario start. The problem is serious yet repairable using the same CCP framework by defining a frozen cohort or fixed pool, so REVISION rather than BLOCKER is appropriate.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "The paper develops a household stress-testing framework that projects serious delinquency using interactions among county leverage by current credit-score group, unemployment shocks, and house-price shocks.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "The introduction distinguishes the exercise from Mian and Sufi by allowing defaults to respond to unemployment and house-price changes and from Fuster et al. by including unemployment shocks and all major household debt categories. The method is built from standard panel regression and scenario analysis, but their combination is a genuine, bounded extension of prior household stress testing."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "The paper documents that its model projects lower delinquency under comparable stress for 2017 household borrowing than for pre-crisis borrowing and attributes the difference to lower leverage and a greater debt share held by high-score borrowers.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "Figures 4 through 6 and the abstract present this as the main empirical result. The question is important and the long CCP county panel is valuable, but the analysis is predictive rather than causal and the current-stock interpretation depends on resolving the outcome-cohort mismatch."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript has a clear progression from default mechanisms to data, model, standard CCAR scenarios, and alternative housing corrections. Its leverage and double-trigger intuition helps readers interpret the interactions. The argument is useful rather than unusually transformative, and the distinction between fixed-stock performance and future aggregate delinquency is not recognized.",
+        "supporting_evidence": "Sections 2 through 6 connect liquidity shocks, negative equity, credit quality, and leverage to the scenario design, while Tables 3 and 4 translate a highly interacted regression into illustrative predictions. However, Section 5.1 treats close full-sample fitted values as evidence that the model can accurately predict stress outcomes without reporting genuinely out-of-time validation.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The model uses today's county debt characteristics to predict the delinquency rate two years later, but that later rate may cover a different set of loans and borrowers. New loans can enter, old loans can be repaid or refinanced, and households can move. Thus the results may show that the overall future debt market looks safer, not that the particular loans outstanding today would perform better under the same shock than loans outstanding before the crisis.",
+      "confidence_score": 8.6,
+      "source_evidence": "The abstract says the authors forecast delinquency rates for the recent stock of debt and compare them with the stock before the crisis. Section 1 similarly says the exercise forecasts serious delinquency rates for outstanding household debt. Section 4 instead specifies D[c,t+8] as the dependent variable and D[c,t] plus debt-to-income measures at t as predictors; Section 3.1 defines D as the share of balances in the county that are delinquent, without stating that balances at t+8 are restricted to balances outstanding at t. Table 1 also reports that county coverage changes from 1,421 counties in 2000 to 1,478 in 2007 and 1,649 in 2014. Figure 1 is described as based on estimating the model over the sample, and no held-out temporal validation is reported.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Policymaker": {
+      "structural_strength": "The paper uses a transparent scenario-based framework and explicitly separates household delinquency vulnerability from some institutional determinants of ultimate losses. It tests several shock allocations, including CCAR scenarios, valuation corrections, local price reversions, and shocks concentrated in highly leveraged counties. It also acknowledges that government guarantees and the distribution of credit exposure affect who bears losses.",
+      "domain_audit": "The paper's direct result is that the 2017 stock of covered household debt generates lower model-predicted serious delinquency under specified unemployment and house-price shocks than pre-crisis debt stocks. The stronger headline conclusion that household debt therefore poses lower risk to financial stability does not fully follow. The model does not translate delinquency into losses, identify the institutions or public entities bearing those losses, assess capital and liquidity capacity, or quantify macroeconomic amplification through foreclosures and household consumption. Government guarantees may shift direct credit losses away from private intermediaries, but they do not eliminate fiscal exposure or borrower-side macroeconomic effects. The manuscript itself recognizes this gap, stating that the ultimate financial-stability impact depends on intermediary exposure. Because no concrete policy intervention is proposed, there is no binding legal or administrative feasibility problem to audit; the central policy-relevant issue is instead that the institutional incidence of losses is outside the model.",
+      "best_case_contribution": "The strongest defensible contribution is a household-debt vulnerability monitor: a county-level model that estimates how serious delinquency on most household debt would respond to joint unemployment and house-price shocks, conditional on leverage and borrower credit-score composition. Under that metric, the 2017 debt stock appears more resilient than pre-crisis stocks, while a severe recession would still produce a large increase in delinquency.",
+      "minimum_viable_revision": "Narrow the abstract, introduction, and conclusion from claims about overall financial-stability risk to claims about model-predicted serious-delinquency vulnerability. State clearly that the exercise is an input into, rather than a complete assessment of, financial stability. Distinguish private-intermediary credit exposure, government or fiscal exposure, and borrower-demand or foreclosure amplification. If the authors wish to retain the broad financial-stability conclusion, they must add an institutional loss-mapping exercise that combines delinquency with loss severity, guarantee structure, creditor ownership, and loss-absorbing capacity.",
+      "primary_issue_class": "substantial_rephrasal",
+      "severity_score": 6.0,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The econometric exercise can remain useful and its comparative delinquency result may survive unchanged, so this is not a defect in the underlying analysis. However, the abstract and conclusion elevate a delinquency forecast into a conclusion about financial stability, which materially broadens the outcome being evaluated. A reader relying on the headline framing could mistake a partial vulnerability indicator for an assessment of system-wide losses and resilience. This central claim-calibration problem warrants resubmission, but not a blocker, because narrowing the claim is feasible within the existing framework.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "Adapts stress-testing logic to the stock of household debt using a county-level delinquency model with joint unemployment and house-price shocks interacted with leverage and borrower credit quality.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "The manuscript describes its household stress test as analogous to bank balance-sheet stress testing and estimates delinquency as a function of unemployment, house prices, credit-score-group debt-to-income ratios, and their interactions. It distinguishes the exercise from Fuster et al. (2018) by incorporating both house-price and unemployment shocks and by covering multiple household-debt categories. The ingredients are established, but their combination is a genuine applied extension."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Documents that the 2017 stock of covered household debt produces lower predicted delinquency under common stress scenarios than pre-crisis debt stocks and attributes the difference to lower leverage and a shift of debt toward higher-score borrowers.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "Figure 4 compares predicted delinquency under common CCAR shocks across 2002, 2004, 2006, and 2017; Figures 5 and 6 describe leverage and credit-score composition. This is a useful bounded empirical finding based on CCP credit records and county data, but it is not causal identification of a policy effect or a complete measurement of systemic risk."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Proposes household delinquency stress testing as a monitoring tool for assessing one dimension of macrofinancial vulnerability.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "The paper applies published CCAR scenarios and several alternative shock designs to household debt. This creates a potentially useful surveillance input, although the manuscript does not develop a decision rule, regulatory intervention, legal mandate, budgetary analysis, or implementation architecture."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript offers a clear narrative connecting leverage, borrower credit quality, liquidity shocks, house-price shocks, and the double-trigger theory of mortgage default. The progression from model fit to multiple stress scenarios is easy to follow. Its institutional interpretation is less developed because the argument stops at delinquency rather than tracing losses through creditors, guarantees, capital, fiscal exposure, and macroeconomic feedback.",
+        "supporting_evidence": "Sections 2 through 5 motivate the interaction structure and Table 3 translates the many regression coefficients into economically interpretable scenarios. Sections 6.2 through 6.3 compare several stress designs. The introduction and conclusion acknowledge that financial-stability consequences depend on intermediary exposure, but that caveat is not integrated into the headline conclusion.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper credibly suggests that households' covered debts in 2017 would produce fewer serious late payments than pre-crisis debts if hit by comparable unemployment and house-price shocks. But fewer predicted late payments do not by themselves prove that the financial system is safer. That also depends on how much lenders lose, who owns or guarantees the loans, whether banks and public entities can absorb the losses, and how defaults affect spending and the wider economy.",
+      "confidence_score": 9.0,
+      "source_evidence": "The abstract states that the results support the conclusion that household debt currently poses a lower risk to financial stability than before the crisis. Section 1 defines the output instead as a forecast of serious delinquency rates and says the exercise assesses risks posed by household borrowing. The manuscript then expressly concedes that the ultimate impact of household delinquencies on financial stability depends on the extent to which financial intermediaries are exposed to credit risk. Section 7 repeats that household borrowing is less risky and that risks to financial stability are lower, while again noting that intermediary exposure and the shift of mortgage credit risk toward government matter. The modeled dependent variable in the displayed equation is the county share of debt at least 60 days delinquent; no loss-given-default, creditor ownership, guarantee incidence, capital capacity, fiscal cost, or macroeconomic feedback term appears. Student loans are excluded from the baseline, and the appendix notes both their growth and predominantly federal guarantee.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The peer reviews identify two distinct central issues: the Data Scientist highlights a mismatch between claims about the debt stock outstanding at t and an outcome apparently measured on balances outstanding at t+8, while the Policymaker correctly distinguishes predicted delinquency vulnerability from a complete assessment of financial-stability losses. Both concerns complement the econometric validation problem already identified.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript presents full-sample fitted performance as evidence of forecasting ability and then uses the same full-sample coefficients for historical stress comparisons. This does not validate temporal stability or genuine out-of-sample predictive performance, particularly across the crisis and materially different underwriting regimes. The absence of reported uncertainty for cross-vintage differences further prevents assessing whether modest rankings, such as 7.6 percent for 2017 versus 8.3 percent for 2002, are statistically meaningful.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Figure 1 compares actual delinquency with fitted values from equation (1), and Section 6 says this has established that the model can predict. Figure 4 explicitly uses equation (1) estimated over the entire sample, meaning the apparent prediction of crisis delinquency uses crisis outcomes in coefficient estimation. No rolling, expanding-window, or held-out forecast exercise is reported. Table 2 also does not state an inference correction for overlapping eight-quarter outcomes, county dependence, common time shocks, or estimated county scenario mappings."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A creditor-level loss, guarantee, capital, and macroeconomic amplification model is not necessary for the narrower contribution of a household-delinquency stress test. Such institutional loss mapping becomes necessary only if the paper retains its broader claim about overall financial-stability risk. If the headline is narrowed to conditional serious-delinquency vulnerability, the additional mapping is an extension rather than a required component of the core forecasting framework.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "The manuscript does not establish that D[c,t+8] follows only balances or tradelines outstanding at t. If it instead uses all balances observed at t+8, post-t originations, refinancing, repayment, charge-off, migration, and denominator changes enter the outcome. That materially weakens the interpretation that the exercise compares the intrinsic stress performance of debt stocks outstanding at different dates. A fixed-pool outcome or a consistent reinterpretation as future aggregate delinquency is required.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "Predicted delinquency is only one input into financial-stability assessment. The model does not estimate loss severity, identify who bears losses, measure loss-absorbing capacity, or capture borrower-demand and foreclosure feedback. The abstract and conclusions should therefore characterize the result as lower modeled delinquency vulnerability unless an institutional loss-mapping exercise is added.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Data_Scientist",
+            "question": "Would the available CCP tradeline identifiers permit the authors to define a fixed pool at t and measure either point-in-time delinquent balances at t+8 or cumulative entry into 60-plus-day delinquency over the eight-quarter horizon, while separately accounting for repayment, refinancing, charge-off, and disappearance?"
+          },
+          {
+            "target_persona": "Policymaker",
+            "question": "Would narrowing every headline claim to serious-delinquency vulnerability, while explicitly presenting financial stability as a downstream application requiring separate exposure and loss mapping, fully resolve the policy interpretation concern?"
+          }
+        ],
+        "final_argument_state": "The framework remains a useful and moderately novel applied household stress test, with MEDIUM novelty and MEDIUM insight. Its interactions among unemployment, house prices, leverage, and credit-score composition are economically coherent and well aligned with the conditional-scenario objective. However, execution is not yet sufficiently validated: full-sample fit is not an out-of-time forecast test, uncertainty around cross-vintage rankings is unreported, and the apparent use of the aggregate t+8 balance pool conflicts with claims about stressing debt outstanding at t. These are repairable within the existing data and framework through fixed-pool or explicitly aggregate outcome construction, temporal validation, appropriate dependence-robust uncertainty, and balanced-sample checks. Separately, claims about overall financial-stability risk require substantial narrowing unless losses and institutional exposure are modeled. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The review graph converges on a RESUBMIT judgment and identifies complementary problems: the Econometrician establishes that full-sample fit is not forecast validation, while the Policymaker correctly distinguishes delinquency vulnerability from system-wide financial-stability risk. The remaining central data issue is an estimand mismatch between future aggregate delinquency and performance of the debt stock outstanding at the stress-test date.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The proposed time-based validation and uncertainty analysis are necessary but not sufficient. Even a well-validated forecast of D[c,t+8] would not establish how the debt stock outstanding at t performs unless the outcome follows a fixed pool of balances or tradelines. The historical ranking can otherwise reflect post-t originations, refinancing, amortization, charge-offs, migration, and changing county balance composition.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Section 3.1 defines delinquency as the share of county dollar balances that are at least 60 days past due, and Section 4 uses D[c,t+8] as the outcome while characterizing debt at t. The manuscript never states that balances in the t+8 numerator and denominator were outstanding at t. Nevertheless, the abstract and Section 6 interpret the projections as comparisons of the riskiness of debt stocks outstanding at different dates."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "The policy review correctly limits the financial-stability interpretation, but it still describes the direct result as showing that the 2017 debt stock generates lower delinquency. That fixed-stock interpretation is not established by the reported outcome construction. Before policy incidence is considered, the paper must first clarify whether it measures performance of a fixed initial debt pool or merely forecasts the future aggregate delinquency rate.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.7,
+            "evidence": "The regression predicts the aggregate balance-weighted delinquency share at t+8 from county characteristics at t. No cohort restriction, tradeline-level tracking rule, or treatment of balances disappearing through repayment, refinancing, foreclosure, or charge-off is specified."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The credit-score-specific variables are not actually group-specific debt-to-income ratios. Each numerator is debt held by a score group, but every denominator is total county wage income. These measures jointly encode debt composition and aggregate county leverage; they do not measure leverage among subprime, near-prime, or prime borrowers. Consequently, interpretations attributing sensitivity to the leverage of particular borrower groups require calibration or rephrasing.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.0,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Section 3.2 explicitly states that total wages are used as the denominator for all three credit-score groups and defines subprime DTI as subprime debt divided by total county wage income. Section 4 nevertheless calls these credit-score-group DTI ratios, while the abstract separately attributes the result to improved DTI and a shift in debt toward high-score borrowers."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A full institutional loss-mapping model is outside the necessary scope if the manuscript consistently narrows its contribution to conditional serious-delinquency vulnerability. Loss severity, creditor ownership, guarantees, capital capacity, and macroeconomic feedback become required only if the authors retain the broader claim that the exercise measures overall financial-stability risk.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The close correspondence between actual outcomes and fitted values from a model estimated over the full sample, including the crisis, is not genuine forecasting validation. Rolling or expanding time-based evaluation against simple benchmarks and uncertainty estimates that respect overlapping horizons are necessary for the cross-vintage predictive claim.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "Serious delinquency alone does not measure financial-system losses or systemic resilience. The headline must be narrowed to household-debt delinquency vulnerability unless the authors add evidence on loss severity, exposure incidence, guarantees, and loss-absorbing capacity.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "Would the cross-vintage ranking remain economically and statistically distinguishable after jointly implementing fixed-pool outcomes, time-based validation, balanced county coverage, and block-bootstrap uncertainty?"
+          },
+          {
+            "target_persona": "Policymaker",
+            "question": "If the authors withdraw the broad financial-stability conclusion and present the output solely as a delinquency-vulnerability input, do you agree that institutional loss mapping becomes an extension rather than a publication barrier?"
+          }
+        ],
+        "final_argument_state": "The paper retains a credible medium-novelty, medium-insight contribution as a practical county-level conditional delinquency forecasting framework combining consumer credit records with unemployment and house-price stress scenarios. Execution is not yet sound enough for acceptance. Full-sample fitted performance does not validate forecasting stability, the reported future aggregate delinquency outcome may not track the debt stock outstanding at the stress-test date, changing county coverage can contaminate historical comparisons, and the score-specific DTI measures conflate debt composition with aggregate leverage. In addition, delinquency vulnerability must not be equated with overall financial-stability risk. These problems are serious but repairable within the existing CCP and county-data framework through fixed-pool outcome construction or explicit estimand narrowing, balanced-sample checks, genuine temporal validation, uncertainty analysis, and calibrated interpretation. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer reviews identify two complementary threats to the central interpretation: the absence of genuine time-based forecast validation and a possible mismatch between debt measured at the forecast origin and delinquent balances measured eight quarters later. Both reinforce the policy concern that the results are conditional projections of aggregate delinquency vulnerability, not a complete assessment of the intrinsic risk of a fixed debt stock or of financial-system losses.",
+        "attacks": [],
+        "novelty_counters": [],
+        "defenses": [],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I concede that full-sample fitted values and historical projections generated from coefficients estimated using crisis observations do not establish genuine forecasting performance. Because the headline cross-vintage ranking depends on temporal stability and some projected differences are modest, time-based validation and uncertainty estimates are necessary within-framework repairs.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I concede that the manuscript does not establish that the delinquency outcome at t+8 follows only balances outstanding at t. If the outcome instead uses all balances present at t+8, post-origin lending, repayment, refinancing, charge-off, migration, and balance attrition can affect the comparison. This materially undermines language about stress testing a fixed outstanding debt stock unless a fixed-pool outcome is constructed or the estimand and central claims are narrowed.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "Would an expanding-window pseudo-out-of-sample exercise that estimates through 2005 and forecasts the crisis, followed by later rolling forecast origins, adequately test the stability needed for the cross-vintage ranking?"
+          },
+          {
+            "target_persona": "Data_Scientist",
+            "question": "If tradeline-level linkage cannot reliably distinguish refinancing from disappearance or charge-off, what feasible CCP-based fixed-pool definition would best preserve the policy interpretation while limiting survivorship bias?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is that the paper offers a useful and transparent conditional household-delinquency stress-testing framework, but its central cross-vintage interpretation is not yet adequately supported. Full-sample fit is not out-of-time validation, uncertainty around the ranking is unreported, and the defined t+8 aggregate delinquency rate may not measure performance of debt outstanding at t. Independently, delinquency projections alone do not establish lower overall financial-stability risk because the analysis does not map delinquency into loss severity, creditor and guarantee incidence, loss-absorbing capacity, fiscal exposure, or macroeconomic amplification. Novelty remains MEDIUM: combining county leverage by credit-score group with joint unemployment and house-price scenarios is a meaningful applied extension. Insight remains MEDIUM: the leverage, credit-quality, and double-trigger narrative is coherent, but distinctions among fitted association, forecast validation, fixed-pool performance, and systemic loss are insufficiently developed. Revision should construct or clearly delimit the outcome cohort, conduct genuine temporal validation with suitable uncertainty estimates, and substantially rephrase the financial-stability conclusion unless an institutional loss-mapping analysis is added. These are serious but repairable issues within the broader framework, so RESUBMIT is warranted.",
+        "verdict": "RESUBMIT"
+      }
+    },
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph correctly identifies three central distinctions: full-sample fit versus genuine forecast validation, future aggregate delinquency versus performance of a fixed initial debt pool, and delinquency vulnerability versus system-wide financial-stability risk. I retain these concerns while qualifying the criticism of the score-group debt measures.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "Changing county coverage may contaminate the historical comparison of stressed delinquency rates. Because Zillow coverage expands over time, the aggregate prediction for 2017 need not represent the same geographic population as predictions for 2002, 2004, or 2006. Population weighting does not eliminate this composition problem.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 3 states that Zillow coverage increased over time and that this explains the rising number of counties in the panel. Section 6 nevertheless compares population-weighted stressed delinquency predictions across vintages without reporting a balanced-county analysis, reweighting to a common population, or decomposition of changes in sample composition."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The uncertainty analysis must account jointly for overlapping eight-quarter outcomes, persistent county observations, common macroeconomic shocks, and estimation of the county-level scenario mappings. Without such uncertainty, the manuscript cannot establish that modest cross-vintage differences represent meaningful changes in vulnerability rather than estimation and scenario-allocation noise.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "The dependent variable is an eight-quarter-ahead delinquency rate observed quarterly, mechanically creating substantial overlap. Equation (1) is estimated on a county-quarter panel, while Section 6.1.1 first estimates a separate national-to-county shock mapping for every county. Sections 5 and 6 report fitted and stressed delinquency levels without confidence intervals for either forecasts or cross-vintage differences and without describing dependence-robust or generated-regressor inference."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The score-group debt measures are not subgroup debt-to-subgroup-income ratios, but this does not invalidate their use as a decomposition of county leverage. Because prime, near-prime, and subprime debt divided by the same total-wage denominator sum to total county debt divided by total wages, their vector jointly identifies aggregate leverage and its allocation across score groups. The required correction is to label them debt-to-county-income components and avoid interpreting them as leverage within each borrower group; subgroup-income data are not necessary for the narrower composition-based specification.",
+            "defense_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A complete mapping from delinquency into creditor losses, guarantees, capital adequacy, and macroeconomic feedback is an extension if the paper consistently presents itself as a conditional household-delinquency stress test. It becomes necessary only if the authors retain the broader conclusion that the exercise by itself establishes lower overall financial-stability risk.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "The manuscript does not state that the balances used to calculate delinquency at t+8 were outstanding at t. Consequently, the outcome may incorporate new lending, amortization, refinancing, charge-offs, account disappearance, and migration across counties. That outcome can support a forecast of future aggregate delinquency, but not the repeated claim that the model measures the stress performance of a fixed debt stock outstanding at each vintage. A fixed-pool construction or material narrowing of the estimand is required.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "The projected serious-delinquency rate does not alone identify expected credit losses or systemic resilience. The abstract and conclusions must refer to lower modeled delinquency vulnerability unless the paper additionally establishes loss severity, who bears the losses, guarantees, loss-absorbing capacity, and relevant amplification mechanisms.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Does the t+8 numerator and denominator follow only tradelines or balances outstanding at t, and how are repayment, refinancing, foreclosure, charge-off, account disappearance, and county migration treated?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How do the cross-vintage rankings change when equation (1) is estimated recursively without future or crisis observations and evaluated on held-out time periods against simple persistence benchmarks?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Do the 2017-versus-pre-crisis comparisons survive restriction to a balanced county sample and bootstrap inference that re-estimates both the delinquency model and county-level CCAR shock mappings?"
+          }
+        ],
+        "final_argument_state": "The paper offers a useful conditional household-delinquency stress-testing framework, but the execution does not yet support its central cross-vintage interpretation. Full-sample fitted values are not out-of-time validation; uncertainty around the rankings is unreported; changing county coverage can alter the compared populations; and the t+8 aggregate outcome may not track debt outstanding at t. The score-group measures remain useful as components of aggregate debt relative to county income, although they must not be described as subgroup leverage based on subgroup income. Novelty is MEDIUM because combining county leverage composition with joint unemployment and house-price stress scenarios is a meaningful applied contribution. Insight is MEDIUM because the leverage, credit-quality, and double-trigger interactions are economically coherent, but the manuscript insufficiently distinguishes fitted association, conditional forecasting, fixed-pool performance, and systemic loss. The financial-stability conclusion also requires substantial rephrasing unless institutional loss incidence and resilience are modeled. These defects are serious but repairable through explicit outcome-cohort construction or estimand narrowing, temporal validation, dependence-robust uncertainty, and balanced-sample analysis. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The review graph correctly identifies three central distinctions: full-sample fit versus genuine out-of-time forecasting, future aggregate delinquency versus performance of a fixed initial debt pool, and delinquency vulnerability versus overall financial-system risk. I retain those concerns and add two data-construction issues affecting cross-vintage comparability and scenario calibration.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "Changing geographic coverage can contaminate the historical comparison of stressed delinquency rates. Because Zillow coverage and therefore the number of included counties increase over time, differences attributed to debt vintages may partly reflect changes in the counties represented rather than changes in household leverage or credit quality.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 3 states that Zillow coverage increased over time and explicitly attributes the rising number of counties in the panel to this expansion. Section 6 nevertheless compares population-weighted stressed delinquency predictions for 2002, 2004, 2006, and 2017 without reporting a balanced-county sample, common-support reweighting, or decomposition of the effect of changing coverage."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The county scenario-construction method is not shown to reproduce the published national CCAR paths or remain calibrated under severe extrapolation. County-specific intercepts and slopes are applied independently, with no stated aggregation constraint, so the population- or balance-weighted county shocks need not equal the national shock they purportedly distribute.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.0,
+            "evidence": "Section 6.1.1 estimates separate regressions of county quarterly changes on national changes, including county-specific intercepts, and then applies those estimates to the CCAR paths. The manuscript reports no reconciliation to national totals, holdout validation of these mappings, treatment of implausible county projections, or sensitivity to alternative regional-shock allocation methods for the baseline CCAR results."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The score-group variables should not be interpreted as leverage ratios for the corresponding borrower groups. Dividing each group's debt by total county wages means that the three variables jointly mix aggregate leverage, debt composition, and potentially the geographic distribution of income; they do not identify subprime, near-prime, or prime borrowers' debt relative to their own incomes.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.0,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Section 3.2 explicitly says that total county wages are used as the denominator for every score group. Sections 4 through 6 nevertheless call the resulting quantities group-specific DTI ratios and use them to attribute changes in stress performance to leverage by borrower credit quality. The variables support an interpretation as score-group debt intensity relative to the county wage base, not borrower-group DTI."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A complete mapping from delinquency to creditor losses, guarantees, capital adequacy, and macroeconomic feedback is an extension rather than a necessary component if the manuscript consistently defines its contribution as a conditional household-delinquency stress test. It becomes necessary only if the authors retain the broader conclusion that the model directly establishes lower overall financial-stability risk.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that Figure 1's full-sample fitted values are not out-of-time validation, and that reproducing crisis delinquency with coefficients estimated using crisis observations cannot validate prospective forecasting. Rolling or expanding-window tests, benchmark comparisons, and dependence-robust uncertainty for cross-vintage differences are necessary.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that delinquency projections alone do not establish financial-system resilience. Without loss severity, exposure ownership, guarantees, loss-absorbing capacity, and amplification channels, the central policy conclusion must be narrowed to modeled serious-delinquency vulnerability.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Does the t+8 delinquency numerator and denominator follow only balances or tradelines outstanding at t, and how are repayment, refinancing, charge-off, foreclosure, and account disappearance treated?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Do the balance- or population-weighted county shocks produced by the scenario mapping exactly reproduce the national CCAR unemployment and house-price paths, and how sensitive are the headline results to enforcing that constraint?"
+          }
+        ],
+        "final_argument_state": "The paper offers a useful applied conditional-delinquency stress-testing framework, but execution remains insufficiently validated. The main cross-vintage result is vulnerable to full-sample look-ahead, an unclear fixed-pool estimand, changing county coverage, unverified county-level scenario mappings, and interpretation of score-group debt intensity as borrower-group DTI. These are serious but repairable within the CCP and county-panel framework through fixed-pool construction or explicit estimand narrowing, balanced-sample and reweighting checks, time-based validation, dependence-robust uncertainty, scenario reconciliation, and calibrated variable labels. Novelty is MEDIUM because jointly modeling house-price and unemployment stress with leverage and credit-score composition is a meaningful applied extension. Insight is MEDIUM because the double-trigger and credit-composition narrative is coherent, although it currently outruns the measurement design. Claims about overall financial-stability risk require substantial rephrasing unless institutional loss mapping is added. RESUBMIT is warranted.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer reviews identify three distinct and consequential issues: lack of genuine out-of-time validation, ambiguity between a fixed debt-stock estimand and future aggregate delinquency, and misinterpretation of score-group debt divided by total county wages as group-specific leverage. These concerns are separate from the broader policy overclaim that delinquency vulnerability alone measures financial-stability risk.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript's central financial-stability conclusion exceeds what the modeled outcome establishes. Serious delinquency is relevant to financial stability, but its systemic consequences depend on loss given default, creditor and guarantor incidence, securitization and risk transfer, institutional capital and liquidity, fiscal exposure, and macroeconomic feedback. The paper can retain a valuable household-delinquency stress test, but absent such mapping it should not conclude that household debt currently poses lower overall risk to financial stability.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 9.2,
+            "evidence": "The abstract concludes that household debt currently poses a lower risk to financial stability, and the introduction describes the exercise as assessing risks to the financial system. Yet the estimated outcome is only the share of household debt at least 60 days delinquent. The manuscript itself acknowledges that the ultimate financial-system impact depends on intermediaries' exposure and that mortgage credit risk has shifted toward government guarantees, but it does not incorporate these considerations into the stress-test output."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "A complete creditor-level loss and capital model is not required for the narrower contribution of forecasting conditional household delinquency. Such institutional mapping is an extension if the paper consistently presents its result as delinquency vulnerability rather than as a measure of overall financial-system resilience.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "Full-sample fitted values do not establish out-of-time forecasting performance, especially when crisis observations help estimate the coefficients used to reconstruct crisis outcomes. Rolling or expanding-window validation against simple benchmarks, together with uncertainty estimates robust to overlapping eight-quarter outcomes and common shocks, is necessary to support the cross-vintage ranking.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "The manuscript does not establish that the t+8 delinquency numerator and denominator track only balances or tradelines outstanding at t. Without a fixed-pool construction, future originations, refinancing, amortization, repayment, charge-off, and migration can affect the outcome, so the analysis cannot presently be interpreted as measuring intrinsic performance of a fixed debt stock.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "Debt held by a credit-score group divided by total county wage income is not that group's household debt-to-income ratio. These variables combine aggregate leverage and debt composition. The paper must either rename and reinterpret them as score-group debt shares relative to county wages or provide group-specific income denominators and demonstrate that its decomposition of lower risk into leverage and credit-quality channels remains valid.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "The manuscript offers a useful, transparent applied framework for projecting county-level serious delinquency under joint unemployment and house-price scenarios. Its novelty is MEDIUM: incorporating score-stratified debt measures, leverage interactions, and a double-trigger channel into a household stress-testing exercise is a meaningful extension of the cited literature. Its insight is MEDIUM: the economic narrative connecting liquidity shocks, housing wealth, leverage, and credit quality is coherent, but the manuscript does not adequately distinguish fitted association from validated forecasting, future aggregate delinquency from fixed-pool debt performance, or delinquency vulnerability from systemic losses. Execution therefore remains materially incomplete. The authors should clarify or reconstruct the debt cohort, perform genuine temporal validation with dependence-robust uncertainty, test historical comparisons on stable county samples, and correct the interpretation of score-group debt-to-county-wage measures. Independently, the headline should be substantially narrowed to lower modeled delinquency vulnerability unless institutional exposure and loss transmission are added. These defects are serious but repairable within the broader framework, warranting RESUBMIT rather than rejection.",
+        "verdict": "RESUBMIT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper is a practical county-level framework for projecting aggregate serious delinquency under joint unemployment and house-price scenarios, conditional on current delinquency, debt intensity, and credit-score composition. Its applied novelty and insight are both moderate: combining broad consumer-credit coverage with local macroeconomic shocks and double-trigger interactions is useful, but the underlying panel regression and scenario methods are standard. All three reviewers recommend resubmission, and their concerns are complementary rather than contradictory. There are no unresolved blockers, but several substantive flaws prevent acceptance. First, full-sample fitted values—including crisis observations used to estimate the coefficients—do not validate forecasting performance. Genuine time-based validation and uncertainty estimates are needed, especially because eight-quarter outcomes overlap and some cross-vintage differences are modest. Second, the reported outcome appears to be aggregate delinquency among balances observed at t+8, whereas the paper repeatedly interprets it as performance of debt outstanding at t. Without a fixed-pool construction, subsequent originations, repayment, refinancing, charge-off, disappearance, migration, and denominator changes can affect the result. The analysis can support a forecast of future aggregate delinquency, but not presently a comparison of the intrinsic riskiness of fixed debt stocks. Third, expanding Zillow coverage changes the county sample across vintages; population weighting alone does not establish comparability. Fourth, the county allocation of national CCAR shocks is not reconciled to national paths or validated against alternatives. Fifth, debt held by each score group divided by total county wages is not borrower-group DTI. These variables can defensibly be interpreted as score-group debt intensity relative to the county wage base—components combining aggregate leverage and debt composition—but not as leverage within each borrower group. The central substantial-rephrasal issue is the inference from delinquency projections to overall financial-stability risk. The model does not map delinquency into loss severity, creditor or guarantor incidence, capital and liquidity capacity, fiscal exposure, or macroeconomic amplification. Institutional loss mapping is not required if the paper is consistently framed as a delinquency-vulnerability exercise; it is an extension unless the broader systemic-risk conclusion is retained. No separate minor-rephrasal issues or mandatory extensions were identified. The paper is promising because its data integration, scenario sequence, and economic mechanism are transparent, and the principal defects appear repairable within the existing framework.",
+    "official_letter_to_the_author": "Dear Authors,\n\nWe have completed our evaluation of the manuscript. The decision is MAJOR REVISION REQUIRED. The paper has a credible core contribution: it develops a transparent county-level household-debt stress-testing framework that combines consumer-credit records with unemployment and house-price scenarios and allows stress sensitivity to vary with debt intensity and credit-score composition. This is a useful applied contribution of moderate novelty, and the economic narrative linking liquidity shocks, collateral values, leverage, and the double-trigger mechanism is coherent.\n\nThe present manuscript, however, does not yet support its central interpretation. The most important issue is forecast validation. Figure 1 reports fitted values, and the historical exercises use coefficients estimated over the full sample, including crisis outcomes. Reproducing the crisis in this setting cannot establish prospective predictive ability. Please conduct genuine temporal validation—such as an early-sample estimate forecasting the crisis and rolling or expanding-window evaluations thereafter—and compare performance with simple benchmarks. Because the dependent variable is observed quarterly at an eight-quarter horizon, inference must address overlapping outcomes, persistent county dependence, common time shocks, and uncertainty from estimated county scenario mappings. Please report uncertainty for projected levels and, especially, cross-vintage differences.\n\nA second central issue concerns the estimand. The manuscript describes the exercise as stressing debt outstanding at the forecast origin, but the stated dependent variable is the aggregate delinquency share at t+8. The paper does not establish that the later numerator and denominator are restricted to balances or tradelines outstanding at t. If they are not, the outcome can reflect new originations, repayment, refinancing, foreclosure, charge-off, account disappearance, migration, and changing balance composition. The preferred revision is to construct a fixed-pool outcome for debt or tradelines outstanding at t and explain the treatment of attrition and transitions. If that is infeasible, the manuscript must consistently redefine its contribution as forecasting future aggregate delinquency conditional on current county characteristics and withdraw claims about the intrinsic performance of fixed debt stocks.\n\nThird, the historical comparisons require common geographic support. Zillow coverage expands over time, so comparisons among 2002, 2004, 2006, and 2017 may partly reflect changing county composition. Please provide a balanced-county or common-support analysis, appropriate reweighting, or a decomposition showing that the headline ranking is not driven by coverage changes.\n\nFourth, validate the translation of national CCAR paths into county shocks. Show whether the weighted county projections reconcile to the national paths, document the handling of implausible extrapolations, and report sensitivity to reasonable alternative allocation methods.\n\nFifth, revise the terminology and interpretation of the score-group variables. Debt held by a score group divided by total county wages is not that group's debt-to-income ratio. These measures may be useful as score-group debt intensity relative to the county wage base and jointly decompose aggregate leverage and debt composition, but they do not identify leverage within prime, near-prime, or subprime households. Rename the variables throughout and reassess any attribution that depends on borrower-group DTI.\n\nFinally, the conclusion about overall financial-stability risk is broader than the modeled outcome. Serious delinquency is an important vulnerability indicator, but the analysis does not estimate loss given default, identify who bears losses or guarantees them, assess loss-absorbing capacity, or model fiscal and macroeconomic feedback. The abstract, introduction, and conclusion should therefore state that the exercise measures conditional serious-delinquency vulnerability and is an input into—not a complete assessment of—financial stability. A broader systemic-risk conclusion would require an additional institutional loss-mapping analysis; otherwise that analysis is best treated as future work.\n\nA successful revision need not transform the paper into a causal study or a complete financial-system stress test. It must instead align the estimand, validation, uncertainty, sample comparability, variable definitions, and claims. We would be willing to reconsider a substantially revised manuscript that addresses these points directly and reports transparently whether the cross-vintage ranking survives.",
+    "minimum_viable_revision_path": "1. Clarify the outcome cohort. Preferably construct a fixed pool of balances or tradelines outstanding at t and measure point-in-time or cumulative serious delinquency over the next eight quarters, documenting repayment, refinancing, foreclosure, charge-off, disappearance, and migration. If this cannot be done, redefine the estimand everywhere as future aggregate delinquency and remove fixed-stock interpretations.\n2. Implement genuine time-based validation: estimate on an early period and forecast the crisis, then conduct rolling or expanding-window evaluations against simple persistence or comparable benchmarks. Do not describe full-sample fitted values as predictive validation.\n3. Provide dependence-robust uncertainty for coefficients, forecasts, and cross-vintage differences. The procedure should address overlapping eight-quarter outcomes, county dependence, common time shocks, and re-estimation of county scenario mappings.\n4. Re-estimate the principal vintage comparisons on a balanced county sample or common support, with common-population reweighting or a transparent composition decomposition.\n5. Validate county shock assignment by reconciling weighted county paths to national CCAR paths, checking extrapolations, and reporting sensitivity to alternative allocation methods.\n6. Rename score-group DTI variables as score-group debt relative to total county wages or equivalent. Interpret them as components of aggregate leverage and debt composition, not borrower-group leverage, and revise the decomposition claims accordingly.\n7. Reframe the abstract, introduction, results, and conclusion around conditional serious-delinquency vulnerability. Present financial stability as a downstream application requiring separate information on losses, exposure ownership, guarantees, resilience, and amplification.\n8. Report whether the headline 2017-versus-pre-crisis ranking remains economically and statistically distinguishable after these revisions; narrow the conclusion if it does not.",
+    "constructive_summary": "The manuscript asks an important question and offers a workable applied framework for household-debt surveillance. Its strongest contribution is not a complete test of systemic resilience or a causal account of default, but a conditional projection of county-level serious delinquency under transparent macroeconomic scenarios. The scenario design, broad debt coverage, and interaction of unemployment, house prices, debt intensity, and credit composition are promising. The current evidence nevertheless conflates in-sample fit with forecasting, future aggregate delinquency with fixed-stock performance, score-group debt intensity with group-specific DTI, and delinquency vulnerability with financial-stability risk. Changing county coverage and unvalidated county shock mappings add further uncertainty to the vintage comparisons. These are substantive but repairable problems, not fatal blockers. The most efficient path is to define the estimand precisely, validate it out of time, quantify uncertainty, establish common geographic support, calibrate scenario allocation, and narrow the headline claims. Institutional loss mapping would be valuable future work but is required only if the manuscript retains its broad conclusion about overall financial stability."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Econometrician': 0.5, 'Data_Scientist': 0.3, 'Policymaker': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→Econometrician: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → CONCEDED. Explicit concession recorded.\n  • Data_Scientist→Policymaker: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.7/10 → CONCEDED. Explicit concession recorded.\n  • Data_Scientist→paper: severity 6.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n### Debate Round 2\n  • Econometrician→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 6.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 6.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 6.5/10; category REVISION; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Econometrician→paper (UNANSWERED): +0.010 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.006 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.002 to Econometrician (paper critique, discounted)\n  Data_Scientist→Econometrician (CONCEDED): +0.040 to Data_Scientist, -0.040 to Econometrician\n  Data_Scientist→Policymaker (CONCEDED): +0.023 to Data_Scientist, -0.023 to Policymaker\n  Data_Scientist→paper (UNANSWERED): +0.002 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Econometrician: 0.500 -0.022 → 0.478\n  Data_Scientist: 0.300 +0.069 → 0.369\n  Policymaker: 0.200 -0.017 → 0.183\nNormalized final weights: {'Econometrician': 0.4646038295555853, 'Data_Scientist': 0.35797259678728066, 'Policymaker': 0.17742357365713396}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Econometrician: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.5/10, barrier=REVISION\n  Data_Scientist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION\n  Policymaker: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantial_rephrasal, severity=6.0/10, barrier=REPHRASAL\nRaw execution score: 0.750\nExecution penalty from surviving substantive flaws: 0.096\nExecution score: 0.654\nNovelty consensus: MEDIUM (0.450 before debate penalty; 0.450 after)\nNovelty claim counts (all personas): HIGH=0, MEDIUM=8, LOW=0\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 11\nSubstantial-rephrasal (central overclaim) revisions: 2\nRephrasal-only revisions: 0\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.392 + 0.099 + 0.112 = 0.603\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nSubstantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.",
+  "score_components": {
+    "final_score": 0.6028868249999999,
+    "execution_score": 0.653811375,
+    "novelty_score": 0.44999999999999996,
+    "insight_score": 0.62,
+    "raw_execution_score": 0.75,
+    "novelty_consensus": "MEDIUM",
+    "novelty_counts": {
+      "HIGH": 0,
+      "MEDIUM": 8,
+      "LOW": 0
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Econometrician": "RESUBMIT",
+      "Data_Scientist": "RESUBMIT",
+      "Policymaker": "RESUBMIT"
+    },
+    "adjusted_weights": {
+      "Econometrician": 0.4646038295555853,
+      "Data_Scientist": 0.35797259678728066,
+      "Policymaker": 0.17742357365713396
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figure 1 compares actual delinquency with fitted values from equation (1), and Section 6 says this has established that the model can predict. Figure 4 explicitly uses equation (1) estimated over the entire sample, meaning the apparent prediction of crisis delinquency uses crisis outcomes in coefficient estimation. No rolling, expanding-window, or held-out forecast exercise is reported. Table 2 also does not state an inference correction for overlapping eight-quarter outcomes, county dependence, common time shocks, or estimated county scenario mappings.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "The dependent variable is an eight-quarter-ahead delinquency rate observed quarterly, mechanically creating substantial overlap. Equation (1) is estimated on a county-quarter panel, while Section 6.1.1 first estimates a separate national-to-county shock mapping for every county. Sections 5 and 6 report fitted and stressed delinquency levels without confidence intervals for either forecasts or cross-vintage differences and without describing dependence-robust or generated-regressor inference.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and that this explains the rising number of counties in the panel. Section 6 nevertheless compares population-weighted stressed delinquency predictions across vintages without reporting a balanced-county analysis, reweighting to a common population, or decomposition of changes in sample composition.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 3.1 defines delinquency as the share of county dollar balances that are at least 60 days past due, and Section 4 uses D[c,t+8] as the outcome while characterizing debt at t. The manuscript never states that balances in the t+8 numerator and denominator were outstanding at t. Nevertheless, the abstract and Section 6 interpret the projections as comparisons of the riskiness of debt stocks outstanding at different dates.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The regression predicts the aggregate balance-weighted delinquency share at t+8 from county characteristics at t. No cohort restriction, tradeline-level tracking rule, or treatment of balances disappearing through repayment, refinancing, foreclosure, or charge-off is specified.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly states that total wages are used as the denominator for all three credit-score groups and defines subprime DTI as subprime debt divided by total county wage income. Section 4 nevertheless calls these credit-score-group DTI ratios, while the abstract separately attributes the result to improved DTI and a shift in debt toward high-score borrowers.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly says that total county wages are used as the denominator for every score group. Sections 4 through 6 nevertheless call the resulting quantities group-specific DTI ratios and use them to attribute changes in stress performance to leverage by borrower credit quality. The variables support an interpretation as score-group debt intensity relative to the county wage base, not borrower-group DTI.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and explicitly attributes the rising number of counties in the panel to this expansion. Section 6 nevertheless compares population-weighted stressed delinquency predictions for 2002, 2004, 2006, and 2017 without reporting a balanced-county sample, common-support reweighting, or decomposition of the effect of changing coverage.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 6.1.1 estimates separate regressions of county quarterly changes on national changes, including county-specific intercepts, and then applies those estimates to the CCAR paths. The manuscript reports no reconciliation to national totals, holdout validation of these mappings, treatment of implausible county projections, or sensitivity to alternative regional-shock allocation methods for the baseline CCAR results.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states that forecasted delinquency rates for recent debt are 'moderately lower' than for pre-crisis debt under the same shocks and attributes this to improved DTI ratios and a larger high-score debt share. Equation (1) predicts eight-quarter-ahead delinquency from current delinquency, future unemployment and house-price changes, credit-score-group DTI quartiles, and their interactions. Figure 1 is described as comparing observed delinquency with the 'model-predicted' series based on estimating equation (1), with no held-out sample. Section 6 then says, 'Having established that our model is able to predict the levels and trends in observed household delinquency rates during our sample period,' before making out-of-sample projections. Figure 4 states that historical estimates are 'based on estimating equation 1 for the entire sample period,' so the apparent 2006-to-crisis predictive success uses crisis observations in estimation. Table 2 reports conventional-looking standard errors but does not identify clustering or another correction despite overlapping eight-quarter outcomes in a county panel. The manuscript also acknowledges omitted LTV, changing mortgage underwriting, student-loan measurement limitations, and changing allocation of mortgage credit risk, all of which reinforce the need to phrase results as conditional model projections."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract says the authors forecast delinquency rates for the recent stock of debt and compare them with the stock before the crisis. Section 1 similarly says the exercise forecasts serious delinquency rates for outstanding household debt. Section 4 instead specifies D[c,t+8] as the dependent variable and D[c,t] plus debt-to-income measures at t as predictors; Section 3.1 defines D as the share of balances in the county that are delinquent, without stating that balances at t+8 are restricted to balances outstanding at t. Table 1 also reports that county coverage changes from 1,421 counties in 2000 to 1,478 in 2007 and 1,649 in 2014. Figure 1 is described as based on estimating the model over the sample, and no held-out temporal validation is reported."
+      }
+    ],
+    "substantial_rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.2,
+        "evidence": "The abstract concludes that household debt currently poses a lower risk to financial stability, and the introduction describes the exercise as assessing risks to the financial system. Yet the estimated outcome is only the share of household debt at least 60 days delinquent. The manuscript itself acknowledges that the ultimate financial-system impact depends on intermediaries' exposure and that mortgage credit risk has shifted toward government guarantees, but it does not incorporate these considerations into the stress-test output.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "outcome": "CONCEDED",
+        "issue_class": "substantial_rephrasal",
+        "attack_type": "substantial_rephrasal",
+        "evidence": "The abstract states that the results support the conclusion that household debt currently poses a lower risk to financial stability than before the crisis. Section 1 defines the output instead as a forecast of serious delinquency rates and says the exercise assesses risks posed by household borrowing. The manuscript then expressly concedes that the ultimate impact of household delinquencies on financial stability depends on the extent to which financial intermediaries are exposed to credit risk. Section 7 repeats that household borrowing is less risky and that risks to financial stability are lower, while again noting that intermediary exposure and the shift of mortgage credit risk toward government matter. The modeled dependent variable in the displayed equation is the county share of debt at least 60 days delinquent; no loss-given-default, creditor ownership, guarantee incidence, capital capacity, fiscal cost, or macroeconomic feedback term appears. Student loans are excluded from the baseline, and the appendix notes both their growth and predominantly federal guarantee."
+      }
+    ],
+    "rephrasal_revisions": [],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figure 1 compares actual delinquency with fitted values from equation (1), and Section 6 says this has established that the model can predict. Figure 4 explicitly uses equation (1) estimated over the entire sample, meaning the apparent prediction of crisis delinquency uses crisis outcomes in coefficient estimation. No rolling, expanding-window, or held-out forecast exercise is reported. Table 2 also does not state an inference correction for overlapping eight-quarter outcomes, county dependence, common time shocks, or estimated county scenario mappings.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "The dependent variable is an eight-quarter-ahead delinquency rate observed quarterly, mechanically creating substantial overlap. Equation (1) is estimated on a county-quarter panel, while Section 6.1.1 first estimates a separate national-to-county shock mapping for every county. Sections 5 and 6 report fitted and stressed delinquency levels without confidence intervals for either forecasts or cross-vintage differences and without describing dependence-robust or generated-regressor inference.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and that this explains the rising number of counties in the panel. Section 6 nevertheless compares population-weighted stressed delinquency predictions across vintages without reporting a balanced-county analysis, reweighting to a common population, or decomposition of changes in sample composition.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 3.1 defines delinquency as the share of county dollar balances that are at least 60 days past due, and Section 4 uses D[c,t+8] as the outcome while characterizing debt at t. The manuscript never states that balances in the t+8 numerator and denominator were outstanding at t. Nevertheless, the abstract and Section 6 interpret the projections as comparisons of the riskiness of debt stocks outstanding at different dates.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The regression predicts the aggregate balance-weighted delinquency share at t+8 from county characteristics at t. No cohort restriction, tradeline-level tracking rule, or treatment of balances disappearing through repayment, refinancing, foreclosure, or charge-off is specified.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly states that total wages are used as the denominator for all three credit-score groups and defines subprime DTI as subprime debt divided by total county wage income. Section 4 nevertheless calls these credit-score-group DTI ratios, while the abstract separately attributes the result to improved DTI and a shift in debt toward high-score borrowers.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly says that total county wages are used as the denominator for every score group. Sections 4 through 6 nevertheless call the resulting quantities group-specific DTI ratios and use them to attribute changes in stress performance to leverage by borrower credit quality. The variables support an interpretation as score-group debt intensity relative to the county wage base, not borrower-group DTI.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and explicitly attributes the rising number of counties in the panel to this expansion. Section 6 nevertheless compares population-weighted stressed delinquency predictions for 2002, 2004, 2006, and 2017 without reporting a balanced-county sample, common-support reweighting, or decomposition of the effect of changing coverage.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 6.1.1 estimates separate regressions of county quarterly changes on national changes, including county-specific intercepts, and then applies those estimates to the CCAR paths. The manuscript reports no reconciliation to national totals, holdout validation of these mappings, treatment of implausible county projections, or sensitivity to alternative regional-shock allocation methods for the baseline CCAR results.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states that forecasted delinquency rates for recent debt are 'moderately lower' than for pre-crisis debt under the same shocks and attributes this to improved DTI ratios and a larger high-score debt share. Equation (1) predicts eight-quarter-ahead delinquency from current delinquency, future unemployment and house-price changes, credit-score-group DTI quartiles, and their interactions. Figure 1 is described as comparing observed delinquency with the 'model-predicted' series based on estimating equation (1), with no held-out sample. Section 6 then says, 'Having established that our model is able to predict the levels and trends in observed household delinquency rates during our sample period,' before making out-of-sample projections. Figure 4 states that historical estimates are 'based on estimating equation 1 for the entire sample period,' so the apparent 2006-to-crisis predictive success uses crisis observations in estimation. Table 2 reports conventional-looking standard errors but does not identify clustering or another correction despite overlapping eight-quarter outcomes in a county panel. The manuscript also acknowledges omitted LTV, changing mortgage underwriting, student-loan measurement limitations, and changing allocation of mortgage credit risk, all of which reinforce the need to phrase results as conditional model projections."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract says the authors forecast delinquency rates for the recent stock of debt and compare them with the stock before the crisis. Section 1 similarly says the exercise forecasts serious delinquency rates for outstanding household debt. Section 4 instead specifies D[c,t+8] as the dependent variable and D[c,t] plus debt-to-income measures at t as predictors; Section 3.1 defines D as the share of balances in the county that are delinquent, without stating that balances at t+8 are restricted to balances outstanding at t. Table 1 also reports that county coverage changes from 1,421 counties in 2000 to 1,478 in 2007 and 1,649 in 2014. Figure 1 is described as based on estimating the model over the sample, and no held-out temporal validation is reported."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figure 1 compares actual delinquency with fitted values from equation (1), and Section 6 says this has established that the model can predict. Figure 4 explicitly uses equation (1) estimated over the entire sample, meaning the apparent prediction of crisis delinquency uses crisis outcomes in coefficient estimation. No rolling, expanding-window, or held-out forecast exercise is reported. Table 2 also does not state an inference correction for overlapping eight-quarter outcomes, county dependence, common time shocks, or estimated county scenario mappings.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 3.1 defines delinquency as the share of county dollar balances that are at least 60 days past due, and Section 4 uses D[c,t+8] as the outcome while characterizing debt at t. The manuscript never states that balances in the t+8 numerator and denominator were outstanding at t. Nevertheless, the abstract and Section 6 interpret the projections as comparisons of the riskiness of debt stocks outstanding at different dates.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The regression predicts the aggregate balance-weighted delinquency share at t+8 from county characteristics at t. No cohort restriction, tradeline-level tracking rule, or treatment of balances disappearing through repayment, refinancing, foreclosure, or charge-off is specified.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly states that total wages are used as the denominator for all three credit-score groups and defines subprime DTI as subprime debt divided by total county wage income. Section 4 nevertheless calls these credit-score-group DTI ratios, while the abstract separately attributes the result to improved DTI and a shift in debt toward high-score borrowers.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and that this explains the rising number of counties in the panel. Section 6 nevertheless compares population-weighted stressed delinquency predictions across vintages without reporting a balanced-county analysis, reweighting to a common population, or decomposition of changes in sample composition.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "The dependent variable is an eight-quarter-ahead delinquency rate observed quarterly, mechanically creating substantial overlap. Equation (1) is estimated on a county-quarter panel, while Section 6.1.1 first estimates a separate national-to-county shock mapping for every county. Sections 5 and 6 report fitted and stressed delinquency levels without confidence intervals for either forecasts or cross-vintage differences and without describing dependence-robust or generated-regressor inference.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3 states that Zillow coverage increased over time and explicitly attributes the rising number of counties in the panel to this expansion. Section 6 nevertheless compares population-weighted stressed delinquency predictions for 2002, 2004, 2006, and 2017 without reporting a balanced-county sample, common-support reweighting, or decomposition of the effect of changing coverage.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 6.1.1 estimates separate regressions of county quarterly changes on national changes, including county-specific intercepts, and then applies those estimates to the CCAR paths. The manuscript reports no reconciliation to national totals, holdout validation of these mappings, treatment of implausible county projections, or sensitivity to alternative regional-shock allocation methods for the baseline CCAR results.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Section 3.2 explicitly says that total county wages are used as the denominator for every score group. Sections 4 through 6 nevertheless call the resulting quantities group-specific DTI ratios and use them to attribute changes in stress performance to leverage by borrower credit quality. The variables support an interpretation as score-group debt intensity relative to the county wage base, not borrower-group DTI.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.2,
+        "evidence": "The abstract concludes that household debt currently poses a lower risk to financial stability, and the introduction describes the exercise as assessing risks to the financial system. Yet the estimated outcome is only the share of household debt at least 60 days delinquent. The manuscript itself acknowledges that the ultimate financial-system impact depends on intermediaries' exposure and that mortgage credit risk has shifted toward government guarantees, but it does not incorporate these considerations into the stress-test output.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 3,
+    "fail_count": 0
+  }
+}

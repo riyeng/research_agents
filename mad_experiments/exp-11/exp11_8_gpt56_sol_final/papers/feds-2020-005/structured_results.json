@@ -1,0 +1,1545 @@
+{
+  "metadata": {
+    "doc_id": "feds-2020-005",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2020-005.txt",
+    "ground_truth_tier": "Tier2",
+    "year": "2020",
+    "series": "feds",
+    "final_score": 0.709522384,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 327.3162131309509,
+    "char_count": 139438,
+    "word_count": 20115,
+    "token_usage": {
+      "duration_seconds": 327.31003,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 290378,
+        "output": 25146,
+        "thinking": 7952,
+        "total": 315524,
+        "cache_read": 0,
+        "cache_creation": 290345
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 8978,
+          "output": 172,
+          "thinking": 0,
+          "total": 9150,
+          "cache_read": 0,
+          "cache_creation": 8975,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 44629,
+          "output": 3960,
+          "thinking": 2218,
+          "total": 48589,
+          "cache_read": 0,
+          "cache_creation": 44626,
+          "calls": 1
+        },
+        "Data_Scientist": {
+          "input": 44627,
+          "output": 3300,
+          "thinking": 1470,
+          "total": 47927,
+          "cache_read": 0,
+          "cache_creation": 44624,
+          "calls": 1
+        },
+        "Policymaker": {
+          "input": 44608,
+          "output": 2229,
+          "thinking": 367,
+          "total": 46837,
+          "cache_read": 0,
+          "cache_creation": 44605,
+          "calls": 1
+        },
+        "Debater-Econometrician": {
+          "input": 36008,
+          "output": 5138,
+          "thinking": 1807,
+          "total": 41146,
+          "cache_read": 0,
+          "cache_creation": 36002,
+          "calls": 2
+        },
+        "Debater-Data_Scientist": {
+          "input": 36010,
+          "output": 4431,
+          "thinking": 1363,
+          "total": 40441,
+          "cache_read": 0,
+          "cache_creation": 36004,
+          "calls": 2
+        },
+        "Debater-Policymaker": {
+          "input": 36008,
+          "output": 3786,
+          "thinking": 727,
+          "total": 39794,
+          "cache_read": 0,
+          "cache_creation": 36002,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 39510,
+          "output": 2130,
+          "thinking": 0,
+          "total": 41640,
+          "cache_read": 0,
+          "cache_creation": 39507,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 290378,
+          "output": 25146,
+          "thinking": 7952,
+          "total": 315524,
+          "cache_read": 0,
+          "cache_creation": 290345,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 2.56920125
+      },
+      "total_cost": 2.56920125
+    },
+    "timestamp": "2026-07-29T19:42:05.984486",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Econometrician": {
+      "structural_strength": "The paper tightly links a newly derived covariance estimator to unusually rich administrative panel data. Modeling annual income and expenditure as time-aggregated flows is a concrete improvement over mechanically applying discrete-time BPP restrictions, and the large Danish sample permits economically meaningful heterogeneity by liquidity, net wealth, and interest-rate exposure.",
+      "domain_audit": "The descriptive covariance patterns are informative, but the headline monetary-policy estimand is not yet established by the reported design. The estimated psi is the same-year expenditure pass-through from residual labor-income movements under the restrictions c_t = phi P_t + integral g(t-s)dQ_s; it is treated as the household MPC required in Auclert's contemporaneous sufficient statistic. That mapping requires residual income innovations to be unanticipated and orthogonal to preference, labor-supply, household, and wealth shocks, and it requires the response to labor-income innovations to equal the response to interest cash-flow changes. The manuscript instead labels residual changes after demographic controls as 'unexpected' without an instrument or explicit orthogonality validation. Moreover, Appendix D states that URE calculations use averages over 2009-2015, while equation (8) requires the contemporaneous joint distribution of household MPC and URE. If MPC is state-dependent, sorting households by multi-year average exposure estimates a persistent-type covariance rather than the policy-date sufficient statistic. Consequently, the reported 26-basis-point effect should currently be interpreted as a model-based calibration conditional on these mappings, not as an empirically identified causal consumption response to a one-percentage-point rate increase.",
+      "best_case_contribution": "The strongest defensible contribution is a continuous-time, time-aggregation-aware covariance method for estimating model-implied expenditure pass-through from permanent and transitory income innovations, applied to scarce Danish administrative data to document strong heterogeneity associated with liquid wealth and persistent interest-rate exposure. Conditional on equating this pass-through with the relevant MPC and on the stylized Auclert experiment, the estimates imply that redistribution through interest cash flows may be quantitatively more important than representative-agent intertemporal substitution.",
+      "minimum_viable_revision": "Recompute the monetary-policy statistic using calendar-year or predetermined-date URE and NNP positions and state-conditioned MPX estimates, rather than multi-year average exposure, so that the estimated object matches the contemporaneous joint moment in equation (8). Explicitly state the orthogonality and no-anticipation assumptions needed to interpret psi as an MPC, provide sensitivity to plausible departures from those assumptions and to the assumed MPXs assigned outside the estimation sample, and describe the 26-basis-point number as a conditional sufficient-statistic calculation unless the equivalence between labor-income pass-through and interest-income MPC is independently validated. The inference procedure should also document household-level treatment of overlapping multi-year observations.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.5,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The issue affects the paper's headline macroeconomic number rather than merely its wording: the estimated labor-income covariance coefficient and the averaged exposure sorting do not automatically equal the contemporaneous MPC-by-URE moment required by the stated monetary-policy experiment. If the mapping fails, the 26-basis-point estimate can change in magnitude and potentially no longer dominate intertemporal substitution. The underlying administrative data and covariance method remain valuable, and the problem can be addressed or the result credibly narrowed within the present framework, so this is a serious revision rather than a blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A continuous-time extension of covariance-restriction methods that explicitly handles annual time aggregation and permits the consumption response to a transitory income shock to follow an unrestricted path for up to two years.",
+          "significance": "MEDIUM",
+          "confidence": 8.5,
+          "supporting_evidence": "Sections 3.2-3.4 derive Var(Delta^N y-bar) = (N-1/3)sigma_P^2 + 2Var(y-tilde) and the corresponding income-consumption covariance, contrasting these restrictions with BPP's random-walk consumption assumption. This is a genuine extension of Carroll-Samwick and BPP rather than a wholly new identification paradigm."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Measurement of expenditure pass-through across finely partitioned household balance-sheet states using population-scale Danish administrative income, wealth, mortgage, and imputed expenditure data.",
+          "significance": "HIGH",
+          "confidence": 7.5,
+          "supporting_evidence": "The sample contains approximately 7.7 million household-year observations and detailed mortgage repricing and balance-sheet information. Figures VI-VIII document sharp gradients by liquid wealth and URE that smaller survey or lottery samples could not estimate with comparable granularity. The scarce administrative data unlock the joint distribution relevant to an important monetary-transmission question, although interpretation remains model-dependent."
+        },
+        {
+          "claim_type": "policy",
+          "description": "A quantitative sufficient-statistic calculation suggesting that interest-rate cash-flow redistribution can reduce consumption growth by roughly 26 basis points after a one-percentage-point real-rate increase.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "Equation (7), equation (8), and Tables IV-V combine estimated household MPXs with URE positions and assumed MPXs for other sectors. The calculation is economically important but is conditional on the stylized one-period experiment, sectoral assignments, and the disputed mapping from labor-income pass-through to the relevant MPC."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper offers a clear economic narrative connecting liquidity, wealthy and poor hand-to-mouth households, and interest-rate redistribution. The progression from time aggregation to micro heterogeneity and then to sufficient statistics is useful, although the exposition sometimes moves too quickly from covariance-based pass-through to causal monetary-policy language.",
+        "supporting_evidence": "Figure I gives intuitive benchmark comparisons, Figures VI-VIII connect estimated MPXs to wealth and exposure, and Section 6 organizes the macro implications using Auclert's decomposition. The distinction between estimated objects and assumptions used in the macro mapping is less clearly maintained.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The data convincingly show that households with little cash and substantial debt have spending that moves more closely with income than the spending of liquid, wealthy households. But the paper has not fully shown that these income-spending correlations measure what the same households would do when interest payments change after monetary policy. It also groups households using exposure averaged across several years, whereas the monetary-policy formula needs their exposure at the time rates change. The 0.26-percentage-point estimate is therefore a plausible model-based calculation, not yet a directly identified causal effect.",
+      "confidence_score": 8.2,
+      "source_evidence": "The abstract states, 'Following a 1-percentage-point interest rate increase, we estimate that consumption growth decreases by a 1/4 percentage point through this interest rate exposure channel alone.' Section 4.1 says the authors regress income on observed characteristics and 'take the change in the residuals ... to be the unexpected income change,' but no instrument or explicit test establishes that these residuals are unanticipated or orthogonal to consumption determinants. Section 3.2.2 specifies consumption solely as c_t = phi P_t + integral g(t-s)dQ_s, making the income-shock interpretation depend on omitted-shock orthogonality. Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Equation (8) defines E_R from MPX_i times URE_i, while Appendix D states, 'All calculations are based on average values over the years 2009 to 2015.' Table IV further assigns rather than estimates MPXs of 0.1 to pension funds, financial and nonfinancial corporations, and zero to government and the rest of the world.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Data_Scientist": {
+      "structural_strength": "The manuscript provides unusually transparent documentation of its core data construction. Income is largely third-party reported, expenditure is linked to an explicit household budget identity, the authors distinguish liquid wealth, net worth, NNP, and URE, and the appendices examine stock holdings, negative imputed expenditure, outlier rules, durables, logs versus levels, and household-head versus total income. This is a substantially stronger provenance and sensitivity discussion than is typical for imputed-consumption panels.",
+      "domain_audit": "The paper claims to estimate heterogeneous MPXs and then use their distribution across wealth, NNP, and URE to quantify monetary-policy redistribution. The most decision-relevant data-construction problem is that households are assigned to groups using information from the same full period in which income shocks and expenditure responses are estimated. Section 5 states that wealth is measured as the household's mean holdings over the entire sample period; Appendix D likewise describes NNP and URE calculations using average values over 2009-2015. These are not predetermined labels. Wealth is itself changed by the income and expenditure realizations being studied, and expenditure is imputed from the change in wealth through C = Y - P - ΔNW. Consequently, a positive income shock that is saved raises the grouping variable, while expenditure that reduces saving lowers it. This can mechanically sort low-response observations toward higher measured wealth and high-response observations toward lower measured wealth, producing or amplifying the reported negative wealth-MPX gradient. The URE sorting is still more directly exposed because URE includes annual savings, defined as after-tax income minus expenditure, so its label contains the outcome used to estimate MPX. The same-window sorting therefore puts the central findings in Figures VI-VIII and the sufficient statistic E_R in doubt. This is a substantive data-leakage problem rather than merely a request for an optional robustness check.",
+      "best_case_contribution": "The strongest credible contribution is a new continuous-time covariance-based estimator that explicitly handles annual time aggregation and permits short-lived consumption responses, applied to scarce Danish administrative income, balance-sheet, and imputed-expenditure data. If heterogeneous groups are defined using predetermined information, the framework could provide unusually precise evidence on how spending responses vary with household liquidity and interest-rate exposure and could materially improve the empirical calibration of heterogeneous-agent monetary models.",
+      "minimum_viable_revision": "Reconstruct every wealth-, NNP-, and URE-based label using information predetermined relative to each income-consumption growth window, such as beginning-of-window balances, lagged multi-year averages ending before the window, or a split-sample/cross-fitted assignment. Do not include realized expenditure or savings from the estimation window in URE group assignment. Re-estimate Figures VI-VIII and all five sufficient statistics, report movement across labels and effective sample sizes, and reconcile the exposure totals used in Table IV after applying the estimation-sample exclusions. If the 26-basis-point result changes materially, the abstract and macro interpretation must be updated accordingly.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 8.0,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The endogenous labels affect the paper's central heterogeneity evidence and the headline monetary-policy redistribution estimate, not just a secondary table. The direction of the induced sorting can align mechanically with the main reported pattern because wealth accumulation and imputed expenditure are connected by the same budget identity. Nevertheless, the problem is repairable within the existing Danish panel by defining groups with lagged or split-sample information. The aggregate MPX estimator may also remain informative even if the cross-group results weaken, so this is a serious revision rather than an unrecoverable blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A new covariance-based method estimates expenditure responses to permanent and transitory income shocks while explicitly modeling time aggregation and allowing the transitory expenditure response to decay over two years rather than imposing a consumption random walk.",
+          "significance": "HIGH",
+          "confidence": 8.5,
+          "supporting_evidence": "Sections 3.2-3.4 formulate income and consumption in continuous time, derive Var(Δ^N y) and Cov(Δ^N c, Δ^N y) for time-aggregated annual observations, and use these moments to identify permanent and transitory shock variances and MPXs. The manuscript directly contrasts this construction with Blundell, Pistaferri, and Preston (2008) and demonstrates that the original procedure gives a transitory estimate of 0.12 rather than its preferred estimate of 0.50."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Administrative Danish income and balance-sheet records are used to document fine-grained heterogeneity in expenditure responses by liquidity, net worth, nominal position, and interest-rate exposure.",
+          "significance": "HIGH",
+          "confidence": 8.0,
+          "supporting_evidence": "The data contain millions of household-year observations, third-party-reported income, bank balances, liabilities, mortgage reset information, and security holdings. Such linked administrative balance-sheet information is scarce and directly addresses a first-order empirical input to heterogeneous-agent macroeconomic models. The significance is conditional on removing the same-window label leakage."
+        },
+        {
+          "claim_type": "policy",
+          "description": "The paper combines household MPXs with NNP and URE exposures to estimate Auclert-style sufficient statistics, including a claimed 26-basis-point decline in consumption growth following a one-percentage-point real-rate increase through the interest-rate-exposure channel.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Section 6 and Tables IV-V calculate E_R = -0.26 and compare the implied redistribution channel with the intertemporal-substitution channel. This is a consequential quantitative application, but it is a stylized sufficient-statistic exercise rather than causal estimation of an observed monetary-policy intervention, and its current estimate depends on endogenous URE grouping and assumptions for out-of-sample sectors."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument is well organized around a useful progression from time-aggregation bias, to heterogeneous household MPXs, to monetary-policy sufficient statistics. The poor hand-to-mouth, wealthy hand-to-mouth, and wealthy grouping provides clear economic intuition. The exposition is competent and informative, although the manuscript does not recognize that its full-period grouping variables are jointly determined with the income and expenditure outcomes, which obscures a crucial distinction between descriptive ex post types and predetermined economic states.",
+        "supporting_evidence": "Figure I motivates identification using different growth horizons; Sections 3.2-3.4 connect the continuous-time assumptions to observable moments; and Section 6 maps household estimates into Auclert's decomposition. Figure VIII's three-group interpretation is intuitive, but the labels are constructed using same-window average URE and wealth rather than predetermined states.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper uses excellent administrative records and an interesting new method, but it sorts families into rich, poor, debtor, and creditor groups using averages calculated partly after the very income and spending changes it wants to explain. Because saving raises measured wealth and spending lowers it, this sorting can manufacture the appearance that wealthy households spend less of an income shock. The interest-rate measure even contains income minus spending directly. The authors should assign households to groups using only information known before each measured shock and then rerun the main results.",
+      "confidence_score": 8.7,
+      "source_evidence": "Section 4.2 defines imputed expenditure by the identity C_t = Y_t - P_t - ΔNW_t. Section 5 states: \"In each case, wealth is measured as the mean household wealth holdings over the entire sample period.\" Section 6.1 defines URE as the difference between maturing assets, including income, and liabilities, including planned consumption; Appendix D.1 operationalizes it as \"annual savings (i.e. after-tax income minus expenditure) plus maturing assets minus maturing liabilities.\" Appendix D states that calculations are based on average values over 2009-2015. Figures VI-VIII then estimate MPXs within groups formed from these variables, and equation (8) uses the URE-group MPXs to construct E_R. Table V reports E_R = -0.26, which supports the abstract's headline claim that a one-percentage-point rate increase lowers consumption growth by roughly one-quarter percentage point through this channel.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Policymaker": {
+      "structural_strength": "The paper maps household-level estimates into Auclert's sufficient-statistics decomposition rather than jumping directly from heterogeneous MPCs to an undisciplined policy narrative. It also uses unusually detailed administrative balance-sheet information to distinguish net nominal positions from unhedged interest-rate exposure and explicitly reconciles household exposures with other institutional sectors through the national accounts.",
+      "domain_audit": "The evidence supports a policy-relevant Danish accounting counterfactual, but the headline wording makes it sound like an estimated response of aggregate consumption to an actual monetary-policy intervention. The reported 26-basis-point result is instead the interest-rate-exposure term in a stylized, one-period decomposition. It requires a one-percentage-point change in the relevant real rate, the assumed repricing schedules for deposits, bank debt, mortgages, and other instruments, assigned MPXs for exposures held by pension funds, firms, government, financial institutions, foreigners, young households, and old households, and the omission of endogenous lending, income, fiscal, exchange-rate, and institutional responses. The paper itself says the experiment has stylized dynamics and no response lag, and it warns that its treatment of bank lending may fail in a banking crisis. These qualifications materially narrow the policy interpretation. The result should therefore be presented as an exposure-weighted partial-equilibrium semi-elasticity for Denmark under stated incidence assumptions, not as the observed or causal consumption effect of a monetary-policy rate increase. This is principally a central claim-calibration problem rather than evidence that the underlying household estimates or sufficient-statistics calculation are invalid.",
+      "best_case_contribution": "The paper develops a time-aggregation-aware method for estimating household expenditure responses to permanent and transitory income shocks, applies it to scarce Danish administrative income, expenditure, wealth, mortgage, and interest-rate-exposure data, and shows that households harmed by a real-rate increase have substantially higher estimated spending propensities than households that benefit. Under an explicitly stylized one-period incidence experiment, this heterogeneity implies an interest-rate-exposure contribution of about negative 0.26 percent to consumption growth per one-percentage-point increase in the relevant real rate.",
+      "minimum_viable_revision": "Rewrite the abstract, introduction, and conclusion so the 26-basis-point estimate is consistently described as a Danish partial-equilibrium sufficient-statistic counterfactual rather than the aggregate causal effect of a monetary-policy hike. State alongside the number the critical institutional assumptions: the shock is to the one-period real rate; contractual and assumed repricing determine URE; out-of-sample sectoral MPXs are assigned rather than estimated; and general-equilibrium income, lending, fiscal, exchange-rate, and policy-reaction effects are outside the calculation. A compact sensitivity table using the existing framework for mortgage repricing, non-household maturities, and assigned sectoral MPXs would substantially improve policy usability, although the indispensable revision is claim narrowing.",
+      "primary_issue_class": "substantial_rephrasal",
+      "severity_score": 6.0,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The issue touches the abstract's headline policy result: a reader could reasonably interpret the statement that an interest-rate increase causes consumption growth to fall by one-quarter percentage point as an estimated monetary-policy effect. The defensible result is narrower—a component of a stylized Danish accounting decomposition conditional on institutional and incidence assumptions. Narrowing the claim materially changes its policy meaning but leaves the empirical heterogeneity findings and the sufficient-statistics calculation intact. It is therefore substantial rephrasing rather than a substantive flaw or blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "methodological",
+          "description": "A new covariance-based estimator of expenditure responses to permanent and transitory income shocks that explicitly models annual time aggregation and permits the transitory consumption response to decay over two years rather than imposing a consumption random walk.",
+          "significance": "HIGH",
+          "confidence": 8.5,
+          "supporting_evidence": "Sections 3 and Appendix A derive observable variance and covariance moments in continuous time, including Var(Delta_N y-bar) = (N - 1/3)sigma_p squared + 2 Var(y-tilde) and Cov(Delta_N c-bar, Delta_N y-bar) = phi(N - 1/3)sigma_p squared + 2 Cov(c-tilde,y-tilde). Section 3.4 and Appendix E argue that ignoring time aggregation and imposing the BPP random-walk restriction produces sharply different transitory-response estimates."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Detailed measurement of how expenditure responses vary jointly with Danish households' liquid wealth, net worth, net nominal positions, and contractual interest-rate exposure using population-scale administrative data.",
+          "significance": "HIGH",
+          "confidence": 8.0,
+          "supporting_evidence": "The manuscript uses approximately 7.7 million household-year observations, third-party-reported income and asset data, mortgage repricing information, and imputed expenditure. Figures VI-VIII document a monotonic decline in MPX with liquid wealth and show that negatively interest-rate-exposed households have higher MPXs than positively exposed households. The combination of scarce administrative data and a first-order monetary-transmission question is a substantial empirical contribution even though it is not a causal estimate of a policy intervention."
+        },
+        {
+          "claim_type": "policy",
+          "description": "A sufficient-statistics quantification of the Danish interest-rate-exposure and Fisher redistribution channels, including an estimated interest-rate-exposure statistic of negative 0.26.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "Equation 7 decomposes consumption into aggregate-income, earnings-heterogeneity, Fisher, interest-rate-exposure, and intertemporal-substitution channels. Tables IV and V report the exposure allocations and sufficient statistics, including E_R = -0.26 and E_P = -0.75. The contribution is policy relevant but bounded because it is a stylized incidence calculation rather than an identified total monetary-policy effect."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper provides a clear conceptual bridge from household consumption smoothing to macroeconomic redistribution channels. The three-way distinction among poor hand-to-mouth, wealthy hand-to-mouth, and wealthy households is economically intuitive and helps explain why rate changes can redistribute cash flow between groups with different spending propensities. The policy discussion is useful but does not fully separate a sufficient-statistic channel calculation from a feasible monetary-policy experiment, preventing a HIGH assessment.",
+        "supporting_evidence": "Figure VIII combines MPXs, homeownership, liquid assets, and URE to motivate the three household groups. Equation 7 organizes the policy interpretation into five channels. Section 6.2 acknowledges that the dynamics are stylized and lack response lags, while sections 6.3-6.4 explain the assigned MPXs and compare the exposure channel with intertemporal substitution.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper convincingly shows that Danish households whose mortgage and other payments rise when interest rates rise tend to cut spending more strongly than households that receive more interest income. Its one-quarter-percentage-point number is not, however, a forecast or causal estimate of what the central bank would do to total consumption. It is the size of one accounting channel under assumptions about which rates reset, who ultimately owns financial assets, and how each group spends gains or losses. Other consequences of monetary policy—changes in jobs, wages, bank lending, taxes, exchange rates, and policy reactions—are not included in that number.",
+      "confidence_score": 8.5,
+      "source_evidence": "The abstract states: \"Following a 1-percentage-point interest rate increase, we estimate that consumption growth decreases by a 1/4 percentage point through this interest rate exposure channel alone.\" Section 6.2 defines a stylized experiment in which the real rate changes for one period and says the dynamics \"are clearly stylized\" and \"lack any lag in the economy's response.\" Equation 7 shows that the interest-rate-exposure term is only one component of the total response. Section 6.1 assumes all bank deposits and loans reprice immediately, mortgage repricing follows observed reset amounts, and other assets and liabilities have five-year maturity. Table IV assigns MPXs of 0.5 to young and old households, 0.1 to pension funds and corporate or financial exposures, and zero to government and the rest of the world. Section 6.3 cautions that ignoring a bank lending response \"may be reasonable in good times\" but may not hold during a banking crisis. Table V reports E_R = -0.26, the basis of the headline estimate.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The peer reviews correctly identify two distinct problems: endogenous same-window construction of household states and overstatement of a stylized sufficient-statistic calculation as a monetary-policy response. The former, together with the unvalidated mapping from income covariance to MPC, is a substantive identification problem; the latter independently requires substantial claim narrowing.",
+        "attacks": [
+          {
+            "target_persona": "Policymaker",
+            "critique": "Classifying the policy problem principally as substantial rephrasing understates the econometric defect. The interest-rate-exposure statistic requires the relevant household MPC conditional on contemporaneous, predetermined URE. The paper instead inserts a regression coefficient describing expenditure pass-through from residual labor-income movements and, according to the documented construction, sorts on multi-year average URE that includes realized savings. Neither the equivalence across income sources nor the required contemporaneous joint distribution is established. Rewording the result as partial equilibrium is necessary but does not repair the statistic itself.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient for transitory expenditure and income. Section 4.1 merely designates changes in residual income as unexpected. The review graph documents that URE is averaged over 2009-2015 and operationally includes annual savings, while the policy calculation requires MPX_i multiplied by URE_i. Thus both the MPC mapping and the policy-date conditioning required by the sufficient statistic remain unsupported."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The covariance restrictions do not by themselves identify a causal marginal propensity to expend. The specified consumption equation attributes income-consumption covariance entirely to common permanent and transitory income innovations. Residual labor-income changes can nevertheless be anticipated or correlated with labor supply, preferences, household composition, health, job transitions, or wealth shocks. Demographic residualization is not an instrument and does not establish the required orthogonality. The estimates are therefore model-implied pass-through coefficients unless these assumptions are defended and subjected to sensitivity analysis.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Section 4.1 says that the authors regress income on demographic controls and 'take the change in the residuals ... to be the unexpected income change.' Section 3.2.2 specifies consumption solely as c_t = phi P_t plus the response to Q innovations, while Section 3.3 defines psi as a regression coefficient. No instrument, expectation measure, placebo restriction, or explicit test establishes no anticipation and orthogonality to other determinants of expenditure."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "Imputing expenditure from income and changes in net worth makes measurement-error assumptions central to the covariance estimator. Because measured income enters both the explanatory variable and the constructed expenditure outcome, income-reporting error can mechanically generate positive covariance. Errors in asset values, capital gains, liabilities, or timing can also induce serial covariance that the estimator may classify as permanent or transitory expenditure response. Administrative reporting quality mitigates but does not eliminate this generated-outcome problem.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 7.5,
+            "evidence": "Section 4.2 constructs expenditure from the budget identity C-bar_t = Y-bar_t - P-bar_t - Delta NW-bar_t, and the estimator uses covariance between changes in this constructed expenditure and changes in the same measured income series. The supplied text asserts that income is highly accurate but does not derive the estimator under measurement error or provide an independent expenditure validation in the material available for audit."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The policymaker review is right that the 26-basis-point number is not the total causal effect of an observed monetary-policy intervention and must be labeled as a stylized partial-equilibrium sufficient-statistic calculation. However, this wording correction cannot substitute for reconstructing the relevant contemporaneous joint distribution or validating the MPC mapping.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that assigning households using full-period mean wealth, and especially URE containing realized savings, conditions on variables jointly determined with the income and imputed-expenditure observations used for estimation. This can create or amplify the reported heterogeneity and directly contaminate the exposure-weighted policy statistic. Predetermined or cross-fitted state assignment is required.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the abstract and policy discussion overstate the 26-basis-point result. Even after econometric repairs, it should be described as a Danish, one-period, partial-equilibrium channel calculation conditional on repricing and sectoral-MPX assumptions, not as an estimated aggregate causal response to a monetary-policy hike.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Data_Scientist",
+            "question": "Can contractual beginning-of-window asset and liability positions be used to construct URE without realized savings, and can household types be cross-fitted using only years preceding each three-to-five-year estimation window?"
+          },
+          {
+            "target_persona": "Policymaker",
+            "question": "After reconstructing predetermined URE, which repricing and assigned sectoral-MPX assumptions should be displayed beside the headline statistic to make clear that it is a channel-specific incidence calculation rather than a total policy effect?"
+          }
+        ],
+        "final_argument_state": "The continuous-time treatment of annual time aggregation and the population-scale administrative application remain meaningful contributions. Methodological novelty is MEDIUM and the scarce-data empirical contribution is HIGH; economic insight is MEDIUM. Execution is not yet sound enough for acceptance because household states are formed using same-window outcomes, the covariance coefficient is interpreted as an MPC without establishing no anticipation and orthogonality, and the labor-income coefficient is transferred to interest cash flows without validation. The generated-expenditure measurement structure also needs explicit error analysis. These defects are serious but repairable within the framework using predetermined or cross-fitted balance-sheet states, sensitivity and validation exercises, transparent inference for overlapping observations, and recalculation of the sufficient statistics. Independently, the central policy language requires substantial rephrasing as a conditional partial-equilibrium calculation. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The graph converges on a valuable methodological and administrative-data contribution but identifies two distinct barriers: endogenous same-window construction of household groups and an insufficiently justified mapping from income-shock expenditure pass-through to the MPC needed for the monetary-policy sufficient statistic. The policy counterfactual also requires materially narrower framing.",
+        "attacks": [
+          {
+            "target_persona": "Policymaker",
+            "critique": "The assessment understates the problem by treating the headline primarily as claim calibration while describing the underlying household estimates as potentially valid. The URE and wealth groups used to estimate heterogeneous MPXs are constructed from the same outcome window. Because URE includes savings, defined as income minus imputed expenditure, the grouping variable directly incorporates the variables whose covariance identifies MPX. This can alter the estimated joint distribution of MPX and exposure, so rephrasing alone cannot validate the negative 0.26 statistic.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Section 4.2 defines expenditure through the budget identity involving income and the change in net worth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. Appendix D defines URE using annual savings, meaning after-tax income minus expenditure, and averages calculations over 2009-2015. Figures VI-VIII estimate MPXs for groups formed from these same-window variables, and equation (8) then uses the resulting URE-group MPXs to calculate the interest-rate-exposure statistic."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "The proposed repair should not present calendar-year URE as interchangeable with predetermined-date URE. A contemporaneous calendar-year measure can still include realized income, expenditure, and savings from the response period and therefore preserve the leakage. The necessary repair is explicitly predetermined or cross-fitted exposure assignment; calendar-time alignment alone is insufficient.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "Appendix D operationalizes URE partly through annual savings, defined as after-tax income minus expenditure. Expenditure is itself imputed from income and changes in net worth. Thus a calendar-year URE measure containing response-year savings remains jointly determined with the estimated response unless it is lagged, fixed at the beginning of the window, or constructed on an independent sample period."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The requested narrowing of the policy language is warranted, but it is not a substitute for re-estimating the exposure-MPX relationship with predetermined labels. The current concern affects the numerical sufficient statistic, not only its causal interpretation.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the estimated psi is formally an expenditure-income regression coefficient under the imposed covariance model and that interpreting it as the MPC relevant for interest cash-flow shocks requires no-anticipation, orthogonality, and response-equivalence assumptions that are not independently established.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that, even after repairing group construction, the negative 0.26 estimate must be described as a Danish partial-equilibrium sufficient-statistic counterfactual under stated repricing and sectoral-MPX assumptions, rather than as the identified total causal response to a monetary-policy rate increase.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Can every liquid-wealth, net-worth, NNP, and URE group be reconstructed from beginning-of-window balances or lagged averages ending before each three-, four-, or five-year estimation window, with no response-window savings or expenditure entering the labels?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How much do households move across exposure and wealth bins when full-period averages are replaced by predetermined or split-sample assignments, and how do Figures VI-VIII and the negative 0.26 statistic change?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What empirical evidence supports applying the expenditure response to residual labor-income innovations to interest cash-flow changes, rather than treating that equivalence as a calibration assumption?"
+          }
+        ],
+        "final_argument_state": "Execution remains promising but not yet sound for the central heterogeneous-MPX and monetary-policy claims. The continuous-time, time-aggregation-aware estimator and scarce linked Danish administrative data support a HIGH novelty assessment, while the economic organization around liquidity and interest-rate exposure supports MEDIUM insight. Two repairable substantive flaws survive: same-window wealth and URE labels can mechanically contaminate heterogeneous MPX estimates, and the mapping from residual labor-income pass-through to the interest-income MPC is conditional rather than identified. Predetermined or cross-fitted group construction, re-estimation of all heterogeneity figures and sufficient statistics, explicit identifying assumptions and sensitivity analysis, and substantial narrowing of the policy language are required. These repairs fit within the existing framework, so RESUBMIT rather than REJECT is appropriate.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer reviews identify two stronger concerns than policy-language calibration alone: endogenous same-window construction of household groups and an unvalidated mapping from income-shock expenditure pass-through to the MPC required by the monetary-policy sufficient statistic. Both directly threaten the headline quantitative result while remaining potentially repairable within the existing data and framework.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The central heterogeneity estimates are vulnerable to endogenous sorting because wealth, NNP, and URE groups are formed using averages from the same period used to estimate income-expenditure responses. Since expenditure is imputed from changes in net wealth and URE incorporates savings, these labels contain realizations jointly determined with the estimated outcome. The resulting gradients cannot presently be interpreted as responses conditional on predetermined household states.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.7,
+            "evidence": "Section 4.2 defines expenditure through the household budget identity using income and changes in net wealth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. The review graph further documents that Appendix D constructs URE from annual savings and averages exposure over 2009-2015. Figures VI-VIII and the monetary sufficient statistic then use groups formed from those same-window variables."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The estimated transitory parameter is a covariance-based same-year expenditure pass-through from residual labor-income movements, not automatically the causal MPC out of interest cash-flow changes required for the redistribution calculation. Calling demographic residuals 'unexpected' does not establish no anticipation or orthogonality to preference, labor-supply, household-composition, or wealth shocks, nor does it establish that households respond identically to labor-income and interest-income innovations.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.3,
+            "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Section 4.1 treats changes in residual income after demographic controls as unexpected without an instrument or separate anticipation test. The headline monetary exercise subsequently applies these estimated pass-through coefficients to interest-rate exposures, requiring additional invariance and orthogonality assumptions."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "Even after correcting the measurement and mapping problems, the 26-basis-point number must not be described as the estimated aggregate causal effect of a monetary-policy rate increase. It is one term in a stylized Danish partial-equilibrium sufficient-statistic counterfactual whose value depends on contractual repricing, assigned MPXs for sectors outside the estimation sample, and the exclusion of general-equilibrium income, credit, fiscal, exchange-rate, and policy-reaction effects.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.6,
+            "evidence": "The abstract says that following a one-percentage-point interest-rate increase consumption growth decreases by roughly one-quarter percentage point through the channel. The policy decomposition identifies this as only the interest-rate-exposure term, while the manuscript describes the experiment as stylized, assigns MPXs to non-household sectors, and acknowledges omitted response lags and possible bank-lending responses."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I concede that same-window averaging of wealth and especially URE is an argument-damaging data-construction problem, not an optional robustness exercise. Predetermined, lagged, or cross-fitted group definitions are required before the reported heterogeneity and exposure-weighted policy statistic can be relied upon.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I concede that the labor-income pass-through parameter is not automatically the MPC relevant for interest cash flows and that multi-year average exposure does not match the contemporaneous joint moment in the sufficient-statistic formula. The 26-basis-point estimate is therefore conditional on unvalidated mappings and timing assumptions.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Data_Scientist",
+            "question": "Would beginning-of-window balance-sheet positions alone sufficiently remove the mechanical sorting concern, or should the revision also exclude immediately preceding changes in net wealth because those positions may already reflect anticipated income innovations?"
+          },
+          {
+            "target_persona": "Econometrician",
+            "question": "What within-framework sensitivity analysis would most credibly bound the monetary statistic if the response to interest-income innovations cannot be independently estimated: alternative interest-income MPC ratios, external estimates, or partial-identification bounds?"
+          }
+        ],
+        "final_argument_state": "The continuous-time treatment of annual aggregation and the population-scale administrative application remain structurally promising. Methodological and empirical novelty are HIGH conditional on valid state construction, while economic insight is MEDIUM because the liquidity and interest-exposure narrative is useful but currently outruns identification. Execution is not yet sound enough for acceptance: same-window wealth and URE labels can mechanically generate the central heterogeneity, and the estimated labor-income pass-through is mapped to an interest-income MPC without adequate validation. The authors should reconstruct all groups from predetermined or cross-fitted information, recompute the heterogeneity figures and sufficient statistics, document inference for overlapping observations, test or transparently parameterize the labor-income-to-interest-income mapping, and narrow the headline to a partial-equilibrium Danish channel calculation. These are serious but potentially repairable defects, so the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      }
+    },
+    {
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph has converged on the correct principal diagnosis: the continuous-time treatment of annual aggregation and administrative-data application are promising, but same-window state construction, the causal interpretation of covariance coefficients, and their transfer to interest-rate cash flows place the central heterogeneity and monetary-policy results in doubt. I also agree that the policy headline requires substantial narrowing even after those econometric issues are repaired.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript reports that the overidentifying restrictions are strongly rejected but dismisses this as unsurprising given the sample size. This rejection is direct evidence that the imposed linear moment system does not exactly describe the observed income-consumption dynamics. Because the estimator's interpretation as permanent and transitory MPXs depends on those restrictions, the paper must quantify which moments fail, whether economically material discrepancies are concentrated at particular horizons or dates, and how estimates change under alternative persistence and response specifications. Large samples explain the power of the test, not the source or irrelevance of misspecification.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Footnote 18 in Section 3.3 states that the system has 96 moments for four parameters and that the null of the Sargan-Hansen J-test is strongly rejected, while offering sample size as the reason this is unsurprising. Equations (3) and (5) impose linear restrictions across horizons and calendar periods that are essential to decomposing the covariance into permanent and transitory components."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The paper does not establish that its reported minimum-distance uncertainty is valid for the highly overlapping moment construction. Three-, four-, and five-year changes share observations within households, the same households contribute to multiple calendar windows, and group membership may itself be estimated from longitudinal outcomes. Valid inference therefore requires clustering at the household level and propagating uncertainty from generated expenditure and estimated group assignment. A diagonal weighting matrix does not by itself address this dependence.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.0,
+            "barrier_category": "REVISION",
+            "confidence": 7.5,
+            "evidence": "Section 3.3 constructs 96 moments from overlapping three-, four-, and five-year growth periods within eight consecutive five-year windows and states only that diagonally weighted minimum distance is used. The supplied discussion does not document household-clustered inference or uncertainty propagation for imputed expenditure and longitudinally constructed household states."
+          }
+        ],
+        "novelty_counters": [
+          {
+            "target_persona": "Policymaker",
+            "counter_argument": "Calling the methodological contribution unambiguously HIGH overstates the distance from the paper's cited foundations. The manuscript combines an existing growth-horizon variance strategy with an existing analysis of time aggregation in BPP-style estimators. The flexible short-run consumption response and administrative implementation remain meaningful additions, but the methodological novelty is better characterized as MEDIUM, while the scarce linked-data application is HIGH.",
+            "prior_work_citation": "Carroll and Samwick (1997), as described in Section 3.2.1, identify permanent and transitory income variance from growth over different horizons; Crawley (2019), as described in the introduction and Section 3.4, explicitly models time aggregation in the BPP setting.",
+            "severity_score": 3.0,
+            "barrier_category": "MINOR",
+            "confidence": 8.0,
+            "evidence": "The manuscript repeatedly characterizes its estimator as following Carroll and Samwick closely and identifies accounting for time aggregation as its main innovation, while also citing Crawley (2019) for a time-aggregation correction to BPP using PSID data."
+          }
+        ],
+        "defenses": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "argument": "The same-window sorting critique is well founded and should remain a substantive flaw rather than a robustness suggestion. Predetermined, lagged, or genuinely cross-fitted household states are required; merely aligning URE to a calendar year would not remove leakage if response-period savings or expenditure enter that measure.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The requested narrowing of the 26-basis-point headline is necessary. Even with repaired state construction and a validated MPX mapping, the calculation identifies only a conditional Danish partial-equilibrium interest-exposure term, not the total causal response of consumption to a monetary-policy intervention.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that full-period mean wealth and URE containing realized savings condition group assignment on variables jointly determined with the income and imputed-expenditure observations. This can alter both heterogeneous MPX estimates and the exposure-weighted sufficient statistic, so all relevant results must be reconstructed using predetermined or cross-fitted labels.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that residualizing labor income on observed demographics does not make the remaining changes unanticipated or orthogonal to preferences, labor supply, health, household transitions, and wealth shocks. The covariance parameters are model-implied pass-through coefficients unless the required restrictions are defended and tested.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that applying labor-income pass-through coefficients to interest cash flows requires an additional response-equivalence assumption that is not identified by the presented covariance design.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Which individual overidentifying restrictions account for the rejected J-test, and do estimates remain stable when fitting horizons or calendar windows separately and when allowing longer-lived transitory income or consumption responses?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Are standard errors clustered at the household level across all overlapping growth windows, and how is uncertainty from expenditure imputation and estimated household-state assignment propagated into heterogeneous MPXs and the 26-basis-point statistic?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Can every wealth and URE group be reconstructed using information fixed before the income-consumption response window, or through sample splitting that prevents response-period savings and net-worth changes from determining group membership?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What independent evidence supports applying the estimated response to residual labor-income movements to interest-income and debt-service cash-flow changes?"
+          }
+        ],
+        "final_argument_state": "The continuous-time handling of annual aggregation is a useful methodological refinement, and the population-scale linked Danish data provide a HIGH empirical contribution. Methodological novelty is MEDIUM because the estimator builds directly on Carroll-Samwick horizon restrictions and prior time-aggregation work; economic insight is MEDIUM. Execution remains unsound for the headline results: same-window wealth and URE assignment contaminates the relevant conditional moments, the covariance coefficient is interpreted causally without establishing anticipation and orthogonality restrictions, the labor-income coefficient is transferred to interest cash flows without validation, generated expenditure creates important measurement-error exposure, and the paper proceeds despite a rejected overidentified moment system without diagnosing misspecification. Household-clustered inference for overlapping moments must also be documented. These problems are serious but potentially repairable through predetermined or cross-fitted state construction, independent validation and sensitivity analysis, explicit misspecification diagnostics, and recalculation of all heterogeneous and policy statistics. Separately, the policy result requires substantial rephrasing as a conditional Danish partial-equilibrium channel calculation. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Data_Scientist": {
+        "referee_acknowledgment": "The review graph converges on the correct decision-relevant issues. The time-aggregation-aware estimator and linked administrative data are promising, but the central heterogeneity and monetary-policy statistic are not presently validated because household states use same-window information, the covariance coefficient lacks a causal interpretation without additional assumptions, and expenditure is generated from variables also entering the estimator.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The heterogeneous MPX gradients and exposure-weighted monetary-policy statistic are contaminated by outcome leakage when households are classified using full-window wealth or URE. Because URE incorporates realized savings and expenditure is itself inferred from income and changes in net worth, the sorting variable contains realizations directly related to the covariance moments used to estimate MPX. The reported relationship between exposure and MPX therefore need not represent heterogeneity conditional on predetermined household states.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Section 4.2 constructs expenditure from the household budget identity. The review graph documents that Section 5 uses mean wealth over the sample period and that Appendix D constructs URE partly from annual savings and averages it over 2009-2015. Those same-window labels are subsequently used for the heterogeneous MPX estimates and the exposure-weighted sufficient statistic."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The covariance restrictions identify model-implied expenditure pass-through, not a causal marginal propensity to expend without stronger orthogonality and no-anticipation assumptions. Residualizing labor income on demographics does not make remaining changes innovations: job transitions, labor supply, health, household composition, preferences, and wealth shocks can jointly affect income and expenditure. Applying this coefficient to interest cash-flow changes additionally assumes response invariance across income sources.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.6,
+            "evidence": "Section 3.2.2 attributes consumption movements to the permanent and transitory income processes, while Section 3.3 explicitly defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), a regression coefficient. Section 4.1 calls changes in demographic-residualized income unexpected without presenting an instrument, direct expectations measure, anticipation test, or restriction excluding correlated non-income shocks."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The generated expenditure outcome creates a mechanical errors-in-variables channel that can bias the estimated income-expenditure covariance upward. Any measurement error in income appears both in the income regressor and, through the budget identity, in imputed expenditure. Errors in asset values, capital gains, debt balances, or timing can likewise produce serial covariance that the model may misclassify as a behavioral response.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 7.8,
+            "evidence": "Section 4.2 defines expenditure using measured income and changes in net worth, and the estimator then uses covariance between changes in that generated expenditure series and changes in measured income. The supplied material emphasizes accurate third-party income reporting but does not derive the estimator under measurement error or demonstrate validation against an expenditure measure independent of the budget identity."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "Even after the econometric repairs, the headline 26-basis-point estimate must be framed as a conditional Danish partial-equilibrium sufficient-statistic calculation, not an estimated aggregate causal response to a monetary-policy intervention. The calculation isolates one redistribution channel and depends on assumptions about repricing, timing, sectoral MPXs, and the transferability of labor-income responses to interest cash flows.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.7,
+            "evidence": "The abstract states that a one-percentage-point interest-rate increase decreases consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript contrasts this number with the representative-agent intertemporal-substitution channel, although the exercise does not identify the total response to a monetary-policy shock or incorporate the broader general-equilibrium transmission described in the surrounding discussion."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The generated-outcome measurement problem is serious but not demonstrably fatal. Third-party administrative income reporting plausibly reduces the key shared-error component, and the existing framework can accommodate quantitative error bounds, alternative asset treatments, split-source measures, or validation against independent expenditure data. The appropriate classification is therefore a substantive REVISION rather than a BLOCKER.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The policy result need not be abandoned entirely. If groups are reconstructed from predetermined information and the income-source mapping is transparently validated or parameterized, the exercise can remain informative as a partial-equilibrium sufficient-statistic counterfactual. What cannot survive is its presentation as an identified aggregate monetary-policy effect.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that psi is formally an expenditure-income regression coefficient under the imposed covariance model and that demographic residualization alone does not establish causal income innovations, no anticipation, or orthogonality to other determinants of expenditure.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that using income both as an estimator input and as a component of imputed expenditure makes the measurement-error structure central rather than incidental. Explicit derivations and empirical validation are required.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the 26-basis-point result must ultimately be described as a Danish, one-period, partial-equilibrium channel calculation conditional on repricing, sectoral-MPX, and income-source-invariance assumptions.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "How do the liquid-wealth, net-worth, and URE gradients change when every household label is fixed before the corresponding income-expenditure window or assigned through nonoverlapping cross-fitting?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Can the authors quantify the bias induced by shared income measurement error and validate imputed expenditure or its covariance with income using a measure not constructed from the same budget identity?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What empirical evidence or sensitivity range supports applying the labor-income pass-through coefficient to interest-income and debt-service cash-flow changes?"
+          }
+        ],
+        "final_argument_state": "The continuous-time treatment of annual time aggregation is a meaningful methodological contribution, and the population-scale Danish administrative application provides high empirical novelty; methodological novelty is MEDIUM and overall novelty is HIGH. The liquidity and interest-exposure organization offers MEDIUM economic insight. Execution is not yet sound enough for acceptance. Same-window wealth and URE assignment can mechanically distort the central heterogeneous-MPX pattern, the estimated covariance coefficient is interpreted causally without establishing the required innovation and orthogonality conditions, and the generated expenditure measure requires explicit measurement-error analysis. The monetary-policy mapping also needs validation and substantial rephrasing as a conditional partial-equilibrium calculation. These defects are serious but can be addressed within the current framework through predetermined or cross-fitted labels, complete re-estimation of the heterogeneity and policy statistics, measurement-error validation, sensitivity analysis for income-source invariance, and transparent inference. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer critiques correctly sharpen the distinction between claim calibration and validity of the underlying sufficient statistic. The central problem is not merely that the 26-basis-point result is described too broadly: same-window state construction, uncertain causal interpretation of the covariance coefficient, and the unvalidated transfer from labor-income pass-through to interest-cash-flow responses place the numerical result itself in doubt. The generated-expenditure construction adds a further measurement concern requiring explicit analysis.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The reported heterogeneity and exposure-weighted policy statistic rely on household groups constructed from variables measured over the same window as the income-expenditure responses. Because expenditure is imputed using changes in net worth and URE incorporates realized savings, group assignment can mechanically condition on the outcomes entering the covariance estimator. Calendar alignment alone would not solve this problem; state variables must be predetermined, lagged, or cross-fitted.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Section 4.2 constructs expenditure from income and changes in net worth. Section 5, as documented in the review graph, measures wealth using mean holdings over the sample period, while Appendix D constructs URE partly from annual savings and averages it over 2009-2015. The heterogeneous MPXs and policy statistic are then calculated for groups formed from these same-window measures."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The covariance restrictions identify model-dependent expenditure pass-through coefficients, not causal MPCs without further orthogonality and no-anticipation assumptions. Residualizing labor income on demographics does not rule out correlated labor supply, health, preference, household-composition, job-transition, or wealth innovations. Moreover, applying the labor-income coefficient to interest cash flows requires a response-invariance assumption that is neither identified nor validated.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.6,
+            "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly describing it as a regression coefficient. Section 4.1 calls changes in demographically residualized income unexpected, but supplies no instrument, expectation measure, anticipation test, or exclusion restriction. The monetary-policy calculation subsequently uses these coefficients for interest-rate-induced cash-flow changes."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The budget-identity expenditure measure creates a generated-outcome measurement problem that must be incorporated into identification and inference. Since measured income appears in both the income regressor and imputed expenditure, reporting or timing errors can mechanically raise their covariance; errors in asset values, liabilities, and capital-gain adjustments can also create serial patterns that the estimator may misclassify as behavioral responses.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 6.5,
+            "barrier_category": "REVISION",
+            "confidence": 7.7,
+            "evidence": "Section 4.2 defines expenditure through the household budget identity using measured income and changes in net worth, while Sections 3.2-3.3 identify responses from covariances between changes in this constructed expenditure and the income series. The supplied manuscript asserts high administrative accuracy but does not derive robustness to correlated measurement error or provide independent expenditure validation."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "Even after reconstructing household states and validating the MPX mapping, the 26-basis-point estimate should be presented as a conditional Danish partial-equilibrium sufficient-statistic calculation, not as the identified aggregate causal response to a monetary-policy intervention. It isolates one redistribution term and depends on contractual repricing and sectoral-response assumptions while omitting general-equilibrium and policy-reaction channels.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 6.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.7,
+            "evidence": "The abstract states that a one-percentage-point interest-rate increase reduces consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript itself characterizes redistribution as one channel and contrasts it with intertemporal substitution; the review graph further documents assigned MPXs outside the estimation sample and omitted response and lending mechanisms."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that describing the policy problem principally as overstatement would be insufficient. The statistic requires MPCs appropriate for interest cash flows jointly distributed with predetermined policy-date URE; neither the income-source mapping nor that contemporaneous joint distribution is established by the current construction.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Data_Scientist",
+            "reason": "I agree that same-window wealth and URE assignment is outcome leakage affecting the numerical heterogeneity estimates and the negative 0.26 statistic itself. The repair must use genuinely predetermined, lagged, or cross-fitted labels rather than merely calendar-year-aligned exposure.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the imputed-expenditure identity makes correlated measurement error central. Administrative accuracy alone does not establish that errors in income, asset valuation, liabilities, or timing are orthogonal to the covariance moments.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "How do the liquid-wealth, net-worth, and URE gradients change when every household state is fixed before the response window or assigned through nonoverlapping cross-fitting?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What evidence supports applying expenditure pass-through from residual labor-income movements to interest-income and debt-service cash flows, and how does the policy statistic vary under alternative source-specific MPX mappings?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Can the authors derive the covariance estimator under correlated income and balance-sheet measurement error and validate imputed expenditure against an independent expenditure measure?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How are standard errors adjusted for overlapping three-, four-, and five-year growth observations, repeated household observations, generated expenditure, and estimated group-specific sufficient statistics?"
+          }
+        ],
+        "final_argument_state": "The continuous-time treatment of annual time aggregation and the population-scale linked administrative application provide HIGH methodological and empirical novelty. Economic insight is MEDIUM: organizing heterogeneous responses around liquidity and interest-rate exposure is useful, but the policy interpretation currently exceeds what is identified. Execution is not sound enough for acceptance because same-window wealth and URE labels can contaminate the central heterogeneity estimates, the covariance coefficient lacks sufficient causal validation, its transfer from labor-income changes to interest cash flows is unsupported, and generated-expenditure measurement error is not adequately analyzed. The authors should rebuild states from predetermined or cross-fitted information, re-estimate all heterogeneous MPXs and policy statistics, analyze measurement error and overlapping-sample inference, and parameterize or validate source-specific response assumptions. Separately, the headline requires substantial rephrasing as a conditional Danish partial-equilibrium channel calculation. These defects are serious but appear repairable within the existing data and framework, so RESUBMIT is appropriate.",
+        "verdict": "RESUBMIT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper is an innovative empirical study that develops a continuous-time, time-aggregation-aware covariance method and applies it to unusually rich Danish administrative data to estimate model-implied expenditure pass-through across household balance-sheet states. The linked income, wealth, mortgage, and exposure records permit heterogeneity analyses that would be difficult in conventional surveys. Novelty is high overall, driven especially by the scarce-data application; the methodological contribution is meaningful, though it builds directly on Carroll-Samwick horizon restrictions, BPP-style covariance methods, and prior work on time aggregation. Insight is medium: the organization around liquidity, poor and wealthy hand-to-mouth households, and interest-rate exposure is economically useful, but the interpretation currently runs ahead of what the design establishes.\n\nThe unanimous reviewer recommendation to resubmit rests on substantive, repairable flaws rather than a hard blocker. First, the central heterogeneity analysis uses household states formed with information from the same period as the estimated responses. Wealth is averaged over the sample, while URE includes annual savings and is averaged over 2009–2015. Because expenditure is constructed from income and changes in net worth, these labels are jointly determined with the variables entering the covariance estimator. This can mechanically create or amplify wealth and exposure gradients and contaminates the joint MPX-by-URE moment underlying the policy statistic. Predetermined, lagged, or genuinely cross-fitted labels are required.\n\nSecond, the estimated transitory parameter is explicitly a regression coefficient linking transitory expenditure and income under the maintained covariance model. Demographic residualization does not establish that income changes are unanticipated or orthogonal to labor supply, preferences, health, household transitions, or wealth shocks. Nor does the design establish that expenditure responds identically to labor-income innovations and interest-income or debt-service cash-flow changes. The paper must either provide credible validation and sensitivity analysis for these assumptions or consistently describe the estimates as model-implied pass-through coefficients and the policy mapping as conditional.\n\nThird, expenditure is generated from the budget identity using measured income and changes in net worth, while measured income also enters the covariance estimator. Shared income error can mechanically affect the covariance, and errors in asset valuation, liabilities, capital gains, or timing may generate serial patterns attributed to behavior. Administrative accuracy is helpful but does not replace a derivation under measurement error or independent validation.\n\nFourth, the strongly rejected Sargan-Hansen test cannot be dismissed solely because the sample is large. The restrictions across horizons and calendar periods are central to the permanent-transitory decomposition. The revision must diagnose which moments fail, assess economic rather than only statistical discrepancies, and show stability under alternative horizons, windows, persistence assumptions, and response dynamics. Inference must also account for overlapping three-, four-, and five-year observations, repeated households, generated expenditure, and estimated group assignments; household-level clustering and uncertainty propagation should be documented.\n\nA separate substantial-rephrasal issue concerns the headline 26-basis-point result. Even after econometric repair, this is one term in a stylized Danish, one-period, partial-equilibrium sufficient-statistic exercise. It depends on repricing assumptions, assigned MPXs outside the estimation sample, and the transferability of labor-income responses to interest cash flows, while excluding broader income, lending, fiscal, exchange-rate, and policy-reaction channels. It must not be presented as the identified total causal response of aggregate consumption to a monetary-policy intervention. No distinct minor-rephrasal issues or mandatory extensions were identified. Sensitivity analyses for repricing and assigned sectoral MPXs are useful within the existing claim, but broader general-equilibrium modeling is future work rather than a condition for revision.",
+    "official_letter_to_the_author": "Dear Authors,\n\nThis paper has a strong and potentially important core. It combines a continuous-time treatment of annual time aggregation with population-scale Danish administrative data and uses the resulting framework to study heterogeneity in expenditure pass-through by liquidity, wealth, and interest-rate exposure. The data application is unusually rich, and the progression from household covariance moments to macroeconomic sufficient statistics addresses a first-order question in heterogeneous-agent macroeconomics.\n\nAfter considering the manuscript and the three assessments, my decision is MAJOR REVISION REQUIRED. All reviewers recommend resubmission. There are no unresolved hard blockers, but several substantive issues affect the central heterogeneity findings and the reported monetary-policy statistic.\n\nThe first priority is household-state construction. Wealth is measured using full-period averages, and URE is averaged over 2009–2015 and includes annual savings. These variables are used to form groups in the same period over which income and constructed expenditure responses are estimated. Since expenditure is obtained from income and changes in net worth, group assignment can depend mechanically on the outcomes entering the estimator. Please reconstruct liquid-wealth, net-worth, NNP, and URE states using information fixed before each response window or through a nonoverlapping cross-fitting design. Response-window savings and expenditure must not enter URE labels. Re-estimate the principal heterogeneity figures and all sufficient statistics, and report household movement across classifications, effective sample sizes, and any resulting changes in the headline magnitude.\n\nSecond, clarify and strengthen identification. The parameter psi is a covariance-based regression coefficient under the maintained income and consumption process. Calling demographic-residualized income changes “unexpected” does not establish no anticipation or orthogonality to other determinants of expenditure. In addition, applying a labor-income pass-through coefficient to interest-income and debt-service changes requires a source-invariance assumption. State these assumptions precisely and provide the strongest feasible validation, placebo or anticipation evidence, and sensitivity analysis. If they cannot be independently established, describe the estimates as model-implied expenditure pass-through and parameterize or bound the policy calculation under alternative mappings from labor-income responses to interest-cash-flow responses.\n\nThird, address the generated-expenditure measurement structure. Because measured income enters both the income series and expenditure through the budget identity, shared measurement error may mechanically affect their covariance. Errors in asset values, liabilities, capital gains, and timing may also matter. Derive the estimator's behavior under relevant measurement error, quantify sensitivity where possible, and provide validation against an expenditure measure independent of the same identity if such evidence is available. If independent validation is infeasible, transparent error bounds and alternative constructions are needed.\n\nFourth, diagnose model fit. The manuscript reports a strong rejection of the Sargan-Hansen overidentifying restrictions. A large sample explains the test's power but not why the restrictions fail or whether the misspecification is economically negligible. Show which moments and horizons drive the rejection, compare fitted and observed moments, and report estimates from separate horizons or calendar windows and from plausible alternative persistence and response specifications.\n\nFifth, document valid inference for the overlapping longitudinal design. Explain whether uncertainty is clustered at the household level across overlapping growth windows and how uncertainty from generated expenditure, household-state assignment, heterogeneous MPXs, and the final sufficient statistics is propagated.\n\nFinally, revise the policy framing throughout. The 26-basis-point estimate should be described as a conditional Danish partial-equilibrium sufficient-statistic calculation for the interest-rate-exposure channel, not as the identified aggregate causal effect of a monetary-policy rate increase. State alongside it the one-period real-rate experiment, repricing assumptions, assigned MPXs for sectors outside the estimation sample, and omitted general-equilibrium and policy-reaction channels. Update the abstract, introduction, conclusion, tables, and comparisons with intertemporal substitution to reflect the revised estimates and this narrower interpretation.\n\nThese requests are substantial, but they are developmental rather than terminal. A successful revision would preserve the paper's distinctive method and data contribution while aligning the heterogeneity and policy claims with objects that the design can support.\n\nSincerely,\nSenior Coordinating Editor",
+    "minimum_viable_revision_path": "1. Rebuild every liquid-wealth, net-worth, NNP, and URE classification using beginning-of-window balances, lagged averages ending before the response window, or nonoverlapping cross-fitting. Exclude response-period expenditure and savings from all labels.\n2. Re-estimate Figures VI–VIII, the group-specific pass-through coefficients, and every sufficient statistic. Report classification mobility, cell sizes, exposure totals, uncertainty, and changes relative to the original results.\n3. Define the estimated parameters as covariance-based, model-implied expenditure pass-through unless causal MPC interpretation is supported. State the no-anticipation, orthogonality, and income-source-invariance assumptions explicitly; add feasible validation and sensitivity ranges for applying labor-income coefficients to interest cash flows.\n4. Analyze the budget-identity expenditure measure under shared income and balance-sheet measurement error. Provide independent validation where available or quantitative sensitivity/error bounds and alternative constructions where it is not.\n5. Diagnose the rejected overidentifying restrictions with observed-versus-fitted moments, horizon- and period-specific estimates, and sensitivity to alternative persistence and consumption-response specifications.\n6. Use and document household-clustered inference for overlapping observations and propagate uncertainty from generated expenditure, state assignment, group estimates, and sectoral assumptions into the policy statistic.\n7. Recast the 26-basis-point result everywhere as a conditional Danish, one-period, partial-equilibrium interest-exposure calculation. Present sensitivity to repricing schedules and assigned non-household MPXs, and clearly list omitted general-equilibrium channels.\n8. Reassess all headline claims after these changes. If the magnitude or heterogeneity pattern changes materially, revise the abstract, introduction, conclusion, and comparisons with representative-agent intertemporal substitution accordingly.",
+    "constructive_summary": "The paper's most promising contribution is the combination of a time-aggregation-aware covariance framework with scarce, detailed administrative balance-sheet data. That combination could yield unusually informative evidence on expenditure pass-through and household liquidity. The present manuscript does not yet support its central heterogeneous-MPX and monetary-policy claims because household states use same-window outcomes, the covariance coefficient is given a causal MPC interpretation without sufficient validation, generated expenditure creates an unresolved measurement-error channel, and the overidentified moment system is rejected without diagnosis. The policy headline also materially overstates a conditional channel calculation. These are serious but potentially repairable issues. A revision centered on predetermined state construction, complete re-estimation, identification and measurement-error sensitivity, misspecification diagnostics, valid longitudinal inference, and narrower policy language would provide a credible path forward."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Econometrician': 0.5, 'Data_Scientist': 0.3, 'Policymaker': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Econometrician→Policymaker: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.\n  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→Policymaker: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → CONCEDED. Explicit concession recorded.\n  • Data_Scientist→Econometrician: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.\n  • Policymaker→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.3/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n### Debate Round 2\n  • Econometrician→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 6.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Policymaker (novelty): severity 3.0/10; category MINOR; type novelty; issue literature_dispute; confidence 8.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Data_Scientist→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Data_Scientist→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Econometrician→paper (UNANSWERED): +0.010 to Econometrician (paper critique, discounted)\n  Econometrician→Policymaker (CONCEDED): +0.023 to Econometrician, -0.023 to Policymaker\n  Econometrician→paper (UNANSWERED): +0.003 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.001 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.001 to Econometrician (paper critique, discounted)\n  Econometrician→Policymaker (novelty) (UNANSWERED): +0.000 to Econometrician, -0.000 to Policymaker (unanswered, discounted)\n  Data_Scientist→Policymaker (CONCEDED): +0.040 to Data_Scientist, -0.040 to Policymaker\n  Data_Scientist→paper (UNANSWERED): +0.006 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→paper (UNANSWERED): +0.003 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→Econometrician (CONCEDED): +0.008 to Data_Scientist, -0.008 to Econometrician\n  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)\n  Data_Scientist→paper (UNANSWERED): +0.000 to Data_Scientist (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.010 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.003 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.002 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.001 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Econometrician: 0.500 +0.031 → 0.531\n  Data_Scientist: 0.300 +0.058 → 0.358\n  Policymaker: 0.200 -0.040 → 0.160\nNormalized final weights: {'Econometrician': 0.5062106979595556, 'Data_Scientist': 0.34120079332406716, 'Policymaker': 0.1525885087163771}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Econometrician: verdict=RESUBMIT, novelty=HIGH, insight=MEDIUM, issue=substantive_flaw, severity=7.5/10, barrier=REVISION\n  Data_Scientist: verdict=RESUBMIT, novelty=HIGH, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION\n  Policymaker: verdict=RESUBMIT, novelty=HIGH, insight=MEDIUM, issue=substantial_rephrasal, severity=6.0/10, barrier=REPHRASAL\nRaw execution score: 0.750\nExecution penalty from surviving substantive flaws: 0.120\nExecution score: 0.630\nNovelty consensus: HIGH (1.000 before debate penalty; 1.000 after)\nNovelty claim counts (all personas): HIGH=5, MEDIUM=4, LOW=0\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 17\nSubstantial-rephrasal (central overclaim) revisions: 4\nRephrasal-only revisions: 0\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.378 + 0.220 + 0.112 = 0.710\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nSubstantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.",
+  "score_components": {
+    "final_score": 0.709522384,
+    "execution_score": 0.63,
+    "novelty_score": 0.9996472,
+    "insight_score": 0.62,
+    "raw_execution_score": 0.75,
+    "novelty_consensus": "HIGH",
+    "novelty_counts": {
+      "HIGH": 5,
+      "MEDIUM": 4,
+      "LOW": 0
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Econometrician": "RESUBMIT",
+      "Data_Scientist": "RESUBMIT",
+      "Policymaker": "RESUBMIT"
+    },
+    "adjusted_weights": {
+      "Econometrician": 0.5062106979595556,
+      "Data_Scientist": 0.34120079332406716,
+      "Policymaker": 0.1525885087163771
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Footnote 18 in Section 3.3 states that the system has 96 moments for four parameters and that the null of the Sargan-Hansen J-test is strongly rejected, while offering sample size as the reason this is unsurprising. Equations (3) and (5) impose linear restrictions across horizons and calendar periods that are essential to decomposing the covariance into permanent and transitory components.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient for transitory expenditure and income. Section 4.1 merely designates changes in residual income as unexpected. The review graph documents that URE is averaged over 2009-2015 and operationally includes annual savings, while the policy calculation requires MPX_i multiplied by URE_i. Thus both the MPC mapping and the policy-date conditioning required by the sufficient statistic remain unsupported.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 4.1 says that the authors regress income on demographic controls and 'take the change in the residuals ... to be the unexpected income change.' Section 3.2.2 specifies consumption solely as c_t = phi P_t plus the response to Q innovations, while Section 3.3 defines psi as a regression coefficient. No instrument, expectation measure, placebo restriction, or explicit test establishes no anticipation and orthogonality to other determinants of expenditure.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 4.2 constructs expenditure from the budget identity C-bar_t = Y-bar_t - P-bar_t - Delta NW-bar_t, and the estimator uses covariance between changes in this constructed expenditure and changes in the same measured income series. The supplied text asserts that income is highly accurate but does not derive the estimator under measurement error or provide an independent expenditure validation in the material available for audit.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 3.3 constructs 96 moments from overlapping three-, four-, and five-year growth periods within eight consecutive five-year windows and states only that diagonally weighted minimum distance is used. The supplied discussion does not document household-clustered inference or uncertainty propagation for imputed expenditure and longitudinally constructed household states.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 defines expenditure through the budget identity involving income and the change in net worth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. Appendix D defines URE using annual savings, meaning after-tax income minus expenditure, and averages calculations over 2009-2015. Figures VI-VIII estimate MPXs for groups formed from these same-window variables, and equation (8) then uses the resulting URE-group MPXs to calculate the interest-rate-exposure statistic.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from the household budget identity. The review graph documents that Section 5 uses mean wealth over the sample period and that Appendix D constructs URE partly from annual savings and averages it over 2009-2015. Those same-window labels are subsequently used for the heterogeneous MPX estimates and the exposure-weighted sufficient statistic.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.2.2 attributes consumption movements to the permanent and transitory income processes, while Section 3.3 explicitly defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), a regression coefficient. Section 4.1 calls changes in demographic-residualized income unexpected without presenting an instrument, direct expectations measure, anticipation test, or restriction excluding correlated non-income shocks.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix D operationalizes URE partly through annual savings, defined as after-tax income minus expenditure. Expenditure is itself imputed from income and changes in net worth. Thus a calendar-year URE measure containing response-year savings remains jointly determined with the estimated response unless it is lagged, fixed at the beginning of the window, or constructed on an independent sample period.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.8,
+        "evidence": "Section 4.2 defines expenditure using measured income and changes in net worth, and the estimator then uses covariance between changes in that generated expenditure series and changes in measured income. The supplied material emphasizes accurate third-party income reporting but does not derive the estimator under measurement error or demonstrate validation against an expenditure measure independent of the budget identity.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from income and changes in net worth. Section 5, as documented in the review graph, measures wealth using mean holdings over the sample period, while Appendix D constructs URE partly from annual savings and averages it over 2009-2015. The heterogeneous MPXs and policy statistic are then calculated for groups formed from these same-window measures.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using income and changes in net wealth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. The review graph further documents that Appendix D constructs URE from annual savings and averages exposure over 2009-2015. Figures VI-VIII and the monetary sufficient statistic then use groups formed from those same-window variables.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly describing it as a regression coefficient. Section 4.1 calls changes in demographically residualized income unexpected, but supplies no instrument, expectation measure, anticipation test, or exclusion restriction. The monetary-policy calculation subsequently uses these coefficients for interest-rate-induced cash-flow changes.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Section 4.1 treats changes in residual income after demographic controls as unexpected without an instrument or separate anticipation test. The headline monetary exercise subsequently applies these estimated pass-through coefficients to interest-rate exposures, requiring additional invariance and orthogonality assumptions.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using measured income and changes in net worth, while Sections 3.2-3.3 identify responses from covariances between changes in this constructed expenditure and the income series. The supplied manuscript asserts high administrative accuracy but does not derive robustness to correlated measurement error or provide independent expenditure validation.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states, 'Following a 1-percentage-point interest rate increase, we estimate that consumption growth decreases by a 1/4 percentage point through this interest rate exposure channel alone.' Section 4.1 says the authors regress income on observed characteristics and 'take the change in the residuals ... to be the unexpected income change,' but no instrument or explicit test establishes that these residuals are unanticipated or orthogonal to consumption determinants. Section 3.2.2 specifies consumption solely as c_t = phi P_t + integral g(t-s)dQ_s, making the income-shock interpretation depend on omitted-shock orthogonality. Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Equation (8) defines E_R from MPX_i times URE_i, while Appendix D states, 'All calculations are based on average values over the years 2009 to 2015.' Table IV further assigns rather than estimates MPXs of 0.1 to pension funds, financial and nonfinancial corporations, and zero to government and the rest of the world."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Section 4.2 defines imputed expenditure by the identity C_t = Y_t - P_t - ΔNW_t. Section 5 states: \"In each case, wealth is measured as the mean household wealth holdings over the entire sample period.\" Section 6.1 defines URE as the difference between maturing assets, including income, and liabilities, including planned consumption; Appendix D.1 operationalizes it as \"annual savings (i.e. after-tax income minus expenditure) plus maturing assets minus maturing liabilities.\" Appendix D states that calculations are based on average values over 2009-2015. Figures VI-VIII then estimate MPXs within groups formed from these variables, and equation (8) uses the URE-group MPXs to construct E_R. Table V reports E_R = -0.26, which supports the abstract's headline claim that a one-percentage-point rate increase lowers consumption growth by roughly one-quarter percentage point through this channel."
+      }
+    ],
+    "substantial_rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract states that a one-percentage-point interest-rate increase decreases consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript contrasts this number with the representative-agent intertemporal-substitution channel, although the exercise does not identify the total response to a monetary-policy shock or incorporate the broader general-equilibrium transmission described in the surrounding discussion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract states that a one-percentage-point interest-rate increase reduces consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript itself characterizes redistribution as one channel and contrasts it with intertemporal substitution; the review graph further documents assigned MPXs outside the estimation sample and omitted response and lending mechanisms.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.6,
+        "evidence": "The abstract says that following a one-percentage-point interest-rate increase consumption growth decreases by roughly one-quarter percentage point through the channel. The policy decomposition identifies this as only the interest-rate-exposure term, while the manuscript describes the experiment as stylized, assigns MPXs to non-household sectors, and acknowledges omitted response lags and possible bank-lending responses.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "outcome": "CONCEDED",
+        "issue_class": "substantial_rephrasal",
+        "attack_type": "substantial_rephrasal",
+        "evidence": "The abstract states: \"Following a 1-percentage-point interest rate increase, we estimate that consumption growth decreases by a 1/4 percentage point through this interest rate exposure channel alone.\" Section 6.2 defines a stylized experiment in which the real rate changes for one period and says the dynamics \"are clearly stylized\" and \"lack any lag in the economy's response.\" Equation 7 shows that the interest-rate-exposure term is only one component of the total response. Section 6.1 assumes all bank deposits and loans reprice immediately, mortgage repricing follows observed reset amounts, and other assets and liabilities have five-year maturity. Table IV assigns MPXs of 0.5 to young and old households, 0.1 to pension funds and corporate or financial exposures, and zero to government and the rest of the world. Section 6.3 cautions that ignoring a bank lending response \"may be reasonable in good times\" but may not hold during a banking crisis. Table V reports E_R = -0.26, the basis of the headline estimate."
+      }
+    ],
+    "rephrasal_revisions": [],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Footnote 18 in Section 3.3 states that the system has 96 moments for four parameters and that the null of the Sargan-Hansen J-test is strongly rejected, while offering sample size as the reason this is unsurprising. Equations (3) and (5) impose linear restrictions across horizons and calendar periods that are essential to decomposing the covariance into permanent and transitory components.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient for transitory expenditure and income. Section 4.1 merely designates changes in residual income as unexpected. The review graph documents that URE is averaged over 2009-2015 and operationally includes annual savings, while the policy calculation requires MPX_i multiplied by URE_i. Thus both the MPC mapping and the policy-date conditioning required by the sufficient statistic remain unsupported.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 4.1 says that the authors regress income on demographic controls and 'take the change in the residuals ... to be the unexpected income change.' Section 3.2.2 specifies consumption solely as c_t = phi P_t plus the response to Q innovations, while Section 3.3 defines psi as a regression coefficient. No instrument, expectation measure, placebo restriction, or explicit test establishes no anticipation and orthogonality to other determinants of expenditure.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 4.2 constructs expenditure from the budget identity C-bar_t = Y-bar_t - P-bar_t - Delta NW-bar_t, and the estimator uses covariance between changes in this constructed expenditure and changes in the same measured income series. The supplied text asserts that income is highly accurate but does not derive the estimator under measurement error or provide an independent expenditure validation in the material available for audit.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 3.3 constructs 96 moments from overlapping three-, four-, and five-year growth periods within eight consecutive five-year windows and states only that diagonally weighted minimum distance is used. The supplied discussion does not document household-clustered inference or uncertainty propagation for imputed expenditure and longitudinally constructed household states.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 defines expenditure through the budget identity involving income and the change in net worth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. Appendix D defines URE using annual savings, meaning after-tax income minus expenditure, and averages calculations over 2009-2015. Figures VI-VIII estimate MPXs for groups formed from these same-window variables, and equation (8) then uses the resulting URE-group MPXs to calculate the interest-rate-exposure statistic.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from the household budget identity. The review graph documents that Section 5 uses mean wealth over the sample period and that Appendix D constructs URE partly from annual savings and averages it over 2009-2015. Those same-window labels are subsequently used for the heterogeneous MPX estimates and the exposure-weighted sufficient statistic.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.2.2 attributes consumption movements to the permanent and transitory income processes, while Section 3.3 explicitly defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), a regression coefficient. Section 4.1 calls changes in demographic-residualized income unexpected without presenting an instrument, direct expectations measure, anticipation test, or restriction excluding correlated non-income shocks.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix D operationalizes URE partly through annual savings, defined as after-tax income minus expenditure. Expenditure is itself imputed from income and changes in net worth. Thus a calendar-year URE measure containing response-year savings remains jointly determined with the estimated response unless it is lagged, fixed at the beginning of the window, or constructed on an independent sample period.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.8,
+        "evidence": "Section 4.2 defines expenditure using measured income and changes in net worth, and the estimator then uses covariance between changes in that generated expenditure series and changes in measured income. The supplied material emphasizes accurate third-party income reporting but does not derive the estimator under measurement error or demonstrate validation against an expenditure measure independent of the budget identity.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from income and changes in net worth. Section 5, as documented in the review graph, measures wealth using mean holdings over the sample period, while Appendix D constructs URE partly from annual savings and averages it over 2009-2015. The heterogeneous MPXs and policy statistic are then calculated for groups formed from these same-window measures.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using income and changes in net wealth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. The review graph further documents that Appendix D constructs URE from annual savings and averages exposure over 2009-2015. Figures VI-VIII and the monetary sufficient statistic then use groups formed from those same-window variables.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly describing it as a regression coefficient. Section 4.1 calls changes in demographically residualized income unexpected, but supplies no instrument, expectation measure, anticipation test, or exclusion restriction. The monetary-policy calculation subsequently uses these coefficients for interest-rate-induced cash-flow changes.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Section 4.1 treats changes in residual income after demographic controls as unexpected without an instrument or separate anticipation test. The headline monetary exercise subsequently applies these estimated pass-through coefficients to interest-rate exposures, requiring additional invariance and orthogonality assumptions.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using measured income and changes in net worth, while Sections 3.2-3.3 identify responses from covariances between changes in this constructed expenditure and the income series. The supplied manuscript asserts high administrative accuracy but does not derive robustness to correlated measurement error or provide independent expenditure validation.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states, 'Following a 1-percentage-point interest rate increase, we estimate that consumption growth decreases by a 1/4 percentage point through this interest rate exposure channel alone.' Section 4.1 says the authors regress income on observed characteristics and 'take the change in the residuals ... to be the unexpected income change,' but no instrument or explicit test establishes that these residuals are unanticipated or orthogonal to consumption determinants. Section 3.2.2 specifies consumption solely as c_t = phi P_t + integral g(t-s)dQ_s, making the income-shock interpretation depend on omitted-shock orthogonality. Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Equation (8) defines E_R from MPX_i times URE_i, while Appendix D states, 'All calculations are based on average values over the years 2009 to 2015.' Table IV further assigns rather than estimates MPXs of 0.1 to pension funds, financial and nonfinancial corporations, and zero to government and the rest of the world."
+      },
+      {
+        "attack_id": "Initial audit by Data_Scientist",
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Section 4.2 defines imputed expenditure by the identity C_t = Y_t - P_t - ΔNW_t. Section 5 states: \"In each case, wealth is measured as the mean household wealth holdings over the entire sample period.\" Section 6.1 defines URE as the difference between maturing assets, including income, and liabilities, including planned consumption; Appendix D.1 operationalizes it as \"annual savings (i.e. after-tax income minus expenditure) plus maturing assets minus maturing liabilities.\" Appendix D states that calculations are based on average values over 2009-2015. Figures VI-VIII then estimate MPXs within groups formed from these variables, and equation (8) uses the URE-group MPXs to construct E_R. Table V reports E_R = -0.26, which supports the abstract's headline claim that a one-percentage-point rate increase lowers consumption growth by roughly one-quarter percentage point through this channel."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient for transitory expenditure and income. Section 4.1 merely designates changes in residual income as unexpected. The review graph documents that URE is averaged over 2009-2015 and operationally includes annual savings, while the policy calculation requires MPX_i multiplied by URE_i. Thus both the MPC mapping and the policy-date conditioning required by the sufficient statistic remain unsupported.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Section 4.1 says that the authors regress income on demographic controls and 'take the change in the residuals ... to be the unexpected income change.' Section 3.2.2 specifies consumption solely as c_t = phi P_t plus the response to Q innovations, while Section 3.3 defines psi as a regression coefficient. No instrument, expectation measure, placebo restriction, or explicit test establishes no anticipation and orthogonality to other determinants of expenditure.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 4.2 constructs expenditure from the budget identity C-bar_t = Y-bar_t - P-bar_t - Delta NW-bar_t, and the estimator uses covariance between changes in this constructed expenditure and changes in the same measured income series. The supplied text asserts that income is highly accurate but does not derive the estimator under measurement error or provide an independent expenditure validation in the material available for audit.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Policymaker",
+        "attack_id": "Data_Scientist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 defines expenditure through the budget identity involving income and the change in net worth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. Appendix D defines URE using annual savings, meaning after-tax income minus expenditure, and averages calculations over 2009-2015. Figures VI-VIII estimate MPXs for groups formed from these same-window variables, and equation (8) then uses the resulting URE-group MPXs to calculate the interest-rate-exposure statistic.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Data_Scientist",
+        "target": "Econometrician",
+        "attack_id": "Data_Scientist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "Appendix D operationalizes URE partly through annual savings, defined as after-tax income minus expenditure. Expenditure is itself imputed from income and changes in net worth. Thus a calendar-year URE measure containing response-year savings remains jointly determined with the estimated response unless it is lagged, fixed at the beginning of the window, or constructed on an independent sample period.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using income and changes in net wealth. Section 5 states that wealth is measured as mean household holdings over the entire sample period. The review graph further documents that Appendix D constructs URE from annual savings and averages exposure over 2009-2015. Figures VI-VIII and the monetary sufficient statistic then use groups formed from those same-window variables.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.3,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly a regression coefficient. Section 4.1 treats changes in residual income after demographic controls as unexpected without an instrument or separate anticipation test. The headline monetary exercise subsequently applies these estimated pass-through coefficients to interest-rate exposures, requiring additional invariance and orthogonality assumptions.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.6,
+        "evidence": "The abstract says that following a one-percentage-point interest-rate increase consumption growth decreases by roughly one-quarter percentage point through the channel. The policy decomposition identifies this as only the interest-rate-exposure term, while the manuscript describes the experiment as stylized, assigns MPXs to non-household sectors, and acknowledges omitted response lags and possible bank-lending responses.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Footnote 18 in Section 3.3 states that the system has 96 moments for four parameters and that the null of the Sargan-Hansen J-test is strongly rejected, while offering sample size as the reason this is unsurprising. Equations (3) and (5) impose linear restrictions across horizons and calendar periods that are essential to decomposing the covariance into permanent and transitory components.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.0,
+        "barrier_category": "REVISION",
+        "confidence": 7.5,
+        "evidence": "Section 3.3 constructs 96 moments from overlapping three-, four-, and five-year growth periods within eight consecutive five-year windows and states only that diagonally weighted minimum distance is used. The supplied discussion does not document household-clustered inference or uncertainty propagation for imputed expenditure and longitudinally constructed household states.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker (novelty)",
+        "attack_type": "novelty",
+        "issue_class": "literature_dispute",
+        "severity_score": 3.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.0,
+        "evidence": "The manuscript repeatedly characterizes its estimator as following Carroll and Samwick closely and identifies accounting for time aggregation as its main innovation, while also citing Crawley (2019) for a time-aggregation correction to BPP using PSID data.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from the household budget identity. The review graph documents that Section 5 uses mean wealth over the sample period and that Appendix D constructs URE partly from annual savings and averages it over 2009-2015. Those same-window labels are subsequently used for the heterogeneous MPX estimates and the exposure-weighted sufficient statistic.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.2.2 attributes consumption movements to the permanent and transitory income processes, while Section 3.3 explicitly defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), a regression coefficient. Section 4.1 calls changes in demographic-residualized income unexpected without presenting an instrument, direct expectations measure, anticipation test, or restriction excluding correlated non-income shocks.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.8,
+        "evidence": "Section 4.2 defines expenditure using measured income and changes in net worth, and the estimator then uses covariance between changes in that generated expenditure series and changes in measured income. The supplied material emphasizes accurate third-party income reporting but does not derive the estimator under measurement error or demonstrate validation against an expenditure measure independent of the budget identity.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Data_Scientist",
+        "target": "paper",
+        "attack_id": "Data_Scientist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract states that a one-percentage-point interest-rate increase decreases consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript contrasts this number with the representative-agent intertemporal-substitution channel, although the exercise does not identify the total response to a monetary-policy shock or incorporate the broader general-equilibrium transmission described in the surrounding discussion.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section 4.2 constructs expenditure from income and changes in net worth. Section 5, as documented in the review graph, measures wealth using mean holdings over the sample period, while Appendix D constructs URE partly from annual savings and averages it over 2009-2015. The heterogeneous MPXs and policy statistic are then calculated for groups formed from these same-window measures.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section 3.3 defines psi as Cov(c-tilde,y-tilde)/Var(y-tilde), explicitly describing it as a regression coefficient. Section 4.1 calls changes in demographically residualized income unexpected, but supplies no instrument, expectation measure, anticipation test, or exclusion restriction. The monetary-policy calculation subsequently uses these coefficients for interest-rate-induced cash-flow changes.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 6.5,
+        "barrier_category": "REVISION",
+        "confidence": 7.7,
+        "evidence": "Section 4.2 defines expenditure through the household budget identity using measured income and changes in net worth, while Sections 3.2-3.3 identify responses from covariances between changes in this constructed expenditure and the income series. The supplied manuscript asserts high administrative accuracy but does not derive robustness to correlated measurement error or provide independent expenditure validation.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.7,
+        "evidence": "The abstract states that a one-percentage-point interest-rate increase reduces consumption growth by roughly one-quarter percentage point through the exposure channel. The manuscript itself characterizes redistribution as one channel and contrasts it with intertemporal substitution; the review graph further documents assigned MPXs outside the estimation sample and omitted response and lending mechanisms.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 3,
+    "fail_count": 0
+  }
+}

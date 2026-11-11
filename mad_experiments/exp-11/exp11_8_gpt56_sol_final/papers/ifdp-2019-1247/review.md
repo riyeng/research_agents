@@ -1,0 +1,531 @@
+# EDITORIAL DECISION REPORT
+---
+**FINAL DETERMINATION**: MAJOR REVISION REQUIRED
+**CONSENSUS ACCREDITATION SCORE**: 0.601 / 1.000
+**EXECUTION SCORE**: 0.651
+**NOVELTY SCORE**: 0.450 (MEDIUM)
+**INSIGHT SCORE**: 0.620 (MEDIUM)
+**SUBSTANTIAL-REPHRASAL (CENTRAL OVERCLAIM) REVISIONS**: 0
+**REPHRASAL-ONLY REVISIONS**: 0
+**VALID AUDITS SCORED**: 3 / 3
+
+## SYSTEM METRIC AUDIT TRAIL
+```text
+## REVIEWER WEIGHTING
+Legacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.
+Initial normalized weights: {'Econometrician': 0.5, 'Theorist': 0.3, 'Data_Scientist': 0.2}
+Valid audits scored: 3; invalid fallback audits excluded: 0.
+
+### Debate Round 1
+  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Econometrician→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Theorist→paper: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Theorist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 5.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+### Debate Round 2
+  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Econometrician→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Econometrician→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Theorist→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Theorist→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 5.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+
+## DUNG-STYLE CREDIBILITY UPDATES
+Only conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.
+  Econometrician→paper (UNANSWERED): +0.011 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.006 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.003 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.002 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.002 to Econometrician (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.011 to Theorist (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.006 to Theorist (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.004 to Theorist (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.002 to Theorist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.011 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.006 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.004 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.002 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→paper (UNANSWERED): +0.001 to Data_Scientist (paper critique, discounted)
+
+## FINAL REVIEWER WEIGHTS
+  Econometrician: 0.500 +0.024 → 0.524
+  Theorist: 0.300 +0.022 → 0.322
+  Data_Scientist: 0.200 +0.024 → 0.224
+Normalized final weights: {'Econometrician': 0.48933049739633655, 'Theorist': 0.30100205572347627, 'Data_Scientist': 0.20966744688018712}
+
+## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION
+  Econometrician: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION
+  Theorist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.5/10, barrier=REVISION
+  Data_Scientist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION
+Raw execution score: 0.750
+Execution penalty from surviving substantive flaws: 0.099
+Execution score: 0.651
+Novelty consensus: MEDIUM (0.450 before debate penalty; 0.450 after)
+Novelty claim counts (all personas): HIGH=0, MEDIUM=9, LOW=0
+Insight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)
+Verdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0
+Unresolved high-confidence BLOCKERs: 0
+Substantive revision barriers: 16
+Substantial-rephrasal (central overclaim) revisions: 0
+Rephrasal-only revisions: 0
+Extension/future-work requests: 0
+
+## FINAL SCORE
+Final score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.
+0.391 + 0.099 + 0.112 = 0.601
+Substantive-revision gate applied: minor-revision outcome is unavailable.
+```
+
+## SELECTED EXPERT PANEL
+- Econometrician, Theorist, Data_Scientist
+- Weights: {'Econometrician': 0.5, 'Theorist': 0.3, 'Data_Scientist': 0.2}
+- Selection rationale: The central risk is empirical inference: overlapping-horizon return-predictive regressions, panel dependence, generated regressors, in-sample forecasting of physical semivariances, multiple specifications, and GMM identification require rigorous econometric scrutiny. The second risk is whether the international no-arbitrage asset-pricing model, its closed-form solution, asymmetric gamma shocks, partial-integration mechanism, and structural interpretations genuinely rationalize and identify the reported patterns. Third, credibility depends on constructing option-implied variances and realized semivariances from options and intraday data, including strike and maturity coverage, interpolation, filtering, synchronization, measurement error, and cross-country return comparability.
+
+## CONSTRUCTIVE SUMMARY
+The paper has a coherent question, a promising international empirical pattern, and a useful economic taxonomy. Its contribution is not yet secure because the purported predictors use future information through full-sample estimation and selection, the improvement claims lack full-procedure inference, pooled precision may not accommodate common calendar-time shocks, and the component definitions and option formula are inconsistent as displayed. The structural source and transmission claims also require either component-level derivation or substantial narrowing. These are serious substantive issues, but they are repairable within the existing framework. The most productive revision is to prioritize mathematically consistent measurement, real-time predictor construction, dependence-robust full-pipeline inference, and disciplined separation of descriptive evidence from model-implied interpretation.
+
+## MINIMUM VIABLE REVISION PATH
+1. Redefine the empirical and theoretical quantities consistently as sign-truncated second moments, expected semivariations, or another mathematically coherent object; remove the invalid additive centered-variance identity.
+2. Verify Equation (3) against the actual code. Report formulas and units explicitly. If the outer squares were implemented, reconstruct the option-implied components, DVP and UVP, and every downstream table and figure.
+3. Construct each date-t physical-semivariance forecast using only information available through t. Use either a pre-specified model chosen before the prediction sample with expanding-window estimation, or rolling/expanding selection performed within each historical information set.
+4. Rerun all domestic, country-level, pooled, and downstream GMM analyses using the reconstructed series.
+5. Implement full-pipeline inference that repeats first-stage estimation and any model selection, accommodates overlapping returns, and directly tests equality of DVP and UVP coefficients. Address the country-horizon multiplicity or pre-designate primary tests.
+6. For pooled regressions, use calendar-time clustering, an appropriately justified cross-sectional dependence-robust estimator, or a bootstrap that resamples months while preserving the full vector of international returns. Document lag and resampling choices.
+7. Report clearly which DVP hump-shaped and UVP short-horizon patterns, and which improvements over total VP, survive these corrections. If they do not survive, narrow the contribution to ex-post in-sample association.
+8. Either derive model-implied downside and upside component moments under P and Q and provide an identification argument, or recast the structural exercise as reduced-form/model-conditional attribution. Revise the abstract, introduction, results, and conclusion consistently.
+9. Supply a compact but complete data-construction appendix and sufficient code-level detail to reproduce the option, intraday, and international-return series.
+
+## EDITORIAL RATIONALE
+Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper documents a potentially useful international asset-pricing fact: U.S. downside and upside variance-premium proxies exhibit different dynamics and different associations with subsequent equity returns across 22 countries, with downside information concentrated at medium horizons and upside information at short horizons. The tail-specific semivariance forecasting exercise and the attempt to organize these patterns through risk aversion, uncertainty, and international integration are promising. Novelty is MEDIUM: the international component-level evidence and tail-specific forecasting comparison are genuine but bounded extensions of established methods and data. Insight is also MEDIUM: the distinction between price-of-risk and amount-of-risk states, and between financial and real integration, provides a useful organizing framework, but the present evidence does not structurally identify those channels.
+
+The unanimous reviewer recommendation to resubmit rests on substantive flaws rather than presentation alone. First, the physical semivariance models are selected and estimated over the full 1990–2018 sample, after which their fitted values are used as purported date-t predictors beginning in 1991. Early DVP and UVP observations therefore depend on future semivariance data and future model-selection information. The current regressions can document ex-post in-sample associations, but they do not establish feasible real-time predictability. Second, the claim that decomposition significantly improves prediction is not established by AIC, BIC, and adjusted R-squared comparisons. Formal inference must account jointly for generated predictors, first-stage model selection, overlapping multi-month returns, and the many country-horizon comparisons. Pooled inference must also permit arbitrary contemporaneous dependence across countries because all countries share the same U.S. predictors each month.
+
+Third, the definitions require correction. Equation (2) does not generally decompose ordinary centered conditional variance into the variances of positive- and negative-return truncated variables; covariance and mean terms remain. Equation (4), by contrast, constructs realized semivariations or truncated second moments. The theoretical and empirical objects must be made consistent. Equation (3) also displays outer squares around option-price integrals that already appear to have variance units. If those squares were implemented, the component series and all downstream results require reconstruction; if they are typographical, the manuscript must verify the implemented formula and units.
+
+Fourth, the structural interpretation currently exceeds what is demonstrated. The record indicates that the model derives total variance compensation but does not clearly derive the empirical sign-contingent components under both P and Q. Flexible component projections cannot by themselves identify risk aversion, uncertainty, or integration channels as causal economic sources. These claims require either a genuine component-level derivation and identification argument or substantial rephrasing as model-implied, conditional attributions. This is a central overclaim, not a judgment that the organizing intuition lacks value.
+
+Minor rephrasal issues include consistently distinguishing prediction from ex-post association, statistical significance from improved fit, and causal or structural language from conditional model interpretation. Defended critiques are limited but important: none of these problems is an unresolved blocker. Recursive construction, full-pipeline inference, corrected definitions, and calibrated structural claims are feasible within the broad framework and existing data. Reproducibility details—option filters, interpolation and extrapolation, forward construction, intraday cleaning, index identifiers, calendar alignment, currency timing, and missing-data rules—are also necessary, but they are secondary to the central identification and inference repairs. Extensions beyond these repairs are not required; out-of-sample portfolio exercises or alternative models may be useful future work but should not substitute for correcting the current design.
+
+## OFFICIAL LETTER TO THE AUTHOR
+Dear Authors,
+
+The paper asks an important and well-focused question: whether separating the U.S. variance premium into downside and upside components reveals distinct dynamics and international return-prediction patterns. Its strongest contribution is the evidence that the two proxies may contain different information across horizons and countries. The comparison of tail-specific physical-semivariance forecasting models is also potentially useful, and the risk-aversion/uncertainty framework offers an intuitive way to organize the findings.
+
+After integrating the three reports, my decision is MAJOR REVISION REQUIRED. All reviewers regard the project as potentially repairable, and there is no unresolved blocker. However, the current manuscript does not yet establish its headline predictive or structural claims.
+
+The first priority is the construction of DVP and UVP. The manuscript selects the physical-semivariance specifications and estimates their coefficients using the full January 1990–March 2018 sample, then uses the resulting fitted series as date-t predictors in regressions beginning in April 1991. This gives historical predictors information from future semivariance observations and future model selection. Please reconstruct the series recursively or with a rolling window so that each date-t value uses only information available by t. A fixed specification selected using a genuinely prior training sample is another defensible approach, provided subsequent coefficients are estimated recursively. If you retain the full-sample construction for descriptive purposes, it must be labeled as ex-post and cannot support a real-time forecasting claim.
+
+Second, please redo inference through the complete empirical pipeline. The revised procedure should repeat first-stage estimation and, where applicable, model selection; accommodate overlapping h-month returns; and test directly the restriction that the DVP and UVP coefficients are equal. AIC, BIC, and adjusted R-squared do not establish that decomposition significantly improves prediction. Because many countries and horizons are examined, address multiplicity or clearly designate a limited set of primary tests. For pooled regressions, use and document an estimator or bootstrap that permits unrestricted same-month covariance across countries while handling serial dependence. Calendar-time clustering or a dependence-preserving calendar-time bootstrap is a natural option.
+
+Third, correct and reconcile the mathematical definitions. Equation (2), as written using ordinary centered conditional variances, is not generally additive because the positive- and negative-return truncated variables have nonzero covariance and nonzero means. Equation (4) instead measures realized semivariation or truncated second moments. Please define one coherent set of objects throughout the empirical and theoretical analysis. Equation (3) also appears to square option integrals that already have variance units. State whether the outer squares were used in the code, provide a unit check and exact implemented formula, and reconstruct all affected results if necessary.
+
+Fourth, either strengthen or narrow the structural contribution. To claim that the model identifies the economic sources of DVP and UVP, it must separately derive moments corresponding to the empirical downside and upside components under the physical and risk-neutral measures and explain the restrictions identifying state loadings and integration coefficients. Numerical component moments could be acceptable if they are rigorously derived and matched to the empirical objects; a closed form is not essential unless retained as a claimed contribution. If such a derivation is infeasible, recast the component equations as reduced-form or model-conditional projections and describe risk aversion, uncertainty, and integration channels as model-implied attributions rather than identified causes.
+
+Finally, add a reproducible data appendix specifying option filters, zero-bid treatment, strike-tail extrapolation, maturity interpolation, forward-price construction, intraday cleaning, country-index identifiers, holiday and market-calendar alignment, exchange-rate and risk-free-rate timing, and missing-observation rules.
+
+A successful revision need not preserve every original result. What matters is a transparent account of which horizon patterns and cross-country findings survive real-time construction and valid inference. If the principal patterns weaken, the paper can still make a useful contribution by presenting them as ex-post descriptive associations and narrowing the structural claims accordingly.
+
+Sincerely,
+Senior Coordinating Editor
+
+---
+
+# Token Usage & Cost Summary
+
+## Overall Statistics
+
+- **Total Calls**: 11
+- **Duration**: 330.2 seconds
+- **Total Tokens**: 354,843
+  - Input: 330,482
+  - Output: 24,361
+  - Cached-Read: 0
+  - Cache-Creation: 330,449
+- **Estimated Cost**: $2.7963
+
+## Usage by Model
+
+| Model | Calls | Input | Output | Cached-Read | Cache-Creation | Total | Cost |
+|-------|-------|-------|--------|-------------|----------------|-------|------|
+| Gpt-5.6-sol | 11 | 330,482 | 24,361 | 0 | 330,449 | 354,843 | $2.7963 |
+
+## Usage by Role (Top 10)
+
+| Role | Calls | Input | Output | Cached-Read | Cache-Creation | Total |
+|------|-------|-------|--------|-------------|----------------|-------|
+| Theorist | 1 | 61,995 | 3,022 | 0 | 61,992 | 65,017 |
+| Econometrician | 1 | 62,021 | 2,806 | 0 | 62,018 | 64,827 |
+| Data_Scientist | 1 | 62,019 | 2,741 | 0 | 62,016 | 64,760 |
+| Debater-Data_Scientist | 2 | 33,538 | 5,039 | 0 | 33,532 | 38,577 |
+| Debater-Econometrician | 2 | 33,536 | 4,482 | 0 | 33,530 | 38,018 |
+| Editor-In-Chief | 1 | 35,895 | 2,108 | 0 | 35,892 | 38,003 |
+| Debater-Theorist | 2 | 33,536 | 3,976 | 0 | 33,530 | 37,512 |
+| Editor-Selection | 1 | 7,942 | 187 | 0 | 7,939 | 8,129 |
+
+---
+
+# DETAILED ANALYSIS
+
+## ROUND 1: INDEPENDENT AUDITS
+
+### Econometrician Analysis
+
+**Structural Strength**: The empirical design triangulates the return-predictability result across country-level and pooled regressions, multiple horizons, alternative fit criteria, and controls for the U.S. dividend yield and term spread. In particular, the unrestricted DVP-UVP specification is explicitly compared with the restricted total-VP specification, and the country-level estimates avoid relying exclusively on pooled precision.
+
+**Domain Audit**: The paper's actual empirical claim is descriptive prediction: U.S. DVP and UVP have distinct in-sample associations with subsequent U.S.-dollar stock returns across 22 countries, and separating them improves fit relative to total VP. The central econometric problem is that the predictors are not constructed using date-t information alone. Equation (5) defines expected semivariance using estimated coefficients, and the introduction explicitly describes it as the "best in-sample forecast"; Section 3.2 estimates the semivariance models over the full January 1990-March 2018 sample and then uses the resulting DVP and UVP in return regressions beginning in April 1991. Thus, an early date's DVP and UVP incorporate coefficients selected and estimated using future semivariance observations. Model selection is also conducted on the full sample, with specification (7) chosen for DVP and specification (6) for UVP. The return regressions therefore establish predictability by ex-post generated indices, not feasible real-time predictability, and reported inference does not account for first-stage estimation and model selection. This matters directly for the headline result that decomposing VP "significantly improves" predictability. A related inference concern is that pooled regressions use common U.S. predictors with strongly correlated international returns; the manuscript reports "panel-data Newey-West" errors but does not explain whether they allow arbitrary contemporaneous cross-country dependence. The extremely small pooled standard errors in Table 8 make this consequential. These issues are repairable with the current data, but until re-estimation the strength and horizon pattern of the central predictive evidence remain uncertain. The structural language that DVP and UVP are "driven" by particular states and "transmit" through integration should additionally be understood as conditional on the proposed model rather than as causally identified by the predictive regressions.
+
+**Best-Case Contribution**: The strongest credible contribution is a new descriptive asset-pricing fact: ex-post estimates of the downside and upside components of the U.S. variance premium contain different information about subsequent international equity returns, with DVP displaying an approximately hump-shaped medium-horizon association and UVP a short-horizon association. The paper then offers a coherent, explicitly model-dependent interpretation connecting DVP to right-tail movements in risk aversion, UVP to downside economic uncertainty, and their cross-country heterogeneity to financial and real integration.
+
+**Minimum Viable Revision**: Reconstruct DVP and UVP recursively or with a rolling window so that every date-t value uses only observations available through t, including real-time selection or pre-specification of the semivariance forecasting model. Re-estimate all country and pooled predictive regressions with a bootstrap that repeats the entire first-stage construction and accommodates overlapping h-month returns. For pooled results, use inference clustered by calendar time or another method allowing unrestricted contemporaneous cross-country dependence, and document the Newey-West lag choice. Report whether the DVP hump and UVP short-horizon pattern, as well as the improvement over total VP, survive. If they do not, narrow the claim to ex-post in-sample association. Structural source and transmission claims should be labeled explicitly as model-implied decompositions.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.0/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: This is a defect in the empirical implementation rather than merely an optional out-of-sample extension: the purported date-t predictors use full-sample estimated and selected forecasting rules, so they are not measurable with the stated date-t information set. Because international return predictability and improvement from decomposing VP are headline contributions, correcting the look-ahead and generated-regressor inference could alter both significance and the reported horizon pattern. The problem is serious but not a blocker because recursive construction, full-pipeline bootstrap inference, and appropriate panel dependence corrections can be implemented using the existing data and framework.
+
+**Novelty Claims**:
+- [EMPIRICAL] Documents distinct international stock-return predictability patterns for U.S. downside and upside variance risk premiums, including a medium-horizon hump for DVP and short-horizon predictive content for UVP. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The introduction states that international predictability of VP components is new to the literature. Section 4 compares a restricted total-VP model with separate DVP and UVP models for 22 countries and reports that decomposition improves fit, particularly below six months. This is a genuine but bounded empirical contribution using publicly available option, intraday-price, and international-index data without causal identification or scarce data.
+- [METHODOLOGICAL] Develops and compares forecasting specifications for expected downside and upside realized semivariances, including HAR terms and option-implied tail variances, to construct DVP and UVP. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Table 1 compares seven specifications and the manuscript argues that tail-specific predictor sets differ from those for total realized variance. The ingredients are established forecasting tools, but their systematic tail-specific combination is a non-trivial measurement extension.
+- [THEORETICAL] Combines asymmetric gamma shocks to risk aversion and economic uncertainty with partial international integration to rationalize DVP and UVP dynamics and cross-country predictive patterns. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Section 5 introduces asymmetric state-variable shocks and country-specific exposure to common U.S. kernel and fundamental variables. The paper cites existing ingredients from Bekaert, Engstrom, and Xu and related affine models, but their combination produces a new unified interpretation and integration-channel decomposition rather than a wholly new asset-pricing paradigm.
+
+**Insight Assessment**:
+MEDIUM: The paper has a clear empirical-to-theoretical architecture and gives useful intuition for why downside and upside variance compensation may behave differently. The distinction between price-of-risk and amount-of-risk states, followed by financial versus real transmission channels, helps organize a technically dense analysis. The interpretation is less persuasive where flexible latent-state and loading specifications are described as identifying economic sources without sufficiently emphasizing their dependence on maintained model assumptions. (Confidence: 8.0/10)
+Evidence: Sections 3 and 4 first establish magnitude, cyclicality, persistence, and horizon patterns; Section 5 then maps those facts into risk-aversion and uncertainty states. Table 12 and Tables 15-16 make the proposed mechanism transparent, although the GMM attribution relies on extracted latent variables, time-varying loadings, and selected instruments rather than independent identifying variation.
+
+**Layman Translation**: The paper finds that fear of downside volatility and attitudes toward upside volatility appear to forecast stock returns at different horizons across countries. That is potentially useful, but the volatility-premium measures for early dates were built using forecasting equations estimated with data from later dates. The exercise therefore gives the predictors information investors would not actually have had at the time. Rebuilding the measures one date at a time and correcting the uncertainty calculations could confirm the result, but the current estimates do not yet establish feasible real-time predictability.
+
+**Confidence Score**: 9.0/10.0
+
+**Source Evidence**: The introduction says the physical expectation is approximated as the "best in-sample forecast" of realized semivariance. Equation (5) uses estimated coefficients, Et(rv^i_{t+1}) = alpha-hat plus gamma-hat times X^i_t. Section 3.2 states that option and intraday data span January 1990-March 2018; Table 1 selects specification (7) for downside semivariance and specification (6) for upside semivariance using full-sample adjusted R-squared and BIC. Section 4 then uses the generated DVP and UVP series in predictive regressions over April 1991-March 2018. Tables 6 and 8 report pooled "panel-data Newey-West" inference without specifying treatment of cross-country dependence, while the predictors are identical across countries and Table 8 reports unusually tiny standard errors. The abstract and conclusion claim that decomposition "significantly improves" domestic and international predictability and that DVP and UVP transmit through different integration channels.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### Theorist Analysis
+
+**Structural Strength**: The model has a useful structural architecture: asymmetric gamma shocks separately govern upside and downside economic uncertainty and risk-aversion movements, while country-specific integration coefficients allow common U.S. states to affect foreign markets differently. This creates a parsimonious affine expression for the total variance premium and a coherent language for discussing asymmetric global risks.
+
+**Domain Audit**: The paper claims that its no-arbitrage model provides closed-form economic identification of DVP and UVP, but the formal model derives only the total conditional variance premium. Equation (33) gives V_t^Q(r_{t+1})-V_t^P(r_{t+1}) and then labels it DVP+UVP without deriving either return-sign-contingent component. The empirical DVP and UVP were defined using bad and good return states, yet equations (35)-(38) replace them with flexible linear projections on four latent states, with 16 freely estimated loading parameters. Those projections are not restrictions implied by equations (30)-(33), because the sign of the aggregate return in equation (31) depends jointly on all shocks. Consequently, the finding that DVP is driven by right-tail risk aversion while UVP is driven by downside uncertainty is a reduced-form factor attribution, not an identified equilibrium implication of the stated model. There is also a foundational definition problem: equation (2) decomposes a conditional variance into variances of sign-truncated returns, which is not generally additive because the covariance and conditional-mean terms do not vanish. Realized semivariances in equation (4) instead concern quadratic variation. Equation (3) additionally places an outer square around each option integral, apparently producing fourth-power rather than variance units. These issues directly affect the claimed formal mechanism, although the descriptive predictability evidence can survive.
+
+**Best-Case Contribution**: The strongest credible version is that the paper documents a useful international empirical fact: option-based downside and upside variance-premium measures have distinct dynamics and predictive horizons, and flexible reduced-form projections associate those patterns with different latent U.S. uncertainty and risk-aversion states. The model supplies an economically motivated state-variable taxonomy and an affine expression for total variance compensation, rather than a structural decomposition of DVP and UVP as currently claimed.
+
+**Minimum Viable Revision**: First, define all empirical and theoretical objects consistently as expected quadratic variation or semivariation rather than using an invalid additive decomposition of ordinary conditional variance, and correct or explain the outer squares in equation (3). Second, derive model-implied truncated second moments under P and Q from the return process in equation (31), thereby obtaining actual formulas or numerical restrictions for DVP and UVP. Re-estimate the mechanism using those restrictions. If that derivation is infeasible, retain the empirical results but explicitly recast equations (35)-(38) as reduced-form projections and narrow all claims of equilibrium identification, closed-form component solutions, and causal economic sources.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.5/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: The defect concerns the paper's central theoretical contribution: the model does not derive the two asymmetric objects whose economic sources it claims to identify, and the initial variance decomposition is not valid under its stated meaning. This materially weakens the equilibrium interpretation but does not destroy the independently useful empirical predictability findings. Repair is potentially possible within the current shock and return framework by deriving sign-truncated moments, or by narrowing the model section to reduced-form attribution, so REVISION rather than BLOCKER is appropriate.
+
+**Novelty Claims**:
+- [EMPIRICAL] Documents distinct international stock-return predictability patterns for U.S. downside and upside variance-premium components, with DVP peaking around four to six months and UVP performing best at very short horizons. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: Sections 3-4 analyze 22 countries from April 1991 to March 2018. Tables 5-8 and Figures 4-10 report improved fit relative to total VP and different horizon profiles. The manuscript identifies international predictability of the components as new, while citing prior domestic component work by Kilic and Shaliastovich, Feunou et al., and Held et al. This is a real but bounded empirical contribution using available market data and predictive regressions rather than scarce data or causal identification.
+- [METHODOLOGICAL] Extends realized-semivariance forecasting by comparing Martingale, autoregressive, HAR, and option-implied predictor specifications separately for downside and upside semivariances. (Significance: MEDIUM; Confidence: 7.0/10)
+  Evidence: Table 1 and Section 3.2 compare seven forecasting specifications and select different models for downside and upside physical variance. The ingredients are established methods, but their tail-specific combination is a genuine measurement extension.
+- [THEORETICAL] Combines asymmetric time-varying uncertainty and risk aversion with partial international integration to interpret variance-premium components and their transmission across markets. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Equations (9)-(34) combine external-habit preferences, asymmetric gamma shocks, and country-specific integration coefficients. The paper cites antecedents for each major ingredient, including Campbell-Cochrane and Bekaert-Engstrom-Xu, so the novelty is the international combination and application. Its significance remains MEDIUM because the claimed component-level equilibrium mapping is not actually derived.
+
+**Insight Assessment**:
+MEDIUM: The paper has a clear empirical-to-theoretical narrative and offers useful intuition distinguishing price-of-risk movements from amount-of-risk movements. However, the exposition blurs descriptive association, model implication, and structural identification, particularly when flexible GMM projections are described as equilibrium economic sources. (Confidence: 8.0/10)
+Evidence: The introduction clearly organizes the contribution around dynamics, predictability, economic sources, and international transmission. Sections 5.2-5.3 provide intuitive discussions of kernel loadings and horizon patterns, but equation (33) does not deliver the component formulas subsequently attributed to the model, while equations (35)-(38) introduce them through estimated projections.
+
+**Layman Translation**: The empirical evidence may convincingly show that bad-side and good-side volatility compensation behave differently and forecast returns at different horizons. But the theory currently explains only the overall volatility premium. It does not mathematically derive the two pieces separately; instead, it fits each piece flexibly to risk-aversion and uncertainty measures and then calls the fitted associations structural economic sources.
+
+**Confidence Score**: 9.0/10.0
+
+**Source Evidence**: Equation (2) states that total VP equals the sum of variances of r_{t+1} multiplied by positive- and negative-return indicators, although ordinary variances of those two truncated variables do not add without covariance and mean adjustments. Equation (4) instead constructs realized semivariances as sums of squared intraday returns. Equation (3) displays squared option integrals, which is dimensionally inconsistent with a variance measure unless the displayed outer powers are errors. Equation (31) makes aggregate returns linear in multiple gamma shocks, so return-sign states cannot generally be assigned one-for-one to individual shocks. Equation (33) derives only total VP and writes '≡ DVP + UVP' without separate formulas. Equations (35)-(38) then posit two unrestricted linear loading systems with 16 parameters. Table 12 interprets these estimated loadings as economic determinants, and the abstract claims that the model rationalizes the economic sources of DVP and UVP.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### Data_Scientist Analysis
+
+**Structural Strength**: The data construction has a clear conceptual decomposition: risk-neutral downside and upside variances are extracted from S&P 500 option prices, while their physical counterparts are forecast from high-frequency realized semivariances. The manuscript also compares seven forecasting specifications and reports their coefficients, fit statistics, and resulting variance-premium summary statistics rather than relying on a single undocumented proxy.
+
+**Domain Audit**: The central return-predictability evidence is exposed to look-ahead leakage because the physical variance forecasts used to construct DVP and UVP are explicitly estimated and selected in sample. Equation (5) estimates expected next-month semivariance using fitted coefficients, Section 3.2 selects specification (7) for downside variance and specification (6) for upside variance using full-sample BIC and adjusted R-squared, and the introduction calls these the "best in-sample forecast." Those full-sample fitted coefficients are then used to construct end-of-month predictors for return regressions beginning in April 1991, although the underlying variance sample runs through March 2018. Consequently, an early-period DVP or UVP observation indirectly incorporates semivariance outcomes realized later in the return-prediction sample, and model selection itself uses the future. This does not establish that the reported patterns are spurious, but it means the constructed predictors were not measurable using information available at time t as asserted in the predictive framework. The same generated series subsequently enters the GMM interpretation, so leakage can propagate into the estimated economic loadings. In addition, the manuscript does not document enough operational lineage to reproduce timing and joins exactly, including option filters and maturity interpolation, country-index identifiers, holiday alignment, currency-conversion timing, and missing-value rules. That documentation issue is secondary to the look-ahead problem.
+
+**Best-Case Contribution**: The strongest credible contribution is a new sample-specific empirical finding that separately measured U.S. downside and upside variance-premium proxies contain different information about subsequent U.S.-dollar stock returns across 22 developed markets: downside information is strongest around four to six months, while upside information is concentrated at very short horizons. The accompanying model provides an economically coherent interpretation linking these patterns to asymmetric risk aversion, economic uncertainty, and different forms of international integration.
+
+**Minimum Viable Revision**: Reconstruct DVP and UVP in real time. At each month, estimate the physical-semivariance forecasting model only with observations then available, using a fixed specification selected before the prediction sample or model selection performed within a rolling or expanding historical window. Rerun all country and panel predictive regressions and the downstream GMM exercises with these recursive series, and account for first-stage generated-regressor uncertainty. Provide a compact data appendix listing exact option filters, interpolation rules, index identifiers, exchange-rate and risk-free-rate timing, market-calendar alignment, and missing-data rules. If the horizon patterns survive, the main contribution is substantially restored.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.0/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: The flaw directly affects the paper's headline empirical claim that time-t DVP and UVP predict future international returns, because the reported predictors use coefficients and model choices informed by future observations. The direction and magnitude of distortion cannot be determined without rebuilding the series recursively, so the central evidence is in real doubt. It is not a blocker because the same option, intraday, and return data can support a clean expanding-window reconstruction and complete rerun within the existing framework.
+
+**Novelty Claims**:
+- [EMPIRICAL] The paper claims new evidence that decomposing the U.S. variance premium into downside and upside components improves domestic and international stock-return predictability, with a hump-shaped four-to-six-month DVP pattern and a declining short-horizon UVP pattern. (Significance: MEDIUM; Confidence: 8.5/10)
+  Evidence: The introduction identifies four new empirical facts, and Section 4 studies U.S.-dollar excess returns for a balanced panel of 22 countries from April 1991 through March 2018. This is a genuine but bounded extension of prior domestic and international variance-premium work using conventional public or commercial market data and predictive regressions, rather than scarce data or causal identification.
+- [METHODOLOGICAL] The paper compares a relatively wide set of forecasting models for downside and upside realized semivariances and uses tail-specific predictors to construct physical variance expectations. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Table 1 compares Martingale, autoregressive, HAR, option-implied, and combined specifications separately for downside and upside semivariances. The manuscript argues that the predictor set for total variance and the two semivariances can differ. This is a useful measurement extension, although it builds on established HAR, model-free option variance, and realized-semivariance methods.
+- [THEORETICAL] The paper proposes an international affine no-arbitrage model with asymmetric gamma shocks, time-varying risk aversion and economic uncertainty, and partial integration to interpret the two variance-premium components and their international transmission. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Section 5 combines asymmetric state-variable shocks with country-specific exposure to common U.S. kernel and fundamental variables. The model yields distinct interpretations and integration channels, but its main ingredients are explicitly motivated by existing habit, affine-gamma, and partial-integration approaches, making it a substantive combination and extension rather than a wholly new asset-pricing paradigm.
+
+**Insight Assessment**:
+MEDIUM: The manuscript has a coherent empirical-to-theoretical architecture and supplies useful intuition for why downside and upside variance compensation may behave differently. The presentation is nevertheless very dense, and the economic interpretation rests on a highly parameterized sequence of latent-state and GMM mappings whose connection to directly observed data is less transparent than the initial empirical decomposition. (Confidence: 8.0/10)
+Evidence: Sections 3 and 4 first establish magnitude, cyclicality, persistence, and horizon-specific predictability facts; Section 5 then maps them to risk aversion, economic uncertainty, and real versus financial integration. Tables 11 through 16 and Figures 14 through 17 provide the mapping, but the interpretation relies on estimated latent variables, time-varying loadings, and numerous moment conditions rather than a simple independently testable mechanism.
+
+**Layman Translation**: The paper builds two monthly indicators intended to measure how much investors are paid for downside and upside market volatility, then asks whether those indicators forecast international stock returns. The major data problem is that the indicators are fitted using the entire 1990-2018 sample, including observations that were still in the future at the dates being predicted. The authors need to rebuild them month by month using only information available at each date and show that the forecasting results survive.
+
+**Confidence Score**: 9.0/10.0
+
+**Source Evidence**: The introduction states: "We approximate the physical expectation of the downside (upside) stock return variation as the best in-sample forecast" and gives the variance sample as January 1990 to March 2018. Equation (5) defines the physical expectation using estimated coefficients. Section 3.2.2 selects model (7) for downside semivariance and model (6) for upside semivariance after comparing full-sample adjusted R-squared and BIC, then states: "We use their end-of-month values as monthly measures for the physical variables." Section 4 uses those measures to predict returns over April 1991 to March 2018 and writes the predictors as time-t variables in Equations (7) and (8). These passages directly establish that full-sample estimation and selection precede construction of purportedly time-t predictors.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+# MULTI-AGENT DEBATE
+
+
+## DEBATE ROUND 1
+
+### Econometrician Debate Contribution
+
+**Acknowledgment**: The peer reviews converge on two serious, complementary concerns: the variance-premium predictors are constructed using full-sample estimation and model selection, and the theoretical decomposition does not consistently derive the same downside and upside semivariance objects used empirically. I agree that these defects materially weaken feasible prediction and structural interpretation, while remaining repairable within the paper's broad empirical framework.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The claim that separating DVP and UVP significantly improves international return predictability is not supported by adequately documented inference. The comparison relies heavily on adjusted R-squared, AIC, and BIC, while the dependent variables overlap at multi-month horizons, the predictors are generated through a selected first-stage model, and many countries and horizons are examined. These fit comparisons do not by themselves establish statistical significance of the improvement.
+  - Evidence: Section 4 compares the restricted total-VP specification with separate DVP and UVP specifications across 22 countries and numerous horizons using AIC, BIC, and adjusted R-squared. Equations (7) and (8) use overlapping h-month returns, while Equation (5) shows that DVP and UVP contain estimated first-stage coefficients. The reported analysis does not describe a bootstrap or other test that repeats first-stage estimation and model selection while accommodating overlap and the extensive country-horizon comparisons.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.0]
+  - Critique: The pooled-regression precision is not credible without inference allowing unrestricted contemporaneous dependence across countries. Because every country is exposed to the same U.S. predictors and international equity returns are strongly correlated, treating country observations as providing independent cross-sectional information would substantially overstate effective sample size.
+  - Evidence: Equation (8) pools 22 countries against common U.S. DVP and UVP series. The review record indicates that Tables 6 and 8 report panel-data Newey-West errors without explaining whether arbitrary same-month cross-country covariance is allowed. Valid inference requires calendar-time clustering, a Driscoll-Kraay-type procedure with appropriate asymptotics, or a bootstrap preserving international return dependence.
+
+**Defenses**:
+- Against: Theorist [substantive_flaw]
+  - The theoretical inconsistency is serious but does not make the descriptive contribution irretrievable. The authors can consistently redefine the objects as expected semivariation or truncated second moments, correct the option-integral expression, and either derive the corresponding model moments or explicitly recast the latent-state exercise as a reduced-form projection. The latter would sacrifice structural identification but preserve a potentially publishable empirical paper if the reconstructed predictive results survive.
+- Against: Data_Scientist [substantive_flaw]
+  - Full-sample construction does not mechanically insert future stock returns into the right-hand side, so the current estimates may still document an ex-post association between generated variance-premium indices and returns. Nevertheless, they cannot support feasible real-time predictability. Recursive reconstruction and inference incorporating the first stage are therefore necessary for the headline forecasting claim, but this repair can be performed with the existing data and design.
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I concede that Equation (2), as written with ordinary conditional variance notation, is not generally an additive decomposition into the variances of positive- and negative-return truncated variables. Equation (4) instead measures realized semivariation, and the outer squares displayed in Equation (3) are dimensionally inconsistent with variance units unless they are typographical errors. The theoretical source claims therefore require corrected definitions and an actual component-level derivation or substantial narrowing.
+- To: Data_Scientist [substantive_flaw]
+  - I concede that selecting and estimating the physical-semivariance forecasting specifications over January 1990 through March 2018 and then using their fitted values as predictors from April 1991 creates look-ahead leakage relative to a real-time forecasting interpretation. Model selection also uses future information. This is central because the manuscript repeatedly describes the resulting evidence as return predictability rather than merely an ex-post in-sample association.
+
+**Questions**:
+- To: Theorist — If the authors replace conditional variances with risk-neutral and physical expected semivariations, do you view numerical evaluation of the sign-truncated model moments as sufficient, or does the paper's claimed closed-form contribution require separate analytical formulas for DVP and UVP?
+- To: Data_Scientist — Would a fixed forecasting specification chosen from a pre-April-1991 training period, followed by expanding-window coefficient estimation, adequately remove the leakage concern, provided the entire procedure is repeated inside the return-regression bootstrap?
+
+**Final Argument State**: The surviving contribution is a potentially valuable but currently ex-post descriptive finding that U.S. downside and upside variance-premium proxies have different international return-association horizons. Execution is not yet sound enough for acceptance: the predictors use future information through full-sample first-stage estimation and selection; generated-regressor, overlapping-return, multiple-comparison, and pooled cross-country dependence issues are insufficiently handled; and the theoretical component decomposition is mathematically inconsistent with the empirical semivariance construction. Novelty remains MEDIUM because the international component-level evidence and tail-specific forecasting exercise are useful extensions. Insight remains MEDIUM because the risk-aversion versus uncertainty taxonomy is informative, but the source and transmission results must be labeled as model-dependent or reduced-form unless genuine component moments are derived. The paper requires recursive predictor construction, full-procedure inference, dependence-robust pooled standard errors, corrected definitions, and substantial calibration of structural language. These repairs are demanding but feasible within the current data and broad framework, supporting RESUBMIT rather than rejection.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Theorist Debate Contribution
+
+**Acknowledgment**: The Econometrician and Data Scientist correctly identify that full-sample estimation and selection of the semivariance forecasting models prevent the constructed DVP and UVP series from representing feasible date-t predictors. This reinforces, rather than displaces, the separate theoretical concern that the stated downside-upside decomposition is not mathematically consistent with ordinary conditional variance.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.5/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The foundational variance decomposition is not valid as written. If r is decomposed into r times positive- and negative-return indicators, the two truncated variables generally have nonzero covariance because their product is zero while their means need not be zero. Consequently, their ordinary conditional variances do not add to the conditional variance of r. The empirical realized-semivariance construction instead concerns truncated second moments or quadratic variation, so the theoretical and empirical objects are inconsistent.
+  - Evidence: Equation (2) asserts V_t(r)=V_t(r1_{r>0})+V_t(r1_{r<0}). In general, V_t(r)=V_t(r^+)+V_t(r^-)+2Cov_t(r^+,r^-), with Cov_t(r^+,r^-)=-E_t(r^+)E_t(r^-) rather than zero. Equation (4), by contrast, defines realized semivariances as sums of squared intraday returns selected by sign, which correspond to truncated second-moment or quadratic-variation objects.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The displayed option-implied component formulas are dimensionally inconsistent because each option integral is squared. Standard option-price integrals of this form already have variance units; the additional outer square produces fourth-power return units and cannot be directly subtracted from expected realized semivariance. The paper must establish that this is merely a typographical error or reconstruct every component and result using dimensionally consistent formulas.
+  - Evidence: Equation (3) defines both ivD and ivU as the square of an integral involving option prices divided by K squared. Equation (4) defines realized semivariance as a sum of squared returns. The two displayed quantities therefore do not share units unless the outer powers in Equation (3) are errors.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I concede that the full-sample first-stage estimation and model selection make the early DVP and UVP observations functions of future semivariance data. This materially weakens the interpretation as feasible return predictability and requires recursive or rolling reconstruction, generated-regressor inference, and panel inference allowing contemporaneous cross-country dependence.
+- To: Data_Scientist [substantive_flaw]
+  - I concede the look-ahead concern. The manuscript explicitly calls the physical expectations the best in-sample forecasts, chooses different specifications using full-sample fit criteria, and then treats the resulting series as date-t predictors. This can support an ex-post descriptive association but not the stronger real-time forecasting claim without reconstruction.
+
+**Questions**:
+- To: Econometrician — Would you distinguish the validity of the ex-post population association from feasible real-time forecasting when setting the severity, provided the authors bootstrap the full generated-regressor procedure but retain full-sample first-stage estimates?
+
+**Final Argument State**: Two independent sets of substantive problems survive. Empirically, DVP and UVP are generated using full-sample estimation and model selection, so the reported regressions do not establish feasible date-t forecasting and their inference omits important first-stage and cross-country dependence issues. Theoretically, the manuscript's ordinary-variance decomposition is not additive, while its empirical semivariances are truncated quadratic-variation objects; the displayed option formulas also appear dimensionally incorrect. These defects are serious but repairable within the broad framework by consistently redefining the objects as expected semivariation or truncated second moments, correcting the option formulas, deriving component-level model restrictions, and reconstructing predictors recursively. The empirical novelty remains MEDIUM, centered on distinct international horizon patterns, and the economic insight remains MEDIUM because the risk-aversion versus uncertainty taxonomy is useful but not yet structurally established. Central structural and real-time-predictability claims require substantial narrowing unless the revised analysis validates them. The appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Data_Scientist Debate Contribution
+
+**Acknowledgment**: The Econometrician correctly identifies the dominant data-science problem: full-sample estimation and model selection leak future semivariance information into predictors represented as available at date t. The Theorist also identifies a separate measurement-consistency concern in the displayed definitions of variance-premium components. Both issues are potentially repairable within the existing empirical framework, but they currently prevent the headline predictive and structural claims from being treated as established.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The displayed option-implied semivariance formula appears dimensionally inconsistent. Equation (3) places an outer square around an option-price integral that already has variance units, which would produce fourth-power return units. If this formula was implemented literally, the risk-neutral components, DVP and UVP series, and all downstream predictive results require reconstruction; if it is only a typographical error, the manuscript must state and verify the implemented formula.
+  - Evidence: Equation (3) defines both ivD and ivU as the square of an integral involving option prices divided by K squared. The surrounding text calls these quantities variances and later reports them in monthly percentage-squared units, which is incompatible with the displayed outer square.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 5.5/10; Barrier: REVISION; Confidence: 8.0]
+  - Critique: The empirical data lineage is insufficiently specified to reproduce the variance-premium predictors. Option-based tail integrals are particularly sensitive to strike filters, maturity interpolation, treatment of zero bids, extrapolation, and forward-price construction, while international return joins depend on index identifiers, market calendars, currency-conversion timing, and missing-value rules.
+  - Evidence: The manuscript names OptionMetrics, TICKDATA, DataStream, and the Federal Reserve Board, but the supplied methods do not give exact option filters, interpolation and extrapolation procedures, country-index identifiers, holiday alignment, exchange-rate timing, or missing-observation rules.
+
+**Defenses**:
+- Against: Theorist [substantive_flaw]
+  - The definitional inconsistency does not necessarily destroy the descriptive research design. Equations (3) and (4) indicate that the intended empirical objects are risk-neutral and physical truncated second moments or semivariations. Those objects can be defined coherently without claiming that centered conditional variances of sign-truncated returns add exactly. Thus, unless the incorrect formulas were implemented literally, this aspect is repairable by correcting definitions and narrowing the theoretical interpretation rather than abandoning the empirical decomposition.
+- Against: Econometrician [substantive_flaw]
+  - The requested recursive reconstruction, full-pipeline bootstrap, and calendar-time dependence correction are all feasible with the manuscript's existing option, intraday, and international-return data. The leakage therefore warrants RESUBMIT rather than REJECT or BLOCKER status.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I concede the central look-ahead objection. The manuscript explicitly calls the physical-semivariance estimates the best in-sample forecasts, selects different specifications using full-sample fit criteria, and then treats the resulting series as date-t predictors. The reported regressions therefore demonstrate ex-post in-sample association rather than feasible real-time predictability.
+- To: Theorist [substantive_flaw]
+  - I concede that Equation (2), if V denotes ordinary centered conditional variance as stated, is not generally an additive decomposition into the variances of positive- and negative-return truncated variables. The empirical and theoretical objects must instead be defined consistently as truncated second moments, quadratic variation, or semivariation.
+- To: Theorist [substantial_rephrasal]
+  - I also concede that claims that particular latent states economically drive DVP or UVP and transmit through specific integration channels must be labeled as model-dependent attributions unless the model separately derives the sign-contingent component moments under both probability measures.
+
+**Questions**:
+- To: Econometrician — Would a calendar-time clustered bootstrap that resamples months and preserves the entire cross-country return vector, while repeating recursive first-stage estimation, adequately address both overlapping horizons and unrestricted contemporaneous cross-country dependence?
+- To: Theorist — If the authors redefine the components as expected positive and negative semivariations and numerically derive their P and Q moments rather than obtaining closed forms, would that sufficiently restore the model-to-measurement mapping?
+
+**Final Argument State**: The surviving assessment is that the paper has a coherent architecture and a potentially publishable empirical contribution, but its current execution contains serious, repairable substantive flaws. Most importantly, full-sample estimation and model selection contaminate purported date-t predictors with future information. The displayed semivariance definitions and option-integral formula also require mathematical and implementation verification, and the data pipeline needs reproducible operational documentation. Novelty remains MEDIUM: the international comparison of downside and upside variance-premium proxies and their distinct predictive horizons is a genuine but bounded extension. Insight remains MEDIUM because the risk-aversion versus uncertainty and financial versus real integration narrative is useful, though strongly model-dependent. The authors should reconstruct predictors recursively, repeat inference through the complete generated-regressor pipeline, permit calendar-time cross-country dependence, correct or verify the component formulas, and recast structural source and transmission statements as model-implied unless separate component restrictions are derived. These repairs fit within the current framework, supporting RESUBMIT rather than rejection.
+
+**Verdict**: RESUBMIT
+
+---
+
+
+## DEBATE ROUND 2
+
+### Econometrician Debate Contribution
+
+**Acknowledgment**: The peer reviews identify mutually reinforcing problems in the construction, definition, and inference for the variance-premium components. I agree that the current evidence supports an ex-post descriptive association, but not yet the manuscript's stronger claims of feasible return predictability or structurally identified economic sources.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The assertion that separating DVP and UVP significantly improves international return predictability is not established by the reported model-fit comparisons. Adjusted R-squared, AIC, and BIC do not test the restriction that the DVP and UVP slope coefficients are equal, and the required inference is complicated by overlapping multi-month returns, generated predictors, full-sample first-stage model selection, and repeated examination of countries and horizons.
+  - Evidence: Section 4 calls the total-VP model a restricted version of the component model, but Table 5 is described as comparing the models through AIC, BIC, and adjusted R-squared. Equations (7) and (8) use overlapping h-month returns, while Equation (5) makes DVP and UVP functions of estimated first-stage coefficients. No full-pipeline bootstrap, equality-restriction test, or multiplicity adjustment is documented in the supplied manuscript.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The pooled-regression inference must allow unrestricted contemporaneous dependence across countries. Because all 22 country returns are regressed on the same U.S. predictor realization each month, the effective time-series information is much closer to that in a cross-country return portfolio than to 22 independent observations per month. Conventional panel or observation-level Newey-West calculations would overstate precision.
+  - Evidence: Equation (8) pools country returns while DVP, UVP, the U.S. term spread, and the U.S. dividend yield are common across every country in a given month. The supplied discussion of Tables 6 and 8 does not document calendar-time clustering, a cross-sectional covariance-robust estimator, or a bootstrap preserving contemporaneous international return dependence.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The first-stage construction uses future information relative to the purported forecast dates. Selecting specifications and estimating semivariance-forecast coefficients using the full 1990–2018 sample makes early DVP and UVP observations functions of later realized semivariances. Consequently, the subsequent regressions do not establish feasible real-time predictability.
+  - Evidence: Section 3 describes the physical expectation as the best in-sample forecast, compares seven specifications using full-sample adjusted R-squared and BIC, selects different models for downside and upside semivariance, and then uses their fitted values as date-t predictors beginning in April 1991.
+
+**Defenses**:
+- Against: Theorist [substantive_flaw]
+  - The invalid centered-variance decomposition is serious, but it is repairable within the empirical architecture if the intended objects are consistently redefined as risk-neutral and physical truncated second moments or expected semivariations. The authors would then need to correct the option formula and derive matching component moments, or explicitly narrow the structural exercise to a reduced-form projection.
+- Against: Data_Scientist [substantive_flaw]
+  - The displayed outer squares in Equation (3) are dimensionally inconsistent, but the manuscript does not reveal whether they were implemented or are typographical. Verification of code and reconstruction under the correct integrals can resolve this inside the current data design; the uncertainty warrants resubmission rather than treating the empirical contribution as irretrievably invalid.
+- Against: Data_Scientist [substantive_flaw]
+  - The reproducibility omissions are material because option-tail estimates are sensitive to implementation choices, but exact filters, interpolation rules, market-calendar alignment, and identifiers can be supplied without changing the research question or acquiring a fundamentally different dataset.
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I concede that Equation (2) is not an additive decomposition of ordinary centered conditional variance. The covariance between the positive- and negative-return truncated variables is generally nonzero, whereas Equation (4) constructs realized semivariation. The theoretical and empirical objects therefore require consistent redefinition.
+- To: Theorist [substantive_flaw]
+  - I concede that the outer squares in Equation (3) are dimensionally incompatible with the percentage-squared semivariance units used downstream. The authors must verify the implemented expression and reconstruct all results if the displayed formula was used literally.
+- To: Data_Scientist [substantive_flaw]
+  - I concede that full-sample first-stage estimation and specification selection introduce look-ahead information. The current series can support an ex-post association but not a feasible date-t forecasting claim without recursive or rolling reconstruction.
+- To: Data_Scientist [substantial_rephrasal]
+  - I concede that claims identifying risk aversion, economic uncertainty, and particular integration channels as the economic sources of DVP and UVP must be presented as model-dependent unless the corrected model separately derives the empirical sign-contingent moments under both probability measures.
+
+**Questions**:
+- To: paper — Were the outer squares displayed in Equation (3) used in the empirical code, or are they typographical errors? Please report units and provide a code-level verification.
+- To: paper — Can the authors reconstruct DVP and UVP recursively using only information available at each forecast date, including recursive specification selection, and bootstrap the complete construction and predictive-regression procedure?
+- To: paper — What covariance estimator is used in Tables 6 and 8, and does it permit arbitrary same-month covariance across all 22 countries while also addressing serial dependence from overlapping returns?
+- To: paper — Do formal tests of the restriction that the DVP and UVP coefficients are equal survive correction for generated regressors and the multiplicity across countries and horizons?
+
+**Final Argument State**: The paper's potentially publishable contribution is an ex-post descriptive finding that U.S. downside and upside variance-premium proxies have different international return-association horizons. Current execution is not sound enough for acceptance. The predictors use future information through full-sample first-stage estimation and model selection; the claimed improvement from decomposition lacks full-procedure inference; pooled precision must accommodate common predictors and contemporaneously dependent international returns; and the foundational variance decomposition and displayed option formula are mathematically inconsistent with the empirical semivariance construction. Novelty is MEDIUM because component-level international evidence and the comparison of horizon patterns extend the cited literature. Insight is MEDIUM because the risk-aversion versus uncertainty and financial versus real integration taxonomy is economically useful, but those attributions remain model-dependent. Structural language requires substantial rephrasing unless corrected component moments are derived. Recursive construction, dependence-robust full-pipeline inference, corrected definitions and formulas, and reproducible data procedures are demanding but feasible within the broad framework. The appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Theorist Debate Contribution
+
+**Acknowledgment**: The review graph identifies mutually reinforcing theoretical, econometric, and implementation problems. I agree that the current evidence can at most support an ex-post descriptive association until the variance-premium objects are consistently defined, their implementation is verified, and the forecasting exercise is reconstructed without future information.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The claimed structural interpretation is not auditable from the supplied manuscript. The paper repeatedly states that a no-arbitrage international model identifies risk aversion and economic uncertainty as distinct sources of DVP and UVP and identifies financial versus real integration as transmission channels, but the supplied text ends at the opening of Section 5 without presenting the model equations, pricing kernel, component-level moment derivations, identification conditions, GMM system, or estimation results. The asserted source and transmission conclusions therefore remain unsupported within the provided scholarly record.
+  - Evidence: The abstract and Introduction attribute DVP primarily to upside movements in risk aversion, UVP negatively to downside uncertainty, and international transmission to financial or real integration. Section 5 begins with the statement that a model will rationalize these results, but no model specification or derivation appears before the supplied manuscript terminates.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: Even apart from the missing model details, matching model-implied and empirical variance-premium components cannot establish that latent states economically drive those components unless the model separately derives the same sign-contingent semivariation objects under the physical and risk-neutral measures and supplies identification restrictions distinguishing state loadings from integration coefficients. Given the inconsistency between Equations (2) and (4), the current structural labels are not yet attached to the empirical objects actually measured.
+  - Evidence: Equation (2) is written using centered conditional variances of sign-truncated returns, whereas Equation (4) constructs realized semivariations from sums of squared intraday returns. The Introduction nevertheless says that GMM matching of model-implied and empirical components identifies their economic determinants and transmission channels.
+
+**Defenses**:
+- Against: Econometrician [substantive_flaw]
+  - The econometric defects are serious but remain repairable within the existing empirical architecture. Recursive or rolling estimation can produce feasible date-t physical-semivariance forecasts, and a bootstrap that repeats model selection, first-stage estimation, predictor construction, and overlapping-horizon regressions can assess the incremental predictive content of the decomposition. Calendar-time resampling can simultaneously preserve international return dependence.
+- Against: Data_Scientist [substantive_flaw]
+  - The dimensional inconsistency in Equation (3) need not invalidate every empirical result if the outer square is only a transcription error and the code used the unsquared option integral. The paper can resolve this within its current framework by disclosing the implemented formula, providing unit checks and code, and reconstructing all results if the displayed squared expression was actually implemented.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I agree that adjusted R-squared, AIC, and BIC comparisons do not establish the manuscript's claim of a statistically significant improvement from decomposing VP. Valid inference must account jointly for overlapping returns, generated predictors, first-stage model selection, and the many country-horizon comparisons.
+- To: Econometrician [substantive_flaw]
+  - I agree that pooled precision cannot rely on 22 country observations as independent replications of common U.S. predictors. Arbitrary contemporaneous cross-country covariance must be permitted through calendar-time clustering, an appropriate Driscoll-Kraay procedure, or a dependence-preserving bootstrap.
+- To: Data_Scientist [substantive_flaw]
+  - I agree that the option and international-return construction is insufficiently documented for replication. The missing strike and maturity filters, interpolation and extrapolation rules, forward-price treatment, index identifiers, currency-conversion timing, calendar alignment, and missing-value procedures are material because the tail integrals and cross-country joins are sensitive to these choices.
+
+**Questions**:
+- To: paper — Was the outer square in Equation (3) implemented in the empirical code, or is it solely a typographical error? Please provide the exact code-level formula and units at every construction step.
+- To: paper — Can the theoretical model derive risk-neutral and physical truncated second moments or semivariations separately, rather than ordinary centered variances of sign-truncated returns, and show that these are exactly the moments used in estimation?
+- To: paper — Do the risk-aversion, uncertainty, and country-integration parameters satisfy distinct identification restrictions, or are the reported source and transmission shares conditional attributions within one selected parameterization?
+
+**Final Argument State**: The peer claims survive. The empirical predictors incorporate future information through full-sample first-stage estimation and model selection, while the reported inference does not adequately address generated regressors, overlapping returns, multiple comparisons, or contemporaneous international dependence. The theoretical foundation is also inconsistent: centered conditional variances do not yield the asserted additive sign decomposition, the empirical objects are semivariations or truncated second moments, and the displayed option integrals have incorrect units if their outer squares were implemented. Moreover, the supplied manuscript does not present the model derivation needed to audit its structural source and transmission claims. Novelty remains MEDIUM because distinct international horizon patterns for downside and upside variance-premium proxies are a useful extension. Insight remains MEDIUM because the risk-aversion versus uncertainty and financial versus real integration taxonomy could be informative, but it is currently model-dependent rather than structurally established. The paper requires substantive reconstruction and calibrated structural language, but these repairs are feasible within the broad framework; therefore the appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Data_Scientist Debate Contribution
+
+**Acknowledgment**: The peer reviews identify the central execution problems accurately. The manuscript's potentially valuable empirical contribution is not yet established as feasible real-time predictability because its predictors are selected and estimated in sample, while the mathematical definitions, option-based implementation, and dependence-robust inference remain insufficiently verified.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.5/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The headline return-predictability evidence contains look-ahead leakage. The physical semivariance models are selected and estimated using the full 1990–2018 sample, after which their fitted values are treated as date-t predictors beginning in 1991. Early DVP and UVP observations therefore depend on future semivariance realizations and future model-selection information.
+  - Evidence: Section 3.1 describes the physical component as the best in-sample forecast from Equation (5). Section 3.2.2 compares seven specifications over the full January 1990–March 2018 sample and selects model (7) for downside variance and model (6) for upside variance. Section 4 then uses those generated series in predictive regressions from April 1991.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The claim that decomposition significantly improves predictability is stronger than the documented statistical evidence. Adjusted R-squared, AIC, and BIC comparisons do not account for overlapping multi-month returns, first-stage predictor estimation and selection, or simultaneous examination of many countries and horizons.
+  - Evidence: Section 4.2 states that the decomposed model significantly outperforms the total-VP model for all countries and horizons based on AIC, BIC, and adjusted R-squared. Equations (7) and (8) use overlapping h-month returns, and DVP and UVP are generated through the selected first-stage regressions in Equation (5). No full-pipeline bootstrap or multiplicity adjustment is described in the supplied manuscript.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: Equation (3) must be reconciled with the implementation before the empirical series can be trusted. The displayed outer square converts an option integral already expressed in variance units into fourth-power units, making it incompatible with the realized semivariance in Equation (4).
+  - Evidence: Both option-implied components in Equation (3) are displayed as squared option-price integrals, whereas Equation (4) is a sum of squared returns and the subsequent results are reported in monthly percentage-squared units. If the displayed formula was implemented, all downstream series require reconstruction; if it is typographical, code or explicit implementation details must verify that fact.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 5.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The data-construction description is inadequate for reproducing the central predictors and international panel. Tail option integrals and cross-market monthly returns are sensitive to operational choices that the manuscript does not report.
+  - Evidence: The manuscript identifies OptionMetrics, TICKDATA, DataStream, and Federal Reserve sources but does not specify exact option filters, zero-bid treatment, strike-tail extrapolation, maturity interpolation, forward construction, intraday cleaning, country-index identifiers, holiday alignment, currency-conversion timing, or missing-data rules.
+
+**Defenses**:
+- Against: Theorist [substantive_flaw]
+  - The invalid centered-variance decomposition does not necessarily eliminate the descriptive empirical contribution. Equations (3) and (4) reveal an apparent intention to study risk-neutral and physical sign-truncated second moments or semivariations. Those objects can be defined coherently if the formulas and model moments are reconstructed consistently, although the current structural interpretation would then require new derivations or substantial narrowing.
+- Against: Econometrician [substantive_flaw]
+  - The supplied manuscript does not fully document the pooled standard-error implementation, so the strongest evidence-supported criticism is that valid contemporaneous cross-country dependence correction is unverified, not that the authors definitively treated countries as independent. Nevertheless, calendar-time clustering or a bootstrap preserving international dependence must be reported before pooled significance is credible.
+- Against: Econometrician [substantive_flaw]
+  - The leakage and inference defects are serious but repairable within the existing design. Recursive or rolling first-stage estimation, repeated model selection within each information set, and a full-pipeline calendar-time bootstrap can directly test whether the reported horizon patterns survive without requiring new underlying data.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I concede that the current results establish only an ex-post in-sample association rather than feasible date-t forecasting. Full-sample first-stage estimation and model selection make historical DVP and UVP values functions of information unavailable at those dates.
+- To: Econometrician [substantive_flaw]
+  - I concede that fit criteria alone do not justify the manuscript's repeated language of significant model improvement. Inference should reproduce predictor construction and selection while preserving overlapping-return and cross-country dependence and addressing the country-horizon search.
+- To: Theorist [substantive_flaw]
+  - I concede that Equation (2) is not an additive decomposition of ordinary centered conditional variance. The empirical quantities must instead be defined consistently as sign-truncated second moments, semivariation, or quadratic-variation components.
+- To: Theorist [substantial_rephrasal]
+  - I concede that the risk-aversion, uncertainty, and integration-channel claims should be characterized as model-implied attributions unless the model separately derives moments corresponding exactly to the empirical downside and upside components under both probability measures.
+
+**Final Argument State**: The paper retains a coherent empirical architecture and a potentially publishable international comparison of downside and upside variance-premium proxies, but the current execution is not sound enough for acceptance. Its central forecasting claim is contaminated by full-sample first-stage estimation and model selection; improvement tests do not propagate generated-regressor uncertainty or adequately document treatment of overlapping returns, multiplicity, and international dependence; the component definitions and displayed option formula are mathematically inconsistent; and the data pipeline is not reproducible from the supplied description. Novelty is MEDIUM because the international component-level horizon comparison is a genuine but bounded extension of the cited variance-premium literature. Insight is MEDIUM because the distinction between risk aversion and uncertainty, and between financial and real integration channels, is economically useful but presently model-dependent. Structural source and transmission language requires substantial calibration unless matching component-level derivations are supplied. Recursive reconstruction, full-pipeline inference, corrected definitions, implementation verification, and detailed data documentation are demanding but feasible within the existing framework. The appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+

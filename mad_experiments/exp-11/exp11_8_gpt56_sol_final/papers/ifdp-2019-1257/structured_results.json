@@ -1,0 +1,1175 @@
+{
+  "metadata": {
+    "doc_id": "ifdp-2019-1257",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/ifdp-2019-1257.pdf",
+    "ground_truth_tier": "Tier1",
+    "year": "2019",
+    "series": "ifdp",
+    "final_score": 0.7548125303613249,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 517.3348698616028,
+    "char_count": 142895,
+    "word_count": 22843,
+    "token_usage": {
+      "duration_seconds": 517.077065,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 276218,
+        "output": 25776,
+        "thinking": 9967,
+        "total": 301994,
+        "cache_read": 0,
+        "cache_creation": 276185
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 8014,
+          "output": 155,
+          "thinking": 0,
+          "total": 8169,
+          "cache_read": 0,
+          "cache_creation": 8011,
+          "calls": 1
+        },
+        "Theorist": {
+          "input": 44423,
+          "output": 4209,
+          "thinking": 2471,
+          "total": 48632,
+          "cache_read": 0,
+          "cache_creation": 44420,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 44449,
+          "output": 3027,
+          "thinking": 1296,
+          "total": 47476,
+          "cache_read": 0,
+          "cache_creation": 44446,
+          "calls": 1
+        },
+        "Policymaker": {
+          "input": 44428,
+          "output": 2327,
+          "thinking": 687,
+          "total": 46755,
+          "cache_read": 0,
+          "cache_creation": 44425,
+          "calls": 1
+        },
+        "Debater-Theorist": {
+          "input": 33806,
+          "output": 3953,
+          "thinking": 1521,
+          "total": 37759,
+          "cache_read": 0,
+          "cache_creation": 33800,
+          "calls": 2
+        },
+        "Debater-Econometrician": {
+          "input": 33806,
+          "output": 4822,
+          "thinking": 1598,
+          "total": 38628,
+          "cache_read": 0,
+          "cache_creation": 33800,
+          "calls": 2
+        },
+        "Debater-Policymaker": {
+          "input": 33806,
+          "output": 5107,
+          "thinking": 2394,
+          "total": 38913,
+          "cache_read": 0,
+          "cache_creation": 33800,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 33486,
+          "output": 2176,
+          "thinking": 0,
+          "total": 35662,
+          "cache_read": 0,
+          "cache_creation": 33483,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 276218,
+          "output": 25776,
+          "thinking": 9967,
+          "total": 301994,
+          "cache_read": 0,
+          "cache_creation": 276185,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 2.49960125
+      },
+      "total_cost": 2.49960125
+    },
+    "timestamp": "2026-07-29T16:18:44.867920",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Theorist": {
+      "structural_strength": "The paper isolates a sharp economic trade-off between Keynesian stabilization and endogenous sovereign financing costs. Equations (21)–(23) usefully decompose the optimal-spending condition into a Samuelson component, a stimulus benefit from relaxing the wage constraint, and an austerity cost operating through the government budget and endogenous bond-price schedule.",
+      "domain_audit": "The central equilibrium is not internally consistent as written because debt-service flows have contradictory signs and market-access timing across the model's defining equations. From the government budget constraint (8), aggregation requires cT = yT + q[b'-(1-δ)b] - δb when the government repays. Equation (14) has this basic net-flow sign inside its brackets, but multiplies debt flows by 1-ζ even though equation (7) defines ζ=1 as access to credit markets. More seriously, the repayment problem (19) instead writes cT = yT + q[b'-(1-δ)b] + δb, treating repayment δb as a resource inflow, while its government budget constraint correctly treats δb as an outflow. The Markov bond-price condition also evaluates next-period default as χ(yT', b-hat(yT,b')) rather than at inherited debt χ(yT',b'); next-period borrowing should affect q next period, but default is chosen before that borrowing decision. Problem (20) additionally omits the autarky resource condition cT=yT. These are not innocuous within the printed formal system: the bond schedule, default set, fiscal financing cost, and all quantitative policy comparisons depend on the correct debt timing and signs. The intended standard formulation is readily recoverable, but the manuscript must state one consistent system and establish that the numerical implementation used it. Separately, Corollary 1 is too broad under only Proposition 1's assumptions: full employment does not imply that the wage floor binds, and with general CES parameters the unconstrained optimal public spending can depend positively rather than negatively on tradable consumption. The corollary requires an additional binding-wage or parameter condition, or should be weakened.",
+      "best_case_contribution": "The strongest credible contribution is a model combining downward nominal wage rigidity, incomplete unemployment insurance, long-term sovereign debt, and endogenous default to show that sovereign risk can reverse the textbook optimal fiscal response to recessions. Low-debt governments use spending to stabilize employment, whereas governments in an intermediate high-risk region optimally contract spending because debt-financed stimulus sharply worsens bond prices. The same framework produces a novel policy distinction between potentially counterproductive contemporaneous austerity and beneficial commitments to moderate future spending restraint.",
+      "minimum_viable_revision": "Correct and reconcile equations (7), (14), (19), and (20), and replace the bond-pricing fixed point with one in which next-period default is evaluated at inherited debt b'. Explicitly provide the resource constraints in repayment and autarky, state the timing of default and borrowing, and document whether the reported computations used the corrected equations. If the code followed any printed sign or timing error, rerun all quantitative results. Finally, either prove Corollary 1 under explicit additional conditions or narrow it to the region where the wage floor binds.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 8.5,
+      "barrier_category": "REVISION",
+      "severity_rationale": "The inconsistencies occur in the resource constraint and bond-pricing fixed point that define the central quantitative equilibrium, so the reported fiscal-policy and default results cannot be verified from the manuscript as written. The damage is serious but not a blocker because the intended timing and accounting can be repaired within the existing model; if the numerical code already uses the correct system, most results may survive after equations and proofs are corrected.",
+      "novelty_claims": [
+        {
+          "claim_type": "theoretical",
+          "description": "Integrates sovereign default risk into a Keynesian fiscal-stabilization model and shows that endogenous spreads can reverse optimal fiscal policy from strongly countercyclical to procyclical despite large fiscal multipliers.",
+          "significance": "HIGH",
+          "confidence": 8.8,
+          "supporting_evidence": "The manuscript distinguishes New Keynesian stabilization models without sovereign risk from canonical sovereign-default models without nominal-rigidity stabilization gains. Its central quantitative comparison changes corr(GDP,gN) from -0.81 with risk-free debt to 0.72 with defaultable debt in Table 4, and Section 5.3 derives debt-dependent policy responses."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Documents a cross-country association between sovereign default risk and the procyclicality of government spending.",
+          "significance": "LOW",
+          "confidence": 8.5,
+          "supporting_evidence": "Section 2 uses public WDI and Standard & Poor's data with descriptive cross-country regressions. Table 2 reports fiscal procyclicality higher by 0.46 for high-risk countries and 0.30 for medium-risk countries in the uncontrolled specification, with similar patterns under controls. The authors explicitly characterize the evidence as descriptive rather than causal."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Distinguishes current austerity, which can precipitate default, from fiscal forward guidance promising moderate future spending cuts, which can lower current spreads and facilitate current stimulus.",
+          "significance": "MEDIUM",
+          "confidence": 8.3,
+          "supporting_evidence": "Proposition 2 establishes that restricting current spending weakly lowers the repayment value, while Section 6.2 and Table 5 show that promised future cuts can reduce current spreads and unemployment. The implication is a genuine new use of the model's sovereign-spread mechanism, though it relies on an imposed commitment arrangement."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The argument is clearly organized around the austerity-versus-stimulus trade-off and gives useful intuition for debt-dependent fiscal policy. The analytical decomposition connects nominal rigidity, inequality, fiscal multipliers, and sovereign spreads effectively. It does not reach HIGH because key formal equations contradict one another, which materially obstructs the reader's ability to map the intuition into a well-defined equilibrium.",
+        "supporting_evidence": "Sections 4.1–4.3 progress from first-order conditions (21)–(23) to a perturbation exercise, while Sections 5.2–5.3 connect the mechanism to quantitative policy functions and impulse responses. However, equations (14), (19), and the Markov bond-price condition encode inconsistent resource accounting and timing.",
+        "confidence": 9.0
+      },
+      "layman_translation": "The paper's main idea is compelling: a government in recession may want to spend more to preserve jobs, but if investors fear default, borrowing for that stimulus can become prohibitively expensive. The difficulty is that the written model sometimes treats debt repayment as money entering the country rather than leaving it, reverses when debt-market access applies, and prices default using the wrong debt state. Because these equations generate the numerical results, the authors must correct them and verify that the calculations used the intended accounting.",
+      "confidence_score": 9.6,
+      "source_evidence": "Equation (7) defines ζ=1 as access to debt markets. Equation (14) nevertheless writes cT_t = yT_t + (1-ζ_t)[q_t i_t-δb_t]. Equation (8) treats δb_t as a government outflow, while the resource constraint in repayment problem (19) writes +δb. Definition 2 prices bonds using default policy χ-hat(yT', b-hat(yT,b')) rather than default at inherited debt b'. The autarky problem (20) contains cT in utility but does not state cT=yT. Proposition 1 assumes only α=1 and unrestricted lump-sum taxation, while Corollary 1 claims strict countercyclicality without adding a binding-wage or preference restriction.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Econometrician": {
+      "structural_strength": "The empirical section is unusually explicit about its limited ambition: Section 2.2 states that the evidence is “descriptive and not aimed at being causal.” The cross-country association is presented transparently using raw grouped comparisons, regression estimates, alternative income controls, institutional controls, and alternative measures of sovereign distress.",
+      "domain_audit": "The design supports a descriptive cross-country association, not a causal effect of sovereign risk on fiscal cyclicality. The estimand in equation (1) is the difference in countries’ estimated government-spending/output correlations across categories defined by the lowest sovereign rating observed during 1990–2016. Table 2 shows economically large conditional associations: relative to low-risk countries, estimated fiscal procyclicality is 0.46 higher for high-risk countries and 0.30 higher for medium-risk countries without controls, with similar coefficients in several controlled specifications. However, the wording that these differences are “not driven by” income or other macroeconomic and institutional factors is stronger than the design establishes. Including a limited set of cross-sectional controls can show that the association remains after conditioning on those observables, but it cannot rule out omitted factors, reverse direction, common crises, or endogenous rating changes. In particular, the minimum-ever rating is an ex post, full-sample measure that may respond to the same recessions and fiscal contractions used to estimate cyclicality. The paper largely recognizes this limitation later, so the appropriate correction is claim calibration rather than a new causal design.",
+      "best_case_contribution": "The strongest credible empirical claim is that, among countries with available sovereign ratings, countries that experienced worse sovereign credit standing during 1990–2016 also exhibited substantially more procyclical government consumption over that period, and this conditional association is not absorbed by the particular income, institutional, openness, resource, fiscal-rule, and volatility controls examined. The model then supplies a coherent theoretical mechanism capable of generating that pattern, without claiming that the cross-country regressions identify the mechanism causally.",
+      "minimum_viable_revision": "Replace statements that the relationship is “not driven by” observed controls with the narrower statement that it “remains economically large after conditioning on” those controls. Consistently describe minimum-ever ratings, default occurrence, and default counts as ex post measures of sovereign distress or vulnerability rather than predetermined measures of risk. Add one sentence near equation (1) clarifying that neither temporal ordering nor causal direction is identified and that the regressions do not empirically distinguish the model’s mechanism from omitted institutional or macroeconomic channels. The paper should also clarify whether reported standard errors are heteroskedasticity-robust and acknowledge that the dependent variable is an estimated country-level correlation based on relatively short time series.",
+      "primary_issue_class": "rephrasal",
+      "severity_score": 3.5,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The underlying calculations appear appropriate for the paper’s expressly descriptive objective, and the large raw and conditional associations remain informative. The concern affects interpretation of a supporting empirical statement rather than invalidating the regression estimates or the central theoretical contribution. Because the manuscript itself explicitly disclaims causal identification, narrowing “not driven by” to “not explained by the included controls” is a verdict-neutral claim-calibration correction rather than a substantive identification flaw.",
+      "novelty_claims": [
+        {
+          "claim_type": "empirical",
+          "description": "Documents a cross-country association between sovereign distress and the cyclicality of government spending using sovereign ratings and default histories for roughly 100 countries.",
+          "significance": "LOW",
+          "confidence": 8.5,
+          "supporting_evidence": "The empirical exercise uses standard country-level correlations and cross-sectional OLS with WDI government-consumption data and Standard & Poor’s ratings. The data are not presented as scarce or proprietary, and Section 2.2 explicitly states that the evidence is descriptive rather than causal. The pattern is useful motivation, but it is a bounded descriptive contribution rather than new identification or measurement of first-order novelty."
+        },
+        {
+          "claim_type": "theoretical",
+          "description": "Integrates nominal wage rigidity, unemployment risk, and endogenous sovereign default to show that borrowing costs can reverse optimal fiscal policy from strongly countercyclical to strongly procyclical despite large Keynesian stabilization gains.",
+          "significance": "HIGH",
+          "confidence": 9.0,
+          "supporting_evidence": "The manuscript contrasts a calibrated risk-free economy, where corr(GDP, government spending) is -0.81, with a defaultable-debt economy, where it is 0.72 in Table 4. Equation (21) decomposes the optimal spending condition into Samuelson, stimulus, and austerity components, while equation (23) links financing costs to the endogenous bond-price response. The related-literature discussion explains that prior New Keynesian stabilization models omit sovereign risk and canonical default models generally omit the Keynesian stabilization motive."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Shows that imposed current austerity may precipitate default, while commitments to moderate future spending cuts can reduce current spreads and permit greater current stimulus—a policy the paper calls fiscal forward guidance.",
+          "significance": "MEDIUM",
+          "confidence": 8.5,
+          "supporting_evidence": "Proposition 2 establishes that restricting current spending weakly worsens repayment incentives and that sufficiently severe cuts can induce default where repayment otherwise occurs. Section 6.2 and Table 5 show positive model-based welfare gains from promised future cuts, with larger gains when cuts are state contingent. These are novel and relevant policy implications, but they are conditional on the calibrated model and its commitment assumptions rather than empirically identified policy effects."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper has a clear argumentative architecture: it begins with a descriptive empirical pattern, builds a model containing both the Keynesian stabilization force and the sovereign-financing force, analytically decomposes the trade-off, and then uses quantitative exercises to explain state dependence and policy implications. The exposition provides useful economic intuition, although the empirical evidence cannot independently validate the proposed mechanism.",
+        "supporting_evidence": "Equation (21) labels and separates the Samuelson, stimulus, and austerity terms; Figure 3 traces how spending affects unemployment, borrowing, and spreads; Figure 5 directly compares fiscal multipliers with marginal borrowing costs; and Figure 6 illustrates why identical shocks produce stimulus under low debt but austerity under high debt. This sequencing makes the model’s mechanism accessible and connects it to the empirical motivation.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The data show that countries which experienced worse sovereign credit ratings also tended to cut or restrain government spending in bad times. That is a strong correlation, but it does not prove that sovereign risk caused the spending behavior: fiscal contractions and weak institutions could also worsen ratings, and common crises could affect both. The paper acknowledges this and mainly uses the pattern to motivate a model. Its wording should therefore say the relationship survives the controls examined, not that those controls prove what drives it.",
+      "confidence_score": 9.0,
+      "source_evidence": "The abstract says, “We document that procyclicality is more pervasive in countries with higher sovereign risk,” which is appropriately associational. Section 2.2 defines equation (1) as a cross-country regression of an estimated fiscal-cyclicality correlation on sovereign-risk categories and controls. Table 2 reports high-risk coefficients from 0.43 to 0.56 and medium-risk coefficients from 0.26 to 0.31 across specifications. The manuscript then states that the evidence is “descriptive and not aimed at being causal,” directly limiting the identifying claim. The overstatement appears in claims that differences are “not driven by” income or other factors; the regressions establish persistence after conditioning, not exclusion of those or other causal channels. Sovereign risk is measured by the lowest rating received anywhere in the same 1990–2016 period used to estimate fiscal cyclicality, so temporal precedence is not established.",
+      "verdict": "ACCEPT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Policymaker": {
+      "structural_strength": "The paper cleanly separates contemporaneous austerity from promised future consolidation and shows why they can have opposite effects on default incentives. Proposition 2 formalizes the risk that an imposed current spending cut can precipitate default, while Section 6.2 traces how a credible future cut may lower current spreads and permit stimulus. This is a concrete and policy-relevant distinction rather than a generic austerity-versus-stimulus discussion.",
+      "domain_audit": "The model supports a conditional policy result, but the abstract and conclusion present fiscal forward guidance too readily as an implementable policy implication. The favorable experiment assumes that next-period spending cuts are credibly enforceable, potentially state contingent, while current policy remains flexible; lump-sum transfers remain at their optimal levels; and the economy returns to the Markov equilibrium after one year. The manuscript does not identify the government or third-party legal authority that can bind future appropriations, explain how the commitment survives elections or budget amendments, or model enforcement, renegotiation, accounting substitution, implementation lags, or the financial assistance usually accompanying IMF-style conditionality. This is especially important because the baseline government is explicitly unable to commit to debt repayment. The statement that approved budgets are difficult to change does not establish commitment to aggregate real spending, much less to the state-contingent rule studied. Accordingly, the defensible conclusion is that credible, narrowly defined one-period future spending commitments can improve welfare within this calibrated environment—not that fiscal forward guidance is generally available or desirable as an operational austerity program.",
+      "best_case_contribution": "The strongest credible contribution is a theoretical and quantitative demonstration that endogenous sovereign spreads can reverse the textbook Keynesian prescription: although fiscal multipliers are large in recessions, a debt-financed stimulus may become undesirable when it sharply raises default exposure. The framework further establishes a novel conditional result: immediate externally imposed austerity can worsen repayment incentives, whereas a credible promise of moderate future consolidation can reduce current borrowing costs and create room for current stimulus.",
+      "minimum_viable_revision": "Narrow the abstract, introduction, and conclusion so that fiscal forward guidance is explicitly described as a conditional model result requiring credible and enforceable one-period commitment, rather than an operational recommendation for actual IMF or national-budget programs. Section 6 should list the institutional assumptions needed for implementation, distinguish annual appropriations from commitment to realized aggregate spending, and explain that the experiment omits financial assistance, enforcement, renegotiation, political turnover, and expenditure substitution. A compact within-framework sensitivity exercise with imperfect compliance or a probability of reversal would materially strengthen the policy interpretation, but careful claim narrowing is the minimum necessary repair.",
+      "primary_issue_class": "substantial_rephrasal",
+      "severity_score": 6.0,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The underlying theoretical and quantitative results remain coherent, so this is not a defect in the model calculations. However, fiscal forward guidance is a headline contribution in the abstract and conclusion, and readers could mistake a highly conditional commitment experiment for a broadly feasible policy prescription. Narrowing the claim materially changes the policy contribution from an implementable recommendation to a conditional mechanism. That warrants substantial rephrasing and a resubmission, but not a blocker or rejection.",
+      "novelty_claims": [
+        {
+          "claim_type": "theoretical",
+          "description": "Integrates nominal rigidity and Keynesian stabilization benefits with endogenous sovereign default risk, showing that sovereign spreads can reverse optimal fiscal policy from strongly countercyclical to strongly procyclical.",
+          "significance": "HIGH",
+          "confidence": 8.5,
+          "supporting_evidence": "The manuscript contrasts New Keynesian stabilization models without sovereign risk with canonical default models lacking the traditional aggregate-demand stabilization motive. Equations (21) through (23) isolate the stimulus-versus-financing tradeoff, and Table 4 reports a correlation of government spending with GDP of -0.81 under risk-free debt versus 0.72 under defaultable debt."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Shows that immediate imposed austerity can precipitate sovereign default, while credible future spending restraint can lower current spreads and facilitate current fiscal expansion.",
+          "significance": "MEDIUM",
+          "confidence": 8.0,
+          "supporting_evidence": "Proposition 2 establishes that restricting current spending weakly worsens repayment incentives. Section 6.2 and Table 5 compare current cuts with promised state-contingent and non-state-contingent future cuts. The result is a genuine new policy mechanism, but its institutional applicability is bounded by the assumed commitment structure."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Documents a cross-country association between sovereign default risk and the procyclicality of government spending.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "Section 2 uses public WDI and Standard & Poor's data with standard cross-sectional regressions. Table 2 reports that medium- and high-risk countries have substantially more procyclical spending after included controls, while the manuscript explicitly states that the evidence is descriptive and not causal. This is useful motivating evidence but involves neither scarce data nor causal identification."
+        }
+      ],
+      "insight_assessment": {
+        "level": "HIGH",
+        "description": "The argument is unusually effective at organizing the austerity-versus-stimulus debate around a precise state-dependent tradeoff. It moves clearly from descriptive evidence to an analytical decomposition, calibrated policy functions, debt dependence, and contrasting austerity experiments.",
+        "supporting_evidence": "Equation (21) decomposes optimal spending into Samuelson, stimulus, and austerity components; equation (23) links the financing cost to the endogenous bond-price response; Figures 4 through 6 then connect that logic to policy cyclicality and fiscal space. Section 6 builds directly on the mechanism by distinguishing current from future spending restrictions.",
+        "confidence": 8.5
+      },
+      "layman_translation": "The paper convincingly explains why a heavily indebted government may rationally cut spending in a recession even when spending would otherwise create jobs: borrowing to finance stimulus can raise the perceived risk of default and make credit much more expensive. It also shows, within the model, that forcing immediate cuts can make default more attractive, while a believable promise of moderate future cuts can lower today's interest rate and permit current stimulus. The caveat is that the paper assumes such a future promise can be enforced; it does not show that real governments, parliaments, courts, or international institutions can reliably create that commitment.",
+      "confidence_score": 8.4,
+      "source_evidence": "The abstract states that a well-designed \"fiscal forward guidance\" can reduce excess procyclicality, and the conclusion says programs combining current stimulus with future austerity \"can be desirable during recessions.\" Section 6 motivates the experiments as austerity programs \"imposed by a third party.\" The current-cut experiment assumes the intervention lasts one period. The forward-guidance experiment constrains next-period spending, keeps lump-sum transfers at optimal levels, and returns the economy to the Markov equilibrium in period t+2. The manuscript acknowledges that both forward-guidance programs \"require commitment to execute the spending cut\" but argues that this assumption \"does not seem very strong\" because approved budgets are difficult to change. By contrast, Section 3.6 defines a government choosing policies sequentially and without commitment, while Section 6 does not provide an institutional enforcement or renegotiation mechanism. Table 5 reports positive welfare gains of 0.075 percent and 0.088 percent for the two promised-cut designs, but these gains are therefore conditional on the imposed commitment technology.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Theorist": {
+        "referee_acknowledgment": "The peer reviews correctly recognize the paper's strong theoretical contribution, the descriptive rather than causal status of its empirical evidence, and the conditional nature of its fiscal-forward-guidance result. However, the Econometrician's ACCEPT verdict overlooks serious internal inconsistencies in the formal equilibrium system.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The ACCEPT verdict is not warranted merely because the empirical exercise is appropriately descriptive. The paper's central contribution is theoretical, and its defining equilibrium equations contain contradictory debt-flow signs and market-access timing. These inconsistencies directly affect the default set, bond-price schedule, fiscal financing cost, and quantitative comparison between risk-free and defaultable debt. They are therefore a repairable substantive flaw rather than a minor expositional issue.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.5,
+            "barrier_category": "REVISION",
+            "confidence": 9.5,
+            "evidence": "Equation (7) defines ζ=1 as access to financial markets, while equation (14) reportedly activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, but the repayment resource constraint in equation (19) reportedly enters +δb as a resource inflow. The bond-pricing fixed point evaluates next-period default after substituting a next-period borrowing policy rather than at inherited debt b', and the autarky problem omits the condition cT=yT. Since equations (21)-(23), Table 4, and the policy experiments rely on this equilibrium, empirical soundness alone cannot support acceptance."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the cross-country regressions are explicitly descriptive and that their main empirical defect is localized claim calibration. Statements that controls show the association is 'not driven by' income or institutions should be narrowed to persistence after conditioning, and minimum-ever ratings should be described as ex post distress measures.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that fiscal forward guidance is only a conditional model result under credible enforcement of future spending restrictions. The paper should not present that commitment technology as readily implementable when its baseline government cannot commit to debt repayment and no enforcement or renegotiation mechanism is modeled.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Econometrician",
+            "question": "Given that the paper's headline contribution is the quantitative sovereign-default model, how can an ACCEPT verdict survive the contradictory resource constraints and bond-pricing timing without confirmation that the computations used a corrected equilibrium system?"
+          }
+        ],
+        "final_argument_state": "The empirical evidence remains a useful but low-novelty descriptive association and requires only modest wording corrections. The fiscal-forward-guidance interpretation needs material narrowing to emphasize credible one-period commitment and omitted implementation frictions. The core theoretical idea is highly novel and the austerity-versus-stimulus decomposition provides medium-to-high economic insight. Nevertheless, execution is not presently sound because the printed equilibrium system contains serious, mutually consequential sign and timing inconsistencies. The authors must provide a single correct timing convention, reconcile the repayment and autarky resource constraints with the government budget, correct the bond-pricing state, and establish whether the quantitative code used that corrected formulation; results must be recomputed if it did not. Corollary 1 also requires additional binding-wage or parameter conditions. These repairs are feasible within the existing framework, so the appropriate verdict is RESUBMIT rather than reject.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph identifies a serious equation-level consistency problem in the theoretical system that supersedes my earlier econometrician-only ACCEPT assessment. The empirical exercise remains a transparent descriptive association, but the paper as a whole requires resubmission if the reported debt-flow signs, market-access indicator, and default-timing inconsistencies appear in the implemented model rather than only in exposition.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The empirical interpretation occasionally exceeds what the cross-sectional design establishes. Persistence of the sovereign-distress coefficient after adding selected controls does not show that the association is \"not driven by\" income, institutions, macroeconomic volatility, or other channels. Moreover, the minimum rating observed during the same 1990–2016 window is an ex post measure potentially responding to the recessions and fiscal contractions used to estimate each country's cyclicality.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "Equation (1) is a cross-sectional regression in which the dependent variable is an estimated country-level correlation and sovereign risk is classified using the lowest rating observed anywhere in the same sample period. Section 2.2 correctly says the exercise is descriptive and not causal, but surrounding text says the differences are \"not driven by\" included factors. Table 2 only establishes that the estimated association remains after conditioning on those observables."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The empirical section should clarify inference and generated-outcome uncertainty. Each dependent-variable observation is an estimated correlation based on at most 27 annual observations, potentially fewer with missing data, so precision can differ materially across countries. Conventional cross-sectional OLS standard errors need not account for this estimation error or the bounded, non-normal nature of sample correlations.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "MINOR",
+            "confidence": 8.5,
+            "evidence": "Table 2 reports standard errors without stating whether they are heteroskedasticity-robust. Section 2.1 constructs each country's fiscal-procyclicality measure from annual observations over 1990–2016, while sample inclusion permits substantial missingness. No weighting, Fisher transformation, bootstrap, or other treatment of heterogeneous first-stage precision is described."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "The policy-implementation concern is valid, but classifying it as a central substantial rephrasal appears too severe. The manuscript presents fiscal forward guidance as a model-contingent possibility rather than an empirically established, universally implementable recommendation, and it expressly acknowledges that the experiment requires commitment. The appropriate repair is a prominent implementation caveat and narrower institutional interpretation, not a wholesale reframing of the central theoretical contribution.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 7.5,
+            "evidence": "The abstract says a well-designed fiscal forward guidance \"can help\" rather than claiming it will generally work. The introduction describes it as a policy generated by the model's sovereign-spread mechanism. The Policymaker's own evidence notes that Section 6 acknowledges the commitment requirement. These qualifications preserve the conditional theoretical claim, although the analogy to actual IMF programs should be narrowed."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The absence of a modeled enforcement institution limits external policy applicability but does not invalidate the comparative exercise as a conditional commitment benchmark. Because the central theoretical result is that current and future spending restrictions affect default incentives differently, implementation details are best treated as a policy-scope qualification unless the manuscript claims that real governments can costlessly adopt the assumed commitment technology.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I concede the equation-level critique. If equation (14) activates debt flows under 1−ζ even though equation (7) defines ζ=1 as market access, equation (19) treats repayment δb as a resource inflow, and bond pricing evaluates default at debt chosen after the default decision, the printed equilibrium is not internally well defined. These objects determine spreads, default sets, and optimal fiscal financing, so the issue is substantive and requires reconciliation with the numerical implementation and potentially a rerun of the quantitative results.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I concede the narrower wording point that the fiscal-forward-guidance result should be explicitly conditioned on credible enforcement and should not be presented as direct evidence about implementable IMF conditionality or national budget rules.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Can the authors establish from code or computational documentation whether the quantitative exercises used the corrected repayment resource constraint, ζ=1 market-access convention, and default-at-inherited-debt timing, or whether any reported results were generated from the inconsistent printed system?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Are Table 2 standard errors heteroskedasticity-robust, and how sensitive are the results to accounting for heterogeneous precision in the estimated country correlations, for example through a Fisher transformation, minimum-observation restriction, or country-level time-series bootstrap?"
+          }
+        ],
+        "final_argument_state": "Execution assessment: the descriptive cross-country evidence is adequate for its explicitly noncausal purpose, subject to modest claim calibration and clarification of inference for estimated country-level correlations. However, the Theorist's precise debt-accounting and timing critique identifies a repairable substantive flaw in the core equilibrium system. The authors must state a single consistent timing convention, correct the resource constraints and bond-pricing recursion, and document whether the numerical implementation used that corrected system; quantitative results must be rerun if it did not. Novelty remains HIGH for the theoretical integration of Keynesian stabilization and endogenous sovereign default, while the empirical novelty is LOW and primarily motivational. Insight is MEDIUM to HIGH because the stimulus-versus-sovereign-financing decomposition and state dependence are economically illuminating, although confidence in the quantitative conclusions depends on resolving the formal inconsistencies. The fiscal-forward-guidance discussion needs a clear commitment and implementation caveat, but this is a bounded policy-interpretation issue rather than an independent substantive defect. Given the unresolved core-model inconsistency, RESUBMIT is warranted.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The review graph identifies two distinct categories of concern: a serious repairable inconsistency in the model's formal resource accounting and debt timing, and narrower claim-calibration problems concerning the descriptive regressions and the implementability of fiscal forward guidance. The formal inconsistency is decision-dominant.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "The ACCEPT verdict is not sustainable once the model-equilibrium inconsistencies identified by the Theorist are incorporated. The paper's principal contribution is quantitative and theoretical, so contradictory debt-service signs, market-access indicators, and default timing directly place the central policy results in doubt even if the empirical section itself only needs minor rephrasing.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 8.5,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Equation (7) defines ζ=1 as access to financial markets, while the review graph reports that equation (14) activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, whereas the reported repayment resource constraint in equation (19) adds δb as an inflow. The reported bond-pricing condition also evaluates next-period default using a subsequent borrowing choice rather than inherited debt. These objects determine spreads, default sets, and the fiscal-stimulus financing cost."
+          },
+          {
+            "target_persona": "Theorist",
+            "critique": "Downgrading the paper's insight to MEDIUM because of inconsistent formal equations partly conflates execution with intellectual insight. The accounting errors are a serious substantive flaw, but the conceptual decomposition between Keynesian stabilization, sovereign financing costs, and debt-dependent fiscal responses remains unusually clear and economically informative.",
+            "attack_type": "insight",
+            "issue_class": "insight_weakness",
+            "severity_score": 2.0,
+            "barrier_category": "MINOR",
+            "confidence": 7.5,
+            "evidence": "The introduction clearly develops the non-monotonic debt-dependent policy logic: stimulus at low debt, austerity at intermediate debt, and default with redirected spending at very high debt. It also distinguishes contemporaneous austerity from future spending commitments through their different effects on repayment incentives. These insights survive correction of accounting signs, although the quantitative findings must be verified."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The Theorist's substantive accounting and timing objection is valid, but it should not by itself reduce the insight assessment: execution must be repaired and quantitative claims revalidated, while the paper's organizing economic idea remains strong.",
+            "defense_type": "insight"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I concede that the contradictory debt-service signs, market-access timing, and bond-pricing state are substantive rather than typographical unless the authors demonstrate that the numerical implementation used a single corrected equilibrium system. Because spreads and default incentives drive the main policy result, this requires resubmission and potentially rerunning the quantitative analysis.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the cross-country exercise supports only a conditional descriptive association. Minimum-ever ratings are measured over the same sample period as fiscal cyclicality and cannot establish temporal ordering or exclude reverse causality and common shocks. Claims that controls show the pattern is 'not driven by' other factors should be narrowed to persistence after conditioning on the included observables.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Would confirmation that the computational code used the corrected resource constraints and inherited-debt default timing reduce the model defect to a manuscript-level revision, or do any analytical propositions themselves rely on the printed inconsistent formulation?"
+          },
+          {
+            "target_persona": "Econometrician",
+            "question": "Beyond clarifying robust standard errors and generated dependent-variable uncertainty, would weighting or correcting for the varying precision of country-level correlations materially alter the descriptive estimand?"
+          }
+        ],
+        "final_argument_state": "The paper has a high-novelty theoretical contribution and high policy insight: it organizes fiscal stabilization under sovereign risk around a sharp, state-dependent trade-off and distinguishes current austerity from credible future consolidation. However, execution is not presently sound because the defining equilibrium reportedly contains contradictory debt-flow signs, inconsistent market-access timing, and an incorrect state in the bond-pricing/default condition. These defects are serious but repairable within the existing framework if the authors provide a consistent equilibrium, establish the timing formally, disclose which system was coded, and rerun all affected quantitative results when necessary. The descriptive empirical evidence additionally requires minor associational wording, while the fiscal-forward-guidance headline requires substantial narrowing to credible and enforceable one-period commitments rather than an implementation-ready recommendation. The appropriate verdict is RESUBMIT rather than ACCEPT or REJECT.",
+        "verdict": "RESUBMIT"
+      }
+    },
+    {
+      "Theorist": {
+        "referee_acknowledgment": "The review graph appropriately converges on RESUBMIT and correctly distinguishes the paper's strong conceptual contribution from the validity of its printed equilibrium system. However, several cited equation-level defects concern equations beyond the supplied manuscript excerpt and therefore cannot be independently verified here. The excerpt itself contains a separate, explicit fiscal-accounting inconsistency that is sufficient to require clarification and validation of the numerical implementation.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The government budget constraint in financial autarky contains an internally inconsistent sign for lump-sum transfers. Because transfers are government outlays, the displayed autarky constraint should subtract them, as does the preceding market-access constraint. Using the printed positive sign would make larger transfers expand resources available for public spending and would distort the default payoff.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.5,
+            "barrier_category": "REVISION",
+            "confidence": 9.5,
+            "evidence": "Section 3.3 defines T_t as lump-sum transfers provided by the government. The market-access budget following equation (11) is P_t^N g_t^N = τ(income) + q_t e_t i_t − δe_t b_t − T_t, but the immediately following autarky budget is printed as P_t^N g_t^N = τ(income) + T_t. This contradicts both the definition of T_t and equation (9), under which transfers should reduce net tax revenue."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "The conclusion that the equilibrium contains the specific equation (14), equation (19), and bond-pricing defects is not independently supported by the supplied manuscript excerpt. Those equations are absent from the provided text, so the review should distinguish verified inconsistencies from defects reported elsewhere in the review graph.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 10.0,
+            "evidence": "The supplied manuscript ends during Section 3.4, immediately after introducing the foreign lenders' no-arbitrage condition. It includes equations only through (11); equations (14), (19), and the complete bond-pricing recursion are not shown."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "The policy assessment should not treat the alleged equation (14), equation (19), and bond-pricing errors as independently established from this record. The broader demand for a consistent timing convention and code verification remains prudent, especially given the transfer-sign error visible in the excerpt, but the unavailable equations cannot serve as direct manuscript evidence in this audit.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "REPHRASAL",
+            "confidence": 10.0,
+            "evidence": "The provided manuscript truncates before the equilibrium conditions cited by the Policymaker. The visible text does establish a different accounting inconsistency: transfers enter with −T_t under market access but +T_t in autarky."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "Even though the later equation defects cannot be verified from the supplied excerpt, the Econometrician's ultimate RESUBMIT recommendation remains supported by the explicit transfer-sign inconsistency in the autarky budget. Because the autarky payoff determines default incentives and spreads, the authors must reconcile the displayed equations with the code and rerun results if the code used the erroneous sign.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The paper's fiscal-forward-guidance exercise remains informative as a conditional commitment benchmark. Its absence of an enforcement institution limits implementation claims but does not invalidate the theoretical comparison between contemporaneous spending cuts and credible restrictions on future spending.",
+            "defense_type": "rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that Table 2 establishes only a descriptive conditional association. Minimum-ever ratings are measured over the same period used to estimate fiscal cyclicality, and persistence after controls neither establishes temporal ordering nor shows that income and institutions do not drive the relationship through unobserved channels. The generated and heterogeneously precise country-level correlation outcome also warrants an inference clarification.",
+            "concession_type": "rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the organizing economic insight is high despite the execution problem. The distinction among stimulus at low debt, austerity at intermediate debt, and default at high debt, together with the contrast between current austerity and credible future consolidation, is conceptually strong. The forward-guidance claim should nevertheless be conditioned explicitly on credible enforcement.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Is the positive T_t term in the autarky budget a typographical error, and did the numerical implementation instead subtract transfers consistently in both repayment and autarky states?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Please provide a complete timing table linking inherited debt, the default decision, market access, new issuance, debt service, bond pricing, and next-period debt, and verify every displayed equilibrium condition against the code."
+          },
+          {
+            "target_persona": "paper",
+            "question": "What institution enforces the future spending restriction in the fiscal-forward-guidance experiment, and how should the result be interpreted when a government that cannot commit to debt repayment can also renegotiate or abandon that restriction?"
+          }
+        ],
+        "final_argument_state": "The theoretical integration of Keynesian stabilization and endogenous sovereign default has HIGH novelty relative to the literature characterized in the manuscript, and its debt-dependent austerity-versus-stimulus logic provides HIGH economic insight. The empirical evidence is useful but mainly motivational and descriptive; claims that sovereign risk differences are not driven by included covariates should be narrowed to persistence after conditioning, and inference for estimated country-level correlations should be clarified. The fiscal-forward-guidance result should be presented as conditional on a credible enforcement technology rather than as implementation-ready advice. Execution is not presently sound because the supplied excerpt explicitly gives lump-sum transfers opposite signs in the market-access and autarky budget constraints, directly affecting the default payoff and therefore sovereign spreads. The additional market-access, debt-service, and bond-pricing inconsistencies reported in the review graph cannot be verified because the cited equations are absent from the supplied excerpt, but they reinforce the need for a complete timing and code audit. The visible accounting defect is repairable within the existing framework, provided the authors establish which formulation was implemented and recompute all affected quantitative results. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph has converged on the correct decision-relevant distinction: the empirical exercise is descriptive and needs mainly local calibration, whereas the reported debt-accounting and timing inconsistencies would compromise the central quantitative model if they appear in the equilibrium actually solved. Because the supplied manuscript excerpt ends before the equations cited by the Theorist, I cannot independently verify those exact later equations here; my execution judgment therefore relies on the detailed equation-level report in the review graph and remains conditional on author verification against the numerical code.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The claim that fiscal-cyclicality differences are \"not driven by\" income, institutions, or other controls is stronger than the cross-sectional evidence permits. The regressions only show that the association persists after conditioning on the included, imperfectly measured observables; they do not establish causal exclusion of those channels.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "Equation (1) is explicitly a descriptive cross-country regression. Table 2 adds selected country-level controls but provides no source of exogenous variation, causal mediation analysis, or design that rules out omitted variables, reverse causality, or measurement error."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The construction and inference for fiscal procyclicality require clarification and robustness analysis. The dependent variable in Table 2 is itself an estimated correlation based on at most 27 annual observations per country, with the inclusion rule allowing substantial missingness. Its sampling precision therefore varies across countries, while ordinary cross-sectional standard errors do not automatically incorporate generated-outcome uncertainty or the bounded and potentially non-normal distribution of sample correlations.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.0,
+            "barrier_category": "MINOR",
+            "confidence": 8.5,
+            "evidence": "Section 2.1 permits countries missing up to half of the 1990–2016 observations and constructs country-specific correlations after HP filtering. Table 2 does not identify the reported standard-error estimator or discuss heterogeneous first-stage precision. Fisher-transformed correlations, a country-level time-series bootstrap, a common balanced sample, and precision-sensitive robustness checks would clarify reliability."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The minimum rating observed anywhere in 1990–2016 should be described as an ex post distress classification rather than a predetermined measure of sovereign risk. Because it is measured over the same window used to estimate fiscal cyclicality, recessions and fiscal contractions contributing to the dependent variable may also contribute to the rating classification.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 9.0,
+            "evidence": "Section 2.1 defines sovereign risk using the lowest rating received during the complete period of analysis, while fiscal procyclicality is estimated from government spending and GDP over that same period. Section 2.2 acknowledges that the evidence is descriptive, but some surrounding language treats risk as a predictor with stronger temporal implications."
+          },
+          {
+            "target_persona": "Policymaker",
+            "critique": "Treating the fiscal-forward-guidance qualification as a central substantial rephrasing overstates the problem unless the omitted sections make an implementation-ready claim. The theoretical comparison can remain informative as a conditional commitment benchmark. What is required is a prominent limitation that credible enforcement, renegotiation, political feasibility, and institutional implementation are outside the model.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 7.5,
+            "evidence": "The abstract says that a well-designed policy \"can help,\" and the introduction describes the result through the model's effect on sovereign spreads. These are conditional theoretical formulations. The analogy to IMF programs and actual fiscal rules should be narrowed, but the distinction between contemporaneous austerity and future spending commitments remains a valid model result."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The absence of an enforcement institution limits external applicability but does not invalidate fiscal forward guidance as a conditional comparative exercise. The manuscript's conceptual contribution is the distinction between current spending cuts, which can reduce repayment utility and precipitate default, and credible future cuts, which can lower expected debt accumulation and current spreads. Implementation claims should be narrowed without discarding that theoretical result.",
+            "defense_type": "rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I concede that the reported market-access, debt-service, and bond-pricing inconsistencies are substantive if they occur in the equilibrium system used for the analysis. Those equations determine default sets, borrowing prices, fiscal financing costs, and hence the comparison between countercyclical stimulus and austerity. The authors must reconcile the printed system with a single timing convention, disclose the equations implemented numerically, and rerun all affected results if the code did not use the corrected formulation.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the fiscal-forward-guidance discussion must explicitly condition its benefits on credible enforcement and avoid presenting the model experiment as direct evidence that IMF conditionality or national fiscal rules can implement the commitment without renegotiation or political-economy frictions.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Can the cited equations (14), (19), and the bond-pricing recursion be reproduced verbatim from the complete manuscript, since the supplied excerpt ends before those expressions? This would distinguish verified internal contradictions from transcription or equation-numbering errors."
+          },
+          {
+            "target_persona": "Theorist",
+            "question": "Is there evidence indicating whether the numerical code followed the inconsistent printed equations or a coherent alternative timing convention? Without that information, the need to rerun the quantitative results is essential but conditional."
+          }
+        ],
+        "final_argument_state": "Execution is not presently certifiable. The cross-country evidence is adequate as descriptive motivation, but claims that controls eliminate alternative explanations must be narrowed, minimum-ever ratings must be characterized as contemporaneous ex post distress measures, and inference for estimated country-level correlations should be clarified. More importantly, the review graph reports mutually consequential inconsistencies in market access, debt-service signs, and bond-pricing timing. If verified in the complete manuscript, these are serious but repairable substantive flaws in the core equilibrium, requiring a corrected timing convention, reconciliation with the numerical implementation, and potentially complete recomputation of the quantitative exercises. Theoretical novelty is HIGH because combining Keynesian stabilization gains with endogenous sovereign default produces a distinctive fiscal-policy trade-off; empirical novelty is LOW because the cross-country association is primarily motivational. Insight is MEDIUM TO HIGH: the debt-dependent transition among stimulus, austerity, and default, and the distinction between current austerity and credible future consolidation, are economically informative even though quantitative confidence awaits model correction. Fiscal-forward-guidance claims need an explicit credible-enforcement caveat but not wholesale abandonment. Given the unresolved core-model issue, the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The graph converges appropriately on RESUBMIT, but two distinctions require emphasis. First, the reported debt-accounting and timing contradictions would be substantive if verified, yet the supplied manuscript excerpt ends before the equations cited by the reviewers, so their exact diagnosis cannot be independently confirmed from the available text. Second, the fiscal-forward-guidance discussion raises a broader policy-scope issue than a routine caveat because the manuscript invokes austerity programs and IMF-style constraints without modeling the institution that makes future spending promises credible.",
+        "attacks": [
+          {
+            "target_persona": "Econometrician",
+            "critique": "Treating uncertainty in the estimated country-level correlations as a minor clarification understates its potential effect on the empirical result. The dependent variable is a noisy, bounded statistic estimated from short and unequal annual samples, while Table 2 reports conventional-looking cross-sectional standard errors without accounting for first-stage estimation. Appropriate inference could alter the reported significance of the sovereign-risk coefficients, especially in the 59-country controlled specification.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 5.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.0,
+            "evidence": "Section 2 constructs each observation of fiscal procyclicality as an HP-filtered sample correlation over at most 1990–2016 and permits countries with substantial missing data. Table 2 does not identify robust standard errors, Fisher-transform the correlations, weight by their precision, or bootstrap the complete two-stage procedure."
+          },
+          {
+            "target_persona": "Econometrician",
+            "critique": "A prominent implementation caveat alone is insufficient for the fiscal-forward-guidance claim. The manuscript moves from a hypothetical constraint on future spending to statements about the desirability of austerity programs, including programs enforced by the IMF, even though the baseline government cannot commit to debt repayment and no enforcement, renegotiation, political durability, or state-verification mechanism for the spending rule is specified. The theoretical experiment remains useful, but its policy interpretation must be materially reframed as a conditional commitment benchmark.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.5,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "The introduction states that the model is used to study the desirability of austerity programs and explicitly invokes IMF enforcement. It then attributes lower current borrowing costs to a promise of lower future spending. Sections 3.3–3.4 model noncommitment to sovereign repayment and competitive lenders but provide no institution capable of enforcing that distinct future fiscal promise."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The economic importance assigned to the alleged sign and timing contradictions is correct conditional on those equations being quoted accurately, but confidence of 9.5 is not supportable from the supplied manuscript content. The excerpt ends during Section 3.4 before equations (14), (19), and (21)–(23). Equations (6)–(9) that are visible consistently define market access as ζ=1, treat δb as debt service, and remove borrowing and repayment in autarky. The later equations and numerical code must therefore be produced before the precise inconsistency can be established rather than merely reported.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The forward-guidance experiment is not invalid simply because implementation is omitted. It can stand as a conditional comparative exercise showing how an enforceable future spending restriction changes default incentives and current spreads. The required repair concerns the breadth of the policy interpretation, not the underlying logical possibility of the commitment benchmark.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "If the omitted equilibrium equations do activate debt flows under 1−ζ, add repayment δb as a resource inflow, or price bonds using debt chosen after the relevant default decision, those are serious, repairable substantive flaws. They would affect the default set, spreads, fiscal financing costs, and all quantitative policy comparisons, requiring reconciliation with the code and rerunning affected results.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The cross-country evidence is descriptive rather than causal. Minimum-ever ratings are measured over the same period used to estimate fiscal cyclicality, so temporal ordering, reverse causality, and common shocks remain unresolved. The phrase \"not driven by\" should be replaced by the narrower statement that the association persists after conditioning on the included observables.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Can the exact text of equations (14), (19), and the bond-pricing recursion be supplied so that the alleged sign and timing contradictions can be checked against the definitions in equations (6)–(9)?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Did the numerical implementation use the printed equilibrium equations or a separately corrected system, and can the authors provide accounting identities and timing tests demonstrating consistency of repayment, default, market access, and bond pricing?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "Do the Table 2 results survive heteroskedasticity-robust inference, Fisher transformation of country correlations, precision weighting, and a bootstrap that re-estimates each country's cyclical correlation?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What institution credibly enforces future spending restrictions despite sovereign noncommitment, and what happens if the restriction can be renegotiated when the adverse state actually occurs?"
+          }
+        ],
+        "final_argument_state": "Execution cannot presently be certified. The visible model equations are internally coherent through the government budget constraints, but the review graph reports serious contradictions in omitted equilibrium equations; these must be verified, corrected, reconciled with the numerical code, and followed by recomputation where necessary. The empirical association is useful and explicitly descriptive, but inference should account for noisy estimated country-level correlations, while causal-sounding claims must be narrowed. The fiscal-forward-guidance result should be reframed as a benchmark conditional on credible external enforcement rather than an implementation-ready conclusion about IMF programs or national fiscal rules. The theoretical novelty is HIGH because the manuscript integrates Keynesian stabilization gains with endogenous sovereign default and state-dependent fiscal policy. The economic and policy insight is also HIGH: the low-, intermediate-, and high-debt regimes and the distinction between contemporaneous cuts and future commitments provide a clear organizing framework. These strengths do not overcome the unresolved execution and policy-interpretation issues, all of which appear repairable within the current framework. RESUBMIT is therefore appropriate.",
+        "verdict": "RESUBMIT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper makes a high-novelty theoretical contribution by integrating Keynesian stabilization gains, nominal wage rigidity, household unemployment risk, long-term sovereign debt, and endogenous default. Its central insight is economically valuable: optimal fiscal policy can move from stimulus at low debt to austerity at intermediate debt and default at very high debt because sovereign financing costs can overturn otherwise large stabilization benefits. The distinction between contemporaneous austerity and credible future consolidation is also promising. The empirical evidence provides useful descriptive motivation, though not causal validation of the mechanism.\n\nThe decision is driven by execution rather than lack of novelty or insight. The record identifies serious accounting and timing inconsistencies in the equilibrium system. The visible manuscript excerpt itself assigns transfers opposite signs in the market-access and autarky government budgets, despite defining transfers as government outlays. The audits additionally report inconsistent use of the market-access indicator, treatment of debt service as an inflow in a repayment resource constraint, evaluation of default at a subsequent borrowing choice rather than inherited debt, and omission of the autarky tradable-resource condition. Some of those later equations are absent from the supplied excerpt and therefore cannot be independently checked here, but the critiques were conceded in the review process and remain unresolved. Because these objects determine default sets, bond prices, spreads, and fiscal financing costs, the quantitative conclusions cannot presently be certified. The authors must provide one complete and internally consistent equilibrium system, reconcile it with the code, and recompute all affected results if the implementation used any erroneous formulation. Corollary 1 also appears broader than its stated assumptions support and requires either additional binding-wage or preference restrictions or a narrower conclusion.\n\nA separate substantial-rephrasal issue concerns fiscal forward guidance. The model establishes a conditional commitment benchmark, not the general feasibility or desirability of IMF-style or national austerity programs. The favorable experiment assumes credible enforcement of a future spending restriction even though the baseline sovereign lacks commitment, and it does not model enforcement, renegotiation, political turnover, expenditure substitution, or associated financial assistance. The headline policy claims must therefore be materially reframed as conditional on a specified commitment technology. This does not erase the underlying insight that current and future spending restrictions affect default incentives differently.\n\nThe empirical critiques are mostly narrower. Equation (1) supports a descriptive conditional association between ex post sovereign-distress classifications and estimated fiscal-cyclicality correlations. It does not establish that sovereign risk causes procyclicality or that income, institutions, and other factors do not drive the relationship. Statements such as “not driven by” should become “remains economically large after conditioning on the included controls.” Minimum-ever ratings should be described as ex post distress or vulnerability measures because they are observed over the same period used to estimate fiscal cyclicality. The paper should also identify the standard-error estimator and address the fact that its dependent variable is a noisy, bounded correlation estimated from short and unequal country time series. Robustness using Fisher-transformed correlations, stricter observation requirements or a balanced sample, and inference that reflects first-stage estimation uncertainty is warranted.\n\nDefended critiques should be preserved in proportion. The empirical section explicitly disclaims causal identification, so its problem is principally interpretation and inference rather than failure of a claimed causal design. Likewise, fiscal forward guidance remains a valid theoretical comparison under credible commitment; the required change is to its policy scope, not abandonment of the mechanism. No extension beyond the existing framework is required for a viable revision, although an imperfect-compliance or reversal exercise would strengthen the policy analysis. Overall novelty is high for the theoretical integration, lower for the descriptive evidence, and medium for the policy application. Insight is medium to high: the organizing mechanism is strong, but confidence in its quantitative implications depends on repairing and validating the equilibrium.",
+    "official_letter_to_the_author": "Dear Authors,\n\nThe paper develops a strong and potentially important account of why sovereign risk can reverse the conventional Keynesian prescription during recessions. Its most compelling contribution is the unified treatment of stabilization benefits and endogenous sovereign financing costs. The resulting debt-dependent policy logic—stimulus at low debt, austerity at intermediate debt, and default at sufficiently high debt—is clear and economically informative. The comparison between immediate austerity and credible future consolidation is also a promising policy application.\n\nAfter integrating the reports, however, I am requesting a major revision. The principal concern is the internal consistency and verifiability of the equilibrium system underlying the quantitative results. In the supplied text, transfers enter with a negative sign in the market-access government budget but a positive sign in autarky, although they are defined as government outlays. The reviews also identify apparent inconsistencies in the market-access indicator, the sign of debt service in the repayment resource constraint, the debt state used in the bond-pricing/default recursion, and the statement of the autarky resource constraint. Some cited later equations were not included in the supplied excerpt, so the revision should make the complete system available and remove any ambiguity rather than treating these concerns as isolated typographical corrections.\n\nPlease provide a single timing convention covering inherited debt, default, market access, debt service, new issuance, bond pricing, and next-period debt. Rewrite all household, government, aggregate-resource, repayment, and autarky constraints consistently with that timing. Default next period should be evaluated at the debt inherited when that decision is made, unless a different timing is explicitly derived and justified. Then document exactly which equations were implemented computationally. If the code used any inconsistent sign, indicator, or timing convention, all affected calibration, policy functions, tables, figures, welfare calculations, and policy experiments must be recomputed. Even if the code was correct, the paper should provide enough equations and computational documentation for readers to verify that fact. Please also revisit Corollary 1: either prove it under explicit additional conditions, such as a binding wage constraint or appropriate preference restrictions, or narrow the statement.\n\nThe fiscal-forward-guidance discussion also requires material reframing. The model shows that a credible restriction on future spending can lower current spreads and facilitate current stimulus. It does not establish that such a commitment is generally available to governments or readily enforceable through IMF programs or ordinary budget procedures. Please state prominently in the abstract, introduction, policy section, and conclusion that this is a conditional commitment benchmark. Specify the assumed enforcement technology and distinguish it from the sovereign's inability to commit to repayment. The discussion should acknowledge that enforcement, renegotiation, political turnover, expenditure substitution, implementation lags, and accompanying financial assistance are outside the model. An imperfect-compliance exercise would be useful but is not essential if the claims are narrowed adequately.\n\nThe empirical section remains useful as descriptive motivation, but its interpretation and inference should be tightened. Replace claims that the association is “not driven by” income, institutions, or other controls with the accurate statement that it remains after conditioning on the included observables. Describe minimum-ever ratings and default histories as ex post measures of distress or vulnerability, not predetermined risk measures, and state clearly that temporal ordering, causal direction, and the model's mechanism are not identified. Please identify the standard-error estimator and address heterogeneous precision in the country-level correlations, which are estimated from short and unequal time series. At minimum, report heteroskedasticity-robust inference and robustness using Fisher-transformed correlations and stricter sample-balance or observation-count criteria. A bootstrap that re-estimates the country correlations, or another precision-sensitive procedure, would provide a more persuasive assessment of uncertainty.\n\nThese revisions are substantial because the formal system generates the paper's central quantitative findings and because the policy interpretation is a headline contribution. They nevertheless appear feasible within the existing framework. A successful revision would preserve the paper's core idea while making the equilibrium auditable, the numerical results credible, the empirical evidence appropriately bounded, and the policy conclusions commensurate with the modeled commitment technology.\n\nSincerely,\nSenior Coordinating Editor",
+    "minimum_viable_revision_path": "1. Supply the complete manuscript and a consolidated timing table for inherited debt, default, market access, repayment, issuance, bond pricing, and next-period debt.\n2. Correct and reconcile every relevant budget and resource constraint, including the transfer sign in autarky, the market-access indicator, debt-service signs, the autarky condition for tradable consumption, and the state used to evaluate default in bond pricing.\n3. State one complete equilibrium definition and verify every displayed equation against the computational implementation. Provide a concise code-to-equation audit or equivalent documentation.\n4. If the implementation used any erroneous sign or timing, rerun all affected quantitative results, including calibration targets, policy functions, default sets, spreads, Table 4, Table 5, welfare comparisons, and policy experiments. If the code was already correct, demonstrate this explicitly.\n5. Amend Corollary 1 by adding sufficient assumptions and proof or by narrowing its claim to the region and parameter conditions under which strict countercyclicality follows.\n6. Reframe fiscal forward guidance throughout as a conditional benchmark requiring credible, enforceable future spending commitment. Remove or sharply qualify implementation-ready claims about IMF programs and actual fiscal rules; list the omitted enforcement and renegotiation frictions.\n7. Recast the empirical findings consistently as descriptive associations. Replace “not driven by” language, characterize minimum-ever ratings as ex post distress measures, and state that temporal ordering and causal direction are unidentified.\n8. Clarify the Table 2 standard errors and add credible robustness for generated, heterogeneously precise country correlations: heteroskedasticity-robust inference, Fisher transformation, stricter observation or balanced-sample checks, and preferably a bootstrap or precision-sensitive analysis.\n9. Revise the abstract, introduction, results discussion, and conclusion so that all headline claims match the corrected model, revised computations, descriptive empirical design, and conditional commitment experiment.",
+    "constructive_summary": "The paper's core contribution is worth developing: it offers a high-novelty framework in which sovereign financing costs can overturn Keynesian stabilization incentives and generate sharply debt-dependent fiscal policy. Its conceptual organization and distinction between current austerity and credible future consolidation are promising. The present obstacle is not the idea but the reliability of the formal and quantitative execution. A complete accounting-and-timing audit, transparent reconciliation with the code, and recomputation where necessary are indispensable. The policy claims must also be narrowed to the commitment technology actually imposed, while the empirical evidence should remain explicitly descriptive and receive clearer inference checks. No wholesale redesign is required, but these are genuine major revisions rather than cosmetic corrections."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Theorist': 0.5, 'Econometrician': 0.3, 'Policymaker': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Theorist→Econometrician: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → CONCEDED. Explicit concession recorded.\n  • Econometrician→paper: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 3.0/10; category MINOR; type rephrasal; issue rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Policymaker: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 7.5/10 → CONCEDED. Explicit concession recorded.\n  • Policymaker→Econometrician: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Policymaker→Theorist: severity 2.0/10; category MINOR; type insight; issue insight_weakness; confidence 7.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n### Debate Round 2\n  • Theorist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→Econometrician: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 10.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Theorist→Policymaker: severity 3.0/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 10.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Econometrician→paper: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 3.0/10; category MINOR; type rephrasal; issue rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Policymaker: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 7.5/10 → CONCEDED. Explicit concession recorded.\n  • Policymaker→Econometrician: severity 5.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n  • Policymaker→Econometrician: severity 5.5/10; category REVISION; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → UNANSWERED. No matching defense was recorded; treated as unresolved rather than conceded.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Theorist→Econometrician (CONCEDED): +0.043 to Theorist, -0.043 to Econometrician\n  Theorist→paper (UNANSWERED): +0.006 to Theorist (paper critique, discounted)\n  Theorist→Econometrician (UNANSWERED): +0.000 to Theorist, -0.000 to Econometrician (unanswered, discounted)\n  Theorist→Policymaker (UNANSWERED): +0.000 to Theorist, -0.000 to Policymaker (unanswered, discounted)\n  Econometrician→paper (UNANSWERED): +0.001 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.001 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.000 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.000 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.000 to Econometrician (paper critique, discounted)\n  Econometrician→Policymaker (CONCEDED): +0.001 to Econometrician, -0.001 to Policymaker\n  Econometrician→Policymaker (CONCEDED): +0.001 to Econometrician, -0.001 to Policymaker\n  Policymaker→Econometrician (UNANSWERED): +0.010 to Policymaker, -0.003 to Econometrician (unanswered, discounted)\n  Policymaker→Econometrician (UNANSWERED): +0.003 to Policymaker, -0.001 to Econometrician (unanswered, discounted)\n  Policymaker→Econometrician (UNANSWERED): +0.002 to Policymaker, -0.000 to Econometrician (unanswered, discounted)\n  Policymaker→Theorist (UNANSWERED): +0.000 to Policymaker, -0.000 to Theorist (unanswered, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Theorist: 0.500 +0.050 → 0.550\n  Econometrician: 0.300 -0.043 → 0.257\n  Policymaker: 0.200 +0.014 → 0.214\nNormalized final weights: {'Theorist': 0.5382350671251126, 'Econometrician': 0.2518018427970385, 'Policymaker': 0.20996309007784886}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Theorist: verdict=RESUBMIT, novelty=HIGH, insight=MEDIUM, issue=substantive_flaw, severity=8.5/10, barrier=REVISION\n  Econometrician: verdict=RESUBMIT, novelty=HIGH, insight=MEDIUM, issue=rephrasal, severity=3.5/10, barrier=REPHRASAL\n  Policymaker: verdict=RESUBMIT, novelty=HIGH, insight=HIGH, issue=substantial_rephrasal, severity=6.0/10, barrier=REPHRASAL\nRaw execution score: 0.750\nExecution penalty from surviving substantive flaws: 0.069\nExecution score: 0.681\nNovelty consensus: HIGH (1.000 before debate penalty; 1.000 after)\nNovelty claim counts (all personas): HIGH=3, MEDIUM=3, LOW=3\nInsight consensus: MEDIUM (0.700 before debate penalty; 0.700 after)\nVerdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 4\nSubstantial-rephrasal (central overclaim) revisions: 2\nRephrasal-only revisions: 10\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.409 + 0.220 + 0.126 = 0.755\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nRephrasal issues are reported categorically and do not reduce insight or execution scores by themselves.\nSubstantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.",
+  "score_components": {
+    "final_score": 0.7548125303613249,
+    "execution_score": 0.6814515,
+    "novelty_score": 1.0,
+    "insight_score": 0.6996757242295826,
+    "raw_execution_score": 0.75,
+    "novelty_consensus": "HIGH",
+    "novelty_counts": {
+      "HIGH": 3,
+      "MEDIUM": 3,
+      "LOW": 3
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Theorist": "RESUBMIT",
+      "Econometrician": "RESUBMIT",
+      "Policymaker": "RESUBMIT"
+    },
+    "adjusted_weights": {
+      "Theorist": 0.5382350671251126,
+      "Econometrician": 0.2518018427970385,
+      "Policymaker": 0.20996309007784886
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Econometrician",
+        "attack_id": "Theorist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while equation (14) reportedly activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, but the repayment resource constraint in equation (19) reportedly enters +δb as a resource inflow. The bond-pricing fixed point evaluates next-period default after substituting a next-period borrowing policy rather than at inherited debt b', and the autarky problem omits the condition cT=yT. Since equations (21)-(23), Table 4, and the policy experiments rely on this equilibrium, empirical soundness alone cannot support acceptance.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Section 3.3 defines T_t as lump-sum transfers provided by the government. The market-access budget following equation (11) is P_t^N g_t^N = τ(income) + q_t e_t i_t − δe_t b_t − T_t, but the immediately following autarky budget is printed as P_t^N g_t^N = τ(income) + T_t. This contradicts both the definition of T_t and equation (9), under which transfers should reduce net tax revenue.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while the review graph reports that equation (14) activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, whereas the reported repayment resource constraint in equation (19) adds δb as an inflow. The reported bond-pricing condition also evaluates next-period default using a subsequent borrowing choice rather than inherited debt. These objects determine spreads, default sets, and the fiscal-stimulus financing cost.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "attack_id": "Initial audit by Theorist",
+        "attacker": "Theorist",
+        "target": "paper",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.6,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Equation (7) defines ζ=1 as access to debt markets. Equation (14) nevertheless writes cT_t = yT_t + (1-ζ_t)[q_t i_t-δb_t]. Equation (8) treats δb_t as a government outflow, while the resource constraint in repayment problem (19) writes +δb. Definition 2 prices bonds using default policy χ-hat(yT', b-hat(yT,b')) rather than default at inherited debt b'. The autarky problem (20) contains cT in utility but does not state cT=yT. Proposition 1 assumes only α=1 and unrestricted lump-sum taxation, while Corollary 1 claims strict countercyclicality without adding a binding-wage or preference restriction."
+      }
+    ],
+    "substantial_rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "The introduction states that the model is used to study the desirability of austerity programs and explicitly invokes IMF enforcement. It then attributes lower current borrowing costs to a promise of lower future spending. Sections 3.3–3.4 model noncommitment to sovereign repayment and competitive lenders but provide no institution capable of enforcing that distinct future fiscal promise.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 6.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.4,
+        "outcome": "CONCEDED",
+        "issue_class": "substantial_rephrasal",
+        "attack_type": "substantial_rephrasal",
+        "evidence": "The abstract states that a well-designed \"fiscal forward guidance\" can reduce excess procyclicality, and the conclusion says programs combining current stimulus with future austerity \"can be desirable during recessions.\" Section 6 motivates the experiments as austerity programs \"imposed by a third party.\" The current-cut experiment assumes the intervention lasts one period. The forward-guidance experiment constrains next-period spending, keeps lump-sum transfers at optimal levels, and returns the economy to the Markov equilibrium in period t+2. The manuscript acknowledges that both forward-guidance programs \"require commitment to execute the spending cut\" but argues that this assumption \"does not seem very strong\" because approved budgets are difficult to change. By contrast, Section 3.6 defines a government choosing policies sequentially and without commitment, while Section 6 does not provide an institutional enforcement or renegotiation mechanism. Table 5 reports positive welfare gains of 0.075 percent and 0.088 percent for the two promised-cut designs, but these gains are therefore conditional on the imposed commitment technology."
+      }
+    ],
+    "rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "Econometrician",
+        "attack_id": "Theorist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 10.0,
+        "evidence": "The supplied manuscript ends during Section 3.4, immediately after introducing the foreign lenders' no-arbitrage condition. It includes equations only through (11); equations (14), (19), and the complete bond-pricing recursion are not shown.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "Policymaker",
+        "attack_id": "Theorist→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 10.0,
+        "evidence": "The provided manuscript truncates before the equilibrium conditions cited by the Policymaker. The visible text does establish a different accounting inconsistency: transfers enter with −T_t under market access but +T_t in autarky.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.5,
+        "evidence": "Table 2 reports standard errors without stating whether they are heteroskedasticity-robust. Section 2.1 constructs each country's fiscal-procyclicality measure from annual observations over 1990–2016, while sample inclusion permits substantial missingness. No weighting, Fisher transformation, bootstrap, or other treatment of heterogeneous first-stage precision is described.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.5,
+        "evidence": "Section 2.1 permits countries missing up to half of the 1990–2016 observations and constructs country-specific correlations after HP filtering. Table 2 does not identify the reported standard-error estimator or discuss heterogeneous first-stage precision. Fisher-transformed correlations, a country-level time-series bootstrap, a common balanced sample, and precision-sensitive robustness checks would clarify reliability.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Equation (1) is a cross-sectional regression in which the dependent variable is an estimated country-level correlation and sovereign risk is classified using the lowest rating observed anywhere in the same sample period. Section 2.2 correctly says the exercise is descriptive and not causal, but surrounding text says the differences are \"not driven by\" included factors. Table 2 only establishes that the estimated association remains after conditioning on those observables.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Equation (1) is explicitly a descriptive cross-country regression. Table 2 adds selected country-level controls but provides no source of exogenous variation, causal mediation analysis, or design that rules out omitted variables, reverse causality, or measurement error.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Section 2.1 defines sovereign risk using the lowest rating received during the complete period of analysis, while fiscal procyclicality is estimated from government spending and GDP over that same period. Section 2.2 acknowledges that the evidence is descriptive, but some surrounding language treats risk as a predictor with stronger temporal implications.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "The abstract says a well-designed fiscal forward guidance \"can help\" rather than claiming it will generally work. The introduction describes it as a policy generated by the model's sovereign-spread mechanism. The Policymaker's own evidence notes that Section 6 acknowledges the commitment requirement. These qualifications preserve the conditional theoretical claim, although the analogy to actual IMF programs should be narrowed.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "The abstract says that a well-designed policy \"can help,\" and the introduction describes the result through the model's effect on sovereign spreads. These are conditional theoretical formulations. The analogy to IMF programs and actual fiscal rules should be narrowed, but the distinction between contemporaneous austerity and future spending commitments remains a valid model result.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "outcome": "CONCEDED",
+        "issue_class": "rephrasal",
+        "attack_type": "rephrasal",
+        "evidence": "The abstract says, “We document that procyclicality is more pervasive in countries with higher sovereign risk,” which is appropriately associational. Section 2.2 defines equation (1) as a cross-country regression of an estimated fiscal-cyclicality correlation on sovereign-risk categories and controls. Table 2 reports high-risk coefficients from 0.43 to 0.56 and medium-risk coefficients from 0.26 to 0.31 across specifications. The manuscript then states that the evidence is “descriptive and not aimed at being causal,” directly limiting the identifying claim. The overstatement appears in claims that differences are “not driven by” income or other factors; the regressions establish persistence after conditioning, not exclusion of those or other causal channels. Sovereign risk is measured by the lowest rating received anywhere in the same 1990–2016 period used to estimate fiscal cyclicality, so temporal precedence is not established."
+      }
+    ],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Econometrician",
+        "attack_id": "Theorist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while equation (14) reportedly activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, but the repayment resource constraint in equation (19) reportedly enters +δb as a resource inflow. The bond-pricing fixed point evaluates next-period default after substituting a next-period borrowing policy rather than at inherited debt b', and the autarky problem omits the condition cT=yT. Since equations (21)-(23), Table 4, and the policy experiments rely on this equilibrium, empirical soundness alone cannot support acceptance.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Section 3.3 defines T_t as lump-sum transfers provided by the government. The market-access budget following equation (11) is P_t^N g_t^N = τ(income) + q_t e_t i_t − δe_t b_t − T_t, but the immediately following autarky budget is printed as P_t^N g_t^N = τ(income) + T_t. This contradicts both the definition of T_t and equation (9), under which transfers should reduce net tax revenue.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while the review graph reports that equation (14) activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, whereas the reported repayment resource constraint in equation (19) adds δb as an inflow. The reported bond-pricing condition also evaluates next-period default using a subsequent borrowing choice rather than inherited debt. These objects determine spreads, default sets, and the fiscal-stimulus financing cost.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "attack_id": "Initial audit by Theorist",
+        "attacker": "Theorist",
+        "target": "paper",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.6,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "Equation (7) defines ζ=1 as access to debt markets. Equation (14) nevertheless writes cT_t = yT_t + (1-ζ_t)[q_t i_t-δb_t]. Equation (8) treats δb_t as a government outflow, while the resource constraint in repayment problem (19) writes +δb. Definition 2 prices bonds using default policy χ-hat(yT', b-hat(yT,b')) rather than default at inherited debt b'. The autarky problem (20) contains cT in utility but does not state cT=yT. Proposition 1 assumes only α=1 and unrestricted lump-sum taxation, while Corollary 1 claims strict countercyclicality without adding a binding-wage or preference restriction."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Econometrician",
+        "attack_id": "Theorist→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while equation (14) reportedly activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, but the repayment resource constraint in equation (19) reportedly enters +δb as a resource inflow. The bond-pricing fixed point evaluates next-period default after substituting a next-period borrowing policy rather than at inherited debt b', and the autarky problem omits the condition cT=yT. Since equations (21)-(23), Table 4, and the policy experiments rely on this equilibrium, empirical soundness alone cannot support acceptance.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Equation (1) is a cross-sectional regression in which the dependent variable is an estimated country-level correlation and sovereign risk is classified using the lowest rating observed anywhere in the same sample period. Section 2.2 correctly says the exercise is descriptive and not causal, but surrounding text says the differences are \"not driven by\" included factors. Table 2 only establishes that the estimated association remains after conditioning on those observables.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.5,
+        "evidence": "Table 2 reports standard errors without stating whether they are heteroskedasticity-robust. Section 2.1 constructs each country's fiscal-procyclicality measure from annual observations over 1990–2016, while sample inclusion permits substantial missingness. No weighting, Fisher transformation, bootstrap, or other treatment of heterogeneous first-stage precision is described.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "The abstract says a well-designed fiscal forward guidance \"can help\" rather than claiming it will generally work. The introduction describes it as a policy generated by the model's sovereign-spread mechanism. The Policymaker's own evidence notes that Section 6 acknowledges the commitment requirement. These qualifications preserve the conditional theoretical claim, although the analogy to actual IMF programs should be narrowed.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 8.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (7) defines ζ=1 as access to financial markets, while the review graph reports that equation (14) activates debt flows with 1-ζ. Equation (8) treats δb as debt service paid by the government, whereas the reported repayment resource constraint in equation (19) adds δb as an inflow. The reported bond-pricing condition also evaluates next-period default using a subsequent borrowing choice rather than inherited debt. These objects determine spreads, default sets, and the fiscal-stimulus financing cost.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "Theorist",
+        "attack_id": "Policymaker→Theorist",
+        "attack_type": "insight",
+        "issue_class": "insight_weakness",
+        "severity_score": 2.0,
+        "barrier_category": "MINOR",
+        "confidence": 7.5,
+        "evidence": "The introduction clearly develops the non-monotonic debt-dependent policy logic: stimulus at low debt, austerity at intermediate debt, and default with redirected spending at very high debt. It also distinguishes contemporaneous austerity from future spending commitments through their different effects on repayment incentives. These insights survive correction of accounting signs, although the quantitative findings must be verified.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.5,
+        "barrier_category": "REVISION",
+        "confidence": 9.5,
+        "evidence": "Section 3.3 defines T_t as lump-sum transfers provided by the government. The market-access budget following equation (11) is P_t^N g_t^N = τ(income) + q_t e_t i_t − δe_t b_t − T_t, but the immediately following autarky budget is printed as P_t^N g_t^N = τ(income) + T_t. This contradicts both the definition of T_t and equation (9), under which transfers should reduce net tax revenue.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "Econometrician",
+        "attack_id": "Theorist→Econometrician",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 10.0,
+        "evidence": "The supplied manuscript ends during Section 3.4, immediately after introducing the foreign lenders' no-arbitrage condition. It includes equations only through (11); equations (14), (19), and the complete bond-pricing recursion are not shown.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "Policymaker",
+        "attack_id": "Theorist→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "REPHRASAL",
+        "confidence": 10.0,
+        "evidence": "The provided manuscript truncates before the equilibrium conditions cited by the Policymaker. The visible text does establish a different accounting inconsistency: transfers enter with −T_t under market access but +T_t in autarky.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Equation (1) is explicitly a descriptive cross-country regression. Table 2 adds selected country-level controls but provides no source of exogenous variation, causal mediation analysis, or design that rules out omitted variables, reverse causality, or measurement error.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.0,
+        "barrier_category": "MINOR",
+        "confidence": 8.5,
+        "evidence": "Section 2.1 permits countries missing up to half of the 1990–2016 observations and constructs country-specific correlations after HP filtering. Table 2 does not identify the reported standard-error estimator or discuss heterogeneous first-stage precision. Fisher-transformed correlations, a country-level time-series bootstrap, a common balanced sample, and precision-sensitive robustness checks would clarify reliability.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 9.0,
+        "evidence": "Section 2.1 defines sovereign risk using the lowest rating received during the complete period of analysis, while fiscal procyclicality is estimated from government spending and GDP over that same period. Section 2.2 acknowledges that the evidence is descriptive, but some surrounding language treats risk as a predictor with stronger temporal implications.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 7.5,
+        "evidence": "The abstract says that a well-designed policy \"can help,\" and the introduction describes the result through the model's effect on sovereign spreads. These are conditional theoretical formulations. The analogy to IMF programs and actual fiscal rules should be narrowed, but the distinction between contemporaneous austerity and future spending commitments remains a valid model result.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 5.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.0,
+        "evidence": "Section 2 constructs each observation of fiscal procyclicality as an HP-filtered sample correlation over at most 1990–2016 and permits countries with substantial missing data. Table 2 does not identify robust standard errors, Fisher-transform the correlations, weight by their precision, or bootstrap the complete two-stage procedure.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "Econometrician",
+        "attack_id": "Policymaker→Econometrician",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "The introduction states that the model is used to study the desirability of austerity programs and explicitly invokes IMF enforcement. It then attributes lower current borrowing costs to a promise of lower future spending. Sections 3.3–3.4 model noncommitment to sovereign repayment and competitive lenders but provide no institution capable of enforcing that distinct future fiscal promise.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "No matching defense was recorded; treated as unresolved rather than conceded."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 3,
+    "fail_count": 0
+  }
+}

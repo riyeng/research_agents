@@ -1,0 +1,8 @@
+{
+  "main_run_id": "gpt56_sol_full",
+  "repair_substitutions": {
+    "feds-2020-006": "repair_feds-2020-006",
+    "ifdp-2019-1247": "repair_ifdp-2019-1247"
+  },
+  "built_at": "2026-07-30T01:41:59.767719+00:00"
+}

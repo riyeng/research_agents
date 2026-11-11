@@ -1,0 +1,115 @@
+{
+  "doc_id": "feds-2020-001",
+  "paper_path": "PROJECT_ROOT/benchmark/papers/feds-2020-001.txt",
+  "ground_truth_tier": "Tier3",
+  "year": "2020",
+  "series": "feds",
+  "final_score": 0.6452087000000001,
+  "decision": "MAJOR REVISION REQUIRED",
+  "duration_seconds": 312.6233539581299,
+  "char_count": 119006,
+  "word_count": 17694,
+  "token_usage": {
+    "duration_seconds": 312.618138,
+    "total_calls": 11,
+    "total_tokens": {
+      "input": 237142,
+      "output": 22821,
+      "thinking": 8487,
+      "total": 259963,
+      "cache_read": 0,
+      "cache_creation": 237109
+    },
+    "by_role": {
+      "Editor-Selection": {
+        "input": 7251,
+        "output": 176,
+        "thinking": 0,
+        "total": 7427,
+        "cache_read": 0,
+        "cache_creation": 7248,
+        "calls": 1
+      },
+      "Data_Scientist": {
+        "input": 37101,
+        "output": 3797,
+        "thinking": 2180,
+        "total": 40898,
+        "cache_read": 0,
+        "cache_creation": 37098,
+        "calls": 1
+      },
+      "Econometrician": {
+        "input": 37103,
+        "output": 3663,
+        "thinking": 2262,
+        "total": 40766,
+        "cache_read": 0,
+        "cache_creation": 37100,
+        "calls": 1
+      },
+      "Historian": {
+        "input": 37083,
+        "output": 2003,
+        "thinking": 442,
+        "total": 39086,
+        "cache_read": 0,
+        "cache_creation": 37080,
+        "calls": 1
+      },
+      "Debater-Data_Scientist": {
+        "input": 30384,
+        "output": 3762,
+        "thinking": 1067,
+        "total": 34146,
+        "cache_read": 0,
+        "cache_creation": 30378,
+        "calls": 2
+      },
+      "Debater-Econometrician": {
+        "input": 30382,
+        "output": 3936,
+        "thinking": 1338,
+        "total": 34318,
+        "cache_read": 0,
+        "cache_creation": 30376,
+        "calls": 2
+      },
+      "Debater-Historian": {
+        "input": 30380,
+        "output": 3523,
+        "thinking": 1198,
+        "total": 33903,
+        "cache_read": 0,
+        "cache_creation": 30374,
+        "calls": 2
+      },
+      "Editor-In-Chief": {
+        "input": 27458,
+        "output": 1961,
+        "thinking": 0,
+        "total": 29419,
+        "cache_read": 0,
+        "cache_creation": 27455,
+        "calls": 1
+      }
+    },
+    "by_model": {
+      "gpt-5.6-sol": {
+        "input": 237142,
+        "output": 22821,
+        "thinking": 8487,
+        "total": 259963,
+        "cache_read": 0,
+        "cache_creation": 237109,
+        "calls": 11
+      }
+    },
+    "cost_by_model": {
+      "gpt-5.6-sol": 2.16672625
+    },
+    "total_cost": 2.16672625
+  },
+  "timestamp": "2026-07-29T20:46:00.024128",
+  "engine": "exp-11-8"
+}

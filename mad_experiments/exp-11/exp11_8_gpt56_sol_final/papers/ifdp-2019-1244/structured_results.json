@@ -1,0 +1,1388 @@
+{
+  "metadata": {
+    "doc_id": "ifdp-2019-1244",
+    "paper_path": "PROJECT_ROOT/benchmark/papers/ifdp-2019-1244.pdf",
+    "ground_truth_tier": "Tier3",
+    "year": "2019",
+    "series": "ifdp",
+    "final_score": 0.6285828,
+    "decision": "MAJOR REVISION REQUIRED",
+    "duration_seconds": 446.1973419189453,
+    "char_count": 52203,
+    "word_count": 9134,
+    "token_usage": {
+      "duration_seconds": 446.069515,
+      "total_calls": 11,
+      "total_tokens": {
+        "input": 321787,
+        "output": 21594,
+        "thinking": 5650,
+        "total": 343381,
+        "cache_read": 0,
+        "cache_creation": 321754
+      },
+      "by_role": {
+        "Editor-Selection": {
+          "input": 13511,
+          "output": 171,
+          "thinking": 0,
+          "total": 13682,
+          "cache_read": 0,
+          "cache_creation": 13508,
+          "calls": 1
+        },
+        "Theorist": {
+          "input": 29530,
+          "output": 3490,
+          "thinking": 1605,
+          "total": 33020,
+          "cache_read": 0,
+          "cache_creation": 29527,
+          "calls": 1
+        },
+        "Econometrician": {
+          "input": 29556,
+          "output": 2545,
+          "thinking": 788,
+          "total": 32101,
+          "cache_read": 0,
+          "cache_creation": 29553,
+          "calls": 1
+        },
+        "Policymaker": {
+          "input": 29535,
+          "output": 2170,
+          "thinking": 475,
+          "total": 31705,
+          "cache_read": 0,
+          "cache_creation": 29532,
+          "calls": 1
+        },
+        "Debater-Theorist": {
+          "input": 51943,
+          "output": 4391,
+          "thinking": 1115,
+          "total": 56334,
+          "cache_read": 0,
+          "cache_creation": 51937,
+          "calls": 2
+        },
+        "Debater-Econometrician": {
+          "input": 51943,
+          "output": 3358,
+          "thinking": 818,
+          "total": 55301,
+          "cache_read": 0,
+          "cache_creation": 51937,
+          "calls": 2
+        },
+        "Debater-Policymaker": {
+          "input": 51943,
+          "output": 3527,
+          "thinking": 849,
+          "total": 55470,
+          "cache_read": 0,
+          "cache_creation": 51937,
+          "calls": 2
+        },
+        "Editor-In-Chief": {
+          "input": 63826,
+          "output": 1942,
+          "thinking": 0,
+          "total": 65768,
+          "cache_read": 0,
+          "cache_creation": 63823,
+          "calls": 1
+        }
+      },
+      "by_model": {
+        "gpt-5.6-sol": {
+          "input": 321787,
+          "output": 21594,
+          "thinking": 5650,
+          "total": 343381,
+          "cache_read": 0,
+          "cache_creation": 321754,
+          "calls": 11
+        }
+      },
+      "cost_by_model": {
+        "gpt-5.6-sol": 2.6589474999999996
+      },
+      "total_cost": 2.6589474999999996
+    },
+    "timestamp": "2026-07-29T15:30:05.974571",
+    "engine": "exp-11-8"
+  },
+  "independent_audits": {
+    "Theorist": {
+      "structural_strength": "The manuscript imposes a useful equilibrium discipline on its central exchange-rate mechanism. In particular, equation (3) connects the identity e_t = p_t + a_t + x_t to the expected cumulative neutral-rate differential, producing an interpretable decomposition into a PPP term, a business-cycle term, and a forward-looking r* term. This also makes clear why a common global r* shock can move policy rates without moving the bilateral exchange rate, whereas a country-specific component generally requires exchange-rate adjustment.",
+      "domain_audit": "The simple-model mechanism in Section III is internally plausible under its stated special assumptions, but the claimed main extension concerning cooperation in Section IV does not meet its proof burden. The manuscript says that the cooperative outcome requires policy rates to respond to foreign inflation and presents equation (16) as the implementing rule. Yet it does not state and solve the cooperative world-welfare problem, derive the associated first-order conditions, define every coefficient in equation (16), provide the corresponding foreign rule, or demonstrate that the displayed rule implements a welfare improvement over equations (14)-(15). The coefficient denoted varphi in equation (16) is not explained there and is potentially confounded with phi, previously used for labor-supply curvature. Consequently, the manuscript has not established the magnitude or even the precise sign and parameter dependence of the foreign-inflation response on which its communication and credibility discussion rests. Separately, the empirical correlation is not a direct test of equation (3): the theory says today's exchange rate capitalizes expected future r* differentials, while Figures 5-6 report that an estimated contemporaneous equilibrium error leads the dollar by approximately 12 quarters. Persistence could reconcile these observations, but that mapping is neither derived nor estimated. The core Section III decomposition can survive, but the cooperation result requires a complete derivation and the empirical result requires more limited interpretation.",
+      "best_case_contribution": "The strongest credible contribution is a tractable synthesis showing that bilateral exchange rates respond to the expected path of relative, rather than common, neutral rates; that correlated national policy movements can arise endogenously from a shared global component in r* without coordination or a currency war; and that international information sharing may improve estimates of unobserved neutral rates even when binding cooperative policy is unattractive. The richer model adds the useful general-equilibrium observation that each country's conditional neutral rate can depend on foreign productivity and business-cycle conditions even when national productivity shocks are statistically independent.",
+      "minimum_viable_revision": "Derive the cooperative planner problem and equation (16) explicitly: state world welfare, constraints, timing and commitment concept; define all coefficients, including varphi; provide both countries' rules; and show algebraically how the foreign-inflation coefficient depends on model parameters and differs from the Nash rules. Then either quantify the welfare comparison or limit the claim to the qualitative CGG-model implication actually demonstrated. Label the credibility argument as an institutional conjecture rather than a model result. Finally, describe the construction and sample for the HLW equilibrium error and dollar series, explain how the 12-quarter lag was selected, and present the 0.70 correlation only as a descriptive predictive pattern unless a formal mapping from equation (3) to that lead-lag statistic is supplied.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.2,
+      "barrier_category": "REVISION",
+      "severity_rationale": "This is a serious but repairable proof and interpretation gap. Section IV is called the paper's main contribution, and its policy conclusion relies on a cooperative rule that is not derived sufficiently to verify its coefficients or implementation. The defect therefore affects a central supporting mechanism rather than merely exposition. It is not a blocker because the required welfare problem and first-order conditions can be supplied within the existing two-country framework, while the sounder Section III decomposition remains available even if the cooperation claim is narrowed.",
+      "novelty_claims": [
+        {
+          "claim_type": "theoretical",
+          "description": "A structural decomposition of the nominal exchange rate into a PPP component, a relative business-cycle component, and the expected present value of future neutral real-rate differentials, together with the implication that common global r* shocks need not move bilateral exchange rates.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Equations (3) and (10) display the decomposition. The manuscript builds directly on Galí-Monacelli (2005), Clarida-Galí-Gertler (2002), and Clarida (2014), so this is a nontrivial closed-form synthesis and extension rather than a fundamentally new modeling framework."
+        },
+        {
+          "claim_type": "theoretical",
+          "description": "In the richer model, cross-country general-equilibrium spillovers make each country's neutral real rate depend on home and foreign productivity and output-gap dynamics even when productivity innovations are independent across countries.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "Equations (7)-(13) and the numerical example in equations (16)-(18) are offered to establish this result. The added cross-country dependence is a genuine ingredient, although it is developed within the pre-existing CGG framework and several derivation steps are compressed."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "A novel descriptive lead-lag pattern between the HLW four-economy VECM equilibrium error and the nominal trade-weighted dollar, with a reported correlation of 0.70 when the equilibrium error is lagged by 12 quarters.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "The abstract and the discussion surrounding Figures 5-6 report the 0.70 correlation. The exercise uses existing HLW estimates and a standard dollar index, supplies no causal identification or formal inference, and does not show that the lag was selected independently of the observed data."
+        },
+        {
+          "claim_type": "policy",
+          "description": "A distinction between beneficial international coordination through information sharing about unobserved r* and potentially costly binding cooperation that makes domestic policy respond to foreign inflation.",
+          "significance": "MEDIUM",
+          "confidence": 6.5,
+          "supporting_evidence": "Section IV explicitly distinguishes coordination from cooperation and links coordination to improved nowcasts of global inputs into r*. This is useful policy framing, but the cooperative rule and alleged credibility costs are not fully derived or quantified."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper offers clear economic intuition about relative versus global neutral-rate shocks and usefully distinguishes policy correlation, coordination, and cooperation. Its argument architecture is strongest in Section III. Insight is reduced by compressed algebra in Section IV, shifting definitions of the neutral rate, and movement from model implications to speculative credibility claims without clearly marking the change in evidentiary status.",
+        "supporting_evidence": "The numbered discussion following equation (4) clearly explains why correlated rate cuts need not be a currency war and why country-specific r* shocks affect the exchange rate. By contrast, equation (16) is presented without a complete derivation or definition of all notation, while the subsequent credibility discussion is qualitative rather than an implication of the stated welfare model.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper's clearest idea is that exchange rates should react to differences between countries' neutral interest rates, not to a worldwide movement shared by both countries. Thus, simultaneous rate cuts can reflect a common economic shock rather than policy coordination or a currency war. That mechanism is reasonably coherent in the simple model. The weaker part is the argument about formal international cooperation: the paper writes down a cooperative interest-rate rule but does not fully show where it comes from or define all its coefficients. It also reports an interesting dollar correlation that is descriptive, not a direct confirmation of the model.",
+      "confidence_score": 8.2,
+      "source_evidence": "The abstract states that the paper derives an exchange-rate decomposition and that global r* shocks require no exchange-rate adjustment. Equation (3) gives e_t = p_t + x_t minus the expected sum of home-foreign neutral-rate differentials; equation (10) supplies the two-country counterpart. The introduction identifies Section IV as the main contribution. Equations (14)-(15) give Nash Taylor-type rules, while equation (16) is presented as the cooperative rule but contains an unexplained varphi coefficient and is not preceded by a cooperative welfare maximization or first-order-condition derivation. Figures 5-6 and their accompanying text report that the VECM equilibrium error appears to lead the trade-weighted dollar by about 12 quarters and that the simple correlation is 0.70.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Econometrician": {
+      "structural_strength": "The manuscript appropriately treats r* as latent and time varying, and its empirical claim is framed primarily as a correlation rather than a causal effect. It also constructs the cross-country r* equilibrium error from the cointegrating-vector coefficients reported by Holston, Laubach, and Williams, which gives the plotted object an explicit economic interpretation rather than using an arbitrary spread.",
+      "domain_audit": "The theoretical analysis does not require causal identification, but the manuscript's stated empirical regularity is not established by the evidence presented. The only reported statistic is a correlation of 0.70 between the trade-weighted dollar and an apparently ex post selected 12-quarter lag of the HLW equilibrium error. The manuscript gives no sample dates, lag-selection rule, uncertainty estimate, null distribution, regression specification, or robustness to nearby lags, alternative dollar indices, alternative r* estimates, or sample endpoints. This matters especially because both inputs are highly persistent generated time-series objects: the r* series and cointegrating coefficients are estimated, while the manuscript itself argues that the nominal exchange rate possesses a unit root. Conventional correlation inference would therefore be inappropriate without attention to persistence, serial correlation, generated-regressor uncertainty, and lag search. Moreover, equation (3) relates today's exchange rate to the expected present value of future r* differentials, whereas Figures 5–6 relate the dollar to a lagged historical HLW VECM equilibrium error. The paper neither establishes that this equilibrium error measures expected future r* differentials nor explains why the model predicts a 12-quarter delayed dollar response. Thus the figure is, at present, an exploratory visual association rather than a test or validation of the model.",
+      "best_case_contribution": "The strongest defensible contribution is a model-based decomposition of the nominal exchange rate into a PPP component, a business-cycle component, and the expected present value of country-specific neutral-rate differentials, together with the insight that common global r* shocks can produce correlated monetary policies without requiring exchange-rate adjustment or formal cooperation. The richer model further shows that international general-equilibrium spillovers can induce common components in national r* rates even when national productivity shocks are independent. The empirical dollar-HLW pattern can potentially serve as suggestive supporting evidence, but not yet as an established regularity or model test.",
+      "minimum_viable_revision": "Either remove the dollar-HLW result from the abstract and describe Figures 5–6 explicitly as exploratory illustrations, or provide a reproducible time-series analysis. The latter should define the sample, series transformations, dollar convention, equilibrium-error construction, and lag-selection procedure; report the full cross-correlation or distributed-lag profile rather than only the preferred 12-quarter lag; use inference robust to persistence and serial correlation; propagate or bootstrap uncertainty from the estimated HLW r* series and cointegrating vector; and show stability across nearby lags, sample endpoints, and reasonable alternative dollar or r* measures. The paper must also explain how the lagged VECM error corresponds to the expected future r* differential in equations (3) and (10), or clearly state that the exercise is not a test of those equations.",
+      "primary_issue_class": "substantive_flaw",
+      "severity_score": 7.2,
+      "barrier_category": "REVISION",
+      "severity_rationale": "This is a substantive inference problem rather than a wording-only issue because the manuscript elevates the 0.70 correlation to a novel empirical regularity in the abstract, yet supplies no design capable of distinguishing a stable relationship from persistence, generated-variable uncertainty, or ex post lag selection. It also does not connect the empirical timing to the model's forward-looking estimand. The theoretical contribution can survive, and the empirical problem can be repaired or the claim can be removed within the existing framework, so this warrants revision rather than a blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "theoretical",
+          "description": "A structural exchange-rate decomposition into a PPP term, a business-cycle term, and the expected present value of future neutral real-rate differentials, with common global r* shocks dropping out of bilateral exchange-rate adjustment.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "The manuscript labels equation (3) a structural decomposition and states that the nominal exchange rate reflects the entire expected path of the country-specific neutral-rate component but not the global component. The result is derived within standard Galí-Monacelli and Clarida-Galí-Gertler frameworks, making it a meaningful but bounded extension rather than an entirely new modeling architecture."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "A novel empirical association between the trade-weighted dollar and the 12-quarter lag of the equilibrium error from the HLW four-economy r* system.",
+          "significance": "LOW",
+          "confidence": 9.0,
+          "supporting_evidence": "The abstract reports a correlation of 0.7, and Section III states that the equilibrium error 'appears to lead the trade weighted dollar by about 12 quarters.' The exercise uses existing HLW estimates and a standard dollar index, offers no causal identification, and provides only a selected sample correlation without formal inference. Its novelty is therefore a bounded descriptive pattern, conditional on validation."
+        },
+        {
+          "claim_type": "policy",
+          "description": "A distinction between potentially valuable international coordination through information sharing about latent r* and potentially costly binding cooperation requiring national policy rates to respond to foreign inflation.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "Section IV argues that pooling nowcasts of foreign productivity and business-cycle conditions may improve national r* estimates, while formal cooperative rules may damage communication and credibility because they react to foreign inflation. This combines established cooperative-policy results with a practical signal-extraction and credibility interpretation."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The paper provides useful economic intuition about why correlated policy-rate movements need not constitute cooperation or a currency war, and it clearly separates coordination through information sharing from binding policy cooperation. The architecture is generally coherent, moving from a tractable benchmark to a spillover model. The empirical section is much less well integrated: the lagged VECM error is not mapped to the model's forward-looking present-value object, which weakens the otherwise informative theory-to-evidence narrative.",
+        "supporting_evidence": "The numbered implications following equation (4) clearly explain the roles of global and country-specific r* shocks. Sections IV–V articulate the coordination-versus-cooperation distinction. By contrast, Figures 5–6 are introduced through a simple correlation and visual lead statement without an empirical specification connecting them to equations (3) or (10).",
+        "confidence": 8.0
+      },
+      "layman_translation": "The theory says currencies should respond to expected future differences in countries' neutral interest rates, but not to a neutral-rate movement shared equally worldwide. That is a useful result. The paper's dollar evidence, however, amounts to finding that one estimated interest-rate imbalance lines up with the dollar three years later. Because the three-year lag appears to have been chosen after inspecting the data, and because no statistical uncertainty or alternative lags are reported, the manuscript has not shown that this is a reliable relationship rather than a chance alignment between persistent estimated series.",
+      "confidence_score": 9.0,
+      "source_evidence": "The abstract states: 'We document a novel empirical regularity' and reports that 'the correlation between the dollar and the 12 quarter lag of the HLW equilibrium error is estimated to be 0.7.' Section III states: 'the equilibrium error appears to lead the trade weighted dollar by about 12 quarters' and reports the same simple correlation. No accompanying regression, standard error, confidence interval, sample definition, lag-selection protocol, or robustness analysis is provided. Equation (3) instead defines the exchange-rate component as the expected sum of future neutral-rate differentials. Later, the manuscript explicitly states that 'the equilibrium nominal exchange rate in this model must possess a unit root,' underscoring the need for careful time-series inference when correlating the dollar level with another persistent estimated object.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    },
+    "Policymaker": {
+      "structural_strength": "The manuscript clearly distinguishes policy correlation, nonbinding coordination, and binding cooperation. This is institutionally useful because it prevents common responses to a global r* factor from being mischaracterized as either a currency war or evidence of a cooperative policy regime.",
+      "domain_audit": "The model supports the qualitative conclusions that common shocks can correlate national policy rates without cooperation, that country-specific neutral-rate differentials can affect exchange rates, and that formal cooperation may require central banks to react to foreign inflation. It does not, however, establish the abstract's headline statement that gains from policy coordination \"could be substantial.\" Coordination is not modeled as an information-sharing institution with noisy signals, strategic reporting, confidentiality constraints, different mandates, or an evaluable welfare criterion. The manuscript instead assumes that foreign central banks may have a comparative forecasting advantage and infers that pooling information \"could improve\" estimates of home r*. That is a plausible policy conjecture, not a demonstrated magnitude or welfare result. The paper is appropriately cautious about the credibility and communication costs of binding cooperation, and no proposed policy violates an identified legal or fiscal constraint. Nevertheless, statutory mandates, accountability, information governance, and real-time implementation limitations further reinforce the need to present coordination benefits as conditional rather than established.",
+      "best_case_contribution": "The strongest defensible contribution is a transparent theoretical synthesis showing how global and country-specific components of neutral real rates map into policy-rate comovement and exchange-rate adjustment, together with an institutionally valuable distinction between potentially useful information coordination and difficult-to-communicate binding cooperation. It also documents a suggestive lead-lag correlation between an HLW neutral-rate equilibrium error and the trade-weighted dollar.",
+      "minimum_viable_revision": "Narrow the abstract, introduction, and conclusion so that substantial gains from coordination are identified explicitly as a conjecture motivated by the model rather than a result established by it. State that the formal results apply under the paper's special two-country assumptions and that the empirical dollar relationship is descriptive, not causal or a policy-performance test. Briefly specify what coordination means operationally, such as nonbinding exchange of forecasts and model assessments, and acknowledge that mandates, confidentiality, accountability, and heterogeneous real-time estimates condition feasibility. A fuller noisy-signal model would strengthen the claim but is not required if the policy language is narrowed.",
+      "primary_issue_class": "substantial_rephrasal",
+      "severity_score": 5.5,
+      "barrier_category": "REPHRASAL",
+      "severity_rationale": "The theoretical derivations and the core qualitative distinction between correlation, coordination, and cooperation can survive unchanged. The problem is that a central policy claim in the abstract assigns potentially substantial benefits to coordination without modeling or measuring those benefits. A reader of the abstract could therefore materially overestimate what the analysis demonstrates. Because the defensible version is a narrower, conditional policy implication rather than a change to the mathematical framework, this is a substantial rephrasing issue rather than a substantive flaw or blocker.",
+      "novelty_claims": [
+        {
+          "claim_type": "theoretical",
+          "description": "Derives a structural decomposition of the nominal exchange rate into a price-level component, a business-cycle component, and the expected present value of future neutral-real-rate differentials, and shows that global r* components need not induce exchange-rate adjustment.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Equations (3) and (10) provide the decomposition. The manuscript builds explicitly on Galí-Monacelli (2005), Clarida (2014), and Clarida-Galí-Gertler (2002), but the application of these frameworks to global versus country-specific r* components is a genuine, bounded theoretical extension rather than an entirely new model."
+        },
+        {
+          "claim_type": "theoretical",
+          "description": "Shows in the richer two-country model that each country's neutral rate can depend on home and foreign productivity and business-cycle factors even when national productivity processes are independent.",
+          "significance": "MEDIUM",
+          "confidence": 7.5,
+          "supporting_evidence": "Equations (11) through (18) derive the general-equilibrium cross-country dependence and provide a numerical example with sigma equal to 3 and phi equal to 1. The result adds a meaningful global-r* interpretation to an existing open-economy New Keynesian framework."
+        },
+        {
+          "claim_type": "empirical",
+          "description": "Documents a lead-lag association between the trade-weighted dollar and the equilibrium error from the HLW four-economy r* system.",
+          "significance": "LOW",
+          "confidence": 8.0,
+          "supporting_evidence": "Figures 5 and 6 report that the HLW equilibrium error appears to lead the trade-weighted dollar by about 12 quarters and that the simple correlation is 0.70. The evidence uses existing estimates and a simple descriptive correlation, with no identification, sampling uncertainty, or policy-effect estimate."
+        },
+        {
+          "claim_type": "policy",
+          "description": "Distinguishes nonbinding coordination through information sharing from binding cooperation and argues that the former may improve estimation of unobserved r* while the latter may damage communication and credibility by requiring reactions to foreign inflation.",
+          "significance": "MEDIUM",
+          "confidence": 7.0,
+          "supporting_evidence": "Section IV defines cooperation as joint maximization of world welfare, presents a cooperative rule reacting to home and foreign inflation, and contrasts it with information sharing about productivity, output gaps, and neutral rates. This is a useful institutional framing, although the coordination gains and credibility costs are not formally quantified."
+        }
+      ],
+      "insight_assessment": {
+        "level": "MEDIUM",
+        "description": "The manuscript provides clear economic intuition about why common r* shocks can generate synchronized policy without cooperation, why only relative neutral-rate paths enter exchange-rate adjustment, and why cooperation differs from coordination. The argument is useful but not exceptionally integrated: the descriptive HLW-dollar correlation is only loosely connected to the structural model, and the magnitude of the proposed coordination benefit is asserted rather than developed.",
+        "supporting_evidence": "The seven numbered implications following equation (4) clearly organize the model's intuition, while Section IV gives concrete examples in which cooperative policy would react to foreign inflation. By contrast, Figures 5 and 6 offer only a simple correlation, and the coordination discussion relies on the conditional phrase that a foreign central bank may possess a comparative advantage in forecasting.",
+        "confidence": 8.0
+      },
+      "layman_translation": "The paper convincingly explains why central banks may move interest rates together because they face common global forces, not because they have made a joint agreement, and why country-specific changes in neutral rates can move exchange rates. It also gives sensible reasons to prefer information sharing over binding international commitments. But it has not shown that information sharing produces large benefits in practice; that conclusion should be presented as a plausible possibility subject to mandates, confidentiality, accountability, and forecasting uncertainty.",
+      "confidence_score": 8.2,
+      "source_evidence": "The abstract states that \"gains to policy coordination could be substantial given that r*'s are unobserved but are correlated across countries.\" Section IV supports only the conditional proposition that, \"to the extent the foreign central bank has some comparative advantage\" in nowcasting or forecasting, sharing or pooling information \"could improve\" the home central bank's r* estimate. The manuscript also acknowledges that the model assumes the global drivers are observed with known parameter mappings, whereas \"in practice this is not the case.\" Equations (3) and (10) establish the exchange-rate decompositions; equations (12) and (18) establish cross-country general-equilibrium components in r*; equation (16) illustrates that cooperation can require reactions to foreign inflation. The conclusion acknowledges special assumptions including producer-currency pricing, Cobb-Douglas/CES preferences, and Cole-Obstfeld balanced trade.",
+      "verdict": "RESUBMIT",
+      "audit_valid": true,
+      "parse_failure": false
+    }
+  },
+  "debate_history": [
+    {
+      "Theorist": {
+        "referee_acknowledgment": "The reviews converge on a defensible core contribution: the Section III exchange-rate decomposition and the distinction between common and country-specific neutral-rate shocks are useful, while the empirical dollar result and the claims about coordination require substantial qualification or repair. I agree with the Econometrician that the reported 12-quarter correlation is exploratory rather than a validated test of the model, and with the Policymaker that substantial gains from information coordination are conjectured rather than demonstrated.",
+        "attacks": [
+          {
+            "target_persona": "Policymaker",
+            "critique": "Classifying the cooperation problem solely as substantial rephrasing understates a defect in the theoretical work. Section IV identifies cooperation as the paper's main contribution and uses the purported cooperative rule to support its central communication and credibility argument, but the manuscript never states or solves the cooperative planner problem, derives the relevant first-order conditions, or demonstrates that the displayed rule implements the cooperative allocation. This is a repairable substantive flaw, not merely an overstatement of an otherwise established result.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.5,
+            "evidence": "The introduction calls Section IV the paper's main contribution. Equations (14)-(15) provide Nash rules, but the later equation labeled (16) is asserted as the cooperative rule without a world-welfare objective, constraints, first-order conditions, a corresponding foreign rule, or a welfare comparison. It also contains an unexplained coefficient denoted varphi, potentially confused with phi previously used for labor-supply curvature. The subsequent credibility examples rely on the sign and role of the foreign-inflation term in this underived rule."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The manuscript does not establish the cooperative-policy result at the level required for its headline policy conclusions. An explicit planner problem and implementation proof are needed to determine the sign and parameter dependence of the foreign-inflation response and to distinguish a true cooperative optimum from an asserted instrument rule.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 8.6,
+            "evidence": "Section IV defines cooperation as maximizing world welfare but supplies no world-welfare expression or cooperative first-order conditions. The cooperative equation labeled (16) introduces an undefined varphi coefficient and is not accompanied by the foreign-country rule or an algebraic comparison with Nash equations (14)-(15). Consequently, neither implementation nor welfare improvement is shown."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The claimed empirical regularity is not presently a model validation because the empirical object and timing do not match the structural equation. The theory capitalizes expected future neutral-rate differentials into today's exchange rate, whereas the figure reports that a historical estimated equilibrium error precedes the dollar by roughly twelve quarters.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.0,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Equation (3) contains the conditional expectation of the sum of future home-foreign r* differentials. Figures 5-6 instead use an HLW VECM equilibrium error lagged by 12 quarters and report only a correlation of 0.70. No mapping from that equilibrium error to expected future differentials, lag-selection procedure, sample definition, uncertainty estimate, or persistence-robust inference is provided."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The statement that gains from policy coordination could be substantial exceeds what the model establishes. The manuscript motivates information sharing but does not model noisy signals, pooling, forecasting advantages, or welfare gains from coordination.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.3,
+            "evidence": "The abstract claims potentially substantial coordination gains. Section IV only argues conditionally that, if a foreign central bank has a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve the home estimate of r*. No information structure or quantitative welfare comparison is supplied."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The empirical defect does not invalidate the Section III theoretical decomposition. Equation (3) follows from the manuscript's equilibrium identities and stationarity assumptions independently of Figures 5-6. The appropriate remedy is to treat the dollar-HLW exercise as exploratory or supply a valid time-series analysis, rather than abandon the relative-versus-global r* mechanism.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A full noisy-signal model of operational coordination is not necessary if the manuscript narrows the coordination claim to a conditional institutional conjecture. Such a model would be an extension; the immediate publication barrier is the current assertion of substantial gains without evidence and the separate failure to derive the claimed cooperative rule.",
+            "defense_type": "extension"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The reported 0.70 correlation lacks a stated sample, lag-selection rule, uncertainty assessment, robustness analysis, and treatment of persistence or generated-regressor uncertainty. More fundamentally, the lagged VECM error is not shown to measure the forward-looking present-value object in equation (3).",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "The abstract's claim that coordination gains could be substantial is not established by the model. If the authors do not add an information structure and welfare analysis, the claim should be reframed as a plausible but conditional conjecture about information sharing.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Policymaker",
+            "question": "Given that the communication-cost argument depends on the sign and magnitude of the foreign-inflation coefficient in an underived cooperative rule, why should the missing cooperative planner derivation be treated only as rephrasing rather than as a substantive theoretical flaw?"
+          },
+          {
+            "target_persona": "Econometrician",
+            "question": "Would explicitly demoting Figures 5-6 to an exploratory illustration, removing the result from the abstract, and supplying full series construction be sufficient absent formal inference, or does retaining the selected 12-quarter lead necessarily require a persistence-robust lag-search analysis?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is mixed. Section III provides an internally plausible and interpretable decomposition under restrictive but stated assumptions: bilateral exchange rates depend on relative expected neutral-rate paths, while a common global component can generate correlated policy movements without bilateral exchange-rate adjustment. This supports MEDIUM theoretical novelty and MEDIUM insight. Section IV does not yet prove its cooperative-policy result because the planner problem, first-order conditions, coefficients, foreign rule, and welfare comparison are missing. The empirical 12-quarter dollar-HLW correlation is exploratory and is not mapped to the model's forward-looking present-value term. The claim of substantial gains from information coordination also requires substantial rephrasing unless an information and welfare analysis is added. These defects are serious but repairable within the current framework, so the appropriate verdict remains RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph converges on a RESUBMIT recommendation. The theoretical exchange-rate decomposition is the manuscript's strongest contribution, but the empirical dollar-HLW result remains exploratory, and the cooperative-policy result is not sufficiently derived. The distinction between coordination and cooperation is useful, although the claimed magnitude of coordination gains requires narrowing.",
+        "attacks": [
+          {
+            "target_persona": "Policymaker",
+            "critique": "Treating the paper's main weakness only as substantial rephrasing understates the econometric defect in the claimed dollar-HLW regularity. The reported 0.70 correlation is not merely cautiously worded evidence needing narrower interpretation: without a disclosed sample, lag-selection protocol, persistence-robust inference, generated-regressor uncertainty, or robustness analysis, the magnitude itself is not established. Because the manuscript selects a 12-quarter lag from an apparent lead-lag pattern involving highly persistent estimated series, data mining and spurious correlation are material possibilities.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "The abstract calls the relationship a novel empirical regularity and reports a correlation of 0.7. Section III says the equilibrium error 'appears to lead' the dollar by about 12 quarters, but provides no sample dates, cross-correlation profile, lag-selection rule, standard error, confidence interval, or robustness checks. The manuscript also states that the nominal exchange rate has a unit root, while the HLW equilibrium error is constructed from estimated latent r* series and estimated cointegrating coefficients."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The coordination-gains overclaim can be repaired through substantial rephrasing rather than requiring a new institutional model, provided the paper presents information sharing as a conditional conjecture and removes the assertion that gains could be substantial. A noisy-signal model would be a valuable extension, but it is not necessary to preserve the narrower theoretical contribution.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I agree that the cooperative-policy discussion has an argument-damaging omission. Equation (16) is not supported by a stated world-welfare problem, complete first-order conditions, definitions of all coefficients, a symmetric foreign rule, or a demonstrated welfare comparison with the Nash rules. The resulting claims about the sign, magnitude, and credibility consequences of responding to foreign inflation are therefore not fully established.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "I agree that the assertion of potentially substantial coordination gains exceeds the analysis. The manuscript only argues conditionally that foreign central banks may possess useful forecasting information and that pooling it could improve latent-r* estimates; it does not model information quality, implementation constraints, or welfare gains.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Does the unexplained coefficient in equation (16), together with the absence of the cooperative planner derivation, leave only the implementation formula unsupported, or does it also place the qualitative claim that cooperation necessarily requires a foreign-inflation response in doubt within the manuscript as written?"
+          },
+          {
+            "target_persona": "Policymaker",
+            "question": "Would you agree that the empirical regularity requires substantive re-estimation, rather than wording changes alone, because neither the selected lag nor the reported correlation has valid time-series uncertainty assessment?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is mixed. Equations (3) and (10) provide a useful, tractable decomposition in which relative expected neutral-rate paths, rather than their common global component, enter bilateral exchange-rate adjustment. This supports a MEDIUM theoretical novelty assessment and MEDIUM insight: the paper clarifies why synchronized policy rates need not imply cooperation or a currency war and why information coordination differs from binding cooperation. Two repairable substantive flaws remain. First, the claimed 0.70 dollar-HLW regularity is based on an undocumented preferred lag involving persistent generated series and lacks reproducible construction, valid inference, robustness, and a mapping to the model's forward-looking present-value term. Second, the cooperative rule is not derived from a stated planner problem or shown to improve welfare relative to the Nash rules. In addition, the claim that coordination gains could be substantial requires substantial rephrasing as a conditional institutional conjecture. These problems can be addressed within the current framework by supplying the missing derivation, conducting a persistence-aware and reproducible empirical analysis or demoting the figures to exploratory illustrations, and narrowing the policy claims. The appropriate verdict is RESUBMIT rather than rejection because the central relative-versus-global r* mechanism remains potentially publishable.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer reviews identify two distinct repairable weaknesses: the cooperative-policy result is insufficiently derived, and the reported dollar-HLW association lacks the time-series analysis needed to establish it as an empirical regularity. These concerns do not overturn the Section III exchange-rate decomposition, but they materially narrow the manuscript's theoretical, empirical, and policy claims.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The headline claim that gains from international policy coordination could be substantial is not established by the model or evidence. The manuscript does not model information sharing under noisy signals, quantify improvements in r* estimation, or evaluate welfare gains from coordination. It only argues conditionally that pooling forecasts could improve national estimates if foreign central banks possess relevant comparative advantages.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "The abstract states that coordination gains could be substantial, whereas Section IV says only that, 'to the extent' a foreign central bank has a comparative advantage in forecasting foreign productivity and business-cycle factors, sharing information 'could improve' the home estimate of r*. No noisy-signal environment, coordination mechanism, estimation improvement, or welfare comparison is supplied."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The practical case against binding cooperation should be identified as an institutional conjecture rather than a result of the formal welfare model. The model does not endogenize central-bank credibility, communication, statutory accountability, or public support, so it cannot demonstrate that these costs outweigh cooperative welfare gains.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.0,
+            "evidence": "Section IV argues that reacting to foreign inflation could erode credibility and even says the all-in costs could swamp theoretical benefits. Yet credibility and communication do not enter preferences, constraints, expectations formation, or the cooperative welfare comparison."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The missing cooperative-planner derivation damages the claimed Section IV cooperation result, but it does not invalidate the independently derived Section III decomposition in equation (3), the relative-versus-global r* distinction, or the conclusion that common r* shocks can generate correlated policy rates without bilateral exchange-rate adjustment. The defect is therefore serious but repairable rather than fatal to the manuscript's entire contribution.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The inadequate time-series treatment prevents the 0.70 correlation from being presented as an established regularity or test of equation (3), but the empirical exercise is ancillary to the analytical exchange-rate decomposition. Recasting it as exploratory, or supplying the requested reproducible analysis, can repair the manuscript without redesigning its central theoretical framework.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I concede that equation (16) does not currently carry the proof burden assigned to it. The manuscript does not formulate and solve the cooperative world-welfare problem, define the coefficient denoted varphi, provide the corresponding foreign rule, or demonstrate implementation and welfare improvement relative to the Nash rules. Because the cooperation discussion is presented as a main contribution, this is a repairable substantive flaw rather than merely a wording issue.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I concede that the reported 12-quarter correlation is not established as a reliable empirical regularity. The absence of sample definitions, lag-selection disclosure, uncertainty estimates, persistence-robust inference, generated-regressor treatment, and robustness checks is especially consequential because the dollar level and estimated r* objects are persistent. The manuscript also fails to map a lagged VECM error to the model's expected present value of future neutral-rate differentials.",
+            "concession_type": "substantive_flaw"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "Theorist",
+            "question": "Would a complete derivation of both cooperative policy rules and their parameter-dependent foreign-inflation coefficients suffice if the manuscript limits welfare claims to qualitative comparisons, or is a calibrated welfare comparison necessary to sustain any policy conclusion about cooperation?"
+          },
+          {
+            "target_persona": "Econometrician",
+            "question": "If the dollar-HLW figures are removed from the abstract and explicitly labeled exploratory, would full generated-regressor inference remain a publication barrier, or could the descriptive exercise remain with transparent sample construction and a complete cross-correlation profile?"
+          }
+        ],
+        "final_argument_state": "The surviving contribution has MEDIUM novelty and MEDIUM insight. Equations (3) and (10) provide a useful tractable decomposition, and the distinction among policy correlation, information coordination, and binding cooperation has genuine policy value. Execution is nevertheless incomplete in two places: the central Section IV cooperative rule is not fully derived, and the empirical dollar-HLW claim is unsupported by adequate time-series analysis or a formal mapping to the model. In addition, the claimed substantial gains from coordination and the credibility costs of cooperation require material narrowing unless modeled and quantified. These defects are repairable within the current framework, so the appropriate verdict is RESUBMIT rather than rejection.",
+        "verdict": "RESUBMIT"
+      }
+    },
+    {
+      "Theorist": {
+        "referee_acknowledgment": "The review graph correctly converges on RESUBMIT. The analytical relative-versus-global r* mechanism remains potentially publishable, but the cooperative-policy result and the empirical dollar-HLW regularity do not presently carry the evidentiary burden assigned to them.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The cooperative-policy argument is not established because the manuscript asserts an instrument rule without deriving it from the stated objective of maximizing world welfare. This omission directly undermines the conclusions about how cooperation requires national central banks to respond to foreign inflation.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 8.8,
+            "evidence": "Section IV defines cooperation as joint maximization of world welfare, but it provides no world-welfare objective, cooperative constraints, first-order conditions, implementation argument, corresponding foreign-country rule, or welfare comparison with Nash equations (14)-(15). The purported cooperative equation labeled (16) also introduces an undefined coefficient denoted varphi. The subsequent communication and credibility examples depend on the unproved sign and magnitude of the foreign-inflation response."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The reported 0.70 correlation does not validate the structural exchange-rate decomposition because the empirical regressor is neither shown to measure the theoretical present-value object nor analyzed with adequate time-series methods.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.1,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Equation (3) makes today's exchange rate depend on the conditional expected present value of future bilateral r* differentials. Figures 5-6 instead correlate the dollar with a generated HLW VECM equilibrium error lagged by a visually selected 12 quarters. The manuscript reports no sample dates, construction details, cross-correlation profile, lag-selection protocol, confidence interval, persistence-robust inference, generated-regressor treatment, or robustness analysis. The manuscript itself also characterizes the nominal exchange rate as containing a unit root."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The assertion that gains from information coordination could be substantial materially exceeds the analysis and should be narrowed unless the authors add an explicit noisy-information environment and welfare calculation.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.5,
+            "evidence": "Section IV argues only that, if foreign central banks possess a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve a home central bank's estimate of r*. It does not specify signal precision, strategic information sharing, an estimator, resulting policy errors, or welfare gains."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The econometric defect invalidates the presentation of the 0.70 correlation as an established empirical regularity or validation of equation (3), but it does not invalidate the analytical decomposition itself. Equation (3) is derived from the model's equilibrium identities and stationarity assumptions independently of Figures 5-6. The empirical exercise can therefore be repaired or explicitly demoted to an exploratory illustration without abandoning the central theoretical mechanism.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A complete noisy-signal model is not required to preserve a narrower institutional observation that international information sharing may improve national estimates of latent neutral rates. Such a model becomes necessary only if the manuscript retains its stronger claim that the gains are substantial. Otherwise, claim calibration is sufficient.",
+            "defense_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "The omission of credibility and communication from the formal model does not defeat the theoretical comparison between Nash and cooperative policies. It does mean that the proposition that practical credibility costs outweigh formal welfare gains must be presented as an institutional conjecture rather than as a model result.",
+            "defense_type": "rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "The preferred 12-quarter relationship is not established by reproducible construction, valid inference, or robustness analysis, and the lagged VECM equilibrium error is not shown to correspond to the model's forward-looking expected present value of future neutral-rate differentials.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "The claim of substantial coordination gains is unsupported by the manuscript's analysis. Without an information structure and welfare evaluation, it must be reframed as a conditional conjecture about the possible value of pooling information.",
+            "concession_type": "substantial_rephrasal"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "The claim that communication and credibility costs could swamp the theoretical benefits of cooperation is not generated by the formal model. It should be explicitly identified as a practical hypothesis requiring separate evidence.",
+            "concession_type": "rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "What world-welfare objective and implementability conditions generate the purported cooperative rule, and what precisely is the undefined varphi coefficient multiplying the foreign-inflation term?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How is the lagged HLW VECM equilibrium error theoretically mapped into the expected present value of future neutral-rate differentials in equation (3), and was the 12-quarter lag selected before examining the dollar relationship?"
+          }
+        ],
+        "final_argument_state": "Execution remains mixed. Section III offers an internally plausible decomposition under restrictive but stated assumptions: bilateral exchange rates respond to relative expected neutral-rate paths, whereas a common global component can produce synchronized policy movements without requiring bilateral exchange-rate adjustment. This supports MEDIUM theoretical novelty and MEDIUM economic insight, particularly in distinguishing policy correlation from cooperation and in interpreting country-specific r* adjustment. Two serious but repairable substantive flaws remain. Section IV does not derive or verify its cooperative policy rule, while the empirical dollar-HLW exercise lacks a valid mapping to the theoretical object, reproducible construction, and persistence-aware inference. The claims that information coordination yields substantial gains and that credibility costs can outweigh cooperative welfare benefits also require substantial and minor rephrasing, respectively, unless formally modeled. Because the central relative-versus-global r* mechanism survives and the identified defects can be repaired within the existing framework, the appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Econometrician": {
+        "referee_acknowledgment": "The review graph correctly converges on two repairable substantive flaws: the unsupported cooperative-policy rule and the inadequately identified dollar-HLW empirical regularity. It also appropriately distinguishes those defects from the narrower theoretical decomposition, which remains potentially valuable.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The dollar-HLW exercise does not estimate the exchange-rate relationship implied by the structural model. Equation (3) involves the conditional expected present value of future bilateral neutral-rate differentials together with price-level and output-gap terms, whereas the empirical exercise correlates the dollar level with a single lag of a contemporaneous VECM equilibrium error. Omitting the other structural components and selecting a 12-quarter lag from the observed lead-lag pattern prevents the reported correlation from being interpreted as evidence for equation (3).",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.4,
+            "barrier_category": "REVISION",
+            "confidence": 9.2,
+            "evidence": "Equation (3) specifies the exchange rate as the sum of the domestic price level, the output gap, and an infinite expected sum of future home-foreign r* differentials. Figures 5-6 instead use the HLW VECM equilibrium error, with Section III stating that it 'appears to lead' the trade-weighted dollar by about 12 quarters. The manuscript supplies no empirical proxy for the conditional present value, no controls for the price and business-cycle terms, and no justification for translating a lagged equilibrium error into the forward-looking object."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The reported correlation is not supported by valid or reproducible time-series inference. The manuscript combines a dollar series that it later characterizes as containing a unit root with an estimated cointegration residual constructed from latent r* estimates and estimated cointegrating coefficients. Without stability analysis, persistence-aware inference, and propagation of first-stage uncertainty, the numerical correlation of 0.70 may reflect persistence, sample choice, or generated-regressor error rather than a stable predictive relationship.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 9.1,
+            "evidence": "The manuscript reports neither sample dates nor observations, transformations, data vintages beyond noting July 2016 HLW estimates, lag-selection criteria, standard errors, confidence intervals, stability tests, or alternative dollar and r* measures. It explicitly argues later that the nominal exchange rate must possess a unit root, while the HLW equilibrium error is based on estimated latent rates and an estimated cointegrating vector."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The failure to derive the cooperative rule is serious because Section IV assigns that rule a central role, but it does not overturn the Section III exchange-rate decomposition. Equation (3) is presented as following from equilibrium identities and stationarity assumptions independently of the cooperative-policy discussion. The appropriate remedy is to derive and verify the planner solution or narrow the cooperation section, not to discard the relative-versus-global r* mechanism.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "argument": "A full noisy-information coordination model is not necessary to retain a narrower institutional observation that sharing information may improve estimation of unobserved r*. It becomes necessary only if the manuscript retains the central claim that coordination gains could be substantial. Recasting that statement as a conditional conjecture is therefore a legitimate within-manuscript repair.",
+            "defense_type": "substantial_rephrasal"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "Equation (16) does not establish the cooperative optimum because the manuscript omits the world-welfare objective, cooperative first-order conditions, definition of the foreign-inflation coefficient, corresponding foreign-country rule, implementation argument, and welfare comparison with equations (14)-(15). The communication and credibility conclusions based on that rule consequently lack a demonstrated formal premise.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Policymaker",
+            "reason": "The assertions that information coordination could generate substantial gains and that credibility costs could swamp formal cooperation benefits are not outputs of the stated model. Unless information quality, estimation, credibility, and welfare are modeled, these claims should be presented as conditional institutional conjectures rather than analytical findings.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [
+          {
+            "target_persona": "paper",
+            "question": "Was the 12-quarter lag specified before examining the data, and what is the complete cross-correlation profile with simultaneous confidence bands adjusted for searching across lags?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "How are uncertainty in the latent HLW r* estimates and uncertainty in the estimated cointegrating vector propagated into inference for the equilibrium-error and exchange-rate relationship?"
+          },
+          {
+            "target_persona": "paper",
+            "question": "What empirical variable is intended to proxy for the conditional expected present value of future r* differentials in equation (3), and why should a VECM equilibrium error observed twelve quarters earlier measure that object?"
+          }
+        ],
+        "final_argument_state": "The surviving execution assessment is mixed. The manuscript has MEDIUM theoretical novelty and MEDIUM insight: equations (3) and (10) offer a tractable distinction between common global neutral-rate movements, which can generate synchronized policies without exchange-rate adjustment, and relative expected neutral-rate paths, which affect bilateral exchange rates. However, the empirical correlation is not a test or valid estimate of that mechanism because the measured object and timing do not match the structural equation, the preferred lag is undocumented, and inference ignores persistence and generated-regressor uncertainty. Section IV also fails to derive or verify its purported cooperative rule. The claims of substantial coordination gains and dominant credibility costs require substantial rephrasing unless supported by additional modeling and welfare analysis. Both substantive defects are repairable within the current framework through a complete cooperative derivation and either a reproducible persistence-aware empirical design or explicit demotion of the figures to exploratory illustrations. The appropriate verdict is RESUBMIT.",
+        "verdict": "RESUBMIT"
+      },
+      "Policymaker": {
+        "referee_acknowledgment": "The peer critiques correctly distinguish the manuscript's potentially useful core decomposition from two serious but repairable execution failures: the underived cooperative-policy rule and the unsupported dollar-HLW empirical regularity.",
+        "attacks": [
+          {
+            "target_persona": "paper",
+            "critique": "The cooperative-policy result does not carry the proof burden assigned to it. Because Section IV is presented as a main contribution and its communication and credibility conclusions depend on the response to foreign inflation, the manuscript must derive the cooperative allocation and its implementing rules rather than simply assert an instrument rule.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 8.7,
+            "evidence": "The manuscript defines cooperation as maximizing world welfare, but it does not state the cooperative objective, derive planner first-order conditions, define the varphi coefficient in the displayed cooperative equation labeled (16), provide the corresponding foreign-country rule, or demonstrate implementation and welfare improvement relative to Nash equations (14)-(15)."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The reported 0.70 correlation cannot presently be treated as an established empirical regularity or evidence validating the structural exchange-rate decomposition. Its construction, inference, and relationship to the model's forward-looking object are insufficiently documented.",
+            "attack_type": "substantive_flaw",
+            "issue_class": "substantive_flaw",
+            "severity_score": 7.2,
+            "barrier_category": "REVISION",
+            "confidence": 9.0,
+            "evidence": "Figures 5-6 use an HLW VECM equilibrium error lagged by 12 quarters, while equation (3) uses the conditional expected present value of future neutral-rate differentials. The manuscript gives no sample dates, reproducible data construction, lag-selection protocol, confidence interval, persistence-robust inference, treatment of generated-regressor uncertainty, or robustness analysis."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The statement that gains from information coordination could be substantial exceeds the analysis. Unless the manuscript adds an information structure and welfare calculation, it should present information sharing as a conditional institutional conjecture rather than a demonstrated quantitative result.",
+            "attack_type": "substantial_rephrasal",
+            "issue_class": "substantial_rephrasal",
+            "severity_score": 5.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.6,
+            "evidence": "Section IV argues only that information sharing could improve home estimates of r* if foreign central banks possess a comparative forecasting advantage. It does not model noisy signals, pooling, estimation gains, strategic information transmission, implementation costs, or resulting welfare improvements."
+          },
+          {
+            "target_persona": "paper",
+            "critique": "The claim that credibility and communication costs could swamp the theoretical gains from cooperation should be explicitly labeled an institutional conjecture. Those costs are not outcomes of the formal model.",
+            "attack_type": "rephrasal",
+            "issue_class": "rephrasal",
+            "severity_score": 3.5,
+            "barrier_category": "REPHRASAL",
+            "confidence": 8.2,
+            "evidence": "Credibility, communication, statutory accountability, and public support do not enter the modeled preferences, constraints, expectation formation, or welfare comparison, although Section IV invokes them to argue against binding cooperation."
+          }
+        ],
+        "novelty_counters": [],
+        "defenses": [
+          {
+            "attacker_persona": "Theorist",
+            "argument": "The missing cooperative-planner derivation is a serious flaw in Section IV, but it does not invalidate the independently derived Section III exchange-rate decomposition. Equations (3) and (10) still support the distinction between relative neutral-rate movements, which affect bilateral exchange rates, and common global movements, which can generate correlated policy rates without exchange-rate adjustment.",
+            "defense_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "argument": "The empirical defects prevent the 0.70 correlation from being characterized as established evidence, but the figures are ancillary to the analytical mechanism. The manuscript can be repaired within its current framework by supplying a reproducible, persistence-aware analysis with a valid mapping to the theoretical object or by explicitly demoting the exercise to an exploratory illustration.",
+            "defense_type": "substantive_flaw"
+          }
+        ],
+        "concessions": [
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I agree that the missing cooperative objective, first-order conditions, coefficient definitions, foreign rule, implementation proof, and welfare comparison constitute an argument-damaging omission rather than mere overstatement. The policy discussion relies on a result that has not yet been established in the manuscript.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Econometrician",
+            "reason": "I agree that the preferred 12-quarter correlation is not statistically or economically established. The undocumented lag choice, persistence of the series, generated latent-rate inputs, absence of uncertainty estimates, and mismatch with equation (3)'s expected present-value term create material risks of spurious interpretation.",
+            "concession_type": "substantive_flaw"
+          },
+          {
+            "attacker_persona": "Theorist",
+            "reason": "I agree that potentially substantial gains from information coordination are not demonstrated. Without a noisy-information model and welfare analysis, the claim must be narrowed to a plausible conditional benefit of information sharing.",
+            "concession_type": "substantial_rephrasal"
+          }
+        ],
+        "questions": [],
+        "final_argument_state": "The surviving execution assessment is mixed. The paper has MEDIUM novelty and MEDIUM insight: its tractable exchange-rate decompositions and distinction among policy correlation, information coordination, and binding cooperation offer useful policy intuition. Nevertheless, the cooperative rule central to Section IV is not derived or shown to improve welfare, and the dollar-HLW correlation lacks a reproducible, persistence-aware empirical design and a mapping to the model's forward-looking neutral-rate term. The claim of substantial coordination gains requires substantial rephrasing unless supported by an information and welfare analysis, while the asserted credibility costs should be identified as an institutional conjecture. These defects are serious but repairable within the current framework, supporting RESUBMIT rather than rejection.",
+        "verdict": "RESUBMIT"
+      }
+    }
+  ],
+  "final_report": {
+    "editorial_rationale_and_integration": "Decision: MAJOR REVISION REQUIRED. The strongest credible version of the manuscript is a tractable theoretical synthesis of how global and country-specific components of neutral real rates affect monetary-policy comovement and bilateral exchange rates. Equations (3) and (10) decompose the nominal exchange rate into PPP, business-cycle, and forward-looking relative-r* components. This yields useful intuition: common global r* movements can generate synchronized policy rates without cooperation or a currency war, whereas expected relative neutral-rate paths can require exchange-rate adjustment. The richer model also suggests that general-equilibrium spillovers can make national neutral rates depend on foreign productivity and business-cycle conditions even when national productivity shocks are independent. These contributions support MEDIUM novelty and MEDIUM insight: they are meaningful extensions and syntheses within established open-economy New Keynesian frameworks, rather than a wholly new architecture.\n\nTwo substantive flaws prevent acceptance. First, Section IV, identified by the manuscript as its main contribution, does not establish its cooperative-policy result. Cooperation is defined as maximizing world welfare, but the manuscript does not state the world-welfare objective and constraints, derive the planner's first-order conditions, provide both countries' implementing rules, define the coefficient varphi in equation (16), or compare the cooperative allocation and welfare with the Nash rules in equations (14)-(15). Consequently, the sign, magnitude, and parameter dependence of the foreign-inflation response—and thus the formal premise of the subsequent communication and credibility examples—cannot be verified.\n\nSecond, the dollar-HLW exercise does not presently establish the claimed empirical regularity or test the structural decomposition. Equation (3) concerns today's exchange rate, including price and business-cycle terms, and the conditional expected present value of future bilateral r* differentials. Figures 5-6 instead correlate the dollar level with a generated HLW VECM equilibrium error lagged by approximately 12 quarters. The manuscript does not map that lagged error into the theoretical present-value object or explain the delayed response. It also omits sample dates, observations, transformations, reproducible construction details, a lag-selection protocol, the full cross-correlation profile, uncertainty estimates, persistence-robust inference, treatment of generated-regressor uncertainty, stability analysis, and robustness to alternative measures or samples. These omissions are consequential because the manuscript characterizes the nominal exchange rate as containing a unit root, while the HLW object uses estimated latent rates and an estimated cointegrating vector.\n\nA substantial-rephrasal issue is also central. The claim that gains from information coordination could be substantial is not demonstrated. The manuscript offers the conditional proposition that information sharing may improve r* estimates when foreign central banks possess a comparative forecasting advantage, but it does not model noisy signals, strategic transmission, pooling, estimation gains, implementation costs, policy errors, or welfare effects. Unless such analysis is added, this must be presented as a plausible conditional conjecture rather than a quantitative or welfare result. A minor rephrasal issue concerns credibility, communication, statutory accountability, and public support: these considerations are not included in modeled preferences, constraints, expectations, or welfare. They may remain as institutional hypotheses, but not as formal findings that outweigh cooperative gains.\n\nThe critiques were consistently defended in one important respect: neither the empirical defect nor the incomplete cooperation section invalidates the independently derived Section III decomposition. Likewise, a full noisy-information model is an extension rather than a minimum requirement if the coordination claim is narrowed. There are no unresolved blockers and no basis for rejection; however, all three reviewers recommend resubmission because the two substantive gaps affect claims currently presented as central.",
+    "official_letter_to_the_author": "Dear Author,\n\nThe manuscript contains a potentially valuable core argument: bilateral exchange rates respond to expected relative neutral-rate paths, while a common global component of r* can generate synchronized monetary-policy movements without requiring exchange-rate adjustment, formal cooperation, or a currency-war interpretation. The distinction among policy correlation, information coordination, and binding cooperation is also useful, and the richer model's cross-country general-equilibrium channel is promising.\n\nOur decision is MAJOR REVISION REQUIRED. The paper is not yet sound in the form submitted because two central results require substantive repair.\n\nFirst, the cooperative-policy analysis must be completed. Section IV defines cooperation as joint maximization of world welfare and presents equation (16) as a cooperative rule, but the manuscript does not state the planner's objective and constraints, derive the first-order conditions, define varphi, provide the corresponding foreign-country rule, establish implementation, or compare the cooperative outcome with the Nash rules in equations (14)-(15). Because the discussion of reactions to foreign inflation and their communication consequences relies on this result, the missing derivation is not merely expositional. Please provide a complete and internally checkable derivation, including the timing and commitment concept and the parameter dependence of the foreign-inflation coefficients. A calibrated welfare exercise would strengthen the paper, but the minimum requirement is a valid derivation and appropriately bounded qualitative welfare claim.\n\nSecond, the empirical dollar-HLW claim must either be rebuilt or materially demoted. The current correlation of 0.70 at a 12-quarter lag is not sufficient to establish a novel empirical regularity. Please explain how the HLW VECM equilibrium error corresponds to the expected present value of future r* differentials in equations (3) and (10), including why the model would imply the reported timing and how the price and business-cycle terms are handled. If the result is retained as evidence, provide complete sample and construction details, disclose how the lag was selected, report the full lag profile, use inference appropriate for persistent series, address uncertainty from estimated latent r* values and cointegrating coefficients, and assess stability across nearby lags, endpoints, and reasonable alternative measures. If that analysis is not undertaken, remove the result from the abstract and present the figures explicitly as exploratory illustrations rather than model validation or an established regularity.\n\nThe policy claims also need recalibration. The manuscript does not demonstrate that gains from information coordination are substantial; it shows only that information sharing could help under a comparative forecasting advantage. Either add an explicit information structure and welfare analysis or recast this as a conditional institutional conjecture. Similarly, statements that communication and credibility costs could swamp cooperative benefits should be identified as practical hypotheses, since credibility, accountability, and public support are not part of the formal model.\n\nPlease preserve and sharpen the paper's strongest contribution rather than allowing ancillary claims to carry more weight than the analysis supports. A successful revision would clearly separate derived model results, descriptive evidence, and institutional conjectures; state the restrictive assumptions under which the formal conclusions hold; and align the abstract, introduction, and conclusion with that evidentiary hierarchy.\n\nWe would be willing to evaluate a substantially revised manuscript addressing these points.",
+    "minimum_viable_revision_path": "1. Complete the cooperation analysis: state the world-welfare objective, constraints, timing, and commitment concept; derive the planner's first-order conditions; define every coefficient, especially varphi; provide both home and foreign implementing rules; and show algebraically how these differ from equations (14)-(15). Establish the sign and parameter dependence of the foreign-inflation responses and make only the welfare comparison supported by the derivation.\n\n2. Choose one defensible empirical route. Preferred route: document the sample, observations, transformations, data vintages, dollar convention, HLW equilibrium-error construction, and lag-selection procedure; report the full cross-correlation or distributed-lag profile; use persistence- and serial-correlation-robust inference; account for uncertainty in latent r* estimates and the cointegrating vector; test stability across nearby lags, endpoints, and reasonable alternative measures; and explain the mapping to the expected present-value term and other components of equations (3) and (10). Minimal alternative: remove the 0.70 result from the abstract, label Figures 5-6 exploratory and descriptive, disclose their construction and lag choice, and state explicitly that they do not test or validate the structural equations.\n\n3. Recalibrate the coordination claim throughout. Either model information quality, pooling, policy errors, and welfare effects, or replace claims of substantial gains with the conditional proposition that nonbinding information sharing may improve estimates of latent r* when foreign institutions possess relevant forecasting advantages.\n\n4. Recast credibility, communication, accountability, and public-support costs as institutional conjectures outside the formal welfare model. Do not claim that they outweigh cooperative benefits without corresponding modeled or empirical evidence.\n\n5. Revise the abstract, introduction, Section IV, and conclusion to distinguish clearly among formal results, descriptive evidence, and policy conjectures, and to state the special assumptions supporting the two-country results.",
+    "constructive_summary": "The manuscript's publishable prospect lies in its clear relative-versus-global r* mechanism and the resulting distinction between synchronized policy, coordination, and cooperation. Its novelty and insight are moderate but real: the exchange-rate decomposition and general-equilibrium interpretation organize familiar ingredients in a useful way. The present weaknesses are not fatal and there are no unresolved blockers, but they are substantive. The cooperative rule must be derived rather than asserted, and the dollar-HLW correlation must either receive a reproducible, persistence-aware analysis tied to the theoretical object or be presented only as exploratory. Policy claims about large coordination gains and dominant credibility costs must be narrowed unless separately modeled. A focused revision along these lines could produce a coherent theoretical paper with appropriately limited empirical and institutional implications."
+  },
+  "audit_trail": "## REVIEWER WEIGHTING\nLegacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.\nInitial normalized weights: {'Theorist': 0.5, 'Econometrician': 0.3, 'Policymaker': 0.2}\nValid audits scored: 3; invalid fallback audits excluded: 0.\n\n### Debate Round 1\n  • Theorist→Policymaker: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.\n  • Theorist→paper: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.3/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→Policymaker: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → CONCEDED. Explicit concession recorded.\n  • Policymaker→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n### Debate Round 2\n  • Theorist→paper: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→paper: severity 7.1/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Theorist→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 7.4/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Econometrician→paper: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.1/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 7.2/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.6/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n  • Policymaker→paper: severity 3.5/10; category REPHRASAL; type rephrasal; issue rephrasal; confidence 8.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.\n\n## DUNG-STYLE CREDIBILITY UPDATES\nOnly conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.\n  Theorist→paper (UNANSWERED): +0.010 to Theorist (paper critique, discounted)\n  Theorist→paper (UNANSWERED): +0.006 to Theorist (paper critique, discounted)\n  Theorist→paper (UNANSWERED): +0.003 to Theorist (paper critique, discounted)\n  Theorist→paper (UNANSWERED): +0.002 to Theorist (paper critique, discounted)\n  Theorist→Policymaker (CONCEDED): +0.008 to Theorist, -0.008 to Policymaker\n  Theorist→paper (UNANSWERED): +0.000 to Theorist (paper critique, discounted)\n  Theorist→paper (UNANSWERED): +0.000 to Theorist (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.010 to Econometrician (paper critique, discounted)\n  Econometrician→paper (UNANSWERED): +0.006 to Econometrician (paper critique, discounted)\n  Econometrician→Policymaker (CONCEDED): +0.014 to Econometrician, -0.014 to Policymaker\n  Policymaker→paper (UNANSWERED): +0.010 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.001 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)\n  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)\n\n## FINAL REVIEWER WEIGHTS\n  Theorist: 0.500 +0.030 → 0.530\n  Econometrician: 0.300 +0.031 → 0.331\n  Policymaker: 0.200 -0.005 → 0.195\nNormalized final weights: {'Theorist': 0.5017715273441525, 'Econometrician': 0.3132213228919753, 'Policymaker': 0.18500714976387214}\n\n## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION\n  Theorist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.2/10, barrier=REVISION\n  Econometrician: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.2/10, barrier=REVISION\n  Policymaker: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantial_rephrasal, severity=5.5/10, barrier=REPHRASAL\nRaw execution score: 0.750\nExecution penalty from surviving substantive flaws: 0.097\nExecution score: 0.653\nNovelty consensus: MEDIUM (0.570 before debate penalty; 0.570 after)\nNovelty claim counts (all personas): HIGH=0, MEDIUM=8, LOW=3\nInsight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)\nVerdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0\nUnresolved high-confidence BLOCKERs: 0\nSubstantive revision barriers: 12\nSubstantial-rephrasal (central overclaim) revisions: 5\nRephrasal-only revisions: 2\nExtension/future-work requests: 0\n\n## FINAL SCORE\nFinal score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.\n0.392 + 0.125 + 0.112 = 0.629\nSubstantive-revision gate applied: minor-revision outcome is unavailable.\nRephrasal issues are reported categorically and do not reduce insight or execution scores by themselves.\nSubstantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.",
+  "score_components": {
+    "final_score": 0.6285828,
+    "execution_score": 0.652638,
+    "novelty_score": 0.57,
+    "insight_score": 0.62,
+    "raw_execution_score": 0.75,
+    "novelty_consensus": "MEDIUM",
+    "novelty_counts": {
+      "HIGH": 0,
+      "MEDIUM": 8,
+      "LOW": 3
+    },
+    "insight_consensus": "MEDIUM",
+    "final_verdicts": {
+      "Theorist": "RESUBMIT",
+      "Econometrician": "RESUBMIT",
+      "Policymaker": "RESUBMIT"
+    },
+    "adjusted_weights": {
+      "Theorist": 0.5017715273441525,
+      "Econometrician": 0.3132213228919753,
+      "Policymaker": 0.18500714976387214
+    },
+    "unresolved_blockers": [],
+    "substantive_revision_barriers": [
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.1,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (3) makes today's exchange rate depend on the conditional expected present value of future bilateral r* differentials. Figures 5-6 instead correlate the dollar with a generated HLW VECM equilibrium error lagged by a visually selected 12 quarters. The manuscript reports no sample dates, construction details, cross-correlation profile, lag-selection protocol, confidence interval, persistence-robust inference, generated-regressor treatment, or robustness analysis. The manuscript itself also characterizes the nominal exchange rate as containing a unit root.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Equation (3) contains the conditional expectation of the sum of future home-foreign r* differentials. Figures 5-6 instead use an HLW VECM equilibrium error lagged by 12 quarters and report only a correlation of 0.70. No mapping from that equilibrium error to expected future differentials, lag-selection procedure, sample definition, uncertainty estimate, or persistence-robust inference is provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section IV defines cooperation as joint maximization of world welfare, but it provides no world-welfare objective, cooperative constraints, first-order conditions, implementation argument, corresponding foreign-country rule, or welfare comparison with Nash equations (14)-(15). The purported cooperative equation labeled (16) also introduces an undefined coefficient denoted varphi. The subsequent communication and credibility examples depend on the unproved sign and magnitude of the foreign-inflation response.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section IV defines cooperation as maximizing world welfare but supplies no world-welfare expression or cooperative first-order conditions. The cooperative equation labeled (16) introduces an undefined varphi coefficient and is not accompanied by the foreign-country rule or an algebraic comparison with Nash equations (14)-(15). Consequently, neither implementation nor welfare improvement is shown.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Policymaker",
+        "attack_id": "Theorist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "The introduction calls Section IV the paper's main contribution. Equations (14)-(15) provide Nash rules, but the later equation labeled (16) is asserted as the cooperative rule without a world-welfare objective, constraints, first-order conditions, a corresponding foreign rule, or a welfare comparison. It also contains an unexplained coefficient denoted varphi, potentially confused with phi previously used for labor-supply curvature. The subsequent credibility examples rely on the sign and role of the foreign-inflation term in this underived rule.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.4,
+        "barrier_category": "REVISION",
+        "confidence": 9.2,
+        "evidence": "Equation (3) specifies the exchange rate as the sum of the domestic price level, the output gap, and an infinite expected sum of future home-foreign r* differentials. Figures 5-6 instead use the HLW VECM equilibrium error, with Section III stating that it 'appears to lead' the trade-weighted dollar by about 12 quarters. The manuscript supplies no empirical proxy for the conditional present value, no controls for the price and business-cycle terms, and no justification for translating a lagged equilibrium error into the forward-looking object.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.1,
+        "evidence": "The manuscript reports neither sample dates nor observations, transformations, data vintages beyond noting July 2016 HLW estimates, lag-selection criteria, standard errors, confidence intervals, stability tests, or alternative dollar and r* measures. It explicitly argues later that the nominal exchange rate must possess a unit root, while the HLW equilibrium error is based on estimated latent rates and an estimated cointegrating vector.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "The abstract calls the relationship a novel empirical regularity and reports a correlation of 0.7. Section III says the equilibrium error 'appears to lead' the dollar by about 12 quarters, but provides no sample dates, cross-correlation profile, lag-selection rule, standard error, confidence interval, or robustness checks. The manuscript also states that the nominal exchange rate has a unit root, while the HLW equilibrium error is constructed from estimated latent r* series and estimated cointegrating coefficients.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figures 5-6 use an HLW VECM equilibrium error lagged by 12 quarters, while equation (3) uses the conditional expected present value of future neutral-rate differentials. The manuscript gives no sample dates, reproducible data construction, lag-selection protocol, confidence interval, persistence-robust inference, treatment of generated-regressor uncertainty, or robustness analysis.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The manuscript defines cooperation as maximizing world welfare, but it does not state the cooperative objective, derive planner first-order conditions, define the varphi coefficient in the displayed cooperative equation labeled (16), provide the corresponding foreign-country rule, or demonstrate implementation and welfare improvement relative to Nash equations (14)-(15).",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Theorist",
+        "attacker": "Theorist",
+        "target": "paper",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states that the paper derives an exchange-rate decomposition and that global r* shocks require no exchange-rate adjustment. Equation (3) gives e_t = p_t + x_t minus the expected sum of home-foreign neutral-rate differentials; equation (10) supplies the two-country counterpart. The introduction identifies Section IV as the main contribution. Equations (14)-(15) give Nash Taylor-type rules, while equation (16) is presented as the cooperative rule but contains an unexplained varphi coefficient and is not preceded by a cooperative welfare maximization or first-order-condition derivation. Figures 5-6 and their accompanying text report that the VECM equilibrium error appears to lead the trade-weighted dollar by about 12 quarters and that the simple correlation is 0.70."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states: 'We document a novel empirical regularity' and reports that 'the correlation between the dollar and the 12 quarter lag of the HLW equilibrium error is estimated to be 0.7.' Section III states: 'the equilibrium error appears to lead the trade weighted dollar by about 12 quarters' and reports the same simple correlation. No accompanying regression, standard error, confidence interval, sample definition, lag-selection protocol, or robustness analysis is provided. Equation (3) instead defines the exchange-rate component as the expected sum of future neutral-rate differentials. Later, the manuscript explicitly states that 'the equilibrium nominal exchange rate in this model must possess a unit root,' underscoring the need for careful time-series inference when correlating the dollar level with another persistent estimated object."
+      }
+    ],
+    "substantial_rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section IV argues only that, if foreign central banks possess a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve a home central bank's estimate of r*. It does not specify signal precision, strategic information sharing, an estimator, resulting policy errors, or welfare gains.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.3,
+        "evidence": "The abstract claims potentially substantial coordination gains. Section IV only argues conditionally that, if a foreign central bank has a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve the home estimate of r*. No information structure or quantitative welfare comparison is supplied.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.6,
+        "evidence": "Section IV argues only that information sharing could improve home estimates of r* if foreign central banks possess a comparative forecasting advantage. It does not model noisy signals, pooling, estimation gains, strategic information transmission, implementation costs, or resulting welfare improvements.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "The abstract states that coordination gains could be substantial, whereas Section IV says only that, 'to the extent' a foreign central bank has a comparative advantage in forecasting foreign productivity and business-cycle factors, sharing information 'could improve' the home estimate of r*. No noisy-signal environment, coordination mechanism, estimation improvement, or welfare comparison is supplied.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Policymaker",
+        "attacker": "Policymaker",
+        "target": "paper",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.2,
+        "outcome": "CONCEDED",
+        "issue_class": "substantial_rephrasal",
+        "attack_type": "substantial_rephrasal",
+        "evidence": "The abstract states that \"gains to policy coordination could be substantial given that r*'s are unobserved but are correlated across countries.\" Section IV supports only the conditional proposition that, \"to the extent the foreign central bank has some comparative advantage\" in nowcasting or forecasting, sharing or pooling information \"could improve\" the home central bank's r* estimate. The manuscript also acknowledges that the model assumes the global drivers are observed with known parameter mappings, whereas \"in practice this is not the case.\" Equations (3) and (10) establish the exchange-rate decompositions; equations (12) and (18) establish cross-country general-equilibrium components in r*; equation (16) illustrates that cooperation can require reactions to foreign inflation. The conclusion acknowledges special assumptions including producer-currency pricing, Cobb-Douglas/CES preferences, and Cole-Obstfeld balanced trade."
+      }
+    ],
+    "rephrasal_revisions": [
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.2,
+        "evidence": "Credibility, communication, statutory accountability, and public support do not enter the modeled preferences, constraints, expectation formation, or welfare comparison, although Section IV invokes them to argue against binding cooperation.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "Section IV argues that reacting to foreign inflation could erode credibility and even says the all-in costs could swamp theoretical benefits. Yet credibility and communication do not enter preferences, constraints, expectations formation, or the cooperative welfare comparison.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      }
+    ],
+    "extension_requests": [],
+    "hard_blockers": [],
+    "major_barriers": [
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.1,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (3) makes today's exchange rate depend on the conditional expected present value of future bilateral r* differentials. Figures 5-6 instead correlate the dollar with a generated HLW VECM equilibrium error lagged by a visually selected 12 quarters. The manuscript reports no sample dates, construction details, cross-correlation profile, lag-selection protocol, confidence interval, persistence-robust inference, generated-regressor treatment, or robustness analysis. The manuscript itself also characterizes the nominal exchange rate as containing a unit root.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Equation (3) contains the conditional expectation of the sum of future home-foreign r* differentials. Figures 5-6 instead use an HLW VECM equilibrium error lagged by 12 quarters and report only a correlation of 0.70. No mapping from that equilibrium error to expected future differentials, lag-selection procedure, sample definition, uncertainty estimate, or persistence-robust inference is provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section IV defines cooperation as joint maximization of world welfare, but it provides no world-welfare objective, cooperative constraints, first-order conditions, implementation argument, corresponding foreign-country rule, or welfare comparison with Nash equations (14)-(15). The purported cooperative equation labeled (16) also introduces an undefined coefficient denoted varphi. The subsequent communication and credibility examples depend on the unproved sign and magnitude of the foreign-inflation response.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section IV defines cooperation as maximizing world welfare but supplies no world-welfare expression or cooperative first-order conditions. The cooperative equation labeled (16) introduces an undefined varphi coefficient and is not accompanied by the foreign-country rule or an algebraic comparison with Nash equations (14)-(15). Consequently, neither implementation nor welfare improvement is shown.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Policymaker",
+        "attack_id": "Theorist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "The introduction calls Section IV the paper's main contribution. Equations (14)-(15) provide Nash rules, but the later equation labeled (16) is asserted as the cooperative rule without a world-welfare objective, constraints, first-order conditions, a corresponding foreign rule, or a welfare comparison. It also contains an unexplained coefficient denoted varphi, potentially confused with phi previously used for labor-supply curvature. The subsequent credibility examples rely on the sign and role of the foreign-inflation term in this underived rule.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.4,
+        "barrier_category": "REVISION",
+        "confidence": 9.2,
+        "evidence": "Equation (3) specifies the exchange rate as the sum of the domestic price level, the output gap, and an infinite expected sum of future home-foreign r* differentials. Figures 5-6 instead use the HLW VECM equilibrium error, with Section III stating that it 'appears to lead' the trade-weighted dollar by about 12 quarters. The manuscript supplies no empirical proxy for the conditional present value, no controls for the price and business-cycle terms, and no justification for translating a lagged equilibrium error into the forward-looking object.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.1,
+        "evidence": "The manuscript reports neither sample dates nor observations, transformations, data vintages beyond noting July 2016 HLW estimates, lag-selection criteria, standard errors, confidence intervals, stability tests, or alternative dollar and r* measures. It explicitly argues later that the nominal exchange rate must possess a unit root, while the HLW equilibrium error is based on estimated latent rates and an estimated cointegrating vector.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "The abstract calls the relationship a novel empirical regularity and reports a correlation of 0.7. Section III says the equilibrium error 'appears to lead' the dollar by about 12 quarters, but provides no sample dates, cross-correlation profile, lag-selection rule, standard error, confidence interval, or robustness checks. The manuscript also states that the nominal exchange rate has a unit root, while the HLW equilibrium error is constructed from estimated latent r* series and estimated cointegrating coefficients.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figures 5-6 use an HLW VECM equilibrium error lagged by 12 quarters, while equation (3) uses the conditional expected present value of future neutral-rate differentials. The manuscript gives no sample dates, reproducible data construction, lag-selection protocol, confidence interval, persistence-robust inference, treatment of generated-regressor uncertainty, or robustness analysis.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The manuscript defines cooperation as maximizing world welfare, but it does not state the cooperative objective, derive planner first-order conditions, define the varphi coefficient in the displayed cooperative equation labeled (16), provide the corresponding foreign-country rule, or demonstrate implementation and welfare improvement relative to Nash equations (14)-(15).",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "attack_id": "Initial audit by Theorist",
+        "attacker": "Theorist",
+        "target": "paper",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.2,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states that the paper derives an exchange-rate decomposition and that global r* shocks require no exchange-rate adjustment. Equation (3) gives e_t = p_t + x_t minus the expected sum of home-foreign neutral-rate differentials; equation (10) supplies the two-country counterpart. The introduction identifies Section IV as the main contribution. Equations (14)-(15) give Nash Taylor-type rules, while equation (16) is presented as the cooperative rule but contains an unexplained varphi coefficient and is not preceded by a cooperative welfare maximization or first-order-condition derivation. Figures 5-6 and their accompanying text report that the VECM equilibrium error appears to lead the trade-weighted dollar by about 12 quarters and that the simple correlation is 0.70."
+      },
+      {
+        "attack_id": "Initial audit by Econometrician",
+        "attacker": "Econometrician",
+        "target": "paper",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "outcome": "CONCEDED",
+        "issue_class": "substantive_flaw",
+        "attack_type": "substantive_flaw",
+        "evidence": "The abstract states: 'We document a novel empirical regularity' and reports that 'the correlation between the dollar and the 12 quarter lag of the HLW equilibrium error is estimated to be 0.7.' Section III states: 'the equilibrium error appears to lead the trade weighted dollar by about 12 quarters' and reports the same simple correlation. No accompanying regression, standard error, confidence interval, sample definition, lag-selection protocol, or robustness analysis is provided. Equation (3) instead defines the exchange-rate component as the expected sum of future neutral-rate differentials. Later, the manuscript explicitly states that 'the equilibrium nominal exchange rate in this model must possess a unit root,' underscoring the need for careful time-series inference when correlating the dollar level with another persistent estimated object."
+      }
+    ],
+    "debate_nodes": [
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "Policymaker",
+        "attack_id": "Theorist→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.5,
+        "evidence": "The introduction calls Section IV the paper's main contribution. Equations (14)-(15) provide Nash rules, but the later equation labeled (16) is asserted as the cooperative rule without a world-welfare objective, constraints, first-order conditions, a corresponding foreign rule, or a welfare comparison. It also contains an unexplained coefficient denoted varphi, potentially confused with phi previously used for labor-supply curvature. The subsequent credibility examples rely on the sign and role of the foreign-inflation term in this underived rule.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.6,
+        "evidence": "Section IV defines cooperation as maximizing world welfare but supplies no world-welfare expression or cooperative first-order conditions. The cooperative equation labeled (16) introduces an undefined varphi coefficient and is not accompanied by the foreign-country rule or an algebraic comparison with Nash equations (14)-(15). Consequently, neither implementation nor welfare improvement is shown.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.0,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Equation (3) contains the conditional expectation of the sum of future home-foreign r* differentials. Figures 5-6 instead use an HLW VECM equilibrium error lagged by 12 quarters and report only a correlation of 0.70. No mapping from that equilibrium error to expected future differentials, lag-selection procedure, sample definition, uncertainty estimate, or persistence-robust inference is provided.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.3,
+        "evidence": "The abstract claims potentially substantial coordination gains. Section IV only argues conditionally that, if a foreign central bank has a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve the home estimate of r*. No information structure or quantitative welfare comparison is supplied.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Econometrician",
+        "target": "Policymaker",
+        "attack_id": "Econometrician→Policymaker",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "The abstract calls the relationship a novel empirical regularity and reports a correlation of 0.7. Section III says the equilibrium error 'appears to lead' the dollar by about 12 quarters, but provides no sample dates, cross-correlation profile, lag-selection rule, standard error, confidence interval, or robustness checks. The manuscript also states that the nominal exchange rate has a unit root, while the HLW equilibrium error is constructed from estimated latent r* series and estimated cointegrating coefficients.",
+        "outcome": "CONCEDED",
+        "outcome_reason": "Explicit concession recorded."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "The abstract states that coordination gains could be substantial, whereas Section IV says only that, 'to the extent' a foreign central bank has a comparative advantage in forecasting foreign productivity and business-cycle factors, sharing information 'could improve' the home estimate of r*. No noisy-signal environment, coordination mechanism, estimation improvement, or welfare comparison is supplied.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 1,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.0,
+        "evidence": "Section IV argues that reacting to foreign inflation could erode credibility and even says the all-in costs could swamp theoretical benefits. Yet credibility and communication do not enter preferences, constraints, expectations formation, or the cooperative welfare comparison.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.8,
+        "evidence": "Section IV defines cooperation as joint maximization of world welfare, but it provides no world-welfare objective, cooperative constraints, first-order conditions, implementation argument, corresponding foreign-country rule, or welfare comparison with Nash equations (14)-(15). The purported cooperative equation labeled (16) also introduces an undefined coefficient denoted varphi. The subsequent communication and credibility examples depend on the unproved sign and magnitude of the foreign-inflation response.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.1,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Equation (3) makes today's exchange rate depend on the conditional expected present value of future bilateral r* differentials. Figures 5-6 instead correlate the dollar with a generated HLW VECM equilibrium error lagged by a visually selected 12 quarters. The manuscript reports no sample dates, construction details, cross-correlation profile, lag-selection protocol, confidence interval, persistence-robust inference, generated-regressor treatment, or robustness analysis. The manuscript itself also characterizes the nominal exchange rate as containing a unit root.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Theorist",
+        "target": "paper",
+        "attack_id": "Theorist→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.5,
+        "evidence": "Section IV argues only that, if foreign central banks possess a comparative advantage in forecasting foreign productivity or business-cycle conditions, sharing or pooling nowcasts could improve a home central bank's estimate of r*. It does not specify signal precision, strategic information sharing, an estimator, resulting policy errors, or welfare gains.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.4,
+        "barrier_category": "REVISION",
+        "confidence": 9.2,
+        "evidence": "Equation (3) specifies the exchange rate as the sum of the domestic price level, the output gap, and an infinite expected sum of future home-foreign r* differentials. Figures 5-6 instead use the HLW VECM equilibrium error, with Section III stating that it 'appears to lead' the trade-weighted dollar by about 12 quarters. The manuscript supplies no empirical proxy for the conditional present value, no controls for the price and business-cycle terms, and no justification for translating a lagged equilibrium error into the forward-looking object.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Econometrician",
+        "target": "paper",
+        "attack_id": "Econometrician→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.1,
+        "evidence": "The manuscript reports neither sample dates nor observations, transformations, data vintages beyond noting July 2016 HLW estimates, lag-selection criteria, standard errors, confidence intervals, stability tests, or alternative dollar and r* measures. It explicitly argues later that the nominal exchange rate must possess a unit root, while the HLW equilibrium error is based on estimated latent rates and an estimated cointegrating vector.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 8.7,
+        "evidence": "The manuscript defines cooperation as maximizing world welfare, but it does not state the cooperative objective, derive planner first-order conditions, define the varphi coefficient in the displayed cooperative equation labeled (16), provide the corresponding foreign-country rule, or demonstrate implementation and welfare improvement relative to Nash equations (14)-(15).",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantive_flaw",
+        "issue_class": "substantive_flaw",
+        "severity_score": 7.2,
+        "barrier_category": "REVISION",
+        "confidence": 9.0,
+        "evidence": "Figures 5-6 use an HLW VECM equilibrium error lagged by 12 quarters, while equation (3) uses the conditional expected present value of future neutral-rate differentials. The manuscript gives no sample dates, reproducible data construction, lag-selection protocol, confidence interval, persistence-robust inference, treatment of generated-regressor uncertainty, or robustness analysis.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "substantial_rephrasal",
+        "issue_class": "substantial_rephrasal",
+        "severity_score": 5.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.6,
+        "evidence": "Section IV argues only that information sharing could improve home estimates of r* if foreign central banks possess a comparative forecasting advantage. It does not model noisy signals, pooling, estimation gains, strategic information transmission, implementation costs, or resulting welfare improvements.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      },
+      {
+        "round": 2,
+        "attacker": "Policymaker",
+        "target": "paper",
+        "attack_id": "Policymaker→paper",
+        "attack_type": "rephrasal",
+        "issue_class": "rephrasal",
+        "severity_score": 3.5,
+        "barrier_category": "REPHRASAL",
+        "confidence": 8.2,
+        "evidence": "Credibility, communication, statutory accountability, and public support do not enter the modeled preferences, constraints, expectation formation, or welfare comparison, although Section IV invokes them to argue against binding cooperation.",
+        "outcome": "UNANSWERED",
+        "outcome_reason": "Paper critique recorded; no peer defense was required."
+      }
+    ],
+    "valid_audit_count": 3,
+    "invalid_audit_count": 0,
+    "pass_count": 0,
+    "revise_count": 3,
+    "fail_count": 0
+  }
+}

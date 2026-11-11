@@ -1,0 +1,464 @@
+# EDITORIAL DECISION REPORT
+---
+**FINAL DETERMINATION**: MAJOR REVISION REQUIRED
+**CONSENSUS ACCREDITATION SCORE**: 0.594 / 1.000
+**EXECUTION SCORE**: 0.639
+**NOVELTY SCORE**: 0.450 (MEDIUM)
+**INSIGHT SCORE**: 0.620 (MEDIUM)
+**SUBSTANTIAL-REPHRASAL (CENTRAL OVERCLAIM) REVISIONS**: 1
+**REPHRASAL-ONLY REVISIONS**: 0
+**VALID AUDITS SCORED**: 3 / 3
+
+## SYSTEM METRIC AUDIT TRAIL
+```text
+## REVIEWER WEIGHTING
+Legacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.
+Initial normalized weights: {'Theorist': 0.5, 'Policymaker': 0.3, 'CS_Expert': 0.2}
+Valid audits scored: 3; invalid fallback audits excluded: 0.
+
+### Debate Round 1
+  • Theorist→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Theorist→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→Theorist: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → CONCEDED. Explicit concession recorded.
+  • CS_Expert→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • CS_Expert→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+### Debate Round 2
+  • Theorist→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 5.5/10; category REVISION; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • CS_Expert→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • CS_Expert→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 10.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+
+## DUNG-STYLE CREDIBILITY UPDATES
+Only conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.
+  Theorist→paper (UNANSWERED): +0.011 to Theorist (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.006 to Theorist (paper critique, discounted)
+  Theorist→paper (UNANSWERED): +0.003 to Theorist (paper critique, discounted)
+  Policymaker→Theorist (CONCEDED): +0.043 to Policymaker, -0.043 to Theorist
+  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.002 to Policymaker (paper critique, discounted)
+  CS_Expert→paper (UNANSWERED): +0.011 to CS_Expert (paper critique, discounted)
+  CS_Expert→paper (UNANSWERED): +0.006 to CS_Expert (paper critique, discounted)
+  CS_Expert→paper (UNANSWERED): +0.003 to CS_Expert (paper critique, discounted)
+  CS_Expert→paper (UNANSWERED): +0.002 to CS_Expert (paper critique, discounted)
+
+## FINAL REVIEWER WEIGHTS
+  Theorist: 0.500 -0.023 → 0.477
+  Policymaker: 0.300 +0.050 → 0.350
+  CS_Expert: 0.200 +0.023 → 0.223
+Normalized final weights: {'Theorist': 0.45439158437812704, 'Policymaker': 0.33351934767269886, 'CS_Expert': 0.21208906794917406}
+
+## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION
+  Theorist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.5/10, barrier=REVISION
+  Policymaker: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=7.0/10, barrier=REVISION
+  CS_Expert: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION
+Raw execution score: 0.750
+Execution penalty from surviving substantive flaws: 0.111
+Execution score: 0.639
+Novelty consensus: MEDIUM (0.450 before debate penalty; 0.450 after)
+Novelty claim counts (all personas): HIGH=0, MEDIUM=6, LOW=0
+Insight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)
+Verdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0
+Unresolved high-confidence BLOCKERs: 0
+Substantive revision barriers: 12
+Substantial-rephrasal (central overclaim) revisions: 1
+Rephrasal-only revisions: 0
+Extension/future-work requests: 0
+
+## FINAL SCORE
+Final score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.
+0.383 + 0.099 + 0.112 = 0.594
+Substantive-revision gate applied: minor-revision outcome is unavailable.
+Substantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.
+```
+
+## SELECTED EXPERT PANEL
+- Theorist, Policymaker, CS_Expert
+- Weights: {'Theorist': 0.5, 'Policymaker': 0.3, 'CS_Expert': 0.2}
+- Selection rationale: The central validity risk is the formal sovereign-default mechanism, including equilibrium timing, strategic hierarchy, bailout incentives, welfare comparisons, and decentralization through Pigouvian taxes. Policy expertise is needed to assess whether the modeled bailout, centralized-borrowing, and debt-tax arrangements are institutionally meaningful and support the normative recommendations. Computational expertise is complementary because the quantitative conclusions depend on correctly solving and simulating a high-dimensional calibrated dynamic game with default and market-exclusion states.
+
+## CONSTRUCTIVE SUMMARY
+The paper has a credible core: common risk-averse lenders create cross-country financing spillovers, anticipated rescue can distort borrowing incentives, and coordinated borrowing may internalize those spillovers. This yields a useful, medium-novelty and medium-insight comparison of ex-post and ex-ante policy within a common quantitative framework. The present manuscript nevertheless requires major revision because its pricing equations are inconsistent, its anticipated-bailout regime is underdetermined, its exact Pigouvian implementation claim exceeds the analysis, and the supplied quantitative record is incomplete. These critiques are well supported and were conceded or shared across reviewers. No hard blocker was identified, and no wholesale change of research question is required. The most productive revision is therefore to preserve the central comparison while rebuilding its formal and computational foundation, fully specifying the bailout institution, and matching the strength of the policy claims to what the corrected model actually demonstrates.
+
+## MINIMUM VIABLE REVISION PATH
+A minimally viable resubmission should complete the following sequence. First, repair the baseline model: write the lender budget with bond purchases treated consistently as expenditures, use country-specific holdings, derive the generic pricing equation, and correct every issuer-default indicator. Reconcile these equations with the actual code and regenerate all tables and welfare results. Second, close the anticipated-bailout economy by defining psi, the bargaining or selection rule, the timing of transfers, and next-period bailout indicators; then recompute the anticipated-bailout equilibrium and show sensitivity to the transfer rule where relevant. Third, choose one defensible route for the tax result: either solve the fully specified taxed decentralized Bellman system and verify global, state-by-state replication of the central-borrower allocation, or recast equation (50) as a local or approximate wedge and remove exact-replication claims. Fourth, submit the complete manuscript and sufficient computational documentation, including grids, tolerances, interpolation, initialization, simulation design, SMM details, residual diagnostics, and grid-robustness checks. Fifth, revise the abstract, introduction, and conclusion so that policy rankings are conditional on the model's welfare weights, timing, transfer rules, and instruments. A point-by-point response should identify every corrected equation, state whether prior computations used the printed or intended system, and document how each principal result changes.
+
+## EDITORIAL RATIONALE
+Decision: MAJOR REVISION REQUIRED. The strongest credible version of the paper is a quantitative normative comparison of ex-post bailouts and ex-ante borrowing coordination in a two-country sovereign-default model with common risk-averse lenders. Its clearest contribution is to show how anticipated bailouts may encourage borrowing, while a central borrower internalizing cross-country financing spillovers may choose less debt and reduce default risk. This is a meaningful extension of an established common-lender contagion mechanism. Novelty and insight are both best assessed as MEDIUM: the underlying wealth channel is inherited from cited work, but the unified policy comparison and the distinction between ex-post relief and ex-ante discipline are useful.
+
+The paper is promising because it places several policy regimes in a common environment and offers an intuitive mechanism linking one sovereign's choices to another's borrowing terms. However, all three reviewers recommend resubmission, and their substantive concerns converge. First, the lender budget and pricing system are internally inconsistent as written. Equations (4) and (6) add bond purchases to lender consumption despite equation (3) describing them as expenditures, use an inappropriate bond-holding index, and cannot yield equation (7) with a positive price. Equations (12) and (31) price Outskirt debt using Periphery's default indicator, contrary to equation (7) and equations (22), (37), and (45). Because prices drive contagion, borrowing, default, and welfare, the quantitative findings remain unverified until the equations are corrected, reconciled with the implementation, and the results reproduced.
+
+Second, the anticipated-bailout equilibrium is not closed. Equations (34) and (41) introduce an undefined surplus term psi without a fixed value, admissible range, bargaining protocol, or equilibrium condition. The continuation expressions also combine future default choices with an unprimed bailout indicator. These omissions leave transfer incidence, timing, and state contingency unclear and prevent the displayed model from selecting a unique anticipated-bailout allocation.
+
+Third, the claimed exact Pigouvian decentralization is not established. Equations (48)-(50) equate local first-order conditions under differentiability, although footnote 14 acknowledges that default makes value and price functions generally non-differentiable. The derivation does not establish global optimality or equality of policy correspondences, omits strategic effects through the forecast rules H and D, and leaves the tax rebate T insufficiently specified. Tax moments alone do not verify that the complete taxed decentralized equilibrium reproduces the central-borrower allocation.
+
+Fourth, the supplied manuscript ends at the beginning of Table 3. The completed quantitative tables, welfare calculations, policy simulations, and conclusion needed to assess the abstract's rankings are therefore unavailable in the record. A complete manuscript is essential for renewed evaluation.
+
+The central substantial-rephrasal issue is that the manuscript generalizes from its particular welfare criterion and institutional assumptions to broad claims that ex-ante policies are preferable and Pigouvian taxes successfully replicate centralized policies. Equation (42) uses equal country weights, while the bailout regimes impose specific timing and transfer restrictions. Unless stronger analysis is supplied, the claims must be explicitly conditional on those modeled arrangements. Minor rephrasal is not independently decision-relevant here. The reviewers did not request unrelated extensions; institutional feasibility, alternative welfare weights, and bargaining sensitivity are best treated as robustness analysis or future work unless needed to support retained general claims. There are no unresolved hard blockers, and the core idea may be repairable within the existing framework, but the present defects are substantive rather than editorial.
+
+## OFFICIAL LETTER TO THE AUTHOR
+Dear Authors,
+
+We have evaluated the manuscript and reached a decision of MAJOR REVISION REQUIRED. The paper's strongest contribution is its unified comparison of anticipated bailouts and coordinated ex-ante borrowing in a two-country sovereign-default model with common risk-averse lenders. The distinction between ex-post crisis relief and ex-ante correction of borrowing incentives is economically clear and potentially useful. The central-borrower exercise may remain informative even if the proposed tax implementation cannot be sustained in its current form.
+
+The manuscript is not yet sound enough for acceptance because several central parts of the model and quantitative analysis require reconstruction and verification.
+
+1. Please correct and reconcile the lender problem and all bond-pricing equations. As written, equations (4) and (6) add new bond purchases to consumption even though equation (3) defines them as expenditures, and the bond-holding notation is not country-specific. Equations (12) and (31) also price Outskirt debt using Periphery's default indicator, contrary to the generic pricing equation and later specialized equations. Derive equation (7) explicitly from the corrected lender budget, audit every specialized pricing equation, state whether the computations used the printed or intended equations, and rerun all quantitative exercises under the corrected system.
+
+2. Please close the anticipated-bailout equilibrium. Define psi through an exogenous rule, bargaining protocol, or equilibrium condition, including its admissible range and allocation across countries. Correctly date and index bailout indicators in continuation values and explain the sequence of decisions and state contingencies. Because transfer incidence affects borrowing and welfare, report sensitivity to the selected transfer rule or establish why the principal ranking is robust.
+
+3. Please either establish the Pigouvian implementation result in the complete model or materially narrow it. Exact replication cannot presently be inferred from local differentiable first-order conditions in a model with discrete default and non-differentiable value and price functions. A retained exact claim requires a fully specified tax authority, budget and rebate rule; treatment of each government's perceived marginal effect on rebates; incorporation of strategic responses through the follower's policies; and state-by-state verification that the complete taxed Bellman system reproduces the central-borrower borrowing, default, pricing, and welfare outcomes. If this cannot be shown, present equation (50) as a local or approximate candidate wedge and report the allocation generated by the taxed decentralized model rather than claiming exact replication.
+
+4. Please provide a complete manuscript and a reproducible quantitative account. The supplied version ends at the beginning of Table 3, so the welfare and policy rankings asserted in the abstract cannot be audited. Include all tables, simulations, welfare calculations, and conclusions. Document grids and bounds, interpolation, iteration nesting, initialization, convergence tolerances, simulation length, burn-in and seeds, and the SMM objective and weighting matrix. Provide code if possible, or enough detail to reproduce the results, together with pricing or Euler residuals, Bellman residuals, and grid-refinement checks.
+
+5. Please align the claims with the demonstrated scope. The ranking of ex-ante and ex-post policies is conditional on the modeled timing, transfer institution, equal-weight welfare criterion, and available instruments. Unless broader robustness is supplied, the abstract, introduction, and conclusion should say so. Likewise, do not describe Pigouvian taxation as an implementable substitute for centralized borrowing unless the complete implementation result is established.
+
+These concerns are serious, but they do not amount to an irreparable objection to the paper's core mechanism. A revision that corrects the formal system, closes the bailout regime, reproduces the quantitative results transparently, and either proves or narrows the tax result could provide a credible basis for renewed review.
+
+Sincerely,
+Senior Coordinating Editor
+
+---
+
+# Token Usage & Cost Summary
+
+## Overall Statistics
+
+- **Total Calls**: 11
+- **Duration**: 281.0 seconds
+- **Total Tokens**: 256,153
+  - Input: 236,053
+  - Output: 20,100
+  - Cached-Read: 0
+  - Cache-Creation: 236,020
+- **Estimated Cost**: $2.0783
+
+## Usage by Model
+
+| Model | Calls | Input | Output | Cached-Read | Cache-Creation | Total | Cost |
+|-------|-------|-------|--------|-------------|----------------|-------|------|
+| Gpt-5.6-sol | 11 | 236,053 | 20,100 | 0 | 236,020 | 256,153 | $2.0783 |
+
+## Usage by Role (Top 10)
+
+| Role | Calls | Input | Output | Cached-Read | Cache-Creation | Total |
+|------|-------|-------|--------|-------------|----------------|-------|
+| Debater-CS_Expert | 2 | 35,263 | 3,871 | 0 | 35,257 | 39,134 |
+| Debater-Policymaker | 2 | 35,263 | 3,165 | 0 | 35,257 | 38,428 |
+| Debater-Theorist | 2 | 35,263 | 2,967 | 0 | 35,257 | 38,230 |
+| Editor-In-Chief | 1 | 33,663 | 1,990 | 0 | 33,660 | 35,653 |
+| Theorist | 1 | 29,280 | 3,003 | 0 | 29,277 | 32,283 |
+| Policymaker | 1 | 29,285 | 2,594 | 0 | 29,282 | 31,879 |
+| CS_Expert | 1 | 29,279 | 2,365 | 0 | 29,276 | 31,644 |
+| Editor-Selection | 1 | 8,757 | 145 | 0 | 8,754 | 8,902 |
+
+---
+
+# DETAILED ANALYSIS
+
+## ROUND 1: INDEPENDENT AUDITS
+
+### Theorist Analysis
+
+**Structural Strength**: The paper cleanly separates ex-post crisis intervention from ex-ante debt management and embeds both in a common-lender sovereign-default framework. The common lender's stochastic discount factor gives a transparent economic channel through which one country's default can worsen another country's borrowing terms.
+
+**Domain Audit**: The central-borrower exercise is economically coherent, but the claim that its allocation can be replicated exactly with the Pigouvian tax in equation (50) is not established. Equation (50) merely equates locally derived first-order conditions under differentiability and no current default. Sovereign-default value and price functions are generally non-differentiable, debt is solved on a discrete grid, and matching a local first-order condition does not establish equality of global policy correspondences. More importantly, equation (48) omits relevant equilibrium effects present in the stated decentralized game: Outskirt is a Stackelberg leader whose debt choice affects Periphery's forecast borrowing and default rules H and D in equations (13)-(14), while future default also changes the marginal continuation value of debt. The right-hand side is written as beta times expected marginal utility without an explicit future-repayment indicator. The proposed tax-and-rebate budget in equation (47) also requires the government to treat the rebate T as exogenous to its own debt choice; otherwise rebating its own tax revenue can undo the wedge. Thus Table 6 describes a candidate local wedge, not yet a demonstrated decentralized implementation of the central-borrower equilibrium.
+
+**Best-Case Contribution**: The paper provides a useful quantitative normative comparison within a two-country sovereign-default model: anticipated cross-country bailouts encourage additional borrowing and can lower debtor welfare, whereas coordinated ex-ante borrowing restraint internalizes the common-lender wealth externality, lowers debt and default risk, and raises borrower welfare. This distinction between ex-post rescue and ex-ante coordination is the strongest credible contribution, even if the specific Pigouvian implementation result is not yet proved.
+
+**Minimum Viable Revision**: Retain the central-borrower results but replace the local first-order-condition argument with an actual implementation exercise. Define the tax and rebate system completely, require each government to treat its rebate as exogenous at the margin, insert the state-contingent tax into the full Bellman problems, and compute or prove that the central-borrower policy is a global optimum for each decentralized government at every relevant state, including default and non-differentiable states. If exact implementation fails, narrow the claim to an approximate local Pigouvian wedge and report the resulting decentralized allocations rather than asserting exact replication.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 7.5/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: Exact replication by Pigouvian taxes is a headline result in the abstract, introduction, and conclusion, but equation (50) supplies only a local formal condition and does not implement the allocation in the model's non-convex dynamic game. This does not destroy the common-lender contagion mechanism or the separately computed central-borrower result, so it is not a blocker. It does, however, leave one of the paper's three principal policy conclusions unsupported and requires substantial within-framework analysis rather than a wording correction.
+
+**Novelty Claims**:
+- [THEORETICAL] Uses a two-country sovereign-default model with risk-averse common lenders to conduct a normative comparison of anticipated bailouts and coordinated borrowing. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The manuscript explicitly builds on the contagion framework of Arellano et al. (2017), Lizarazo (2013), and Pouzo and Presno (2016), so the underlying wealth-effect mechanism is inherited. The genuine new ingredient is the quantitative normative comparison of cross-country arrangements rather than a fundamentally new contagion mechanism.
+- [POLICY] Claims that ex-ante centralized borrowing restraint dominates anticipated ex-post bailouts and that state-contingent Pigouvian debt taxes can decentralize the coordinated allocation. (Significance: MEDIUM; Confidence: 8.5/10)
+  Evidence: Sections 7.2-7.4 report that anticipated bailouts increase debt and lower debtor welfare, while the central borrower lowers debt and raises borrower welfare. Equation (50) and Table 6 then characterize the proposed tax. This is a bounded but meaningful policy extension of an existing sovereign-contagion model; the exact tax implementation component currently lacks a sufficient proof.
+
+**Insight Assessment**:
+MEDIUM: The ex-post versus ex-ante organization conveys the main economic trade-off clearly, and the common-investor wealth channel is intuitive. The exposition becomes materially less illuminating at the implementation stage because local first-order conditions, exact decentralization, and numerical policy replication are treated as interchangeable despite default non-convexities. (Confidence: 8.0/10)
+Evidence: Sections 4 and 7 consistently contrast bailouts with the central borrower, while equation (8) decomposes bond prices into credit-risk and risk-premium components. By contrast, Section 4.3 moves directly from equations (48)-(49) to the statement that equation (50) equates borrowing policies, without a global implementation proposition or treatment of non-differentiability.
+
+**Layman Translation**: The paper persuasively explains why countries may borrow too much when their defaults also hurt neighbors through shared lenders. Its proposed coordinated borrower directly addresses that problem. But the paper has not yet shown that the advertised debt tax reproduces the coordinated outcome: it matches a simplified marginal equation, whereas actual default decisions are discrete and governments react strategically. The authors should solve the taxed decentralized model and verify implementation state by state, or describe the tax only as an approximation.
+
+**Confidence Score**: 8.7/10.0
+
+**Source Evidence**: The abstract states that "central borrower's policies can be replicated in a decentralized setting with Pigouvian taxes on debt." Section 4.3 derives equation (48) from the decentralized problem and equation (49) from the central-borrower problem, then states that equation (50) equates the policies. Yet the manuscript itself acknowledges in footnote 14 that "value functions and the price function for government debt are generally not differentiable due to the nonlinearity introduced by sovereign defaults." Equations (13)-(14) also show that Outskirt's problem includes forecast rules H and D for Periphery's borrowing and default decisions, effects absent from equation (48). Equation (47) introduces a lump-sum rebate T without specifying the incidence needed to preserve the marginal tax wedge. Table 6 reports moments for the resulting tax but does not verify that solving the complete taxed Bellman system reproduces the central-borrower allocation.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### Policymaker Analysis
+
+**Structural Strength**: The manuscript organizes the policy comparison around a common calibrated sovereign-default environment, so differences among unanticipated bailouts, anticipated bailouts, centralized borrowing, and corrective taxation can be traced to changes in incentives rather than to unrelated modeling choices. This is particularly useful for separating ex-post crisis relief from ex-ante debt discipline.
+
+**Domain Audit**: The paper's actual scope is a normative comparison inside a stylized two-country model calibrated to the euro-area periphery, not an institutional evaluation of implementable euro-area policy. Within that scope, the bailout moral-hazard result and the central-borrower allocation are informative. However, the claimed decentralized implementation through Pigouvian taxes is not established. Equation (50) is derived from first-order conditions under differentiability, while footnote 14 immediately concedes that the value and bond-price functions are generally not differentiable because of default. In addition, equation (47) introduces a lump-sum rebate T, but equation (48) treats it as invariant to the government's borrowing choice. A budget-balanced supranational authority must specify how tax receipts are rebated; with only two strategic governments, a rebate depending on aggregate receipts can itself alter marginal borrowing incentives. Table 6 reports moments for a purported optimal tax but does not prove that the resulting decentralized default and borrowing policies reproduce the central-borrower equilibrium under these nonconvexities and rebate effects. Consequently, the strong statements that Pigouvian taxes 'successfully replicate' centralized policies and that these taxes provide an implementable alternative to surrendering sovereignty do not currently follow. More broadly, the conclusion that ex-ante interventions 'should be preferred' is valid only among the modeled arrangements: the manuscript does not incorporate legal authority, enforcement, fiscal capacity, democratic accountability, bargaining over transfers, bailout conditionality, or political responses to state-contingent taxes.
+
+**Best-Case Contribution**: The strongest credible contribution is a quantitative demonstration that, in a two-borrower sovereign-default model with risk-averse common lenders, anticipated cross-country bailouts can induce additional debt and lower debtor welfare, whereas a planner that internalizes lender-wealth spillovers chooses lower debt and reduces defaults. This provides a disciplined model-based rationale for addressing contagion through ex-ante borrowing incentives rather than relying exclusively on anticipated ex-post transfers.
+
+**Minimum Viable Revision**: Either remove the claim that equation (50) and Table 6 establish exact decentralized implementation, or provide a complete implementation exercise. The latter should define the supranational budget and rebate rule, account for each large government's effect on rebates, construct taxes using global incentive constraints rather than unsupported differentiable first-order conditions, and verify numerically that borrowing, default, prices, and welfare exactly match the central-borrower equilibrium. The abstract and conclusion should also describe the ranking of ex-ante and ex-post policies as conditional on the modeled instruments and avoid presenting the central borrower or state-contingent tax as institutionally feasible without further analysis.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 7.0/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: This is a genuine analytical and policy-feasibility defect rather than merely a request for more institutional detail: the manuscript claims exact decentralization, but its derivation relies on differentiability that it acknowledges is absent and ignores the incentive effects of the rebate needed to balance the tax authority's budget. The defect materially weakens one of the paper's three headline results and its proposed way around the sovereignty problem. It does not invalidate the calibrated comparison between bailouts and centralized borrowing, so the central contribution can be repaired within the existing framework by proving implementation correctly or dropping and narrowing the tax claim. REVISION rather than BLOCKER is therefore appropriate.
+
+**Novelty Claims**:
+- [THEORETICAL] The paper adds a normative comparison of anticipated bailouts and centralized borrowing to a two-country sovereign-contagion model with common risk-averse lenders. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The introduction explicitly distinguishes the paper from Arellano et al. (2017), which studies the positive implications of contagion, by stating that this manuscript examines cross-country arrangements intended to mitigate contagion. The new ingredient is the joint quantitative welfare comparison, while the common-lender wealth channel is borrowed from existing work.
+- [POLICY] The paper claims that anticipated ex-post bailouts are welfare-reducing because of moral hazard, while ex-ante control of borrowing reduces debt and default risk; it further claims these allocations can be decentralized with Pigouvian debt taxes. (Significance: MEDIUM; Confidence: 8.5/10)
+  Evidence: Table 3 reports higher debt, spreads, and bailout rates under anticipated bailouts and lower debt and spreads under the central borrower; Table 5 reports debtor welfare losses under anticipated bailouts and gains under centralized borrowing. The tax-implementation claim appears in the abstract, Sections 4.3 and 7.4, and the conclusion, although the implementation proof is incomplete.
+
+**Insight Assessment**:
+MEDIUM: The manuscript offers a clear economic narrative linking common-lender wealth losses to contagion and distinguishing ex-post relief from ex-ante incentive correction. The exposition becomes less illuminating at the institutional stage, where a planner allocation is translated too quickly into a policy recommendation without fully explaining enforcement, fiscal incidence, rebate design, or political incentives. (Confidence: 8.0/10)
+Evidence: Equation (8) decomposes bond prices into credit-risk and risk-premium components, and Sections 4 and 7 consistently organize the normative comparison by policy timing. By contrast, Section 4.3 moves from a local first-order condition to an exact Pigouvian implementation claim despite footnote 14's acknowledgment of non-differentiability, while the conclusion provides only a brief acknowledgment that centralized delegation and state-contingent taxes 'may be hard to implement.'
+
+**Layman Translation**: The model makes a useful point: if governments expect rescue, they may borrow more, while a common authority that accounts for cross-country damage would restrain debt. But the paper has not yet shown that a real tax-and-rebate system can reproduce that authority's decisions. Its tax formula uses smooth optimization even though sovereign default creates jumps, and it does not explain how returning the tax revenue would affect governments' incentives. The model therefore supports a case for ex-ante debt discipline, but not yet the claimed practical tax solution or a general conclusion that such policies dominate bailouts in actual institutions.
+
+**Confidence Score**: 8.5/10.0
+
+**Source Evidence**: The abstract states that 'central borrower's policies can be replicated in a decentralized setting with Pigouvian taxes on debt.' Section 4.3 introduces the taxed budget constraint cO = AOyO + qO(1-tauO)b'O - bO + T in equation (47), derives equation (48) without a derivative of T, and obtains the tax formula in equation (50) from differentiable first-order conditions. Footnote 14 states that 'the value functions and the price function for government debt are generally not differentiable due to the nonlinearity introduced by sovereign defaults.' Section 7.4 reports correlations and averages for the tax rate but does not document an exact decentralized-equilibrium replication. The conclusion says ex-ante interventions 'should be preferred' and that Pigouvian taxes 'successfully replicate' centralized policies, while acknowledging only afterward that delegation and state-contingent taxation may be difficult to implement.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### CS_Expert Analysis
+
+**Structural Strength**: The manuscript provides a useful recursive decomposition of the two-country Stackelberg problem and an unusually extensive solution-algorithm appendix. In particular, Appendix 9.7 separates the four market-access/default configurations and explains how Periphery's policies are computed conditional on each possible Outskirt borrowing choice before solving Outskirt's problem.
+
+**Domain Audit**: The computational model is not internally executable as written because the lender problem is inconsistent with the asset-pricing equations used throughout the quantitative analysis. Equation (4), repeated in equation (6), adds new bond purchases to lender consumption rather than subtracting them: c_L = y_L + sum_i[(1-d_i)(b_{L,i} + (1-x_i)q_i b'_{P})]. Bond purchases are described immediately beforehand as resources employed by lenders, so the budget should contain a negative purchase term and the country-specific holding b'_{L,i}, not b'_P. With the printed positive sign, the first-order condition cannot yield the positive pricing equation (7). There are additional own-default indexing errors: equations (12) and (31) price Outskirt debt using (1-d_P), although equation (7) and the later equations (22), (37), and (45) imply that Outskirt debt should pay according to (1-d_O). These are central equations rather than cosmetic notation because all simulated spreads, contagion, bailout incentives, and welfare comparisons depend on the pricing kernel. The appendix also omits enough implementation detail to determine whether the actual computation silently corrected these equations: no grid dimensions or bounds, interpolation method, convergence tolerances, initialization, SMM weighting criterion, random seed, or code archive is specified. The intended model is computationally feasible, but the manuscript does not presently establish that Tables 3-8 were generated by a mathematically consistent implementation of that model.
+
+**Best-Case Contribution**: The strongest credible contribution is a quantitative normative extension of a common-lender sovereign-contagion model: anticipated bailouts generate endogenous overborrowing, whereas coordinated ex-ante borrowing restraint internalizes the effect of one sovereign's debt on the other sovereign's financing terms. The paper then seeks to decentralize that coordinated allocation with state-contingent Pigouvian debt taxes.
+
+**Minimum Viable Revision**: Correct and reconcile the lender budget constraints, bond-payoff indicators, and market-clearing notation throughout; explicitly derive equation (7) from the corrected lender problem; verify every specialized pricing equation against the generic formula; and rerun all reported tables using the corrected system. Provide executable code or, at minimum, a complete computational specification covering state and choice grids, bounds, interpolation, price-iteration nesting, convergence criteria, initialization, simulation seeds and burn-in, and the SMM objective and weighting matrix. A short numerical validation should report Euler or pricing residuals, Bellman residuals, policy stability under finer grids, and confirmation that the published moments are reproduced.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.0/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: The inconsistency affects the pricing kernel that generates the paper's central contagion mechanism and therefore places every quantitative policy comparison in doubt. The damage is serious, but it is not an unresolved blocker because the economically intended signs and default indicators are reasonably clear and can be corrected within the existing framework. What remains unknown from the manuscript is whether the implementation used the intended equations or the printed ones, so correction, computational documentation, and a verified rerun are required.
+
+**Novelty Claims**:
+- [THEORETICAL] The paper adds a normative policy comparison to a two-country quantitative sovereign-default framework with contagion transmitted through the wealth of common risk-averse lenders. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The introduction explicitly distinguishes the paper from Arellano et al. (2017), which studies positive contagion, by examining bailouts, centralized borrowing, and welfare. The common-lender wealth mechanism itself is inherited, but applying it to compare ex-post and ex-ante coordination is a genuine extension.
+- [POLICY] The paper argues that anticipated cross-country bailouts reduce debtor welfare through moral hazard, while centralized borrowing or state-contingent Pigouvian debt taxes can improve debtor welfare by internalizing contagion externalities. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: Tables 3 and 5 report higher debt, spreads, and lower debtor welfare under anticipated bailouts, while the central borrower lowers debt and raises debtor welfare. Section 4.3 and Table 6 characterize the proposed tax implementation. These are bounded model-based policy results rather than a new general mechanism.
+
+**Insight Assessment**:
+MEDIUM: The narrative clearly separates ex-post crisis intervention from ex-ante borrowing discipline and gives useful intuition for why common risk-averse lenders transmit sovereign stress. The organization makes the policy comparison easy to understand, although the mathematical and computational inconsistencies prevent the exposition from serving as a reliable implementation blueprint. (Confidence: 8.0/10)
+Evidence: Sections 4 and 7 consistently organize the analysis around unanticipated bailouts, anticipated bailouts, centralized borrowing, and Pigouvian taxation. Figure 2 provides a direct visualization of the proposed contagion region, and Figure 4 links coordinated borrowing to lower debt issuance.
+
+**Layman Translation**: The paper's basic computational idea is plausible: when two governments borrow from the same risk-averse investors, one government's default can make financing more expensive for the other. But the written equations describing investors' purchases have the wrong sign and sometimes make one country's bond repay according to the other country's default. Because those equations generate all of the reported interest rates and policy conclusions, the authors must correct them and demonstrate through reproducible code or detailed numerical diagnostics that the tables were computed from the intended model.
+
+**Confidence Score**: 9.2/10.0
+
+**Source Evidence**: The manuscript says equation (3) is the amount of resources lenders employ to purchase assets, yet equations (4) and (6) add q_i b' to consumption. The same equations use b'_P where country-specific lender holdings b'_{L,i} are required. Equation (7) gives the generic payoff as (1-d_i), but equations (12) and (31) use (1-d_P) when pricing q_O; equations (22), (37), and (45) instead use Outskirt's own default indicator. Appendix 9.7 states only that income is discretized, grids are set up, and iterations continue until convergence; it supplies no numerical grid, tolerance, interpolation, initialization, seed, or SMM weighting details. Tables 3-8 nevertheless report precise simulated and welfare outcomes based on this system.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+# MULTI-AGENT DEBATE
+
+
+## DEBATE ROUND 1
+
+### Theorist Debate Contribution
+
+**Acknowledgment**: The peer reviews identify two distinct and cumulative execution problems. First, the printed lender budget and several specialized bond-pricing equations are inconsistent with the generic pricing equation, so the quantitative results cannot be verified from the stated model. Second, even under the intended pricing system, equation (50) does not prove that Pigouvian taxes globally decentralize the central-borrower allocation. Both problems are repairable within the existing framework but require more than editorial correction.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The lender problem does not mathematically support the asset-pricing equations on which the contagion mechanism and simulations depend. New bond purchases are added to lender consumption in equations (4) and (6), although the text identifies them as resources used to purchase assets. The equations also use b'_P rather than country-specific lender holdings. Moreover, equations (12) and (31) price Outskirt debt using Periphery's default indicator. Until these equations are reconciled and the results reproduced under the corrected system, the reported quantitative policy rankings are not auditable.
+  - Evidence: Equation (3) calls q_i b'_{L,i} resources employed to purchase assets, but equations (4) and (6) place the corresponding term inside consumption with a positive sign and write b'_P. The generic equation (7) prices country i's bond with payoff 1-d_i, whereas equations (12) and (31) use 1-d_P in the formula for q_O. Equations (22), (37), and (45) instead use Outskirt's own default indicator, confirming the internal inconsistency.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The claimed exact Pigouvian implementation is not established by equation (50). Equating local first-order conditions under an explicitly counterfactual differentiability assumption neither proves global optimality in a non-convex default model nor verifies equality of decentralized policy correspondences. The derivation also omits the Stackelberg effects of Outskirt debt on Periphery's borrowing and default rules and leaves the marginal incidence of the lump-sum rebate unspecified.
+  - Evidence: Footnote 14 concedes that sovereign-default value and price functions are generally non-differentiable. Nevertheless, Section 4.3 derives equations (48)-(50) from differentiable first-order conditions and immediately claims policy equivalence. Equation (48) contains no derivatives through the forecast rules H and D appearing in equations (13)-(14), and equation (47) includes a rebate T whose dependence on tax revenue and government borrowing is not defined.
+
+**Concessions**:
+- To: CS_Expert [substantive_flaw]
+  - I concede that the lender-budget sign, bond-holding index, and own-default indicator inconsistencies are central rather than cosmetic as the manuscript stands. They may be transcription errors in an otherwise correctly coded model, but the manuscript supplies no evidence allowing that benign interpretation to be verified. A corrected derivation and reproduction of the numerical results are therefore required.
+- To: Policymaker [substantive_flaw]
+  - I concede that the tax-and-rebate institution is incompletely defined and that the manuscript cannot infer exact decentralized implementation from equation (50). The rebate must be specified so that its perceived marginal dependence on each strategic government's borrowing does not negate or modify the intended wedge.
+
+**Questions**:
+- To: CS_Expert — Would correction of the printed pricing equations plus code, residual diagnostics, and full numerical replication be sufficient to resolve your concern, or do you see an additional conceptual inconsistency in the intended common-lender equilibrium?
+- To: paper — Were the reported simulations generated from the equations as printed or from a corrected lender budget and own-default pricing kernel?
+- To: paper — Can the authors solve the complete taxed Bellman system and verify state by state that the resulting borrowing, default, pricing, and welfare outcomes coincide with the central-borrower allocation, including states at which policy functions are discontinuous?
+
+**Final Argument State**: The paper retains a credible medium-novelty and medium-insight contribution: it organizes a useful quantitative comparison between anticipated ex-post bailouts and ex-ante borrowing coordination in a familiar common-lender contagion framework. The central-borrower exercise may remain informative independently of exact tax implementation. Execution is not presently sound enough for acceptance, however. The baseline lender equations are internally inconsistent, placing all quantitative results in doubt until corrected and reproduced. Separately, the exact Pigouvian decentralization claim requires a complete tax-and-rebate mechanism and global incentive verification rather than local differentiable first-order conditions. These are serious but potentially repairable substantive flaws. The manuscript should also narrow any policy recommendation to the modeled arrangements unless broader institutional feasibility is analyzed.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Policymaker Debate Contribution
+
+**Acknowledgment**: The review graph converges on a credible medium-level contribution—the distinction between anticipated ex-post bailouts and coordinated ex-ante borrowing restraint—but identifies two serious execution problems. The Pigouvian-tax decentralization is not established globally, and the printed lender budget and specialized bond-pricing equations are internally inconsistent. The latter issue places all quantitative results in doubt unless the authors demonstrate that the implementation used corrected equations.
+
+**Challenges**:
+- Target: Theorist [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.5/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The assessment understates the threat to the paper's central quantitative results by focusing primarily on the Pigouvian implementation. The manuscript's lender problem cannot generate its stated bond-pricing equation as printed, and Outskirt debt is sometimes priced using Periphery's default indicator. Because contagion, bailout incentives, spreads, and welfare all operate through these prices, this is a more fundamental execution problem than the tax proof alone.
+  - Evidence: Equations (4) and (6) add new bond purchases to lender consumption even though equation (3) describes them as resources employed to purchase assets; they also use b'_P rather than the country-specific holding b'_{L,i}. The resulting first-order condition cannot yield equation (7) with a positive bond price. Moreover, equations (12) and (31) price q_O with the payoff indicator (1-d_P), contradicting the generic own-default formula in equation (7) and the use of (1-d_O) in equations (22), (37), and (45).
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I agree that equation (50) is only a candidate local wedge, not a proof of exact decentralized implementation. Non-differentiability, Stackelberg effects through Periphery's policy rules, and the unspecified marginal incidence of the rebate prevent the claimed equivalence from following from the displayed first-order conditions.
+- To: CS_Expert [substantive_flaw]
+  - I agree that the lender budget sign, bond-holding index, and own-default indicator errors are central mathematical inconsistencies rather than harmless notation on the present record. The quantitative policy ranking cannot be treated as verified until the authors reconcile the equations with the code, rerun the analysis if necessary, and report numerical validation.
+
+**Questions**:
+- To: CS_Expert — Can the manuscript alone distinguish transcription errors from errors in the actual implementation, or should the review state conditionally that the quantitative results remain unverified until code, corrected derivations, and rerun tables establish which system was solved?
+- To: Theorist — Would you regard exact Pigouvian implementation as recoverable through state-by-state global incentive constraints on the existing discrete debt grid, or should the paper narrow the result to an approximate decentralization even after the lender-pricing system is corrected?
+
+**Final Argument State**: The surviving execution assessment is that the paper has repairable but serious substantive flaws. First, its printed lender budget and several specialized pricing equations are inconsistent with the generic asset-pricing condition, leaving the reported spreads, contagion, bailout, and welfare results unverified. Second, the claimed exact Pigouvian decentralization relies on local differentiable first-order conditions despite default nonconvexities, omitted strategic responses, and an unspecified rebate rule. Novelty remains MEDIUM because the paper extends an established common-lender contagion mechanism through a useful normative comparison rather than introducing a fundamentally new mechanism. Insight also remains MEDIUM: the ex-post versus ex-ante distinction is clear and policy-relevant, but the institutional implementation argument is incomplete. The abstract and conclusion require substantial narrowing unless a complete taxed equilibrium reproduces the central-borrower allocation. These defects appear repairable within the current framework through corrected equations, transparent computation, rerun quantitative exercises, and a global implementation analysis, so RESUBMIT rather than rejection is warranted.
+
+**Verdict**: RESUBMIT
+
+---
+
+### CS_Expert Debate Contribution
+
+**Acknowledgment**: The Theorist and Policymaker correctly identify that equation (50) does not establish exact decentralized implementation of the central-borrower allocation. I retain the separate computational concern that the model's printed lender budget and several specialized pricing equations are inconsistent with the generic asset-pricing equation. I also find that the anticipated-bailout mechanism is not fully closed because the transfer surplus parameter and future bailout policy are not adequately specified in the provided manuscript.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.5]
+  - Critique: The lender problem cannot generate the asset-pricing equations used for the quantitative analysis as printed. New bond purchases are added to lender consumption even though they are described as an expenditure, and the budget uses the non-country-specific object b'_P rather than b'_{L,i}. Moreover, equations (12) and (31) price Outskirt debt using Periphery's default indicator. These inconsistencies directly affect every simulated bond price, spread, contagion effect, and welfare comparison.
+  - Evidence: Equations (3)-(6) describe q_i b'_{L,i} as resources used to purchase assets but place the purchase term inside the lender budget with a positive sign. Equation (7) prices country i debt with payoff 1-d_i, whereas equations (12) and (31) use 1-d_P in the equation for q_O. Equations (22), (37), and (45) instead use Outskirt's own default indicator, confirming the internal inconsistency.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.0]
+  - Critique: The anticipated-bailout economy is not fully specified. The transfer is set equal to the minimum required transfer plus an undefined surplus term psi, but no bargaining rule, fixed value, or equilibrium condition determines that term. Because transfer incidence affects current utility, borrowing incentives, bailout frequency, and country-specific welfare, the anticipated-bailout results are not uniquely determined by the displayed model. In addition, the continuation expressions use the apparently current bailout indicator 1T_P alongside primed future default decisions, leaving the state contingency of future bailouts ambiguous.
+  - Evidence: Equations (34) and (41) impose T_P=T^P_min+psi and T_O=T^O_min+psi without defining psi. Equations (29) and (35) combine the future indicator d'_P with the unprimed bailout indicator 1T_P. The preceding unanticipated-bailout analysis only establishes that any transfer in an interval is mutually beneficial; it does not select a transfer for the anticipated dynamic equilibrium.
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I agree that equation (50) is only a candidate local wedge under differentiability and no current default. It does not prove global implementation in a non-convex sovereign-default problem, and the displayed decentralized first-order condition omits strategic effects operating through Periphery's forecast policies and leaves the rebate's marginal incidence unspecified.
+- To: Policymaker [substantial_rephrasal]
+  - I agree that the manuscript should not describe Pigouvian taxation as an implementable substitute for centralized borrowing without specifying the supranational budget and rebate rule and verifying the complete taxed equilibrium. The broader ranking of ex-ante and ex-post policies must also remain explicitly conditional on the modeled instruments.
+
+**Questions**:
+- To: paper — Did the numerical implementation use the printed lender budget and default indicators, or corrected equations with bond purchases subtracted and each bond paying according to its issuer's own default decision?
+- To: paper — What exact rule determines psi and the division of bailout surplus in the anticipated-bailout equilibrium, and how are future state-contingent bailout indicators represented in the Bellman iteration?
+- To: paper — Was the proposed Pigouvian tax inserted into and solved within the complete decentralized Bellman system, and if so, what numerical residual demonstrates that its policies and welfare reproduce the central-borrower allocation state by state?
+
+**Final Argument State**: The surviving execution assessment is that the intended common-lender model is computationally feasible but not mathematically or numerically validated as written. The lender budget, bond-payoff indexing, and anticipated-bailout closure contain repairable substantive defects that put the reported quantitative comparisons in doubt until the corrected system is rerun. Independently, the Pigouvian-tax section establishes at most a local candidate wedge rather than exact decentralized implementation, so the abstract and policy conclusions require material narrowing unless a complete implementation proof and numerical verification are supplied. Novelty remains MEDIUM: the common-lender wealth channel is inherited from cited work, while the unified quantitative comparison of ex-post bailouts and ex-ante coordination is a meaningful extension. Insight also remains MEDIUM because the ex-post versus ex-ante distinction is clear and economically useful, although the implementation discussion currently conflates local first-order conditions with global equilibrium replication. These defects are serious but repairable within the current framework, supporting RESUBMIT rather than rejection.
+
+**Verdict**: RESUBMIT
+
+---
+
+
+## DEBATE ROUND 2
+
+### Theorist Debate Contribution
+
+**Acknowledgment**: The peer reviews correctly converge on two central issues: the printed lender problem is inconsistent with the asset-pricing equations driving all quantitative results, and the Pigouvian-tax argument does not establish exact implementation. The CS_Expert additionally identifies an unresolved closure problem in the anticipated-bailout economy. These are distinct, repairable substantive flaws rather than merely presentational errors.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The anticipated-bailout equilibrium is not uniquely specified because the transfer surplus and its allocation are left undetermined. The minimum transfer makes the recipient indifferent, but adding an undefined psi does not constitute a bargaining protocol or equilibrium selection rule. Since transfer incidence changes current consumption, continuation values, borrowing incentives, and welfare, the anticipated-bailout policy ranking cannot be audited from the displayed model.
+  - Evidence: Equations (34) and (41) define transfers as T_P=T^P_min+psi and T_O=T^O_min+psi without defining psi, its admissible range, or a bargaining solution. Equations (29) and (35) also combine primed future default indicators with an unprimed bailout indicator, making the timing and state contingency of future transfers unclear.
+
+**Defenses**:
+- Against: Policymaker [substantive_flaw]
+  - The updated assessment does not subordinate the lender inconsistency to the Pigouvian issue. It treats the lender budget sign, holdings index, and wrong default indicator as the most fundamental execution defect because every simulated price, spread, contagion effect, bailout incentive, and welfare comparison depends on the resulting pricing schedules.
+
+**Concessions**:
+- To: CS_Expert [substantive_flaw]
+  - I concede that the anticipated-bailout economy has an additional substantive closure problem. Without a defined value for psi or a bargaining mechanism selecting transfers, and without correctly dated bailout policies in continuation values, the anticipated-bailout allocation and welfare results are not uniquely implied by the manuscript.
+- To: Policymaker [substantial_rephrasal]
+  - I agree that the abstract and policy conclusions must be narrowed unless the authors specify a complete tax-and-rebate institution and demonstrate that its global equilibrium reproduces the central-borrower allocation. Equation (50) alone does not support an implementation-ready policy claim.
+
+**Questions**:
+- To: paper — Do the computational routines use the economically correct lender budget with bond purchases subtracted and each bond priced by its own issuer's default event, and can all reported tables and welfare rankings be reproduced after reconciling the code with the manuscript?
+- To: paper — What bargaining or selection rule determines psi in the anticipated-bailout economy, and how are future bailout indicators indexed by next-period states?
+- To: paper — Can the proposed Pigouvian schedule be shown to implement the central-borrower allocation globally, including default discontinuities, strategic responses through Periphery's policies, and a fully specified supranational budget and rebate rule?
+
+**Final Argument State**: The surviving execution assessment is unfavorable but repairable. First, the lender budget and specialized bond-pricing equations are internally inconsistent, so the quantitative contagion mechanism and all policy rankings remain unverified until the equations are corrected, reconciled with the code, and the simulations reproduced. Second, the anticipated-bailout economy lacks a transfer-selection rule and clear intertemporal indexing, preventing its reported allocation from being uniquely derived. Third, the Pigouvian section supplies only a local candidate wedge under counterfactual differentiability, not a global decentralization result with strategic responses and a defined rebate mechanism. Novelty is MEDIUM: the common-lender wealth channel is inherited from cited work, while the unified normative comparison of bailouts and borrowing coordination is a meaningful extension. Insight is MEDIUM because the distinction between anticipated ex-post intervention and ex-ante borrowing discipline is economically useful, although the implementation claims currently exceed the demonstrated analysis. The abstract and conclusions require substantial narrowing unless the missing equilibrium and implementation results are supplied. All identified defects appear potentially repairable within the present framework, supporting RESUBMIT rather than rejection.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Policymaker Debate Contribution
+
+**Acknowledgment**: The review graph identifies three decisive and mutually reinforcing concerns: the baseline lender problem is internally inconsistent as printed, the anticipated-bailout equilibrium lacks a complete transfer-selection rule, and the Pigouvian-tax argument does not establish global decentralized implementation. These concerns directly affect the quantitative policy ranking rather than merely its exposition.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The anticipated-bailout economy is not closed by a determinate bargaining or transfer-selection mechanism. Defining each transfer as the recipient's minimum required transfer plus an undefined surplus term does not select an equilibrium allocation of the bailout surplus. Since this allocation changes current consumption, borrowing incentives, country-specific welfare, and potentially future bailout behavior, the reported anticipated-bailout results are not uniquely implied by the displayed model.
+  - Evidence: Equations (34) and (41) specify T_P=T^P_min+psi and T_O=T^O_min+psi, but the manuscript does not define psi through a fixed value, bargaining protocol, or equilibrium condition. Equations (29) and (35) also combine future default choices with an unprimed bailout indicator, making the timing and state contingency of future transfers unclear.
+- Target: paper [Type: substantial_rephrasal; Class: substantial_rephrasal; Severity: 5.5/10; Barrier: REVISION; Confidence: 8.0]
+  - Critique: The policy conclusion that ex-ante borrowing coordination is preferable to ex-post crisis support is broader than the demonstrated comparison. The central borrower is assumed to maximize an equally weighted sum of country representative-agent utilities, while the bailout regime is restricted by a particular timing structure and an unresolved surplus allocation. Without sensitivity to welfare weights and a completed bailout institution, the results establish a ranking only for the specified model and instruments.
+  - Evidence: Equation (42) maximizes u(c_O)+u(c_P) without discussing alternative country or population weights. Sections 4.1 and 4.2 impose specific bailout timing and transfer restrictions, while the Introduction generalizes that ex-ante policies are preferable to ex-post policies for managing spillover risks.
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I concede that the lender-budget sign, bond-holding index, and default-payoff indexing inconsistencies undermine the asset-pricing system as presented. Because all contagion and welfare calculations operate through these prices, corrected equations must be reconciled with the computational implementation and the quantitative exercises reproduced.
+- To: Theorist [substantive_flaw]
+  - I concede that equation (50) supplies at most a local candidate wedge under differentiability. It does not prove global implementation in a non-convex default model, incorporate all strategic responses through the follower's policies, or define the marginal incidence of the tax rebate.
+- To: CS_Expert [substantive_flaw]
+  - I concede that the anticipated-bailout results are underdetermined without a definition of psi and a state-contingent transfer rule. This omission is quantitatively consequential because transfer incidence changes borrowing incentives and welfare.
+
+**Questions**:
+- To: paper — Do the numerical routines use the lender budget with bond purchases subtracted and price each country's debt using its own default indicator, and can all principal tables be reproduced after publishing the corrected equations and numerical validation checks?
+- To: paper — What bargaining protocol or fixed rule determines psi in anticipated bailouts, and how sensitive are borrowing, default, transfer, and welfare outcomes to alternative divisions of bailout surplus?
+- To: paper — Can the claimed Pigouvian implementation be demonstrated by solving the complete taxed recursive equilibrium, including the supranational budget, rebate rule, non-differentiable default choices, and strategic policy responses?
+
+**Final Argument State**: The paper offers a useful normative organization of common-lender sovereign contagion, so novelty is MEDIUM: the contagion mechanism is inherited from cited work, but the unified comparison of bailouts, centralized borrowing, and debt taxes is a meaningful extension. Insight is also MEDIUM because the distinction between anticipated ex-post support and ex-ante borrowing discipline is economically clear and policy-relevant. Execution is not currently sound enough for acceptance. The printed lender problem does not support the pricing equations that drive every simulation; the anticipated-bailout regime lacks a determinate transfer rule; and the Pigouvian section does not prove exact implementation. The abstract and conclusions must also restrict the ex-ante-versus-ex-post ranking to the completed model institutions and stated welfare criterion. These are serious but potentially repairable defects within the existing framework through corrected derivations, transparent computational reconciliation, rerun quantitative results, a fully specified bailout equilibrium, and either a global taxed-equilibrium demonstration or materially narrower implementation claims. RESUBMIT is therefore warranted.
+
+**Verdict**: RESUBMIT
+
+---
+
+### CS_Expert Debate Contribution
+
+**Acknowledgment**: The review graph has converged on two central concerns: the baseline lender equations do not support the reported pricing system as written, and the Pigouvian-tax argument does not establish exact implementation. I agree with both assessments. I also retain the concern that the anticipated-bailout equilibrium lacks a transfer-selection rule. Finally, the supplied manuscript ends at the beginning of Table 3, so the quantitative welfare evidence underlying the headline rankings is not available for audit.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The anticipated-bailout model is underdetermined because it does not specify how the bailout surplus is divided. The undefined term psi directly changes transfer incidence and therefore current utility, borrowing incentives, bailout frequency, and country-specific welfare. The continuation values also combine future default indicators with an unprimed bailout indicator, making the timing and state contingency of future bailouts unclear.
+  - Evidence: Equations (34) and (41) set transfers equal to T_min plus psi without defining psi through bargaining, an exogenous parameter, or an equilibrium condition. Equations (29) and (35) use the future default decision d'_P together with the unprimed indicator 1T_P. The preceding mutually beneficial transfer interval does not select a unique anticipated-bailout allocation.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 10.0]
+  - Critique: The supplied manuscript does not present the completed quantitative results needed to support its central policy ranking. It ends at the first row of Table 3, before reporting the bailout, central-borrower, default-frequency, or welfare comparisons. Consequently, even apart from the mathematical inconsistencies, the headline quantitative conclusions cannot be checked against displayed estimates, uncertainty or sensitivity analysis.
+  - Evidence: The provided content terminates immediately after the Table 3 entry 'Mean Debt/GDP O 0.07'. No completed table, welfare-equivalent calculations, policy simulations, numerical bailout results, or concluding section appears in the supplied manuscript, although the abstract asserts welfare rankings among anticipated bailouts, centralized borrowing, and Pigouvian taxes.
+
+**Concessions**:
+- To: Theorist [substantive_flaw]
+  - I agree that the lender budget sign, bond-holding index, and default-payoff indexing are central mathematical inconsistencies. Because the common-lender stochastic discount factor is the model's contagion mechanism, the quantitative results must be reproduced from a corrected and explicitly documented pricing system before they can be credited.
+- To: Theorist [substantive_flaw]
+  - I agree that equation (50) supplies at most a local candidate wedge under counterfactual differentiability. It does not prove global implementation in a non-convex default model, account fully for strategic policy responses, or define the marginal incidence of the tax rebate.
+- To: Policymaker [substantial_rephrasal]
+  - I agree that the tax mechanism is not implementation-ready and that the policy conclusions must remain conditional on the modeled institutions. A complete supranational budget, rebate rule, strategic equilibrium, and numerical verification are required before Pigouvian taxation can be described as replicating the central-borrower allocation.
+
+**Questions**:
+- To: paper — Do the numerical routines use the lender budget and own-country default indicators printed in the manuscript, or corrected equations? Please provide the exact computational equations, code-validation tests, and reproduced tables under the corrected system.
+- To: paper — What determines psi in the anticipated-bailout economy, and how are future bailout indicators indexed by next-period states? Please establish existence and uniqueness, or report how alternative bargaining rules affect the welfare ranking.
+- To: paper — Can the authors provide the omitted quantitative results, including consumption-equivalent welfare measures by country, global welfare weights, simulation error, and sensitivity to lender wealth, bailout surplus division, timing, and country ordering?
+
+**Final Argument State**: Execution is not sound enough for acceptance. The lender budget and payoff indexing are internally inconsistent at the core of the contagion mechanism; the anticipated-bailout equilibrium lacks a determinate transfer-selection and timing rule; and the supplied manuscript omits the completed numerical and welfare results required to substantiate its policy ranking. Independently, the Pigouvian section derives only a local candidate wedge and does not establish exact decentralized implementation, so the abstract and policy conclusions require substantial narrowing unless a complete taxed equilibrium is proved and computed. Novelty is MEDIUM because the common-lender wealth channel is inherited from cited work, while the unified normative comparison of ex-post bailouts and ex-ante borrowing coordination is a meaningful extension. Insight is MEDIUM: the moral-hazard versus internalization distinction is economically useful, but its quantitative magnitude and proposed implementation are not presently verified. These defects appear serious yet repairable within the stated framework through corrected equations, a fully specified bailout protocol, complete numerical disclosure, and global implementation analysis. The appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+

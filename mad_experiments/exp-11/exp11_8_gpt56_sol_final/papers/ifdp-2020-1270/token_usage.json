@@ -1,0 +1,101 @@
+{
+  "duration_seconds": 387.030283,
+  "total_calls": 11,
+  "total_tokens": {
+    "input": 251181,
+    "output": 23943,
+    "thinking": 7395,
+    "total": 275124,
+    "cache_read": 0,
+    "cache_creation": 251148
+  },
+  "by_role": {
+    "Editor-Selection": {
+      "input": 8622,
+      "output": 166,
+      "thinking": 0,
+      "total": 8788,
+      "cache_read": 0,
+      "cache_creation": 8619,
+      "calls": 1
+    },
+    "Econometrician": {
+      "input": 33237,
+      "output": 3418,
+      "thinking": 1422,
+      "total": 36655,
+      "cache_read": 0,
+      "cache_creation": 33234,
+      "calls": 1
+    },
+    "Data_Scientist": {
+      "input": 33235,
+      "output": 2797,
+      "thinking": 1024,
+      "total": 36032,
+      "cache_read": 0,
+      "cache_creation": 33232,
+      "calls": 1
+    },
+    "Policymaker": {
+      "input": 33216,
+      "output": 2747,
+      "thinking": 1024,
+      "total": 35963,
+      "cache_read": 0,
+      "cache_creation": 33213,
+      "calls": 1
+    },
+    "Debater-Econometrician": {
+      "input": 35750,
+      "output": 4796,
+      "thinking": 1249,
+      "total": 40546,
+      "cache_read": 0,
+      "cache_creation": 35744,
+      "calls": 2
+    },
+    "Debater-Data_Scientist": {
+      "input": 35752,
+      "output": 4131,
+      "thinking": 1337,
+      "total": 39883,
+      "cache_read": 0,
+      "cache_creation": 35746,
+      "calls": 2
+    },
+    "Debater-Policymaker": {
+      "input": 35750,
+      "output": 3800,
+      "thinking": 1339,
+      "total": 39550,
+      "cache_read": 0,
+      "cache_creation": 35744,
+      "calls": 2
+    },
+    "Editor-In-Chief": {
+      "input": 35619,
+      "output": 2088,
+      "thinking": 0,
+      "total": 37707,
+      "cache_read": 0,
+      "cache_creation": 35616,
+      "calls": 1
+    }
+  },
+  "by_model": {
+    "gpt-5.6-sol": {
+      "input": 251181,
+      "output": 23943,
+      "thinking": 7395,
+      "total": 275124,
+      "cache_read": 0,
+      "cache_creation": 251148,
+      "calls": 11
+    }
+  },
+  "cost_by_model": {
+    "gpt-5.6-sol": 2.2881300000000007
+  },
+  "total_cost": 2.2881300000000007
+}

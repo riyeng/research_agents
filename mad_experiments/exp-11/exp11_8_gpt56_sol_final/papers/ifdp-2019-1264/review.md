@@ -1,0 +1,548 @@
+# EDITORIAL DECISION REPORT
+---
+**FINAL DETERMINATION**: MAJOR REVISION REQUIRED
+**CONSENSUS ACCREDITATION SCORE**: 0.615 / 1.000
+**EXECUTION SCORE**: 0.630
+**NOVELTY SCORE**: 0.570 (MEDIUM)
+**INSIGHT SCORE**: 0.620 (MEDIUM)
+**SUBSTANTIAL-REPHRASAL (CENTRAL OVERCLAIM) REVISIONS**: 5
+**REPHRASAL-ONLY REVISIONS**: 0
+**VALID AUDITS SCORED**: 3 / 3
+
+## SYSTEM METRIC AUDIT TRAIL
+```text
+## REVIEWER WEIGHTING
+Legacy qualitative mapping for selection weights: HIGH=0.55, MEDIUM=0.30, LOW=0.15.
+Initial normalized weights: {'Econometrician': 0.5, 'Data_Scientist': 0.3, 'Policymaker': 0.2}
+Valid audits scored: 3; invalid fallback audits excluded: 0.
+
+### Debate Round 1
+  • Econometrician→Policymaker: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → CONCEDED. Explicit concession recorded.
+  • Data_Scientist→Policymaker: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → CONCEDED. Explicit concession recorded.
+  • Data_Scientist→Policymaker: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.
+  • Data_Scientist→Econometrician: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → CONCEDED. Explicit concession recorded.
+  • Data_Scientist→Econometrician: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → CONCEDED. Explicit concession recorded.
+  • Policymaker→paper: severity 8.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 8.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.7/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.2/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+### Debate Round 2
+  • Econometrician→paper: severity 7.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Econometrician→paper: severity 6.5/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 9.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Econometrician→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 8.0/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Data_Scientist→paper: severity 5.5/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 8.5/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 7.0/10; category REVISION; type substantive_flaw; issue substantive_flaw; confidence 7.8/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+  • Policymaker→paper: severity 6.0/10; category REPHRASAL; type substantial_rephrasal; issue substantial_rephrasal; confidence 9.3/10 → UNANSWERED. Paper critique recorded; no peer defense was required.
+
+## DUNG-STYLE CREDIBILITY UPDATES
+Only conceded or successfully defended debate nodes shift reviewer credibility. Severity is numeric argument damage; barrier category controls editorial impact. Rephrasal is categorical only and is not counted as insight or execution damage.
+  Econometrician→Policymaker (CONCEDED): +0.041 to Econometrician, -0.041 to Policymaker
+  Econometrician→paper (UNANSWERED): +0.006 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.002 to Econometrician (paper critique, discounted)
+  Econometrician→paper (UNANSWERED): +0.000 to Econometrician (paper critique, discounted)
+  Data_Scientist→Policymaker (CONCEDED): +0.041 to Data_Scientist, -0.041 to Policymaker
+  Data_Scientist→Econometrician (CONCEDED): +0.024 to Data_Scientist, -0.024 to Econometrician
+  Data_Scientist→Policymaker (CONCEDED): +0.013 to Data_Scientist, -0.013 to Policymaker
+  Data_Scientist→paper (UNANSWERED): +0.002 to Data_Scientist (paper critique, discounted)
+  Data_Scientist→Econometrician (CONCEDED): +0.005 to Data_Scientist, -0.005 to Econometrician
+  Data_Scientist→paper (UNANSWERED): +0.000 to Data_Scientist (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.010 to Policymaker (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.006 to Policymaker (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.003 to Policymaker (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)
+  Policymaker→paper (UNANSWERED): +0.000 to Policymaker (paper critique, discounted)
+
+## FINAL REVIEWER WEIGHTS
+  Econometrician: 0.500 +0.020 → 0.520
+  Data_Scientist: 0.300 +0.085 → 0.385
+  Policymaker: 0.200 -0.075 → 0.125
+Normalized final weights: {'Econometrician': 0.5047456484869907, 'Data_Scientist': 0.37375113555201545, 'Policymaker': 0.12150321596099381}
+
+## EXECUTION, NOVELTY, INSIGHT, AND CLAIM CALIBRATION
+  Econometrician: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.0/10, barrier=REVISION
+  Data_Scientist: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantive_flaw, severity=8.8/10, barrier=REVISION
+  Policymaker: verdict=RESUBMIT, novelty=MEDIUM, insight=MEDIUM, issue=substantial_rephrasal, severity=6.0/10, barrier=REPHRASAL
+Raw execution score: 0.750
+Execution penalty from surviving substantive flaws: 0.120
+Execution score: 0.630
+Novelty consensus: MEDIUM (0.570 before debate penalty; 0.570 after)
+Novelty claim counts (all personas): HIGH=0, MEDIUM=3, LOW=5
+Insight consensus: MEDIUM (0.620 before debate penalty; 0.620 after)
+Verdict counts: ACCEPT=0, RESUBMIT=3, REJECT=0
+Unresolved high-confidence BLOCKERs: 0
+Substantive revision barriers: 13
+Substantial-rephrasal (central overclaim) revisions: 5
+Rephrasal-only revisions: 0
+Extension/future-work requests: 0
+
+## FINAL SCORE
+Final score = 0.60 × execution + 0.22 × novelty + 0.18 × insight.
+0.378 + 0.125 + 0.112 = 0.615
+Substantive-revision gate applied: minor-revision outcome is unavailable.
+Substantial-rephrasal issues (central overclaims) inform the RESUBMIT verdict but carry no execution score penalty by themselves.
+```
+
+## SELECTED EXPERT PANEL
+- Econometrician, Data_Scientist, Policymaker
+- Weights: {'Econometrician': 0.5, 'Data_Scientist': 0.3, 'Policymaker': 0.2}
+- Selection rationale: The central risk is whether the observational probit, survival, earnings-profile, and income-process estimates support claims about selection, cyclicality, and returns despite endogenous labor-state transitions, unobserved heterogeneity, and potentially noncausal interpretations. Data construction is the next risk because credibility depends on the MCVL panel's retrospective histories, conditioning on affiliation and Spanish nationality, classification of overlapping jobs and nonemployment, earnings measurement for the self-employed, and sample attrition or survivorship. Policy expertise is needed to assess whether the evidence warrants revising self-employment subsidies and training policies in Spain's segmented labor market.
+
+## CONSTRUCTIVE SUMMARY
+The manuscript has a credible core: rich administrative spell data can support a useful descriptive account of registered self-employment in Spain, especially the heterogeneity associated with prior labor-market status and contract type. Its novelty and insight are moderate rather than methodological or causal. The present version overreaches because unemployment is partly inferred from broader nonemployment, historical risk sets are not shown to be representative, aggregate-cycle inference may rely on pseudo-replication, contribution bases may not measure comparable income risk, and endogenous career groups do not identify returns or skill accumulation. Survival notation and interpretation also require correction. The policy and age-period-cohort claims materially exceed what is identified. No hard blocker prevents revision, and no new welfare model is required. A successful resubmission would be a narrower, transparent, statistically defensible descriptive paper whose claims track its administrative measures and estimands.
+
+## MINIMUM VIABLE REVISION PATH
+1. Reframe the paper around a bounded descriptive contribution concerning registered self-employment transitions, survival hazards, and selected career-group profiles; remove causal language unless new identification is supplied.
+2. Provide a complete data-lineage and sample-flow account covering annual MCVL sampling, replenishment, linkage, retrospective histories, exclusions, simultaneous spells, missingness, attrition, death, emigration, weighting, and every analytic risk set.
+3. Validate historical representativeness. If this cannot be done, use a prospectively observed 2005–2015 sample as the primary analysis and sharply limit claims based on earlier histories.
+4. Reconstruct labor states and report separate core estimates for benefit-observed unemployment and broader inferred nonemployment. Define gaps, transitions, competing outcomes, and censoring rules explicitly.
+5. Remove future information from historical predictors where possible. Otherwise label final-extraction residence and highest reported education as eventual characteristics and do not interpret them as covariates known at transition time.
+6. Re-estimate transition models with inference appropriate to repeated workers and aggregate quarterly regressors. Address worker dependence, quarter-level common shocks, serial correlation, limited recession episodes, seasonality, trends, and alternative cycle definitions; report marginal effects and reassess significance.
+7. Present age-period-cohort results as conditional on the normalization and add sensitivity to alternative restrictions. Remove ‘pure’ and ‘entirely attributable’ claims.
+8. Audit Equation (6) and the implemented survival likelihood. Define event indicators correctly, distinguish cause-specific hazards from persistence in self-employment, account for competing exits in interpretation, and reconcile Table 19 with the text.
+9. Document contribution-base floors, ceilings, bunching, and comparability with salaried earnings. Validate the measure against economic income if feasible; otherwise remove or substantially narrow the income-risk headline.
+10. Treat career-group earnings estimates as descriptive conditional profiles. Withdraw claims of causal returns, lower human-capital accumulation, or effects of time spent self-employed absent a credible identification strategy.
+11. Rewrite the abstract, introduction, results, and conclusion so that subsidy-induced selection, training effectiveness, optimal intervention, and welfare-improving reform are presented only as untested hypotheses or future research questions.
+12. Supply a detailed response document, revised variable dictionary, sample-flow table, and table-by-table reconciliation of estimands, standard errors, and textual claims.
+
+## EDITORIAL RATIONALE
+Decision: MAJOR REVISION REQUIRED. The strongest credible version of the manuscript is a large-scale descriptive study of transitions into registered self-employment in Spain’s dual labor market, linking entry origins, aggregate conditions, spell survival, and later career profiles using unusually detailed administrative histories. This architecture is coherent and potentially useful. Novelty and insight are both MEDIUM: the joint empirical scope and administrative detail are meaningful, but the methods are standard and the design does not identify causal occupational or policy effects.
+
+The reviewers unanimously recommend resubmission, and their substantive concerns converge. First, the data cannot distinguish unemployment without benefits from broader nonemployment, yet the manuscript labels relevant origins and exits as unemployment and interprets them as job-search decisions. This affects the underlying estimand, not merely terminology. The principal analyses must distinguish benefit-observed unemployment from inferred nonemployment and define all spells and risk sets precisely.
+
+Second, historical representativeness is unresolved. The manuscript analyzes retrospective histories beginning in 1990 while describing a sample selected in 2004 and a panel constructed from 2005–2015 waves. It does not establish how replenishment, linkage, weighting, survival, emigration, death, or later affiliation affect earlier risk sets. The authors must validate the historical frame or make a prospectively observed period the primary sample.
+
+Third, the headline cyclical inference is not adequately supported. National unemployment and recession indicators vary at the quarter level, yielding roughly one hundred aggregate observations and only three recession episodes. Millions of worker-quarter rows do not provide independent aggregate variation. The revision must use inference appropriate to repeated workers, common quarterly shocks, serial correlation, and limited aggregate variation, and must test sensitivity to trends, seasonality, time controls, and alternative cycle definitions.
+
+Fourth, the earnings analysis does not identify returns to self-employment or human-capital accumulation. Predominant career status before age 40, tenure, and mobility are endogenous; individual fixed effects do not remove time-varying selection, match quality, financing constraints, or prior shocks. Moreover, self-employed ‘earnings’ are contribution bases, with repeated medians suggesting administrative bunching. Claims about lower returns and smaller economic income-shock variances therefore require either credible validation and a suitable identification strategy or withdrawal. Descriptive profiles among selected career groups may remain if labeled accurately.
+
+Fifth, the survival analysis requires an implementation and estimand audit. Equation (6) appears to reverse the event and censoring indicator; paid-employment exits treated as censored imply a cause-specific unemployment hazard rather than literal continuation in self-employment; and the textual recession interpretation conflicts with the reported insignificant coefficient. These matters must be corrected and reconciled.
+
+Substantial rephrasal is also necessary. The age-period-cohort components are conditional on the chosen normalization and cannot be called ‘pure’ effects or used to claim that an increase is ‘entirely attributable’ to one component. Binary probits do not identify the relative expected values of self-employment, salaried work, and continued search. Finally, no subsidy treatment, training intervention, eligibility variation, fiscal effect, displacement effect, or welfare criterion is estimated. Claims that subsidies induce negative selection, that training is the appropriate remedy, or that active labor-market policy should be revised must become hypotheses and motivations for future evaluation.
+
+Defended critiques and extensions are important to delimit the revision. The reviewers agree that a new structural welfare model or causal policy evaluation is not required if the paper is narrowed to a descriptive contribution. Likewise, defects in retrospective sampling or income measurement need not invalidate every transition result: a validated prospective sample and administratively well-defined states could preserve the core analysis. Such causal or welfare work is future research, not a condition for a properly reframed descriptive paper. There are no unresolved hard blockers, but the current data construction, inference, measurement, and estimand problems are substantive and preclude acceptance.
+
+## OFFICIAL LETTER TO THE AUTHOR
+Dear Authors,
+
+The manuscript’s strongest contribution is its use of detailed Spanish administrative histories to organize evidence on entry into registered self-employment, prior labor-market status, aggregate conditions, spell survival, and later career outcomes. The distinction between entry from paid employment and from nonemployment is economically promising, and the administrative information on contracts and spell dates offers a potentially valuable descriptive perspective on self-employment in a dual labor market.
+
+After considering the manuscript and the three assessments, my decision is MAJOR REVISION REQUIRED. All reviewers reached the same conclusion. The paper can potentially be developed into a sound descriptive study, but several central estimates and interpretations require substantive reconstruction.
+
+The first priority is labor-state measurement. The manuscript acknowledges that unemployment without benefits cannot be separated from other nonemployment, yet it repeatedly estimates and interprets transitions from or into ‘unemployment.’ Please define the spell-construction rules and risk sets completely, report the core results separately for benefit-observed unemployment and broader inferred nonemployment, and avoid interpreting the latter as continued job search. This distinction should carry through the entry, survival, and policy discussions.
+
+Second, establish the sampling frame for the historical analysis. Please explain how the 2004 selection statement, the use of 2005–2015 waves, and retrospective histories beginning in 1990 fit together. Document annual replenishment, linkage, weighting, attrition, death, emigration, and the role of later Social Security affiliation. If representative pre-2005 risk sets cannot be demonstrated, make a prospectively observed sample the principal analysis and present earlier histories only with appropriately limited claims.
+
+Third, revise inference for the transition models. National unemployment and recession indicators vary at the quarterly level, so their effective identifying variation is not the number of worker-quarter observations. Report inference that addresses repeated observations by worker, common quarter-level shocks, serial correlation, and the small number of recession episodes. Include sensitivity to seasonality, aggregate trends or time controls, and alternative cycle definitions. Reassess the headline pro-cyclicality conclusion in light of these results.
+
+Fourth, reconsider the earnings and income-risk contribution. The current career groups are endogenously selected, and fixed effects do not identify causal returns to self-employment or human-capital accumulation. In addition, self-employed contribution bases may be bunched, floored, capped, or otherwise noncomparable with salaried earnings. Document this measurement process and provide diagnostics on bunching and administrative limits. Unless the measure can be validated, withdraw the claim that self-employed workers experience smaller economic income shocks. Unless a credible identification strategy is added, replace ‘returns,’ ‘due to,’ and ‘human-capital accumulation’ with descriptive language about conditional gradients and selected career-group differences.
+
+Fifth, audit the survival analysis. Clarify whether Equation (6) contains only a notation error or reflects the implemented likelihood. Define the event and censoring indicators, distinguish cause-specific unemployment hazards from remaining self-employed, and reconcile the text with the insignificant recession coefficient reported in Table 19. Statements about the fraction remaining in self-employment must match the actual estimand and treatment of competing exits.
+
+Several central claims also require substantial rephrasing. The age-period-cohort decomposition is conditional on its normalization; the resulting components should not be described as ‘pure,’ nor should changes be said to be ‘entirely attributable’ to one component without sensitivity analysis. The binary probits estimate conditional transition associations, not structural comparisons among the expected values of self-employment, salaried work, and continued search. Most importantly, the paper does not estimate the effects of subsidies, training, or policy reform and does not conduct welfare analysis. Please present the findings as policy-relevant diagnostics that motivate future evaluation, not as evidence that subsidies induce negative selection, training is the identified remedy, or policy revision would improve welfare.
+
+A new causal policy design or structural welfare model is not required for revision. The viable path is to make the paper’s descriptive contribution precise and credible: validate or restrict the sample, reconstruct the labor states, correct inference and survival estimands, address contribution-base measurement, and align every headline claim with what the design identifies. Please accompany any resubmission with a detailed response and a reproducible mapping from each analytic sample and variable definition to the revised tables.
+
+Sincerely,
+Senior Coordinating Editor
+
+---
+
+# Token Usage & Cost Summary
+
+## Overall Statistics
+
+- **Total Calls**: 11
+- **Duration**: 476.7 seconds
+- **Total Tokens**: 263,041
+  - Input: 239,540
+  - Output: 23,501
+  - Cached-Read: 0
+  - Cache-Creation: 239,507
+- **Estimated Cost**: $2.2021
+
+## Usage by Model
+
+| Model | Calls | Input | Output | Cached-Read | Cache-Creation | Total | Cost |
+|-------|-------|-------|--------|-------------|----------------|-------|------|
+| Gpt-5.6-sol | 11 | 239,540 | 23,501 | 0 | 239,507 | 263,041 | $2.2021 |
+
+## Usage by Role (Top 10)
+
+| Role | Calls | Input | Output | Cached-Read | Cache-Creation | Total |
+|------|-------|-------|--------|-------------|----------------|-------|
+| Editor-In-Chief | 1 | 35,622 | 2,394 | 0 | 35,619 | 38,016 |
+| Debater-Policymaker | 2 | 32,666 | 4,640 | 0 | 32,660 | 37,306 |
+| Debater-Econometrician | 2 | 32,666 | 4,144 | 0 | 32,660 | 36,810 |
+| Debater-Data_Scientist | 2 | 32,668 | 3,915 | 0 | 32,662 | 36,583 |
+| Data_Scientist | 1 | 32,795 | 3,164 | 0 | 32,792 | 35,959 |
+| Econometrician | 1 | 32,797 | 2,965 | 0 | 32,794 | 35,762 |
+| Policymaker | 1 | 32,776 | 2,101 | 0 | 32,773 | 34,877 |
+| Editor-Selection | 1 | 7,550 | 178 | 0 | 7,547 | 7,728 |
+
+---
+
+# DETAILED ANALYSIS
+
+## ROUND 1: INDEPENDENT AUDITS
+
+### Econometrician Analysis
+
+**Structural Strength**: The manuscript exploits unusually rich longitudinal administrative records with exact spell dates, contract type, earnings, tenure, unemployment-benefit receipt, and self-employment status. Separating entry from unemployment versus paid employment and then studying spell survival and later earnings is a coherent descriptive architecture for characterizing self-employment in a dual labor market.
+
+**Domain Audit**: The entry probits credibly estimate conditional associations and predicted transition probabilities, but the manuscript's central claims about returns, skill accumulation, and the consequences of choosing self-employment are not identified by the design. Workers are classified by their predominant status before age 40, an endogenous outcome reflecting ability, preferences, wealth, industry, prior shocks, and employment opportunities. Person fixed effects in equation (7) do not resolve endogenous tenure, mobility, job-match quality, time-varying selection, or selection into the career groups. Thus Table 20 and Figure 6 describe earnings profiles among selected career types; they do not establish that time in self-employment causes lower earnings growth or that the difference is due to lower human-capital accumulation. The manuscript nevertheless says the earnings difference 'is due to both lower returns to general experience and tenure' and concludes that the evidence 'points towards lower human capital accumulation in self-employment.' The inference and survival sections also require correction. The probit tables report observation-level t-statistics for millions of repeated quarterly observations without stating that standard errors are clustered by worker, so serial dependence is apparently ignored. In the survival model, equation (6) defines c_i as one for censored observations but multiplies the log-hazard term by c_i, which is the reverse of the usual event indicator and must be clarified as either a notation error or an implementation error. Moreover, Table 19 reports an insignificant recession-quarter coefficient of -0.00340, contrary to the text's statement that both recession status and unemployment increase failure. Treating transitions to paid employment as censored estimates a cause-specific unemployment hazard, not literal continuation in self-employment; consequently statements such as 'after 10 years only 57% of entrants remain in the market' overinterpret the Kaplan-Meier estimand. Finally, the historical sampling frame needs a precise audit: the manuscript says the sample is selected in 2004 and retrospective histories are observed, which could condition pre-2004 estimates on affiliation in 2004 unless annual refreshment and weighting eliminate that selection.
+
+**Best-Case Contribution**: The strongest defensible contribution is a comprehensive descriptive study of who transitions into registered self-employment in Spain, how those transitions covary with aggregate conditions and prior contract status, how unemployment-entry cohorts differ in subsequent unemployment hazards, and how later earnings profiles and income-shock moments differ across selected career-history groups. These are valuable facts about self-employment within a rigid, dual labor market, but not causal estimates of the returns to self-employment or the effects of employment protection and promotion policies.
+
+**Minimum Viable Revision**: Recast all probit, survival, and earnings results as descriptive conditional associations unless a credible source of exogenous variation is introduced. Define the estimands precisely: report average marginal effects for transition models; cluster inference at least by individual and address aggregate-shock inference; distinguish cause-specific unemployment hazards from remaining self-employed; correct or explain the censoring indicator in equation (6); and reconcile the recession claim with Table 19. For the earnings analysis, replace causal language such as 'returns,' 'due to,' and 'human-capital accumulation' with conditional earnings gradients and selected-group differences, explicitly discuss conditioning on career histories, and avoid using these comparisons to rank policy effects. The revision should also document annual sample refreshment, retrospective-selection risks, attrition, and weighting for each analysis period.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.0/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: The unsupported causal interpretation affects a headline contribution stated in the abstract, introduction, life-cycle analysis, and policy conclusions. The current estimates cannot distinguish a return to self-employment experience from selection into career paths, endogenous mobility, or time-varying worker and job heterogeneity. Inference and survival-estimand problems further weaken supporting claims. However, the administrative data and descriptive results remain potentially valuable, so the paper can be repaired within its current empirical framework by narrowing its estimands, correcting inference and survival interpretation, and presenting the life-cycle evidence as selected-group associations rather than causal returns. This warrants substantial revision rather than a blocker.
+
+**Novelty Claims**:
+- [EMPIRICAL] The paper claims to provide a comprehensive characterization of entry into, survival in, and lifetime earnings dynamics around self-employment in a rigid labor market using Spanish administrative labor histories. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The MCVL covers approximately 4 percent of Spanish taxpayers and supplies exact longitudinal spell information, contract type, earnings, and benefit receipt. The paper combines cyclical entry, unemployment origin, survival, career trajectories, and age-dependent income dynamics. This is a real but bounded empirical contribution: the data are unusually rich and administrative, but the empirical tools are standard and the design does not causally identify the effects of self-employment or employment protection.
+- [METHODOLOGICAL] The manuscript combines an age-period-cohort decomposition, probit transition models, discrete-time survival analysis, fixed-effects Mincer regressions, and an age-dependent income process. (Significance: LOW; Confidence: 9.0/10)
+  Evidence: Each method is explicitly borrowed from existing work: Deaton and Paxson (1994), Narendranathan and Stewart (1993), Topel (1991), and Karahan and Ozkan (2013). Their combination is useful for description but does not constitute a new estimator or identification strategy.
+- [POLICY] The paper claims that its findings call for revising self-employment subsidies and complementing them with training policies targeted at young and unemployed workers. (Significance: LOW; Confidence: 8.5/10)
+  Evidence: The policy discussion is motivated by observed lower survival and earnings among workers entering from unemployment and by lower estimated experience gradients among predominantly self-employed workers. Because policy eligibility and self-employment histories are endogenous and no reform is evaluated, these results can motivate policy design but cannot establish the welfare effects or optimality of the proposed revisions.
+
+**Insight Assessment**:
+MEDIUM: The paper offers a clear and economically useful organizing distinction between entry from unemployment and paid employment, and it connects those transitions to labor-market duality and business-cycle conditions. The argument becomes less illuminating in the earnings and policy sections because selected-group differences are repeatedly interpreted as returns and skill accumulation without a selection model, and the push-pull framework is not mapped to separately identified mechanisms. (Confidence: 8.0/10)
+Evidence: Sections 4 through 6 proceed coherently from flows to heterogeneity, survival, and lifetime profiles. However, statements that earnings differences are 'due to' lower returns and that the evidence points to lower human-capital accumulation go beyond equations (7) through (9), which estimate conditional earnings and residual-income processes rather than the causal effect of occupational experience.
+
+**Layman Translation**: The data can show that certain workers are more likely to become self-employed and that workers with different career histories later earn different amounts. They cannot show that becoming self-employed itself caused the lower earnings, because people who choose or are pushed into self-employment differ in many ways from those who remain employees. The paper should present these findings as informative patterns, correct its statistical inference and survival interpretation, and avoid treating them as proof that self-employment reduces skill growth or that a particular subsidy reform would improve outcomes.
+
+**Confidence Score**: 8.8/10.0
+
+**Source Evidence**: The abstract states that the self-employed face 'lower returns compared to fixed-term workers.' Section 6.2.3 estimates equation (7) separately by predominant status before age 40 and concludes that self-employment 'does not reward workers in terms of earnings later in life,' despite no exogenous assignment to status. The manuscript then states that the evidence 'points towards lower human capital accumulation in self-employment.' Table 20 reports fixed-effects Mincer coefficients but no strategy for endogenous tenure, mobility, or career-group assignment. Tables 12 and 17 use 6,618,160 and 23,001,845 quarterly observations respectively, while their notes report t-statistics without identifying worker-level clustering. Equation (6) says c_i equals one when the spell is censored but applies c_i to the log event-hazard term. Table 19 reports recession quarter = -0.00340 with t = -0.16, whereas Section 6.1 says the business cycle and unemployment both increase the hazard. Section 6 treats paid-employment transitions as censored, yet Table 8 is interpreted as the fraction still remaining in self-employment. Section 3 also states that the sample is selected in 2004 and retrospective histories are used back to 1980, creating a need to establish representativeness for pre-2004 estimates.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### Data_Scientist Analysis
+
+**Structural Strength**: The manuscript uses unusually rich spell-level administrative records with exact contract start and end dates, contract type, contribution regime, benefit receipt, industry, and longitudinal labor histories. It also states concrete construction rules for overlapping salaried and self-employment spells, quarterly status assignment, tenure, real earnings, and recession dates, making much of the pipeline potentially auditable.
+
+**Domain Audit**: The paper claims to characterize selection into self-employment, survival, returns, and income-shock variances for Spanish workers from 1990 to 2015. Several central labels and measures do not presently support that full claim. Most importantly, self-employed 'earnings' are acknowledged to be self-reported contribution bases rather than verified income. The repeated median of 817.7 euros across many industries in Table 10 is consistent with substantial administrative-base bunching, so the finding that self-employed workers face shocks with smaller variances may be mechanically induced by the measurement system rather than reflecting economic income risk. Second, the manuscript admits that unemployment cannot be distinguished from nonemployment unless benefits are received, yet it estimates entry from unemployment, includes a UI-recipient indicator within that sample, and defines business failure as transition to unemployment. Inferred gaps may therefore mix unemployment, inactivity, work outside covered employment, and migration, potentially generating the reported gender, education, age, and cyclicality patterns. Third, the retrospective 1990-2004 analysis appears conditioned on later inclusion in a sample selected in or after 2004; the manuscript does not explain replenishment, attrition, deaths, emigration, annual-wave linkage, or risk-set construction sufficiently to establish historical representativeness. Post-outcome information also enters controls: urban status uses address at the last extraction, and highest education may be measured after earlier transitions. Finally, Equation 6 defines c_i as one for censoring but multiplies log failure probability by c_i, the reverse of the usual event indicator, requiring confirmation that this is only a notation error rather than the implemented likelihood.
+
+**Best-Case Contribution**: The strongest credible contribution is a large-scale descriptive account of covered Spanish workers' transitions between contribution regimes and benefit-observed or inferred nonemployment, showing how entry into and persistence in registered self-employment vary with prior contract type, demographics, and the business cycle. The administrative spell histories permit much better measurement of contract duration and employment-protection status than small surveys, and could yield valuable evidence about self-employment in a dual labor market once the sampling frame and state labels are disciplined.
+
+**Minimum Viable Revision**: Provide a complete observation-level data lineage and flow chart covering annual MCVL sampling, replenishment, linkage, attrition, deaths and emigration, retrospective histories, exclusions, simultaneous spells, missing values, and each analytic risk set. Re-estimate historical results on a demonstrably representative frame or restrict claims to prospectively observed 2005-2015 cohorts. Define exactly how non-benefit gaps become 'unemployment' and report core entry and survival results separately for benefit-observed unemployment and broader nonemployment. Remove post-outcome address and education information from earlier-transition controls or reconstruct time-valid covariates. Audit the censoring indicator and likelihood implementation. Most critically, relabel self-employed contribution bases accurately, document floors, ceilings, bunching, and censoring, and either validate them against fiscal income or withdraw/narrow claims about relative earnings returns and shock variances. These steps can preserve the transition contribution, but the income-risk headline cannot remain without validation.
+
+**Primary Issue Class**: substantive_flaw
+
+**Severity Score**: 8.8/10
+
+**Barrier Category**: REVISION
+
+**Severity Rationale**: The concern affects headline evidence rather than optional robustness: unemployment is a central origin and failure label, while measured returns and shock variances are central conclusions in the abstract. If contribution bases compress self-employed income variation, the claim of lower income risk may reverse or disappear; if nonemployment gaps are systematically mislabeled, selection and survival comparisons may reflect labor-force attachment rather than unemployment. Historical conditioning on later sample inclusion could additionally distort cohort and survival estimates. The problems are serious but not necessarily fatal because the current records can support narrower transition analyses through valid risk sets, benefit-observed unemployment, and time-valid covariates. The earnings-risk claim may need external validation or removal, so substantial revision rather than a blocker is appropriate.
+
+**Novelty Claims**:
+- [EMPIRICAL] The paper claims to provide a joint business-cycle and life-cycle characterization of entry into, survival in, and returns to self-employment in a rigid dual labor market using large Spanish administrative labor histories. (Significance: MEDIUM; Confidence: 7.5/10)
+  Evidence: The manuscript emphasizes three data advantages: administrative records, approximately 1.2 million individuals per annual sample, and longitudinal histories extending before 2005. It combines transition analysis, survival analysis, career classification, Mincer profiles, and an age-dependent income process. The tools are standard and cited to Deaton and Paxson, Topel, and Karahan and Ozkan, and there is no causal policy design, but the administrative contract histories and focus on self-employment within a dual labor market provide a real, bounded empirical contribution.
+- [POLICY] The paper claims that self-employment subsidies tied to unemployment should be reconsidered and complemented with training because unemployed and young entrants have lower survival and returns. (Significance: LOW; Confidence: 8.0/10)
+  Evidence: The conclusion recommends revising promotion and training policies based on descriptive selection and survival differences. No policy variation or causal identification isolates the effects of subsidies or training, so this is a suggestive implication rather than an identified policy contribution.
+
+**Insight Assessment**:
+MEDIUM: The paper offers a coherent narrative linking employment protection, unemployment, temporary contracts, and self-employment, and the sequence from flows to survival and career outcomes is useful. However, interpretation sometimes outruns the measurement: descriptive state transitions are framed as choices based on expected values, contribution bases are discussed as earnings, and observed group differences are used to motivate policy despite unresolved selection and labeling issues. (Confidence: 7.8/10)
+Evidence: Sections 4 through 6 progress from age, cohort, and cyclical profiles to probits, survival, Mincer returns, and income dynamics. The push-pull framing is intuitive. At the same time, Section 5 imposes an expected-income decision interpretation on descriptive probits, while Section 6.2 acknowledges that self-employed earnings are self-reported contribution bases but continues to interpret estimated profiles and variances economically.
+
+**Layman Translation**: The records are detailed enough to show when people switch among registered jobs, self-employment, and benefit-related nonemployment. But the database does not always show whether a person without a job is truly unemployed, and the reported income of self-employed people is often the amount they choose or are required to report for social-security contributions rather than their actual business income. Those features could make self-employment look safer and less profitable than it really is. The paper needs to validate or narrow those labels and ensure that its historical sample does not exclude people who disappeared before the administrative panel began.
+
+**Confidence Score**: 9.0/10.0
+
+**Source Evidence**: The manuscript states that, absent benefits, 'it is not possible to separately identify periods of unemployment with no benefits and nonemployment,' yet Tables 12-16 estimate entry 'from unemployment,' Table 19 estimates exit to unemployment, and UI receipt appears as a covariate within the unemployment-entry model. Section 6.2.2 states that self-employed earnings are 'self-reported basis of contribution, and hence, subject to higher measurement error'; Table 10 reports an identical median of 817.7 euros for manufacturing, transportation and trade, IT and finance, real estate and professionals, education, and several other industries. The data section says the sample is selected in 2004, that the preferred analysis starts in 1990, and separately says the 2005-2015 waves construct the panel, without documenting retrospective selection or annual replenishment. Urban status is based on the worker's address 'at the time of the last data extraction.' Equation 6 says c_i equals one when the spell is censored but attaches c_i to log h_i, the failure term. These are direct manuscript-level indications of measurement, sampling, temporal leakage, and possible likelihood-coding problems.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+### Policymaker Analysis
+
+**Structural Strength**: The paper links unusually detailed administrative labor histories to a coherent sequence of policy-relevant outcomes: entry into self-employment, survival, subsequent earnings, returns to experience and tenure, and income-risk profiles. This is substantially more informative for policymaking than examining self-employment rates alone.
+
+**Domain Audit**: The evidence establishes descriptive selection and outcome differences, but it does not evaluate any actual self-employment subsidy, training program, eligibility rule, or reform. Nor does it identify whether lower subsequent earnings reflect deficient skill accumulation, selection on unobserved ability or preferences, business type, financing constraints, or other mechanisms. Consequently, the manuscript can credibly conclude that existing policies should account for heterogeneous risks and that the results motivate policy evaluation. It cannot yet conclude that the facts themselves call for revising active labor-market policies, that training is the appropriate remedy, that subsidy availability induces negative selection, or that a particular intervention is optimal. The policy discussion also does not examine legal eligibility, administrative verification of unemployment and business viability, fiscal cost, take-up, displacement, moral hazard, business survival versus social welfare, or interactions with employment-protection rules. These omissions do not invalidate the empirical profiles, but they materially weaken the headline policy interpretation.
+
+**Best-Case Contribution**: Using a large Spanish administrative panel with long labor histories, the paper provides a valuable empirical diagnostic of how workers enter self-employment in a rigid, dual labor market and how outcomes differ by prior employment status. It documents that entry is generally pro-cyclical, that entrants from unemployment have shorter and lower-earning spells, and that workers with substantial early self-employment experience have flatter later earnings but lower income-shock variance than recurrent fixed-term workers. These facts identify target populations, risks, and margins that future policy design and structural evaluation should address.
+
+**Minimum Viable Revision**: Narrow the abstract, introduction, and conclusion so that the empirical results are presented as policy-relevant diagnostics rather than evidence that a specific reform, training program, subsidy rule, or welfare-improving intervention is warranted. Replace claims that subsidies induce negative selection or that lower returns demonstrate inadequate human-capital accumulation with explicitly labeled hypotheses. State that no policy treatment or causal mechanism is identified. The policy section should briefly distinguish observed private outcomes from social welfare and list the fiscal, administrative, legal, take-up, displacement, and employment-creation margins that must be evaluated before implementation. Alternatively, the authors would need a separate causal or structural policy analysis, but that is not necessary if the claims are appropriately narrowed.
+
+**Primary Issue Class**: substantial_rephrasal
+
+**Severity Score**: 6.0/10
+
+**Barrier Category**: REPHRASAL
+
+**Severity Rationale**: The underlying descriptive analysis can remain intact, but policy conclusions appear in the abstract, introduction, and conclusion and therefore shape the paper's headline contribution. A reader could reasonably infer that the paper evaluates or establishes the desirability of revising active labor-market policies, although it estimates associations rather than policy effects or welfare consequences. Narrowing these central claims would materially change how the contribution is understood, which makes this more than a local wording issue. It is not a substantive flaw because the empirical work remains useful once interpreted as descriptive evidence and policy motivation.
+
+**Novelty Claims**:
+- [EMPIRICAL] The paper combines cyclical and life-cycle evidence on entry into, survival in, and returns to self-employment in Spain's rigid dual labor market using administrative labor histories. (Significance: MEDIUM; Confidence: 8.0/10)
+  Evidence: The MCVL covers approximately 1.2 million individuals per wave, supplies full working histories for sampled workers, and distinguishes salaried contracts, self-employment, unemployment benefits, contract type, tenure, and earnings. This supports a bounded but meaningful empirical contribution beyond the smaller and shorter Spanish surveys discussed in relation to Alba-Ramirez (1994) and Carrasco (1999). The contribution is not HIGH because there is no causal policy identification or new estimator.
+- [METHODOLOGICAL] The paper combines age-period-cohort decomposition, probit entry models, discrete-duration survival analysis, Mincer earnings regressions, and an age-dependent income process to characterize self-employment careers. (Significance: LOW; Confidence: 9.0/10)
+  Evidence: Each method is adopted from established work: Deaton and Paxson (1994), Narendranathan and Stewart (1993), Topel (1991), and Karahan and Ozkan (2013). Their combination is useful, but the manuscript does not claim or demonstrate a methodological innovation.
+- [POLICY] The manuscript argues that self-employment promotion and active labor-market policies should account for entrant heterogeneity, survival risk, and skill accumulation, particularly among young and unemployed workers. (Significance: LOW; Confidence: 8.5/10)
+  Evidence: The paper offers policy-relevant empirical inputs but does not evaluate a reform, identify the causal effect of subsidy eligibility or training, calculate fiscal costs, or perform welfare analysis. The policy contribution is therefore agenda-setting rather than a demonstrated policy prescription.
+
+**Insight Assessment**:
+MEDIUM: The paper has a clear progression from entry to survival and lifetime outcomes, and the comparison between flatter but less volatile self-employment profiles and higher-return but more volatile fixed-term employment is economically informative. The policy intuition becomes less disciplined when lower earnings are treated as evidence of deficient skill accumulation and then used to recommend training without identifying that mechanism. (Confidence: 8.0/10)
+Evidence: Sections 4 through 6 move coherently from flows to heterogeneity, survival, earnings returns, and income shocks. Section 6.2.4 usefully frames self-employment as insuring against fixed-term turnover at the cost of flatter earnings. However, the subsequent statement that the analysis 'points towards lower human capital accumulation' is not directly supported by measured skills or a causal design.
+
+**Layman Translation**: The paper convincingly shows which Spanish workers tend to become self-employed and how their later jobs and earnings differ. It does not show that a government training or subsidy reform would cause better outcomes, pay for itself, or be administratively feasible. The authors should present their findings as warning signs and design inputs for future policy evaluation, not as proof that a particular policy should be adopted.
+
+**Confidence Score**: 9.0/10.0
+
+**Source Evidence**: The abstract states that the documented facts 'call for a revision of active labor market policies in place.' The introduction says that subsidies available to unemployed but not employed workers are 'thus inducing negative selection,' although no subsidy treatment or eligibility discontinuity is analyzed. Section 6.2.4 states that the evidence 'points towards lower human capital accumulation in self-employment' and that an 'optimal government intervention' should target skill accumulation, but skills and training are not measured and no welfare objective or government budget constraint is specified. The conclusion proposes government instruments targeting training and survival and says researchers can perform welfare comparisons in future structural work, implicitly confirming that the current paper does not conduct those comparisons. The empirical specifications are probit associations, survival models, fixed-effect earnings regressions, and a GMM income-process decomposition rather than causal evaluations of policy.
+
+**Verdict**: RESUBMIT
+
+**Audit Valid**: True
+
+---
+
+# MULTI-AGENT DEBATE
+
+
+## DEBATE ROUND 1
+
+### Econometrician Debate Contribution
+
+**Acknowledgment**: The peer reviews converge on the manuscript's genuine strength—rich administrative spell histories—and on the central limitation that the design supports descriptive conditional associations rather than causal returns or policy effects. The Data Scientist additionally identifies consequential measurement and sampling issues that reinforce the econometric concerns.
+
+**Challenges**:
+- Target: Policymaker [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: Classifying the central returns and human-capital claims mainly as substantial rephrasing understates the problem. The earnings analysis groups workers by an endogenous predominant career status and interprets group-specific fixed-effects gradients as returns to self-employment. Individual fixed effects do not address endogenous tenure, mobility, match quality, time-varying shocks, or selection into career groups. Combined with the use of contribution bases as self-employed earnings, this places the economic interpretation of the estimated profiles in substantive doubt rather than merely requiring softer policy language.
+  - Evidence: Section 6.2.3 estimates equation (7) separately by predominant status before age 40 and concludes that self-employment does not reward workers later in life and implies lower human-capital accumulation. No exogenous assignment, selection correction, or model identifying occupational human-capital effects is supplied. Section 6.2.2 also describes self-employed income as a self-reported contribution base.
+
+**Defenses**:
+- Against: Data_Scientist [substantive_flaw]
+  - The retrospective-sampling concern is serious for claims covering 1990–2004, but it does not by itself invalidate every transition result. If annual refreshment and linkage produce representative prospective risk sets, or if the analysis is restricted to prospectively observed 2005–2015 cohorts, the descriptive transition contribution can survive within the current framework. The correct remedy is a sampling-frame audit and restricted robustness analysis, not abandonment of the entire empirical architecture.
+
+**Concessions**:
+- To: Data_Scientist [substantive_flaw]
+  - I concede that contribution bases may be a poor proxy for self-employed economic income and may mechanically compress estimated shock variances through floors, ceilings, and bunching. Without validation or explicit modeling of this measurement system, the headline comparison of earnings risk across statuses is not secure.
+- To: Data_Scientist [substantive_flaw]
+  - I concede that the inability to distinguish unemployment without benefits from broader nonemployment compromises the labels used in the entry and survival analyses. Core results should be separated into benefit-observed unemployment and broader inferred nonemployment, with corresponding estimands stated precisely.
+- To: Policymaker [substantial_rephrasal]
+  - I concede that the abstract and conclusion must describe the results as policy-relevant diagnostics rather than evidence that subsidies induce adverse selection, training is the appropriate remedy, or policy revision is welfare improving. No policy treatment or welfare effect is identified.
+
+**Questions**:
+- To: Data_Scientist — Can the contribution-base concern be quantified by reporting the shares at statutory floors and ceilings by year and status, and would such diagnostics be sufficient to retain only transition results while withdrawing the income-shock comparison?
+- To: Policymaker — Given that endogenous career classification and contribution-base measurement affect the underlying earnings estimand, do you agree that the returns claim requires substantive re-estimation or withdrawal, beyond narrowing the policy language?
+
+**Final Argument State**: The surviving contribution is a potentially valuable, medium-novelty and medium-insight descriptive study of transitions into registered self-employment in Spain's dual labor market. Execution is not yet sound enough for acceptance: unemployment is partly confounded with nonemployment, retrospective representativeness is undocumented, repeated observations apparently lack appropriately clustered inference, the survival likelihood and competing exits require clarification, and contribution bases may invalidate the income-risk comparison. Most importantly, endogenous career-group comparisons do not identify returns to self-employment or human-capital accumulation. The transition architecture can be preserved through data audits, corrected inference, precise estimands, and restricted robustness analyses, while causal returns and policy claims must be withdrawn absent a new identification strategy. These are serious but potentially repairable substantive flaws, so RESUBMIT is appropriate.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Data_Scientist Debate Contribution
+
+**Acknowledgment**: The review graph converges on a RESUBMIT verdict and correctly recognizes the administrative spell data as the paper's principal strength. I agree with the Econometrician that the earnings and career-history comparisons are descriptive rather than causal, and with the Policymaker that the policy prescriptions exceed the identified evidence. However, the Policymaker materially understates the problem by treating it primarily as claim calibration: unresolved state classification, retrospective sampling, and temporal leakage threaten the descriptive estimates themselves.
+
+**Challenges**:
+- Target: Policymaker [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: Classifying the central problem as substantial rephrasing is too lenient because the manuscript has unresolved measurement defects that can alter the reported descriptive patterns, not merely their policy interpretation. In particular, the data cannot distinguish non-benefit unemployment from other nonemployment, even though the paper labels transitions as originating in unemployment and interprets them as labor-market search outcomes.
+  - Evidence: Section 3 explicitly states that, unless a worker receives unemployment insurance, 'it is not possible to separately identify periods of unemployment with no benefits and nonemployment.' Nevertheless, Section 5 estimates transitions 'from unemployment,' includes unemployment-benefit receipt within that state, and interprets the estimates as decisions between continued job search and self-employment. The inferred state can mix unemployment, inactivity, migration, and uncovered work, so the associated gender, age, education, and cyclical coefficients may not describe unemployment entry as claimed.
+- Target: Policymaker [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The assertion that the evidence already establishes reliable descriptive selection and outcome differences is premature because the historical sampling frame is not documented well enough to establish representativeness for 1990–2004.
+  - Evidence: The manuscript says the sample is selected in 2004, uses the 2005–2015 waves to construct the longitudinal panel, and then analyzes retrospective histories beginning in 1990. It does not explain whether workers observed historically must survive, remain in Spain, or be affiliated in a later sampling year, nor how annual replenishment and weights restore historical representativeness. Conditioning on later affiliation could distort age, cohort, survival, and business-cycle profiles.
+- Target: Econometrician [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The Econometrician correctly identifies causal and inference problems but underemphasizes a more basic state-measurement problem. Recasting the entry and survival models as descriptive conditional associations is not sufficient unless the underlying 'unemployment' label is validated or narrowed to benefit-observed unemployment.
+  - Evidence: The manuscript concedes that unemployment without benefits cannot be separated from nonemployment. Yet the probit interpretation assumes that a worker classified as unemployed is choosing between further search and self-employment. A descriptive association involving a misclassified origin state is not automatically a valid description of unemployed workers. Core estimates should be reported separately for benefit-observed unemployment and broader nonemployment, with explicit spell-construction rules.
+- Target: Econometrician [Type: substantive_flaw; Class: substantive_flaw; Severity: 6.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The recommended revision should also address temporal leakage in covariates, because conditioning on information recorded after historical transitions can contaminate even descriptive profiles.
+  - Evidence: Section 3 defines urban status using the worker's address 'at the time of the last data extraction' and describes education as the highest level reported to the Census. Applying these variables to transitions as early as 1990 can use future residence and educational attainment. The models should use time-valid covariates or clearly label these variables as eventual characteristics and avoid interpreting them as predictors known at transition time.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I agree that endogenous career classification, tenure, mobility, and time-varying selection prevent the fixed-effects earnings regressions from identifying causal returns to self-employment or human-capital accumulation. The headline language must be narrowed unless a credible source of exogenous variation is introduced.
+- To: Econometrician [substantive_flaw]
+  - I agree that repeated quarterly observations require worker-level clustered inference, that aggregate business-cycle regressors require additional caution, and that the censoring-indicator definition and cause-specific survival estimand must be audited.
+- To: Policymaker [substantial_rephrasal]
+  - I agree that the paper does not identify the effects of subsidies, training, or employment-protection reform and therefore cannot support implementation-ready policy prescriptions or welfare rankings.
+
+**Questions**:
+- To: Policymaker — Given the manuscript's admission that non-benefit unemployment is observationally inseparable from other nonemployment, do you agree that the unemployment-entry and failure results require substantive reconstruction rather than policy-language rephrasing alone?
+- To: Econometrician — Should the minimum viable revision require separate estimates for benefit-observed unemployment and broader nonemployment, rather than merely relabeling all transition estimates as descriptive?
+
+**Final Argument State**: The surviving execution assessment is that the administrative spell records can support a valuable descriptive study of registered contribution-regime transitions, but the current implementation has repairable substantive flaws. The unemployment origin and failure states are not validly distinguished from broader nonemployment; historical representativeness before the sampling waves is insufficiently documented; some covariates use information measured after the transition; repeated-observation inference and survival censoring require audit; and the earnings comparisons do not identify causal returns or skill accumulation. Novelty is MEDIUM because the scale and labor-market detail yield a bounded empirical contribution, although the methods are standard. Insight is MEDIUM: separating entry from paid employment and nonemployment is economically useful, but the push-pull and policy interpretations outrun measurement and identification. Central causal and policy claims require substantial rephrasing, while the state construction, sampling frame, and estimation pipeline require substantive revision. These problems appear repairable within a narrower descriptive framework, so RESUBMIT is appropriate rather than rejection.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Policymaker Debate Contribution
+
+**Acknowledgment**: The Econometrician and Data Scientist identify defects that go beyond my initial classification of the problem as primarily policy overstatement. In particular, endogenous career classification, uncertain measurement of self-employed income, imperfect separation of unemployment from broader nonemployment, and possible retrospective-sample selection place important earnings, income-risk, and transition findings in substantive doubt. The descriptive transition contribution remains potentially salvageable, but only after a transparent data and estimand audit.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.5/10; Barrier: REVISION; Confidence: 8.8]
+  - Critique: The central comparison of earnings returns and income-shock variances is not presently supported by either a causal design or sufficiently validated income measurement. Predominant self-employment before age 40 is an endogenous career outcome, while self-employed income is measured using contribution bases that may be administratively bunched or censored. The resulting differences cannot establish lower returns to self-employment, weaker human-capital accumulation, or genuinely lower economic income risk.
+  - Evidence: The abstract characterizes differences as lower returns and smaller shock variances. The review graph reports that Section 6.2.2 identifies self-employed earnings as self-reported contribution bases and that Table 10 displays repeated medians of 817.7 euros across many industries. The earnings specifications classify workers by predominant status before age 40 without exogenous assignment, so ability, preferences, wealth, financing constraints, industry, and prior shocks remain confounded with career type.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 8.0/10; Barrier: REVISION; Confidence: 8.7]
+  - Critique: The unemployment and historical transition estimands require reconstruction. The data cannot distinguish non-benefit unemployment from other nonemployment, and retrospective pre-2004 histories may condition the risk set on later Social Security affiliation. These issues can change both the composition and cyclicality of reported transitions from unemployment and failures into unemployment.
+  - Evidence: Section 3 explicitly states that unemployment without benefits cannot be separated from nonemployment, yet Section 5 estimates transitions from unemployment and includes benefit receipt as a covariate. The manuscript also says the sample is selected in 2004 while using retrospective histories beginning in 1990, without establishing that earlier risk sets remain representative through replenishment, weighting, or treatment of deaths, emigration, and attrition.
+- Target: paper [Type: substantial_rephrasal; Class: substantial_rephrasal; Severity: 6.0/10; Barrier: REPHRASAL; Confidence: 9.2]
+  - Critique: The policy conclusions exceed the identified evidence. Conditional differences across entrants can identify populations and margins requiring further evaluation, but they do not show that unemployment-contingent subsidies induce negative selection, that training corrects the relevant mechanism, or that revising current active labor-market policy would improve welfare.
+  - Evidence: The abstract says the facts call for revision of active labor-market policies, and the introduction says subsidies available to unemployed workers are thereby inducing negative selection. No subsidy reform, eligibility discontinuity, training intervention, fiscal cost, displacement effect, employment-creation effect, or welfare criterion is estimated.
+
+**Defenses**:
+- Against: Econometrician [extension]
+  - A separate causal or structural policy evaluation is not necessary to preserve the paper's strongest contribution. If the data, state definitions, and inference are repaired, the paper can make a worthwhile descriptive contribution by documenting registered self-employment transitions and selected-group outcomes. Demanding an identified welfare analysis would be an extension once causal language and policy prescriptions are removed.
+- Against: Data_Scientist [substantive_flaw]
+  - The income-measurement problem need not invalidate every part of the paper. Exact spell dates, contribution regimes, and contract types can still support a bounded analysis of transitions among administratively observed states, provided unemployment is relabeled where necessary and historical risk sets are validated or restricted. The defect is therefore serious but repairable within a narrower empirical framework.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I concede that endogenous career classification and unsupported interpretations of fixed-effects earnings gradients as returns or human-capital accumulation are substantive identification problems, not merely policy wording issues. I also agree that worker-clustered inference, the survival censoring convention, and the conflict between the recession coefficient and textual interpretation require correction.
+- To: Data_Scientist [substantive_flaw]
+  - I concede that contribution-base measurement, unemployment versus nonemployment misclassification, retrospective sample selection, and temporally invalid covariates can materially affect the headline results. The income-risk claim should be withdrawn unless validated, and transition analyses require explicit risk-set and data-lineage documentation.
+
+**Questions**:
+- To: Econometrician — Would restricting the earnings analysis to explicitly descriptive career-group profiles, with no returns or skill-accumulation interpretation, be sufficient within the current framework once income measurement is validated?
+- To: Data_Scientist — Can the administrative records identify a prospectively representative post-2005 sample and benefit-observed unemployment subsample that would preserve the transition contribution without relying on inferred non-benefit unemployment or retrospectively selected pre-2004 histories?
+
+**Final Argument State**: The surviving contribution is a potentially valuable descriptive study of registered self-employment transitions in Spain's dual labor market. Execution is not yet sound for the broader headline: unemployment states and historical risk sets are insufficiently established, self-employed contribution bases may not measure comparable income or volatility, and selected career-group regressions do not identify returns or human-capital accumulation. Novelty remains MEDIUM because the administrative spell data and joint entry-survival-career perspective are useful despite standard methods. Insight remains MEDIUM because the distinction between entry from unemployment and paid employment is informative, while the proposed skill and policy mechanisms are not identified. Substantial rephrasing of policy claims is necessary, but substantive data, inference, and estimand repairs are also required. These defects are serious yet potentially repairable by narrowing claims, validating or restricting samples and income measures, and presenting the analysis as descriptive.
+
+**Verdict**: RESUBMIT
+
+---
+
+
+## DEBATE ROUND 2
+
+### Econometrician Debate Contribution
+
+**Acknowledgment**: The review graph correctly converges on RESUBMIT. The administrative spell data can support a useful descriptive analysis, but the current headline claims are undermined by state misclassification, uncertain historical risk sets, noncomparable income measurement, endogenous career classification, and inadequate identification and inference for aggregate cyclical effects. The policy analysis should be narrowed rather than expanded into a new welfare exercise.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.5/10; Barrier: REVISION; Confidence: 8.5]
+  - Critique: The headline pro-cyclicality result is estimated from aggregate national variables whose effective identifying variation is at the quarter level, yet the probit analysis appears to treat worker-quarter observations as the statistical sample. Worker clustering alone would not address common aggregate shocks or serial correlation in the unemployment rate and recession indicator. Without quarter-level or time-series-robust inference and adequate controls for seasonality and trends, statistical significance for the business-cycle coefficients is unreliable.
+  - Evidence: Section 5 estimates quarterly individual-level probits for 1990–2015 using the national unemployment rate and a common CEPR recession indicator. The reported interpretation emphasizes significant negative effects, but the supplied discussion does not specify worker-clustered, quarter-clustered, or time-series-robust standard errors. The common regressors have roughly one hundred quarterly realizations rather than millions of independent worker-level realizations.
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 6.5/10; Barrier: REVISION; Confidence: 9.0]
+  - Critique: The age-period-cohort decomposition does not uniquely identify pure cohort and cyclical effects. The imposed restriction that year effects are detrended and sum to zero assigns all long-run change to age and cohort by construction. Consequently, the resulting series cannot be described without qualification as isolating a pure cohort trend or proving that the post-2010 increase is entirely a post-recession effect.
+  - Evidence: Section 4 acknowledges exact age-year-cohort collinearity and follows a Deaton-Paxson normalization under which year effects contain only zero-sum cyclical fluctuations. It then calls the estimated components 'pure cohort effects' and concludes that the post-2010 increase is 'entirely attributable' to the post-recession effect. Those conclusions depend on the normalization rather than being unrestricted implications of the data.
+- Target: paper [Type: substantial_rephrasal; Class: substantial_rephrasal; Severity: 5.5/10; Barrier: REPHRASAL; Confidence: 8.5]
+  - Critique: The binary probits are valid as reduced-form models of entering self-employment versus all other observed outcomes, but they do not substantiate the stated latent-choice interpretation based on expected income differences. Pooling continued unemployment and entry into paid employment in the zero category does not identify the relative values of searching, salaried work, and self-employment, especially when unemployment is itself partly inferred from broader nonemployment.
+  - Evidence: Section 5 states that workers enter self-employment when its expected value exceeds the expected value of a salaried job or continued search, but the estimated dependent variable equals one for self-employment and zero for either of two distinct alternatives. No structural utility restrictions, alternative-specific payoffs, or multinomial choice model identify those comparisons.
+
+**Defenses**:
+- Against: Policymaker [extension]
+  - The absence of a policy treatment or welfare criterion does not require rejection if the authors withdraw claims that subsidies induce adverse selection or that training and reform improve welfare. After the data construction and inference are repaired, documenting conditional transitions among registered contribution regimes remains a legitimate descriptive contribution; a structural welfare analysis would be an extension beyond that narrowed scope.
+- Against: Data_Scientist [substantive_flaw]
+  - Uncertain retrospective representativeness is a serious defect for 1990–2004, but it need not invalidate the prospective 2005–2015 analysis. The existing empirical framework can be salvaged by documenting annual sample refreshment and linkage, constructing valid historical weights if possible, and otherwise designating a prospectively observed subsample as the primary risk set.
+
+**Concessions**:
+- To: Data_Scientist [substantive_flaw]
+  - I agree that the manuscript cannot describe all inferred origin spells as unemployment when non-benefit unemployment is observationally confounded with inactivity and other nonemployment. Separate estimates for benefit-observed unemployment and broader inferred nonemployment are necessary, with explicit spell and risk-set definitions.
+- To: Data_Scientist [substantive_flaw]
+  - I agree that residence measured at the final extraction and highest education reported later can contain future information when applied to historical transitions. These variables must be reconstructed as time-valid covariates where possible or described only as eventual characteristics without temporal predictor interpretations.
+- To: Policymaker [substantive_flaw]
+  - I agree that contribution bases may be administratively censored, selected, or bunched and therefore need not be comparable to salaried earnings. The claim that self-employed workers face smaller economic income shocks should be withdrawn unless the measurement process is validated or explicitly modeled.
+- To: Policymaker [substantive_flaw]
+  - I agree that regressions stratified by endogenous predominant career status do not identify causal returns to self-employment or occupational human-capital accumulation. Individual fixed effects cannot remove time-varying selection, endogenous mobility and tenure, match quality, or prior shocks.
+- To: Policymaker [substantial_rephrasal]
+  - I agree that the policy conclusions require substantial narrowing: the estimates can motivate evaluation of heterogeneous entrants but cannot establish that existing subsidies cause negative selection, that training addresses the mechanism, or that policy revision raises welfare.
+
+**Questions**:
+- To: paper — How are standard errors computed for the national unemployment-rate and recession coefficients, and what inference remains when the effective sample is treated as approximately 104 serially correlated quarters rather than as independent worker-quarter observations?
+- To: paper — Can the authors report transition estimates separately for benefit-observed unemployment, inferred nonemployment, and the prospectively observed 2005–2015 sample, together with a precise account of annual sample replenishment and historical weights?
+- To: paper — How sensitive are the age, cohort, and period profiles to alternative identifying restrictions, given that the reported cohort trends and cyclical components are not separately identified without normalization?
+
+**Final Argument State**: The manuscript has a potentially valuable descriptive contribution based on detailed administrative records, exact employment spells, contract types, and registered self-employment regimes. Novelty is MEDIUM: combining entry origins, business-cycle variation, survival, and career histories in Spain is useful, although the empirical methods are standard and related Spanish transition studies are acknowledged. Insight is MEDIUM: distinguishing entry from paid employment and from nonemployment illuminates relevant heterogeneity, but the structural choice, skill-accumulation, income-risk, and policy mechanisms are not identified. Execution currently contains repairable substantive flaws: unemployment is confounded with broader nonemployment, retrospective risk-set representativeness is undocumented, some historical covariates use future information, aggregate cyclical inference requires quarter-level treatment, the age-period-cohort conclusions depend on an imposed normalization, contribution bases may not measure comparable income, and endogenous career groups cannot identify returns or human-capital accumulation. Central causal and policy language also requires substantial rephrasing. A narrower descriptive paper can survive through reconstructed states and risk sets, corrected inference, measurement validation, sensitivity analysis, and withdrawal of unsupported returns and welfare claims. RESUBMIT is therefore appropriate.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Data_Scientist Debate Contribution
+
+**Acknowledgment**: The peer reviews converge appropriately on RESUBMIT. I agree that the manuscript can retain a bounded descriptive contribution based on administrative contribution-regime and contract spells, but not its current claims about unemployment entry, causal returns, human-capital accumulation, income risk, or policy effectiveness. The Econometrician and Policymaker correctly elevate endogenous career classification and contribution-base measurement to substantive flaws rather than wording issues.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 8.0]
+  - Critique: The headline pro-cyclicality result lacks a demonstrated inference strategy appropriate to regressors that vary only at the national-quarter level. Millions of worker-quarter observations do not supply independent variation for the national unemployment rate or the recession indicator, and worker-level clustering alone would not address common aggregate shocks, serial correlation, or trends.
+  - Evidence: Section 5 pools quarterly individual transitions from 1990 to 2015 while identifying cyclicality using a national unemployment rate and a CEPR recession indicator covering only three recession episodes. The provided discussion does not document quarter-level or two-way clustered inference, time-series corrections, flexible aggregate trends, or sensitivity to alternative Spanish cycle definitions. Because pro-cyclicality is a headline finding, inference must reflect the roughly 100 aggregate time observations rather than the much larger microeconomic row count.
+- Target: paper [Type: substantial_rephrasal; Class: substantial_rephrasal; Severity: 5.5/10; Barrier: REPHRASAL; Confidence: 8.5]
+  - Critique: The Deaton-Paxson decomposition does not independently establish a business-cycle effect because its separation of age, period, and cohort components depends on an imposed normalization that assigns long-run growth to age and cohort while forcing period effects to average to zero. Describing the residual period series as the pure cyclical component overstates what the decomposition identifies.
+  - Evidence: Section 4 states that restricted year dummies are detrended and normalized to sum to zero, attributes growth or decline to age and cohort effects, and then calls the resulting year coefficients the cyclical component and the cohort coefficients pure cohort effects. The age-period-cohort identity means these labels are conditional on the normalization, not nonparametrically identified facts.
+
+**Defenses**:
+- Against: Econometrician [substantive_flaw]
+  - I agree with the conditional defense that retrospective-sampling defects need not invalidate every transition result. A prospectively constructed 2005–2015 risk set could preserve the transition analysis if the authors document annual sampling, replenishment, linkage, and weighting and show that results do not depend on retrospective inclusion. This is a repair within the existing descriptive framework rather than a reason to reject the entire architecture.
+- Against: Policymaker [extension]
+  - I agree that an identified welfare analysis is not required to preserve a worthwhile descriptive paper. Once claims about subsidy-induced selection, training effectiveness, and welfare-improving reform are removed, validated administrative transition patterns can stand as policy-relevant diagnostics without a separate structural or experimental policy evaluation.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I concede that fixed-effects earnings gradients estimated within endogenously defined career groups do not identify returns to self-employment or occupational human-capital accumulation. Individual effects do not absorb time-varying selection, endogenous tenure, mobility, match quality, or shocks determining career status.
+- To: Policymaker [substantive_flaw]
+  - I concede that contribution bases may be administratively censored, bunched, and selected by self-employed workers, making their level and variance incomparable with salaried earnings absent validation. The claim that self-employed workers face smaller economic income shocks should be withdrawn unless the measurement system is explicitly addressed.
+- To: Policymaker [substantial_rephrasal]
+  - I concede that the manuscript does not identify the effects of self-employment subsidies, training, or employment-protection reform. Its policy conclusions must be reframed as hypotheses and targets for subsequent evaluation rather than recommendations supported by estimated treatment or welfare effects.
+
+**Questions**:
+- To: Econometrician — Would you require inference clustered by both worker and calendar quarter for the pooled transition models, supplemented by an aggregate quarterly analysis or randomization-style inference given that the recession indicator contains only three episodes?
+- To: Policymaker — If contribution-base validation is unavailable, do you agree that the income-risk section should be removed from the headline contribution rather than retained merely with caveats?
+
+**Final Argument State**: The review graph supports a RESUBMIT verdict. Execution currently contains repairable substantive flaws: inferred unemployment is confounded with broader nonemployment; historical risk-set representativeness is undocumented; residence and education covariates may contain future information; aggregate-cycle inference may treat common national variation as if it were micro-level variation; survival construction requires audit; and contribution bases are not validated as comparable self-employed income. Endogenous career-group regressions cannot identify causal returns or human-capital accumulation. Novelty is MEDIUM because the large administrative panel and joint examination of entry origins, survival, and career histories offer a useful but bounded contribution using standard methods. Insight is MEDIUM because distinguishing transitions from paid employment and nonemployment in a rigid labor market is informative, although the push-pull, skill, and policy mechanisms are not identified. Central causal and policy claims require substantial rephrasing, while state construction, sampling, measurement, and inference require substantive revision. A narrower descriptive study remains feasible within the current framework.
+
+**Verdict**: RESUBMIT
+
+---
+
+### Policymaker Debate Contribution
+
+**Acknowledgment**: The peer reviews correctly distinguish a salvageable descriptive contribution from unsupported causal, income-risk, and policy interpretations. Their concerns about state measurement, retrospective sampling, endogenous career classification, and administrative income measurement materially affect the work rather than merely its wording.
+
+**Challenges**:
+- Target: paper [Type: substantive_flaw; Class: substantive_flaw; Severity: 7.0/10; Barrier: REVISION; Confidence: 7.8]
+  - Critique: Inference on business-cycle effects is not adequately established because the recession indicator and national unemployment rate vary only at the aggregate quarterly level, while the probits use many repeated worker-quarter observations. Treating those observations as independent would create pseudo-replication and potentially severe overstatement of precision.
+  - Evidence: Section 5 constructs a quarterly panel from 1990 to 2015 and reports significant effects of national unemployment and CEPR recession quarters, but the provided methodology does not describe worker-level clustering, clustering appropriate to aggregate time-series regressors, or sensitivity to time effects and the small number of recession episodes.
+- Target: paper [Type: substantial_rephrasal; Class: substantial_rephrasal; Severity: 6.0/10; Barrier: REPHRASAL; Confidence: 9.3]
+  - Critique: The manuscript conflates conditional selection patterns with evidence about the effects of self-employment policy. The lower predicted entry of disadvantaged groups and poorer outcomes among entrants from nonemployment may identify populations for further study, but they do not establish that existing subsidies cause adverse selection or that training would correct the relevant constraint.
+  - Evidence: The introduction states that unemployment-targeted funds are 'thus inducing negative selection' and calls for training policies and revision of active labor-market policies. No subsidy treatment, eligibility variation, training intervention, behavioral mechanism, fiscal cost, displacement effect, or welfare outcome is estimated.
+
+**Defenses**:
+- Against: Econometrician [extension]
+  - A new causal or structural policy design is not required to preserve a publishable descriptive contribution. If the state definitions, historical risk sets, income limitations, and inference are repaired, the administrative spell data can still document transitions into registered self-employment in a dual labor market. Causal welfare evaluation would be an extension once the manuscript withdraws its returns, human-capital, and prescriptive policy language.
+- Against: Data_Scientist [substantive_flaw]
+  - The temporally invalid education and residence controls do not necessarily invalidate the entire transition architecture. The authors can omit them from historical specifications, restrict them to time-valid observations, or label them explicitly as eventual characteristics rather than information observed at the transition. This is a substantive specification repair, not a reason to abandon the administrative transition analysis.
+- Against: Data_Scientist [substantive_flaw]
+  - Failure to establish representativeness of retrospective histories would require restricting the principal analysis to prospectively valid risk sets, but it would not invalidate every result. A narrower 2005–2015 analysis could retain the core descriptive question, although it would no longer support the manuscript's full three-decade and multiple-recession framing.
+
+**Concessions**:
+- To: Econometrician [substantive_flaw]
+  - I agree that classifying workers by predominant status before age 40 and estimating group-specific fixed-effects earnings gradients does not identify returns to self-employment or occupational human-capital accumulation. Individual fixed effects do not remove endogenous mobility, tenure, match quality, financing constraints, or time-varying selection.
+- To: Econometrician [substantive_flaw]
+  - I agree that contribution bases may mechanically compress measured self-employed income variation through administrative choices, floors, ceilings, and bunching. The claim that self-employed workers face smaller economic income shocks should be withdrawn unless the measure is validated or its administrative process is explicitly modeled.
+- To: Data_Scientist [substantive_flaw]
+  - I agree that the inability to separate unemployment without benefits from inactivity and other nonemployment undermines the stated unemployment estimand. Core analyses must distinguish benefit-observed unemployment from inferred nonemployment and avoid interpreting the latter as continued job search.
+- To: Data_Scientist [substantive_flaw]
+  - I agree that retrospective histories beginning in 1990 are not automatically representative merely because later MCVL waves are representative. The authors must document sampling, replenishment, linkage, survival, emigration, and weighting or restrict the analysis to validated prospective risk sets.
+- To: Econometrician [substantive_flaw]
+  - I agree that repeated worker observations, aggregate business-cycle regressors, survival censoring conventions, and competing exits require a transparent inference and estimand audit before the reported significance and survival comparisons can be relied upon.
+- To: Data_Scientist [substantial_rephrasal]
+  - I agree that the policy conclusions require substantial rephrasing. The evidence can motivate evaluation of targeting and training policies, but it cannot show that those policies caused selection or that revising them would improve welfare.
+
+**Questions**:
+- To: Econometrician — Would you regard two-way clustering by worker and quarter as sufficient for the aggregate unemployment and recession coefficients, or should the revised paper rely primarily on time-series aggregation, randomization-style episode inference, or specifications with richer time controls?
+- To: Data_Scientist — What minimum documentation or balance analysis would establish that annual MCVL replenishment yields representative historical risk sets, and which pre-2005 outcomes should be excluded if that standard cannot be met?
+
+**Final Argument State**: The paper retains a potentially worthwhile descriptive contribution on transitions into registered self-employment in Spain's dual labor market, but its present execution is not sound enough for acceptance. Unemployment is partly confounded with broader nonemployment; retrospective historical risk sets are not demonstrated to be representative; some controls use information measured after the relevant transition; inference for repeated observations and aggregate cyclical regressors is insufficiently documented; and contribution bases may not measure comparable earnings or income risk. Endogenously selected career-group regressions do not identify returns to self-employment or human-capital accumulation. Novelty is MEDIUM because the large administrative spell data and joint examination of entry origins, survival, and later outcomes offer a useful but methodologically standard contribution. Insight is MEDIUM because distinguishing entry from paid employment and nonemployment is economically informative, while the proposed skill, subsidy-selection, and welfare mechanisms remain unidentified. Central policy claims require substantial rephrasing, and the data construction, estimands, income validation, and inference require substantive revision. These defects appear repairable within a narrower descriptive framework, so the appropriate verdict is RESUBMIT.
+
+**Verdict**: RESUBMIT
+
+---
+
+
